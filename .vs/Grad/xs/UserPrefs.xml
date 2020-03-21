@@ -1,12 +1,15 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/UI/BagPanel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Item/FireBallExplosion.cs">
     <Files>
       <File FileName="Assets/Script/Mangers/GoodManger.cs" Line="49" Column="1" />
       <File FileName="Assets/Script/UI/BagPanel.cs" Line="57" Column="1" />
-      <File FileName="Assets/Script/Mangers/GameManger.cs" Line="11" Column="44" />
-      <File FileName="Assets/Script/Mangers/UIManger.cs" Line="40" Column="1" />
-      <File FileName="Assets/Script/Player/Player.cs" Line="107" Column="48" />
-      <File FileName="Assets/Script/Mangers/Terrain/Trap/Stab.cs" Line="23" Column="113" />
+      <File FileName="Assets/Script/Mangers/GameManger.cs" />
+      <File FileName="Assets/Script/Mangers/UIManger.cs" />
+      <File FileName="Assets/Script/Player/Player.cs" Line="80" Column="64" />
+      <File FileName="Assets/Script/Mangers/Terrain/Trap/Stab.cs" />
+      <File FileName="Assets/Script/Mangers/SkillParticleCreator.cs" Line="8" Column="37" />
+      <File FileName="Assets/Script/Item/Fireball.cs" Line="993" Column="48" />
+      <File FileName="Assets/Script/Item/FireBallExplosion.cs" Line="17" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

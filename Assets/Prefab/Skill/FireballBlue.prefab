@@ -18789,12 +18789,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2867904005463601258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35ee016406938ef4c942111cd88ccdd2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6efd5f9c1a3bb4f16ad7390e94d7b130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
   attack: 35
-  Boom: {fileID: 119060, guid: dced2fc32a8df41498ec050e598128a1, type: 3}
+  Boom: {fileID: 164310, guid: 785af3d919cb31c4f81a0bf9b5d311f4, type: 3}
 --- !u!58 &8449607218428121932
 CircleCollider2D:
   m_ObjectHideFlags: 0

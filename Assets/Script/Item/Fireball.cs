@@ -15,7 +15,7 @@ public class Fireball : MonoBehaviour
         {
             collision.gameObject.GetComponent<Enemy>().BeAttacked(35);
         }
-        Instantiate(Boom, transform.position,transform.rotation);
+        var boom = Instantiate(Boom, transform.position,transform.rotation);
         Destroy(gameObject);
     }
 }

@@ -308,6 +308,7 @@
     <Compile Include="Assets\Script\Enemy\EnemyWarrior.cs" />
     <Compile Include="Assets\Script\Info\GoodInfo.cs" />
     <Compile Include="Assets\Script\Info\ItemInfo.cs" />
+    <Compile Include="Assets\Script\Item\FireBallExplosion.cs" />
     <Compile Include="Assets\Script\Item\Fireball.cs" />
     <Compile Include="Assets\Script\Item\SkillStone.cs" />
     <Compile Include="Assets\Script\Mangers\GameManger.cs" />
