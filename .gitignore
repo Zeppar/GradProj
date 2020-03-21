@@ -2,4 +2,7 @@
 /Temp
 Library/
 Temp/
-
+/Logs
+Logs/
+/obj
+obj/

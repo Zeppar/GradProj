@@ -954,11 +954,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2a045ce0dc1e5419406a297f607d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillIcon1: {fileID: 0}
-  SkillIcon2: {fileID: 0}
-  playerHp: {fileID: 0}
+  quickSkill1: {fileID: 0}
+  quickSkill2: {fileID: 0}
+  heart_list: []
+  heartFull: {fileID: 0}
+  heartHelf: {fileID: 0}
+  heartNull: {fileID: 0}
   bagPanel: {fileID: 0}
   describePanel: {fileID: 0}
+  BagPanel_Obj: {fileID: 0}
+  Cheat_Obj: {fileID: 0}
 --- !u!4 &1765515148
 Transform:
   m_ObjectHideFlags: 0
