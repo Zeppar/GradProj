@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 8e387dc3f3df4e24ca5d4745dc119a73
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Reeji-CloudYuanXi-GBK
+  fontNames:
+  - Reeji-CloudYuanXi-GBK
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

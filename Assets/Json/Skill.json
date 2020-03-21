@@ -1,0 +1,30 @@
+﻿[
+	{
+		"id": 0,
+		"title": "火球术#0",
+		"value": 10,
+		"range": 5,
+		"describe": "向前面发射一个火球",
+		"icon": "Icon/Skill/HuoQiu",
+		"action": "Fireball"
+	},
+	{
+		"id": 1,
+		"title": "进化#1",
+		"value": 100,
+		"range": 5,
+		"describe": "提升攻击属性",
+		"icon": "Icon/Skill/JinHua",
+		"action": "Jinhua"
+	},
+	{
+		"id": 2,
+		"title": "万箭齐发#2",
+		"value": 100,
+		"range": 5,
+		"describe": "射出前方射出20只箭",
+		"icon": "Icon/Skill/WanJianQiFa",
+		"action": "SkillAction/WanJianQiFa"
+		
+	}
+]
