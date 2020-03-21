@@ -20,7 +20,7 @@ public class Stab : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            iTween.MoveBy(collision.gameObject, iTween.Hash("x", collision.gameObject.GetComponent<PlayerController>().dir* -3, "y", 4, "looktime", 0.5f));
+            iTween.MoveBy(collision.gameObject, iTween.Hash("x", collision.gameObject.GetComponent<Player>().dir* -3, "y", 4, "looktime", 0.5f));
             collision.gameObject.GetComponent<Player>().BeAttacked(attack);
         }
     }

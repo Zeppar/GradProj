@@ -20,8 +20,8 @@ public class Player : MonoBehaviour
     public float checkRadius;
     public LayerMask groundLayer;
 
-    public ParticleSystem moveParticle;
-    public ParticleSystem jumpParticle;
+    //public ParticleSystem moveParticle;
+    //public ParticleSystem jumpParticle;
 
     public int HP {
         get {
@@ -46,9 +46,8 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private bool isJump = false;
     private bool isClimb = false;
-    private bool isMove = false;
-    
-    private int dir = 1;
+
+    public int dir = 1;
 
     //计时器
     private float jumpTimeCounter;
@@ -90,7 +89,7 @@ public class Player : MonoBehaviour
         }
 
         //Debug.Log(currentState.IsName("AirAttack1") + " - " + currentState.normalizedTime + " - " + currentState.IsName("Jump") + " - " + currentState.IsName("Idle"));
-        if (currentState.IsName("AirAttack1") && currentState.normalizedTime > 40.0f) {
+        if (currentState.IsName("AirAttack1") && currentState.normalizedTime > 4.0f) {
             anim.SetInteger("Attack", 0);
             attackCount = 0;
         }
@@ -105,12 +104,12 @@ public class Player : MonoBehaviour
                 anim.SetInteger("Attack", 1);
                 attackCount = 1;
             } else if (currentState.IsName("AirAttack1") && attackCount == 1 && currentState.normalizedTime > 0.5F) {
-                rb.velocity = new Vector2(0, 8.5f);
+                rb.velocity = new Vector2(0, 12.5f);
                 anim.SetInteger("Attack", 2);
                 attackCount = 2;
             } else if (currentState.IsName("AirAttack2") && attackCount == 2 && currentState.normalizedTime > 0.5F) {
                 anim.SetInteger("Attack", 3);
-                rb.velocity = new Vector2(0, -10.5f);
+                rb.velocity = new Vector2(0, -20.5f);
                 attackCount = 3;
             }
             Collider2D coll = Physics2D.OverlapCircle(AttackPoint.position, range);
@@ -160,7 +159,7 @@ public class Player : MonoBehaviour
         if (GetComponent<Player>().attackCount > 0)
             return;
         moveInput = Input.GetAxisRaw("Horizontal");
-        moveParticle.gameObject.SetActive(isGrounded);
+        //moveParticle.gameObject.SetActive(isGrounded);
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         if (moveInput != 0) {
             anim.SetBool("Walk", true);
@@ -206,7 +205,7 @@ public class Player : MonoBehaviour
     }
     private void Jump() {
         if (isClimb) { return; }
-        jumpParticle.gameObject.SetActive(!isGrounded);
+        //jumpParticle.gameObject.SetActive(!isGrounded);
         anim.SetBool("IsGround", isGrounded);
         if (moveInput > 0) {
             //transform.eulerAngles = new Vector2(0, 0);
