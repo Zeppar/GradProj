@@ -11,11 +11,12 @@ public class Fireball : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Vector3 pos = collision.contacts[0].point;
         if (collision.gameObject.CompareTag(Util.Enemy))
         {
             collision.gameObject.GetComponent<Enemy>().BeAttacked(35);
         }
-        var boom = Instantiate(Boom, transform.position,transform.rotation);
+        var boom = Instantiate(Boom, pos, Quaternion.identity);
         Destroy(gameObject);
     }
 }

@@ -87,8 +87,6 @@ public class Player : MonoBehaviour
             }
             return;
         }
-
-        //Debug.Log(currentState.IsName("AirAttack1") + " - " + currentState.normalizedTime + " - " + currentState.IsName("Jump") + " - " + currentState.IsName("Idle"));
         if (currentState.IsName("AirAttack1") && currentState.normalizedTime > 4.0f) {
             anim.SetInteger("Attack", 0);
             attackCount = 0;
@@ -221,6 +219,8 @@ public class Player : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
                 anim.SetTrigger("Jump");
+                attackCount = 0;
+                anim.SetInteger("Attack", attackCount);
                 isJump = true;
                 jumpTimeCounter = jumpTime;
                 rb.velocity = Vector2.up * jumpForce;

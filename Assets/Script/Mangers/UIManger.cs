@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 
 
-public class UIManger : MonoBehaviour
-{
-   
+public class UIManger : MonoBehaviour {
+
     [Header("快捷技能")]
     public Image quickSkill1;
     public Image quickSkill2;
@@ -24,7 +23,7 @@ public class UIManger : MonoBehaviour
     public BagPanel bagPanel;
     public GameObject describePanel;
 
-    
+
 
     [Header("面板物体")]
     public GameObject BagPanel_Obj;
@@ -34,99 +33,69 @@ public class UIManger : MonoBehaviour
     public static UIManger instance;
 
 
-    private void Awake()
-    {
+    private void Awake() {
         instance = this;
         bagPanel.InitSlot();
     }
-    private void Start()
-    {
-      
+    private void Start() {
+
     }
-    private void Update()
-    {
-       //UpdataSkillIcon(GameManger.instance.skillManager.currentSkillList);
-       UpdateHpBar(GameManger.instance.playerScript.HP);
+    private void Update() {
+        //UpdataSkillIcon(GameManger.instance.skillManager.currentSkillList);
+        UpdateHpBar(GameManger.instance.playerScript.HP);
     }
 
     //技能图标更新
-    public void UpdataSkillIcon(List<SkillInfo> currentSkillList)
-    {
+    public void UpdataSkillIcon(List<SkillInfo> currentSkillList) {
         /////////////
         ///暂停使用
         ////////////
-        for (int i = 0; i < currentSkillList.Count; i++)
-        {
-            if(i == 0)
-            {
+        for (int i = 0; i < currentSkillList.Count; i++) {
+            if (i == 0) {
 
-               // SkillIcon1.sprite = Resources.Load<Sprite>(currentSkillList[i].Icon);
-            }
-            else if(i == 1)
-            {              
-             //   SkillIcon2.sprite = Resources.Load<Sprite>(currentSkillList[i].Icon);
+                // SkillIcon1.sprite = Resources.Load<Sprite>(currentSkillList[i].Icon);
+            } else if (i == 1) {
+                //   SkillIcon2.sprite = Resources.Load<Sprite>(currentSkillList[i].Icon);
                 print("1");
-            }
-            else
-            {
+            } else {
                 Debug.LogError("同志，你有多少技能啊");
             }
-                       
+
         }
     }
-   
+
     //血条更新
-    public void UpdateHpBar(int hp)
-    {
+    public void UpdateHpBar(int hp) {
 
-        if(hp % 2 == 0)
-        {
+        if (hp % 2 == 0) {
 
-            for (int i = 0; i < heart_list.Count; i++)
-            {
-                if(i+1 <= hp / 2)
-                {
+            for (int i = 0; i < heart_list.Count; i++) {
+                if (i + 1 <= hp / 2) {
                     heart_list[i].sprite = heartFull;
-                }
-                else
-                {
+                } else {
                     heart_list[i].sprite = heartNull;
                 }
             }
-        }
-        else
-        {
-        
-            for (int i = 0; i < heart_list.Count; i++)
-            {
-                
-                if (i+1 <= hp / 2 )
-                {
-                   
-                    heart_list[i].sprite = heartFull;                   
-                }               
-                else if(i+1 == (hp / 2) + 1)
-                {
-                 
-                    
+        } else {
+
+            for (int i = 0; i < heart_list.Count; i++) {
+
+                if (i + 1 <= hp / 2) {
+                    heart_list[i].sprite = heartFull;
+                } else if (i + 1 == (hp / 2) + 1) {
                     heart_list[i].sprite = heartHelf;
-                }
-                else 
-                {
-                   
+                } else {
                     heart_list[i].sprite = heartNull;
-
                 }
 
             }
         }
-  
+
     }
 
-    public void LoadLevel(int index)
-    {
-        
+    public void LoadLevel(int index) {
+
     }
 
-  
+
 }

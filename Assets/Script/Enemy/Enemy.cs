@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour {
     public int AttDis = 5;
     public bool dead = false;
     public bool isAttacking = false;
+    public bool isHurt = false;
 
     public int HP {
         get { return _HP; }
@@ -56,12 +57,13 @@ public class Enemy : MonoBehaviour {
 
         if (isAttacking)
             return;
-
+        if (isHurt)
+            return;
         MoveOperation();
     }
 
     private void MoveOperation() {
-        if (Vector2.Distance(Player.transform.position, transform.position) < chaseDis) {
+        if (Player != null && Vector2.Distance(Player.transform.position, transform.position) < chaseDis) {
             if (Vector2.Distance(Player.transform.position, transform.position) > attackRange) {
                 Chase();
                 anim.SetBool("Walk", true);
@@ -78,10 +80,11 @@ public class Enemy : MonoBehaviour {
     public virtual void Attack() {
         isAttacking = true;
     }
+
     public virtual void BeAttacked(int IntCount) {
+        isHurt = true;
         HP -= IntCount;
         rd.AddForce(new Vector2(100000, 1000));
-        print(1);
         ResetAttackState();
     }
 
@@ -100,6 +103,10 @@ public class Enemy : MonoBehaviour {
 
     public void ResetAttackState() {
         isAttacking = false;
+    }
+
+    public void ResetHurtState() {
+        isHurt = false;
     }
 
 }
