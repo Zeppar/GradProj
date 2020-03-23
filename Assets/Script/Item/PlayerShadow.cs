@@ -27,7 +27,7 @@ public class PlayerShadow : MonoBehaviour
     }
 
     IEnumerator DestroyEffect() {
-        yield return new WaitForSecondsRealtime(2.0f);
+        yield return new WaitForSecondsRealtime(1.9f);
         Destroy(explosionEffect);
     }
 }

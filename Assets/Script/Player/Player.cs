@@ -124,6 +124,7 @@ public class Player : MonoBehaviour {
         }
 
     }
+
     void GroundAttack() {
         if (!isGrounded)
             return;

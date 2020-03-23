@@ -66,14 +66,16 @@ public class Enemy : MonoBehaviour {
         if (Player != null && Vector2.Distance(Player.transform.position, transform.position) < chaseDis) {
             if (Vector2.Distance(Player.transform.position, transform.position) > attackRange) {
                 Chase();
-                anim.SetBool("Walk", true);
+                if (anim != null) { anim.SetBool("Walk", true); }
+             
             } else {
-                anim.SetBool("Walk", false);
+                if (anim != null) { anim.SetBool("Walk", false); }
                 Attack();
+              
             }
         } else {
             Seek();
-            anim.SetBool("Walk", true);
+            if (anim != null) { anim.SetBool("Walk", true); }
         }
     }
 

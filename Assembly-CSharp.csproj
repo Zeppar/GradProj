@@ -322,7 +322,8 @@
     <Compile Include="Assets\Script\Cheat\CheatPanel.cs" />
     <Compile Include="Assets\Script\Effects\Boom.cs" />
     <Compile Include="Assets\Script\Enemy\Enemy.cs" />
-    <Compile Include="Assets\Script\Enemy\EnemyBird.cs" />
+    <Compile Include="Assets\Script\Enemy\EnemyBird\EnemyBird.cs" />
+    <Compile Include="Assets\Script\Enemy\EnemyBird\EnemyBirdFireBall.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyWarrior.cs" />
     <Compile Include="Assets\Script\Info\GoodInfo.cs" />
     <Compile Include="Assets\Script\Info\ItemInfo.cs" />
