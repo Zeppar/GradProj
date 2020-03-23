@@ -76,9 +76,7 @@ public class Player : MonoBehaviour
         Jump();
     }
     void SkillAttack() {
-        if (Input.GetKeyDown(KeyCode.K)) {
-            GameManger.instance.skillParticleCreator.CreateFireball(AttackPoint.position, new Vector2(transform.GetComponent<Player>().dir, 0));
-        }
+       //null
     }
     void AirAttack() {
         if (isGrounded) {
