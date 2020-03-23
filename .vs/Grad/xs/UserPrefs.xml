@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Enemy/EnemyWarrior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Shader/Flame.shader">
     <Files>
       <File FileName="Assets/Script/Mangers/GoodManger.cs" Line="49" Column="1" />
       <File FileName="Assets/Script/UI/BagPanel.cs" />
@@ -11,12 +11,14 @@
       <File FileName="Assets/Script/Item/Fireball.cs" />
       <File FileName="Assets/Script/Item/FireBallExplosion.cs" />
       <File FileName="Assets/Script/Enemy/Enemy.cs" />
-      <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" Line="78" Column="1" />
+      <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" Line="13" Column="1" />
+      <File FileName="Assets/Script/Enemy/EnemyBird.cs" />
+      <File FileName="Assets/Shader/Flame.shader" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="174fd923-189b-41fe-bc02-0a4010dc5dd8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="66a325e2-fadc-460d-88ef-6dac7106d093" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
