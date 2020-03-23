@@ -71,12 +71,21 @@ public class Player : MonoBehaviour {
         SkillAttack();
         //Climb();
         Jump();
+        CreateShadow();
     }
-    void SkillAttack() {
-        if (Input.GetKeyDown(KeyCode.K)) {
+
+    private void CreateShadow() {
+        if (Input.GetKeyDown(KeyCode.L)) {
             GameManger.instance.skillParticleCreator.CreateFireball(AttackPoint.position, new Vector2(transform.GetComponent<Player>().dir, 0));
         }
     }
+
+    void SkillAttack() {
+        if (Input.GetKeyDown(KeyCode.K)) {
+            GameManger.instance.skillParticleCreator.CreateShadow(transform.position);
+        }
+    }
+
     void AirAttack() {
         if (isGrounded) {
             if (currentState.IsName("AirAttack3")) {

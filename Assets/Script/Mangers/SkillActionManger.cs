@@ -33,7 +33,7 @@ public class SkillActionManger : MonoBehaviour
     }
     public void Fireball()
     {      
-        GameManger.instance.skillParticleCreator.CreateFireball(GameManger.instance.playerScript.AttackPoint.position, new Vector2(GameManger.instance.player.transform.GetComponent<PlayerController>().dir, 0));
+        GameManger.instance.skillParticleCreator.CreateFireball(GameManger.instance.playerScript.AttackPoint.position, new Vector2(GameManger.instance.player.transform.GetComponent<Player>().dir, 0));
     }
     public void Jinhua()
     {
