@@ -15,9 +15,9 @@ public class EnemyBirdFireBall : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Vector3 pos = collision.contacts[0].point;
-        if (collision.gameObject.CompareTag(Util.Enemy))
+        if (collision.gameObject.CompareTag(Util.playerTag))
         {
-            collision.gameObject.GetComponent<Enemy>().BeAttacked(35);
+            collision.gameObject.GetComponent<Player>().BeAttacked(attack);
         }
         var boom = Instantiate(Boom, pos, Quaternion.identity);
         Destroy(gameObject);

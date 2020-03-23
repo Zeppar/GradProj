@@ -23,7 +23,7 @@ public class EnemyBird : Enemy
 
         if (hit.collider != null)
         {
-            print(hit.collider.gameObject.name);
+       
             transform.position = new Vector2(transform.position.x + speed * Time.deltaTime * dir, transform.position.y);
         }
         else//飞行过高降低
@@ -40,17 +40,19 @@ public class EnemyBird : Enemy
         if (move_hit.collider != null)
         {
             dir = -dir;
-            transform.localScale = new Vector2(-transform.localScale.x,transform.localScale.y);
-            print("砖头");
-            return;
+            transform.localScale = new Vector2(dir * 7,transform.localScale.y);
+            print("砖头");         
         }
+      
 
 
 
     }
     public override void Chase()
     {
+       
         transform.GetComponent<SpriteRenderer>().color = Color.red;
+        //转向
         if (transform.position.x>= GameManger.instance.player.transform.position.x)
         {
             dir = -1;
@@ -60,8 +62,19 @@ public class EnemyBird : Enemy
         {
             dir = 1;          
         }
-        transform.localScale = new Vector2(dir * transform.localScale.x, transform.localScale.y);
-        print(dir);
+        transform.localScale = new Vector2(dir * 7, transform.localScale.y);
+
+        //高度
+        if (transform.position.y > GameManger.instance.player.transform.position.y)
+        {
+
+            transform.position = new Vector2(transform.position.x, transform.position.y - speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = new Vector2(transform.position.x, transform.position.y + speed * Time.deltaTime);
+        }
+
         Attack();
     }
     public override void Attack()
@@ -73,7 +86,19 @@ public class EnemyBird : Enemy
         GameObject fireball = Instantiate(Fireball);
         fireball.transform.position = AttackPoint.position;
         fireball.GetComponent<EnemyBirdFireBall>().vector2_dir = new Vector2(dir, 0);
+        fireball.GetComponent<EnemyBirdFireBall>().attack = attack;
         lastAttackTime = Time.time;
         ResetAttackState();
+    }
+    public override void BeAttacked(int IntCount)
+    {
+        
+        base.BeAttacked(IntCount);
+        isHurt = false;
+    }
+    public override void Die()
+    {
+        base.Die();
+        Destroy(gameObject);
     }
 }

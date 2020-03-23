@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8757386055501578819}
   - component: {fileID: 8757386055501578818}
   - component: {fileID: 8757386055501578817}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4767,9 +4767,9 @@ GameObject:
   - component: {fileID: 8757386055909687270}
   - component: {fileID: 8757386055909687269}
   - component: {fileID: 1958041301859255831}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fireball
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

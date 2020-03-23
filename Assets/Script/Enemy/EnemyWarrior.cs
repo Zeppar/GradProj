@@ -62,8 +62,6 @@ public class EnemyWarrior : Enemy {
         }
     }
 
-
-
     public override void BeAttacked(int IntCount) {
         if (HP > 0) {
             base.BeAttacked(IntCount);

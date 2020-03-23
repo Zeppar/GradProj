@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2867904005463757672}
   - component: {fileID: 2867904005457331930}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 2867904005463765052}
   - component: {fileID: 2867904005449669622}
   - component: {fileID: 2867904005447623638}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SmokeTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4731,7 +4731,7 @@ GameObject:
   - component: {fileID: 2867904005463865712}
   - component: {fileID: 2867904005449601016}
   - component: {fileID: 2867904005447740830}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9350,7 +9350,7 @@ GameObject:
   - component: {fileID: 2867904005463823520}
   - component: {fileID: 2867904005449704724}
   - component: {fileID: 2867904005447736918}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ExtraGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14090,9 +14090,10 @@ GameObject:
   - component: {fileID: 4184513206275178204}
   - component: {fileID: 8449607218428121932}
   - component: {fileID: 3943133570021839138}
-  m_Layer: 0
+  - component: {fileID: -3905740646398400513}
+  m_Layer: 10
   m_Name: FireballBlue
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18832,3 +18833,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-3905740646398400513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2867904005463601258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f0d24fde8ef4ffe9df2bd0b80d70b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

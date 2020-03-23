@@ -261,10 +261,11 @@ public class Player : MonoBehaviour {
         //}
 
     }
-
-    void Die() {
+    void Die()
+    {
         dead = true;
         anim.SetBool("Dead", true);
+        UIManger.instance.gameOverPanel.SetActive(true);
     }
 
     public void BeAttacked(int _attack) {

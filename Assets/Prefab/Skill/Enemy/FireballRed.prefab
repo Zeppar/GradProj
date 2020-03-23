@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4448689578862067901}
   - component: {fileID: 4448689578862067874}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 4448689579767216950}
   - component: {fileID: 4448689579767216948}
   - component: {fileID: 4448689579767216951}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ExtraGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4839,7 +4839,7 @@ GameObject:
   - component: {fileID: 4448689579820854854}
   - component: {fileID: 4448689579820854852}
   - component: {fileID: 4448689579820854855}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9453,9 +9453,10 @@ GameObject:
   - component: {fileID: 4448689579823373883}
   - component: {fileID: 4448689579823373880}
   - component: {fileID: 4448689579823373878}
-  m_Layer: 0
+  - component: {fileID: 8935371862490385751}
+  m_Layer: 10
   m_Name: FireballRed
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14201,10 +14202,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f1e0bf7b9da804094d10179cf1dd2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5000
+  speed: 6000
   attack: 35
   Boom: {fileID: 107778, guid: e7ce512db4b74334bad6ab71b1e8655e, type: 3}
   vector2_dir: {x: 1, y: 0}
+--- !u!114 &8935371862490385751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448689579823373873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f0d24fde8ef4ffe9df2bd0b80d70b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4448689580020084260
 GameObject:
   m_ObjectHideFlags: 0
@@ -14216,7 +14229,7 @@ GameObject:
   - component: {fileID: 4448689580020084261}
   - component: {fileID: 4448689580020084267}
   - component: {fileID: 4448689580020084266}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SmokeTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
