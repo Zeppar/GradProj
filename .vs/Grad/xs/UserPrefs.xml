@@ -5,18 +5,18 @@
       <File FileName="Assets/Script/UI/BagPanel.cs" />
       <File FileName="Assets/Script/Mangers/GameManger.cs" />
       <File FileName="Assets/Script/Mangers/UIManger.cs" />
-      <File FileName="Assets/Script/Player/Player.cs" Line="56" Column="17" />
+      <File FileName="Assets/Script/Player/Player.cs" />
       <File FileName="Assets/Script/Mangers/Terrain/Trap/Stab.cs" />
       <File FileName="Assets/Script/Mangers/SkillParticleCreator.cs" />
       <File FileName="Assets/Script/Item/Fireball.cs" />
-      <File FileName="Assets/Script/Item/FireBallExplosion.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="57" Column="9" />
-      <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" Line="57" Column="43" />
+      <File FileName="Assets/Script/Item/FireBallExplosion.cs" />
+      <File FileName="Assets/Script/Enemy/Enemy.cs" />
+      <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" Line="78" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f0d9105c-bfa4-40ff-9b46-24f287b23e4b" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="174fd923-189b-41fe-bc02-0a4010dc5dd8" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

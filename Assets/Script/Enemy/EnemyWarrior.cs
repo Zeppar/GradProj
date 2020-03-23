@@ -50,12 +50,15 @@ public class EnemyWarrior : Enemy {
     }
 
     public void CheckAttackPlayer() {
-        Collider2D coll = Physics2D.OverlapCircle(AttackPoint.position, range);
-        if (coll == null) { return; }
+        Collider2D[] collArr = Physics2D.OverlapBoxAll(AttackPoint.position, new Vector2(range, range), 0);
+        if (collArr.Length == 0) { return; }
 
-        if (coll.CompareTag("Player")) {
-            Player.GetComponent<Player>().BeAttacked(10);
-            iTween.MoveBy(Player, iTween.Hash("x", dir*2, "y", 1, "looktime", 0.5f));
+        foreach (var coll in collArr) {
+            if (coll.CompareTag("Player")) {
+                Player.GetComponent<Player>().BeAttacked(10);
+                iTween.MoveBy(Player, iTween.Hash("x", dir * 2, "y", 1, "looktime", 0.5f));
+                break;
+            }
         }
     }
 

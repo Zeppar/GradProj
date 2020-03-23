@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
     public int maxHP;
     public int attack;
     public float range;
@@ -41,7 +40,7 @@ public class Player : MonoBehaviour
     private AnimatorStateInfo currentState;
     private Animator anim;
     private Rigidbody2D rb;
- 
+
     private float moveInput;
     private bool isGrounded;
     private bool isJump = false;
@@ -53,8 +52,7 @@ public class Player : MonoBehaviour
     private float jumpTimeCounter;
     public float jumpTime;
 
-    void Start()
-    {
+    void Start() {
         HP = maxHP;
         anim = GetComponent<Animator>();
         currentState = anim.GetCurrentAnimatorStateInfo(0);
@@ -65,8 +63,7 @@ public class Player : MonoBehaviour
         Move();
     }
 
-    void Update()
-    {
+    void Update() {
         currentState = anim.GetCurrentAnimatorStateInfo(0);
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, groundLayer);
         AirAttack();
@@ -82,7 +79,7 @@ public class Player : MonoBehaviour
     }
     void AirAttack() {
         if (isGrounded) {
-            if(currentState.IsName("AirAttack3")) {
+            if (currentState.IsName("AirAttack3")) {
                 anim.SetInteger("Attack", 4);
             }
             return;
@@ -98,16 +95,16 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J)) {
             if (currentState.IsName("Jump") && attackCount == 0) {
-                rb.velocity = new Vector2(0, 7.5f);
+                AddVertVelocity(7.5f);
                 anim.SetInteger("Attack", 1);
                 attackCount = 1;
             } else if (currentState.IsName("AirAttack1") && attackCount == 1 && currentState.normalizedTime > 0.5F) {
-                rb.velocity = new Vector2(0, 12.5f);
+                AddVertVelocity(13.5f);
                 anim.SetInteger("Attack", 2);
                 attackCount = 2;
             } else if (currentState.IsName("AirAttack2") && attackCount == 2 && currentState.normalizedTime > 0.5F) {
+                AddVertVelocity(-20.5f);
                 anim.SetInteger("Attack", 3);
-                rb.velocity = new Vector2(0, -20.5f);
                 attackCount = 3;
             }
             Collider2D coll = Physics2D.OverlapCircle(AttackPoint.position, range);
@@ -133,13 +130,15 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J)) {
             if ((currentState.IsName("Idle") || currentState.IsName("Walk")) && attackCount == 0) {
-                rb.velocity = new Vector2(rb.velocity.x * 0.5f, rb.velocity.y);
+                AddHoriVelocity(dir * 2.0f);
                 anim.SetInteger("Attack", 1);
                 attackCount = 1;
             } else if (currentState.IsName("Attack1") && attackCount == 1 && currentState.normalizedTime > 0.5F && currentState.normalizedTime < 1.5f) {
+                AddHoriVelocity(dir * 3.0f);
                 anim.SetInteger("Attack", 2);
                 attackCount = 2;
             } else if (currentState.IsName("Attack2") && attackCount == 2 && currentState.normalizedTime > 0.5F && currentState.normalizedTime < 1.0f) {
+                AddHoriVelocity(dir * 5.0f);
                 anim.SetInteger("Attack", 3);
                 attackCount = 3;
             }
@@ -151,6 +150,8 @@ public class Player : MonoBehaviour
 
     }
 
+
+    private RaycastHit2D[] results = new RaycastHit2D[1];
     private void Move() {
         if (isClimb)
             return;
@@ -158,10 +159,12 @@ public class Player : MonoBehaviour
             return;
         moveInput = Input.GetAxisRaw("Horizontal");
         //moveParticle.gameObject.SetActive(isGrounded);
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        if (moveInput != 0) {
+        if (rb.Cast(new Vector2(moveInput, 0), results, 1.0f) <= 0)
+            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+        if (!Mathf.Approximately(moveInput, 0)) {
             anim.SetBool("Walk", true);
-        } else if (isJump == false) {
+        } else {
             anim.SetBool("Walk", false);
         }
         if (transform.position.y <= -40)//玩家过低销毁玩家
@@ -206,17 +209,14 @@ public class Player : MonoBehaviour
         //jumpParticle.gameObject.SetActive(!isGrounded);
         anim.SetBool("IsGround", isGrounded);
         if (moveInput > 0) {
-            //transform.eulerAngles = new Vector2(0, 0);
             transform.rotation = new Quaternion(0, 0, 0, 0);
             dir = 1;
         } else if (moveInput < 0) {
-            //transform.eulerAngles = new Vector2(0, 180);
             transform.rotation = new Quaternion(0, 180, 0, 0);
             dir = -1;
         }
 
         if (isGrounded == true) {
-
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
                 anim.SetTrigger("Jump");
                 attackCount = 0;
@@ -224,15 +224,17 @@ public class Player : MonoBehaviour
                 isJump = true;
                 jumpTimeCounter = jumpTime;
                 rb.velocity = Vector2.up * jumpForce;
-
                 //source.PlayOneShot(Jump);
             }
-        } else {
-            isJump = false;
         }
 
+        // TOOD
+        //if (isJump && rb.velocity.y < -0.1f) {
+        //    rb.velocity = Vector2.up * jumpForce * -1.2f;
+        //}
+
         //if (isJump == true) {
-            
+
         //    if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
         //        if (jumpTimeCounter > 0) {
         //            rb.velocity = Vector2.up * jumpForce;
@@ -250,16 +252,14 @@ public class Player : MonoBehaviour
 
     }
 
-    void Die()
-    {
+    void Die() {
         dead = true;
         anim.SetBool("Dead", true);
     }
 
-    public void BeAttacked(int _attack)
-    {
+    public void BeAttacked(int _attack) {
         HP -= _attack;
-        if(HP > 0)
+        if (HP > 0)
             anim.SetTrigger("Hurt");
     }
 
@@ -271,5 +271,13 @@ public class Player : MonoBehaviour
     public void ResetAttackCount() {
         attackCount = 0;
         anim.SetInteger("Attack", attackCount);
+    }
+
+    private void AddHoriVelocity(float val) {
+        rb.velocity = new Vector2(val, 0);
+    }
+
+    private void AddVertVelocity(float val) {
+        rb.velocity = new Vector2(0, val);
     }
 }
