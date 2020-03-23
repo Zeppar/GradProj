@@ -54,7 +54,7 @@ public class EnemyWarrior : Enemy {
         if (coll == null) { return; }
 
         if (coll.CompareTag("Player")) {
-            Player.GetComponent<Player>().BeAttacked(10);
+            Player.GetComponent<Player>().BeAttacked(attack);
             iTween.MoveBy(Player, iTween.Hash("x", dir*2, "y", 1, "looktime", 0.5f));
         }
     }

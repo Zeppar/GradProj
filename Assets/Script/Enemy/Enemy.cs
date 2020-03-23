@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour {
     public bool dead = false;
     public bool isAttacking = false;
     public bool isHurt = false;
-
+    public int attack = 7;
     public int HP {
         get { return _HP; }
         set {
@@ -84,10 +84,13 @@ public class Enemy : MonoBehaviour {
     }
 
     public virtual void BeAttacked(int IntCount) {
-        isHurt = true;
-        HP -= IntCount;
-        rd.AddForce(new Vector2(100000, 1000));
-        ResetAttackState();
+        if (HP > 0)
+        {
+            isHurt = true;
+            HP -= IntCount;
+            rd.AddForce(new Vector2(100000, 1000));
+            ResetAttackState();
+        }
     }
 
     public virtual void Seek() {

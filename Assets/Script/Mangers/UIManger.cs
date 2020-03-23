@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class UIManger : MonoBehaviour {
 
@@ -29,7 +29,8 @@ public class UIManger : MonoBehaviour {
     public GameObject BagPanel_Obj;
     public GameObject Cheat_Obj;
 
-
+    [Header("死亡界面")]
+    public GameObject gameOverPanel;
     public static UIManger instance;
 
 
@@ -94,7 +95,7 @@ public class UIManger : MonoBehaviour {
     }
 
     public void LoadLevel(int index) {
-
+        SceneManager.LoadScene(index);
     }
 
 
