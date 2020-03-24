@@ -8,6 +8,7 @@ TagManager:
   - Trap
   - Bullet
   - PBullet
+  - OBS
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - 
   - Ground
   - Trap
-  - Bullet
-  - 
+  - Bullut
+  - Enemy
   - 
   - 
   - 

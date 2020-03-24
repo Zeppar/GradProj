@@ -49,6 +49,10 @@ public class EnemyWarrior : Enemy {
         lastAttackTime = Time.time;
     }
 
+    public override bool ShouldChase() {
+        return Vector2.Distance(Player.transform.position, transform.position) < chaseDis;
+    }
+
     public void CheckAttackPlayer() {
         Collider2D[] collArr = Physics2D.OverlapBoxAll(AttackPoint.position, new Vector2(range, range), 0);
         if (collArr.Length == 0) { return; }

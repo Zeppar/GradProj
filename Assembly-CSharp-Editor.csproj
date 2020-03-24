@@ -349,6 +349,9 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="PackageManagerAssembly">
+      <HintPath>/Users/magene/Desktop/Grad/Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
+    </Reference>
     <Reference Include="LitJson">
       <HintPath>/Users/magene/Desktop/Grad/Assets/Plus/LitJson/LitJson.dll</HintPath>
     </Reference>
@@ -357,9 +360,6 @@
     </Reference>
     <Reference Include="DOTweenEditor">
       <HintPath>/Users/magene/Desktop/Grad/Assets/Plus/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="PackageManagerAssembly">
-      <HintPath>/Users/magene/Desktop/Grad/Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>/Users/magene/Desktop/Grad/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

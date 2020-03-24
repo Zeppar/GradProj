@@ -62,16 +62,24 @@ public class Enemy : MonoBehaviour {
         MoveOperation();
     }
 
+    public virtual bool ShouldChase() {
+        return true;
+    }
+
     private void MoveOperation() {
-        if (Player != null && Vector2.Distance(Player.transform.position, transform.position) < chaseDis) {
+        if (Player != null && ShouldChase()) {
             if (Vector2.Distance(Player.transform.position, transform.position) > attackRange) {
                 Chase();
-                if (anim != null) { anim.SetBool("Walk", true); }
-             
+                if (anim != null) {
+                    anim.SetBool("Walk", true);
+                }
+
             } else {
-                if (anim != null) { anim.SetBool("Walk", false); }
+                if (anim != null) {
+                    anim.SetBool("Walk", false);
+                }
                 Attack();
-              
+
             }
         } else {
             Seek();
