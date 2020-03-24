@@ -51,6 +51,13 @@ public class EnemyBird : Enemy
     {
 
         //尝试不让怪物穿墙
+        Debug.DrawLine(transform.position, GameManger.instance.player.transform.position, Color.red, 1f);
+        bool grounded = Physics2D.Linecast(transform.position, GameManger.instance.player.transform.position, LayerMask.GetMask("Ground"));
+        if (grounded)
+        {
+            Seek();
+            return;
+        }
 
 
         transform.GetComponent<SpriteRenderer>().color = Color.red;
