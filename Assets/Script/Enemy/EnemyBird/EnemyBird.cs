@@ -16,8 +16,7 @@ public class EnemyBird : Enemy
     public Transform AttackPoint;
     public override void Seek()
     {
-        //转头
-
+       
         transform.GetComponent<SpriteRenderer>().color = Color.white;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(dir*-0.5f, -1), birdHight, LayerMask.GetMask("Ground"));
 
@@ -50,7 +49,10 @@ public class EnemyBird : Enemy
     }
     public override void Chase()
     {
-       
+
+        //尝试不让怪物穿墙
+
+
         transform.GetComponent<SpriteRenderer>().color = Color.red;
         //转向
         if (transform.position.x>= GameManger.instance.player.transform.position.x)
