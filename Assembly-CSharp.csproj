@@ -324,12 +324,15 @@
     <Compile Include="Assets\Script\Mangers\UIKeyManger.cs" />
     <Compile Include="Assets\Script\Mangers\UIManger.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
+    <Compile Include="Assets\Script\Player\Player3D.cs" />
     <Compile Include="Assets\Script\Player\PlayerController.cs" />
     <Compile Include="Assets\Script\UI\BagItem.cs" />
     <Compile Include="Assets\Script\UI\BagPanel.cs" />
     <Compile Include="Assets\Script\UI\GoodItem.cs" />
+    <Compile Include="Assets\Script\UI\HelpItem.cs" />
     <Compile Include="Assets\Script\UI\SkillData.cs" />
     <Compile Include="Assets\Script\UI\SlotData.cs" />
+    <Compile Include="Assets\Script\UI\describePanel.cs" />
     <Compile Include="Assets\Script\Util.cs" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UIAdditive.shader" />
     <None Include="Assets\Sprite\Effects\wills_pixel_explosions_sample\round_explosion\spritesheet\spritesheet.txt" />

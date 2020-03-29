@@ -53,12 +53,17 @@ public class Player : MonoBehaviour
     private float jumpTimeCounter;
     public float jumpTime;
 
+    [Header("音频")]
+    private AudioSource audioSource;
+    public AudioClip attackAudio;
+
     void Start()
     {
         HP = maxHP;
         anim = GetComponent<Animator>();
         currentState = anim.GetCurrentAnimatorStateInfo(0);
         rb = gameObject.GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void FixedUpdate() {
@@ -95,6 +100,7 @@ public class Player : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.J)) {
+           
             if (currentState.IsName("Jump") && attackCount == 0) {
                 rb.velocity = new Vector2(0, 7.5f);
                 anim.SetInteger("Attack", 1);
@@ -112,11 +118,13 @@ public class Player : MonoBehaviour
 
             if (coll != null && coll.CompareTag("Enemy") && !coll.GetComponent<Enemy>().dead) {
                 coll.GetComponent<Enemy>().BeAttacked(attack);
+              
             }
         }
 
     }
     void GroundAttack() {
+      
         if (!isGrounded)
             return;
 
@@ -129,25 +137,52 @@ public class Player : MonoBehaviour
             attackCount = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.J)) {
-            if ((currentState.IsName("Idle") || currentState.IsName("Walk")) && attackCount == 0) {
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+
+            if (currentState.IsName("Attack3") && attackCount == 3 && currentState.normalizedTime > 0.5F && currentState.normalizedTime < 1.5f)
+            {
+                anim.SetInteger("Attack", 1);
+                attackCount = 1;
+                audioSource.clip = attackAudio;
+                audioSource.Play();
+            }
+            else if ((currentState.IsName("Idle") || currentState.IsName("Walk")) && attackCount == 0)
+            {
                 rb.velocity = new Vector2(rb.velocity.x * 0.5f, rb.velocity.y);
                 anim.SetInteger("Attack", 1);
                 attackCount = 1;
-            } else if (currentState.IsName("Attack1") && attackCount == 1 && currentState.normalizedTime > 0.5F && currentState.normalizedTime < 1.5f) {
+                audioSource.clip = attackAudio;
+                audioSource.Play();
+            }
+            else if (currentState.IsName("Attack1") && attackCount == 1 && currentState.normalizedTime > 0.5F && currentState.normalizedTime < 1.5f)
+            {
                 anim.SetInteger("Attack", 2);
                 attackCount = 2;
-            } else if (currentState.IsName("Attack2") && attackCount == 2 && currentState.normalizedTime > 0.5F && currentState.normalizedTime < 1.0f) {
+                audioSource.clip = attackAudio;
+                audioSource.Play();
+            }
+            else if (currentState.IsName("Attack2") && attackCount == 2 && currentState.normalizedTime > 0.5F && currentState.normalizedTime < 1f)
+            {
                 anim.SetInteger("Attack", 3);
                 attackCount = 3;
+                audioSource.clip = attackAudio;
+                audioSource.Play();
             }
+
+
+
+
             Collider2D coll = Physics2D.OverlapCircle(AttackPoint.position, range);
-            if (coll != null && coll.CompareTag("Enemy") && !coll.GetComponent<Enemy>().dead) {
+            if (coll != null && coll.CompareTag("Enemy") && !coll.GetComponent<Enemy>().dead)
+            {
                 coll.GetComponent<Enemy>().BeAttacked(attack);
             }
+
+        }
         }
 
-    }
+    
 
     private void Move() {
         if (isClimb)
@@ -250,7 +285,7 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        print("aa");
+
         dead = true;
         anim.SetBool("Dead", true);
         UIManger.instance.gameOverPanel.SetActive(true);

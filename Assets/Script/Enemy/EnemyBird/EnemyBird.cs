@@ -14,9 +14,12 @@ public class EnemyBird : Enemy
     public float attackInterval;
     private float lastAttackTime = 0;
     public Transform AttackPoint;
+
+    [Header("其他")]
+    public bool isSeek = true;
     public override void Seek()
     {
-       
+        if (!isSeek) { return; }
         transform.GetComponent<SpriteRenderer>().color = Color.white;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(dir*-0.5f, -1), birdHight, LayerMask.GetMask("Ground"));
 
@@ -51,7 +54,7 @@ public class EnemyBird : Enemy
     {
 
         //尝试不让怪物穿墙
-        Debug.DrawLine(transform.position, GameManger.instance.player.transform.position, Color.red, 1f);
+        Debug.DrawLine(transform.position, GameManger.instance.player.transform.position, Color.red);
         bool grounded = Physics2D.Linecast(transform.position, GameManger.instance.player.transform.position, LayerMask.GetMask("Ground"));
         if (grounded)
         {

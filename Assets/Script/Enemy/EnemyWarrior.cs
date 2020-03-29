@@ -27,7 +27,8 @@ public class EnemyWarrior : Enemy {
     public LayerMask whatIsGround;
     public bool isGrounded =true;
 
-
+    [Header("其他")]
+    public bool isSeek = true;
     //私有成员
     private int dir = -1;//玩家方向
     public override void Begin() {
@@ -72,6 +73,7 @@ public class EnemyWarrior : Enemy {
     }
 
     public override void Seek() {//巡逻
+        if (!isSeek) { return; }
         
         anim.SetBool("Walk", true);
         int count = rd.Cast(new Vector2(dir * 5, 0), contactFilter, resultArr, 5 + 0.01f);

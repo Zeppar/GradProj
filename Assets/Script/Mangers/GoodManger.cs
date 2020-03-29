@@ -15,6 +15,7 @@ public class GoodManger
 
     public void AddItemToPanel(GoodInfo.GoodType _goodType,int id)
     {
+        UIManger.instance.GotItemHelpText.SetActive(true);
         for (int i = 0; i < goodInfoList.Count; i++) //还未检查检查检查检查检查
         {
             if(goodInfoList[i].goodInfo!= null &&

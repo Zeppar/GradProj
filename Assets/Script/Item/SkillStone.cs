@@ -22,11 +22,20 @@ public class SkillStone : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        
+    private void OnTriggerStay2D(Collider2D collision) {
+      
         if (collision.CompareTag(Util.playerTag)) {
-            GameManger.instance.skillManager.AddSkill(skillInfo);
-            Destroy(gameObject);
+            UIManger.instance.GetItemHelp.SetActive(true);
+            if (Input.GetKey(KeyCode.E))
+            {
+                GameManger.instance.goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, skillInfo.ID);
+
+                Destroy(gameObject);
+            }
         }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+         UIManger.instance.GetItemHelp.SetActive(false);
     }
 }

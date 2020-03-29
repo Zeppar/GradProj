@@ -13,7 +13,7 @@
 		"title": "进化#1",
 		"value": 100,
 		"range": 5,
-		"describe": "提升攻击属性",
+		"describe": "增加血量",
 		"icon": "Icon/Skill/JinHua",
 		"action": "Jinhua"
 	},
@@ -22,7 +22,7 @@
 		"title": "万箭齐发#2",
 		"value": 100,
 		"range": 5,
-		"describe": "射出前方射出20只箭",
+		"describe": "<color=red>此技能正在开发中....</color>",
 		"icon": "Icon/Skill/WanJianQiFa",
 		"action": "SkillAction/WanJianQiFa"
 		
