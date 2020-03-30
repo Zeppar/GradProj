@@ -2,30 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillStone : MonoBehaviour
-{
-  
-   
-  public SkillInfo skillInfo;
-    private void Awake()
-    {
-     
-    }
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public class SkillStone : MonoBehaviour {
+    public SkillInfo skillInfo;
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        
-        if (collision.CompareTag(Util.playerTag)) {
-            GameManger.instance.skillManager.AddSkill(skillInfo);
+
+        if (collision.CompareTag(Util.TagCollection.playerTag)) {
+            GameManager.instance.skillManager.AddSkill(skillInfo);
             Destroy(gameObject);
         }
     }

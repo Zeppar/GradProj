@@ -38,12 +38,8 @@ public class UIManger : MonoBehaviour {
         instance = this;
         bagPanel.InitSlot();
     }
-    private void Start() {
-
-    }
     private void Update() {
-        //UpdataSkillIcon(GameManger.instance.skillManager.currentSkillList);
-        UpdateHpBar(GameManger.instance.playerScript.HP);
+        UpdateHpBar(GameManager.instance.player.HP);
     }
 
     //技能图标更新

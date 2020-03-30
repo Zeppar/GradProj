@@ -14,7 +14,7 @@ public class SkillManager
 
     public void InitSkill(){
 
-        JsonData skilldata = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/Json/Skill.json"));
+        JsonData skilldata = JsonMapper.ToObject(Resources.Load<TextAsset>("Skill/Skill").text);
         for (int i = 0; i < skilldata.Count; i++){
             SkillInfo info = new SkillInfo();
             info.ID = (int)skilldata[i]["id"];
@@ -28,7 +28,6 @@ public class SkillManager
             Icon_List.Add(Resources.Load<Sprite>(info.Icon));
             //加载图标
         }
-        Debug.Log("已完成技能加载，共加载到了 " + skill_Dic.Count + " 个技能");
     }
 
     public SkillInfo FindSkillWithID(int _id)

@@ -33,7 +33,7 @@ public class GoodItem : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragH
     public void OnEndDrag(PointerEventData eventData)
     {
        
-        transform.SetParent(GameManger.instance.goodManger.goodInfoList[SlotInedx].transform);
+        transform.SetParent(GameManager.instance.goodManger.goodInfoList[SlotInedx].transform);
         transform.position = transform.parent.position;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
     }

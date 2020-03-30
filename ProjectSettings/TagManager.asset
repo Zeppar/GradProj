@@ -9,6 +9,8 @@ TagManager:
   - Bullet
   - PBullet
   - OBS
+  - NPC
+  - Prize
   layers:
   - Default
   - TransparentFX
@@ -20,10 +22,10 @@ TagManager:
   - 
   - Ground
   - Trap
-  - Bullut
+  - PlayerBullut
+  - EnemyBullet
   - Enemy
-  - 
-  - 
+  - Player
   - 
   - 
   - 
