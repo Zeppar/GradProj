@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2867904005463757672}
   - component: {fileID: 2867904005457331930}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2867904005463757672
 Transform:
   m_ObjectHideFlags: 0
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 2867904005463765052}
   - component: {fileID: 2867904005449669622}
   - component: {fileID: 2867904005447623638}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: SmokeTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4731,7 +4731,7 @@ GameObject:
   - component: {fileID: 2867904005463865712}
   - component: {fileID: 2867904005449601016}
   - component: {fileID: 2867904005447740830}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FireTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9350,7 +9350,7 @@ GameObject:
   - component: {fileID: 2867904005463823520}
   - component: {fileID: 2867904005449704724}
   - component: {fileID: 2867904005447736918}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ExtraGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14091,7 +14091,7 @@ GameObject:
   - component: {fileID: 8449607218428121932}
   - component: {fileID: 3943133570021839138}
   - component: {fileID: -3905740646398400513}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FireballBlue
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -14113,6 +14113,7 @@ Transform:
   - {fileID: 2867904005463765052}
   - {fileID: 2867904005463823520}
   - {fileID: 2867904005463757672}
+  - {fileID: 8738785923953444575}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -18845,3 +18846,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f0d24fde8ef4ffe9df2bd0b80d70b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6568225771980925319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8738785923953444575}
+  - component: {fileID: 1017125972067135483}
+  m_Layer: 0
+  m_Name: Point Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8738785923953444575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6568225771980925319}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2867904005463738982}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1017125972067135483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6568225771980925319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 0, g: 0.16732645, b: 1, a: 1}
+  m_Intensity: 2
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.76
+  m_PointLightOuterRadius: 3.39
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
