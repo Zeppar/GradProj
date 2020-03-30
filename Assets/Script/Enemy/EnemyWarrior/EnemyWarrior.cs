@@ -80,18 +80,17 @@ public class EnemyWarrior : Enemy {
     }
 
     public override void Chase() {//追逐
-        int curDir = 0;
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);//同步是否在地面
         if (!isGrounded)
         {        return; }
         anim.SetBool("Walk", true);
         if(GameManager.instance.player.transform.position.x > transform.position.x + 0.5f) {
-            curDir = 1;
+            dir = 1;
         } else if(GameManager.instance.player.transform.position.x < transform.position.x - 0.5f) {
-            curDir = -1;
+            dir = -1;
         }
-        transform.position = new Vector2(transform.position.x + speed * Time.deltaTime * curDir, transform.position.y);
-        transform.localScale = new Vector2(curDir * 10, transform.localScale.y);
+        transform.position = new Vector2(transform.position.x + speed * Time.deltaTime * dir, transform.position.y);
+        transform.localScale = new Vector2(dir * 10, transform.localScale.y);
     }
 
     public override void Die() {
