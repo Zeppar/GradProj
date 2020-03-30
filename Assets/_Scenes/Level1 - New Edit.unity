@@ -1394,6 +1394,8 @@ MonoBehaviour:
   BagPanel_Obj: {fileID: 1070005316}
   Cheat_Obj: {fileID: 759207162}
   gameOverPanel: {fileID: 491546097}
+  GetItemHelp: {fileID: 0}
+  GotItemHelpText: {fileID: 0}
 --- !u!4 &446304791
 Transform:
   m_ObjectHideFlags: 0
@@ -76294,6 +76296,7 @@ MonoBehaviour:
     m_Bits: 256
   dir: 1
   feetCollider: {fileID: 150631123214415274}
+  attackAudio: {fileID: 0}
 --- !u!70 &150631123205175265
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
