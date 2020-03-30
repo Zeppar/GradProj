@@ -45,11 +45,16 @@ public class Player : MonoBehaviour {
     public int dir = 1;
     public BoxCollider2D feetCollider;
 
+    [Header("音频")]
+    private AudioSource audioSource;
+    public AudioClip attackAudio;
+
     void Start() {
         HP = maxHP;
         anim = GetComponent<Animator>();
         currentState = anim.GetCurrentAnimatorStateInfo(0);
         rb = gameObject.GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void FixedUpdate() {
@@ -73,7 +78,7 @@ public class Player : MonoBehaviour {
     }
 
     private void SwitchFall() {
-        if(currentState.IsName("Jump") && !isGrounded && rb.velocity.y < -0.1f) {
+        if (currentState.IsName("Jump") && !isGrounded && rb.velocity.y < -0.1f) {
             anim.SetTrigger("Fall");
         }
     }
@@ -157,7 +162,7 @@ public class Player : MonoBehaviour {
     private void SetAttackVal(int value) {
         attackCount = value;
         anim.SetInteger("Attack", value);
-        
+
     }
 
     RaycastHit2D[] results = new RaycastHit2D[1];
@@ -166,7 +171,7 @@ public class Player : MonoBehaviour {
             return;
         if (GetComponent<Player>().attackCount > 0)
             return;
-        
+
         if (transform.position.y < -40.0f) {
             Destroy(gameObject);
             return;
@@ -189,7 +194,7 @@ public class Player : MonoBehaviour {
 
 
         if (!Mathf.Approximately(moveInput, 0)) {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(moveInput * 1.2f, 0, 0), new Vector2(moveInput, 0),  0.1f);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(moveInput * 1.2f, 0, 0), new Vector2(moveInput, 0), 0.1f);
             if (hit.collider != null) {
                 rb.velocity = new Vector2(0, rb.velocity.y);
                 return;
@@ -248,8 +253,7 @@ public class Player : MonoBehaviour {
         }
 
     }
-    void Die()
-    {
+    void Die() {
         dead = true;
         anim.SetBool("Dead", true);
         UIManger.instance.gameOverPanel.SetActive(true);

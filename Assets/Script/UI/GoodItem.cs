@@ -40,14 +40,20 @@ public class GoodItem : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragH
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-
-       // describePanel.transform.position = Input.mousePosition;
-       // describePanel.SetActive(true);
+       
+       
+        describePanel.SetActive(true);
+        describePanel.transform.position = Input.mousePosition;
+        describePanel.GetComponent<describePanel>().Title.text = GameManager.instance.goodManger.goodInfoList[SlotInedx].goodInfo.skill.Title;
+        describePanel.GetComponent<describePanel>().Describe.text = GameManager.instance.goodManger.goodInfoList[SlotInedx].goodInfo.skill.Describe;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-       
-        ///describePanel.SetActive(false);
+
+        describePanel.SetActive(false);
+
     }
+
+  
 }

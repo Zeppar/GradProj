@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 
 public class UIManger : MonoBehaviour {
@@ -33,7 +32,9 @@ public class UIManger : MonoBehaviour {
     public GameObject gameOverPanel;
     public static UIManger instance;
 
-
+    [Header("提示界面")]
+    public GameObject GetItemHelp;
+    public GameObject GotItemHelpText;
     private void Awake() {
         instance = this;
         bagPanel.InitSlot();
