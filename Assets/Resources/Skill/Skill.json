@@ -2,7 +2,7 @@
 	{
 		"id": 0,
 		"title": "火球术#0",
-		"value": 10,
+		"value": 100,
 		"range": 5,
 		"describe": "向前面发射一个火球",
 		"icon": "Icon/Skill/HuoQiu",

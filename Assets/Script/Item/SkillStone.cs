@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class SkillStone : MonoBehaviour {
     public SkillInfo skillInfo;
+    public bool isEnter = false;
 
     private void OnTriggerEnter2D(Collider2D collision) {
 
         if (collision.CompareTag(Util.TagCollection.playerTag)) {
-            UIManger.instance.GetItemHelp.SetActive(true);
-            if (Input.GetKey(KeyCode.E)) {
-                GameManager.instance.goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, skillInfo.ID);
-
-                Destroy(gameObject);
-            }
+            isEnter = true;
+            UIManger.instance.GetItemHelp.SetActive(true);          
         }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
          UIManger.instance.GetItemHelp.SetActive(false);
+        isEnter = false;
+    }
+
+   
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.E) && isEnter)
+        {
+            GameManager.instance.goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, skillInfo.ID);
+
+            Destroy(gameObject);
+        }
+
     }
 }

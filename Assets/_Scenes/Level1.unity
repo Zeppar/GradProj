@@ -275,7 +275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52829102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 13.383333, y: 5.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 26230182158005365}
@@ -29543,7 +29543,7 @@ RectTransform:
   - {fileID: 1772786279}
   - {fileID: 1540814831}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -29658,7 +29658,7 @@ MonoBehaviour:
   maxHP: 100
   speed: 6
   dir: -1
-  attack: 7
+  attack: 4
   anim: {fileID: 0}
   rd: {fileID: 0}
   type: 0
@@ -29762,7 +29762,7 @@ MonoBehaviour:
   maxHP: 100
   speed: 6
   dir: -1
-  attack: 7
+  attack: 4
   anim: {fileID: 0}
   rd: {fileID: 0}
   type: 0
@@ -31193,7 +31193,7 @@ Transform:
   - {fileID: 137472580}
   - {fileID: 2137844350}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &696400941
 GameObject:
@@ -32311,7 +32311,7 @@ Transform:
   m_Children:
   - {fileID: 234895314}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &876698983
 GameObject:
@@ -32606,7 +32606,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &993602123
 GameObject:
@@ -32919,7 +32919,7 @@ Transform:
   m_Children:
   - {fileID: 1627400473}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1142393130
 GameObject:
@@ -35562,7 +35562,7 @@ Transform:
   - {fileID: 1163161358}
   - {fileID: 423663845}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1309590983
 GameObject:
@@ -129043,8 +129043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f44eeb50cf0d447a9ed80a1bfccfab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 20000
-  attack: 10
+  maxHP: 20
+  attack: 5
   range: 1
   attackInterval: 0.75
   dead: 0
@@ -129262,10 +129262,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07c36c4139a3d2042921018ba6d14331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 20
   speed: 5
   dir: -1
-  attack: 7
+  attack: 6
   anim: {fileID: 0}
   rd: {fileID: 0}
   type: 1

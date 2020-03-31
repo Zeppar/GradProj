@@ -14084,12 +14084,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2867904005463738982}
-  - component: {fileID: -7365009213323019058}
   - component: {fileID: 2867904005447625282}
   - component: {fileID: 2867904005449690268}
   - component: {fileID: 2867904005469381832}
   - component: {fileID: 8449607218428121932}
   - component: {fileID: 3943133570021839138}
+  - component: {fileID: -4814246484867119096}
   m_Layer: 10
   m_Name: PlayerFireBall
   m_TagString: Bullet
@@ -14115,19 +14115,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &-7365009213323019058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2867904005463601258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6efd5f9c1a3bb4f16ad7390e94d7b130, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack: 35
 --- !u!199 &2867904005447625282
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -18830,3 +18817,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4814246484867119096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2867904005463601258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcbd5c4b68937542bc753720fd756bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 0
+  tag: 
+  fireBallExplosion: 

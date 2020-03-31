@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Networking;
 
 public class Player : MonoBehaviour {
     public int maxHP;
@@ -84,13 +84,14 @@ public class Player : MonoBehaviour {
     }
 
     private void CreateShadow() {
+        return;
         if (Input.GetKeyDown(KeyCode.L)) {
-            GameManager.instance.skillParticleCreator.CreateFireball(attackPoint.position, new Vector2(dir, 0), 0.5f, Util.SkillCollection.playerFireBall);
+            //GameManager.instance.skillParticleCreator.CreateFireball(attackPoint.position, new Vector2(dir, 0), 0.5f, Util.SkillCollection.playerFireBall,attack);
         }
     }
 
     void SkillAttack() {
-        if (Input.GetKeyDown(KeyCode.K)) {
+        if (Input.GetKeyDown(KeyCode.I)) {
             GameManager.instance.skillParticleCreator.CreateShadow(transform.position, dir);
         }
     }
@@ -195,7 +196,7 @@ public class Player : MonoBehaviour {
 
         if (!Mathf.Approximately(moveInput, 0)) {
             RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(moveInput * 1.2f, 0, 0), new Vector2(moveInput, 0), 0.1f);
-            if (hit.collider != null) {
+            if (hit.collider != null && !hit.collider.isTrigger) {
                 rb.velocity = new Vector2(0, rb.velocity.y);
                 return;
             }

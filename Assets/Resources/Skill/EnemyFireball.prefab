@@ -9447,12 +9447,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4448689579823373882}
-  - component: {fileID: 4448689579823373878}
   - component: {fileID: 4448689579823373877}
   - component: {fileID: 4448689579823373876}
   - component: {fileID: 4448689579823373879}
   - component: {fileID: 4448689579823373883}
   - component: {fileID: 4448689579823373880}
+  - component: {fileID: 3956118620239337460}
   m_Layer: 11
   m_Name: EnemyFireball
   m_TagString: Bullet
@@ -9478,19 +9478,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &4448689579823373878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4448689579823373873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f1e0bf7b9da804094d10179cf1dd2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack: 35
 --- !u!198 &4448689579823373877
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -14202,6 +14189,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &3956118620239337460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448689579823373873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcbd5c4b68937542bc753720fd756bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 0
+  tag: 
+  fireBallExplosion: 
 --- !u!1 &4448689580020084260
 GameObject:
   m_ObjectHideFlags: 0

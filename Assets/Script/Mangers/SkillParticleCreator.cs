@@ -6,9 +6,12 @@ public class SkillParticleCreator : MonoBehaviour
 {
     public PlayerShadow shadowPrefab;
 
-    public void CreateFireball(Vector2 pos, Vector2 dir, float speed, string tag) {
+    public void CreateFireball(Vector2 pos, Vector2 dir, float speed, string tag,int attack,string targetTag,string fireBallExplosion) {
         var fb = Resources.Load<GameObject>("Skill/" + tag);
-        GameObject fireball = Instantiate(fb, pos, Quaternion.identity);
+        GameObject fireball = Instantiate(fb, pos, Quaternion.identity);     
+        fireball.GetComponent<Fireball>().attack = attack;      
+        fireball.GetComponent<Fireball>().tag = targetTag;      
+        fireball.GetComponent<Fireball>().fireBallExplosion = fireBallExplosion;      
         fireball.GetComponent<Rigidbody2D>().AddForce(dir * speed);
     }
 
