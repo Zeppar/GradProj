@@ -1528,6 +1528,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light
       objectReference: {fileID: 0}
+    - target: {fileID: 7227803923312678689, guid: 6161cd189aa028e41a85582ff693c023,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.65
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6161cd189aa028e41a85582ff693c023, type: 3}
 --- !u!1001 &8400244936712250664
