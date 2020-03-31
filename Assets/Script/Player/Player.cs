@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
     public int maxHP;
     public int attack;
     public float range;
@@ -12,16 +11,12 @@ public class Player : MonoBehaviour
     public bool dead = false;
     public float speed;
     public float jumpForce;
-    public GameObject Target;
-    public Transform AttackPoint;
+    public Transform attackPoint;
 
-    public Transform ClimbPos;
+    public Transform climbPos;
     public Transform feetPos;
     public float checkRadius;
     public LayerMask groundLayer;
-
-    //public ParticleSystem moveParticle;
-    //public ParticleSystem jumpParticle;
 
     public int HP {
         get {
@@ -41,24 +36,20 @@ public class Player : MonoBehaviour
     private AnimatorStateInfo currentState;
     private Animator anim;
     private Rigidbody2D rb;
- 
+
     private float moveInput;
     private bool isGrounded;
     private bool isJump = false;
     private bool isClimb = false;
 
     public int dir = 1;
-
-    //计时器
-    private float jumpTimeCounter;
-    public float jumpTime;
+    public BoxCollider2D feetCollider;
 
     [Header("音频")]
     private AudioSource audioSource;
     public AudioClip attackAudio;
 
-    void Start()
-    {
+    void Start() {
         HP = maxHP;
         anim = GetComponent<Animator>();
         currentState = anim.GetCurrentAnimatorStateInfo(0);
@@ -70,137 +61,147 @@ public class Player : MonoBehaviour
         Move();
     }
 
-    void Update()
-    {
-        currentState = anim.GetCurrentAnimatorStateInfo(0);
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, groundLayer);
+    void Update() {
+        UpdateState();
         AirAttack();
         GroundAttack();
         SkillAttack();
         //Climb();
         Jump();
+        SwitchFall();
+        CreateShadow();
     }
+
+    private void UpdateState() {
+        currentState = anim.GetCurrentAnimatorStateInfo(0);
+        isGrounded = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
+    }
+
+    private void SwitchFall() {
+        if (currentState.IsName("Jump") && !isGrounded && rb.velocity.y < -0.1f) {
+            anim.SetTrigger("Fall");
+        }
+    }
+
+    private void CreateShadow() {
+        if (Input.GetKeyDown(KeyCode.L)) {
+            GameManager.instance.skillParticleCreator.CreateFireball(attackPoint.position, new Vector2(dir, 0), 0.5f, Util.SkillCollection.playerFireBall);
+        }
+    }
+
     void SkillAttack() {
-       //null
+        if (Input.GetKeyDown(KeyCode.K)) {
+            GameManager.instance.skillParticleCreator.CreateShadow(transform.position, dir);
+        }
     }
+
     void AirAttack() {
         if (isGrounded) {
-            if(currentState.IsName("AirAttack3")) {
-                anim.SetInteger("Attack", 4);
+            if (currentState.IsName("AirAttack3")) {
+                SetAttackVal(7);
             }
             return;
         }
-        if (currentState.IsName("AirAttack1") && currentState.normalizedTime > 4.0f) {
-            anim.SetInteger("Attack", 0);
-            attackCount = 0;
+        if (currentState.IsName("AirAttack1") && currentState.normalizedTime > 1.0f) {
+            SetAttackVal(0);
         }
-        if (currentState.IsName("AirAttack2") && currentState.normalizedTime > 4.0f) {
-            anim.SetInteger("Attack", 0);
-            attackCount = 0;
+        if (currentState.IsName("AirAttack2") && currentState.normalizedTime > 1.0f) {
+            SetAttackVal(0);
         }
 
         if (Input.GetKeyDown(KeyCode.J)) {
-           
             if (currentState.IsName("Jump") && attackCount == 0) {
-                rb.velocity = new Vector2(0, 7.5f);
-                anim.SetInteger("Attack", 1);
-                attackCount = 1;
-            } else if (currentState.IsName("AirAttack1") && attackCount == 1 && currentState.normalizedTime > 0.5F) {
-                rb.velocity = new Vector2(0, 12.5f);
-                anim.SetInteger("Attack", 2);
-                attackCount = 2;
-            } else if (currentState.IsName("AirAttack2") && attackCount == 2 && currentState.normalizedTime > 0.5F) {
-                anim.SetInteger("Attack", 3);
-                rb.velocity = new Vector2(0, -20.5f);
-                attackCount = 3;
+                AddVertVelocity(7.5f);
+                SetAttackVal(4);
+            } else if (currentState.IsName("AirAttack1") && currentState.normalizedTime > 0.5F) {
+                AddVertVelocity(20.5f);
+                SetAttackVal(5);
+            } else if (currentState.IsName("AirAttack2") && currentState.normalizedTime > 0.5F) {
+                AddVertVelocity(-34.5f);
+                SetAttackVal(6);
             }
-            Collider2D coll = Physics2D.OverlapCircle(AttackPoint.position, range);
+            Collider2D coll = Physics2D.OverlapCircle(attackPoint.position, range);
 
             if (coll != null && coll.CompareTag("Enemy") && !coll.GetComponent<Enemy>().dead) {
                 coll.GetComponent<Enemy>().BeAttacked(attack);
-              
             }
         }
 
     }
+
     void GroundAttack() {
-      
         if (!isGrounded)
             return;
 
-        if (currentState.IsName("Attack1") && currentState.normalizedTime > 2.0f) {
-            anim.SetInteger("Attack", 0);
-            attackCount = 0;
+        if (currentState.IsName("Attack1") && currentState.normalizedTime > 1.0f) {
+            SetAttackVal(0);
         }
-        if (currentState.IsName("Attack2") && currentState.normalizedTime > 2.0f) {
-            anim.SetInteger("Attack", 0);
-            attackCount = 0;
+        if (currentState.IsName("Attack2") && currentState.normalizedTime > 1.0f) {
+            SetAttackVal(0);
         }
 
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-
-            if (currentState.IsName("Attack3") && attackCount == 3 && currentState.normalizedTime > 0.5F && currentState.normalizedTime < 1.5f)
-            {
-                anim.SetInteger("Attack", 1);
-                attackCount = 1;
-                audioSource.clip = attackAudio;
-                audioSource.Play();
+        if (Input.GetKeyDown(KeyCode.J)) {
+            if ((currentState.IsName("Idle") || currentState.IsName("Walk")) && attackCount == 0) {
+                AddHoriVelocity(dir * 2.0f);
+                SetAttackVal(1);
+            } else if (currentState.IsName("Attack1") && currentState.normalizedTime > 0.5f) {
+                AddHoriVelocity(dir * 3.0f);
+                SetAttackVal(2);
+            } else if (currentState.IsName("Attack2") && currentState.normalizedTime > 0.5f) {
+                AddHoriVelocity(dir * 5.0f);
+                SetAttackVal(3);
             }
-            else if ((currentState.IsName("Idle") || currentState.IsName("Walk")) && attackCount == 0)
-            {
-                rb.velocity = new Vector2(rb.velocity.x * 0.5f, rb.velocity.y);
-                anim.SetInteger("Attack", 1);
-                attackCount = 1;
-                audioSource.clip = attackAudio;
-                audioSource.Play();
-            }
-            else if (currentState.IsName("Attack1") && attackCount == 1 && currentState.normalizedTime > 0.5F && currentState.normalizedTime < 1.5f)
-            {
-                anim.SetInteger("Attack", 2);
-                attackCount = 2;
-                audioSource.clip = attackAudio;
-                audioSource.Play();
-            }
-            else if (currentState.IsName("Attack2") && attackCount == 2 && currentState.normalizedTime > 0.5F && currentState.normalizedTime < 1f)
-            {
-                anim.SetInteger("Attack", 3);
-                attackCount = 3;
-                audioSource.clip = attackAudio;
-                audioSource.Play();
-            }
-
-
-
-
-            Collider2D coll = Physics2D.OverlapCircle(AttackPoint.position, range);
-            if (coll != null && coll.CompareTag("Enemy") && !coll.GetComponent<Enemy>().dead)
-            {
+            Collider2D coll = Physics2D.OverlapCircle(attackPoint.position, range);
+            if (coll != null && coll.CompareTag("Enemy") && !coll.GetComponent<Enemy>().dead) {
                 coll.GetComponent<Enemy>().BeAttacked(attack);
             }
-
-        }
         }
 
-    
+    }
 
+    private void SetAttackVal(int value) {
+        attackCount = value;
+        anim.SetInteger("Attack", value);
+
+    }
+
+    RaycastHit2D[] results = new RaycastHit2D[1];
     private void Move() {
         if (isClimb)
             return;
         if (GetComponent<Player>().attackCount > 0)
             return;
+
+        if (transform.position.y < -40.0f) {
+            Destroy(gameObject);
+            return;
+        }
+
         moveInput = Input.GetAxisRaw("Horizontal");
-        //moveParticle.gameObject.SetActive(isGrounded);
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        if (moveInput != 0) {
+        if (moveInput > 0) {
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            dir = 1;
+        } else if (moveInput < 0) {
+            transform.rotation = new Quaternion(0, 180, 0, 0);
+            dir = -1;
+        }
+
+        if (!Mathf.Approximately(moveInput, 0)) {
             anim.SetBool("Walk", true);
-        } else if (isJump == false) {
+        } else {
             anim.SetBool("Walk", false);
         }
-        if (transform.position.y <= -40)//玩家过低销毁玩家
-        {
-            Destroy(gameObject);
+
+
+        if (!Mathf.Approximately(moveInput, 0)) {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(moveInput * 1.2f, 0, 0), new Vector2(moveInput, 0), 0.1f);
+            if (hit.collider != null) {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+                return;
+            }
         }
+
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
     }
     private void Climb() {
@@ -210,13 +211,13 @@ public class Player : MonoBehaviour
                 anim.SetBool("ClimbDown", false);
                 isClimb = false;
             }
-            if (!isClimb && Physics2D.OverlapCircle(ClimbPos.position, checkRadius, groundLayer)) {
+            if (!isClimb && Physics2D.OverlapCircle(climbPos.position, checkRadius, groundLayer)) {
                 anim.SetBool("ClimbDown", true);
                 isClimb = true;
             }
         }
         if (isClimb) {
-            bool canClimb = Physics2D.OverlapCircle(ClimbPos.position, checkRadius, groundLayer);
+            bool canClimb = Physics2D.OverlapCircle(climbPos.position, checkRadius, groundLayer);
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
                 if (!canClimb) {
                     anim.SetBool("Climb", false);
@@ -235,66 +236,32 @@ public class Player : MonoBehaviour
         }
     }
     private void Jump() {
-        if (isClimb) { return; }
+        if (isClimb) {
+            return;
+        }
         //jumpParticle.gameObject.SetActive(!isGrounded);
         anim.SetBool("IsGround", isGrounded);
-        if (moveInput > 0) {
-            //transform.eulerAngles = new Vector2(0, 0);
-            transform.rotation = new Quaternion(0, 0, 0, 0);
-            dir = 1;
-        } else if (moveInput < 0) {
-            //transform.eulerAngles = new Vector2(0, 180);
-            transform.rotation = new Quaternion(0, 180, 0, 0);
-            dir = -1;
-        }
-
         if (isGrounded == true) {
-
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
                 anim.SetTrigger("Jump");
                 attackCount = 0;
                 anim.SetInteger("Attack", attackCount);
                 isJump = true;
-                jumpTimeCounter = jumpTime;
                 rb.velocity = Vector2.up * jumpForce;
-
                 //source.PlayOneShot(Jump);
             }
-        } else {
-            isJump = false;
         }
 
-        //if (isJump == true) {
-            
-        //    if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
-        //        if (jumpTimeCounter > 0) {
-        //            rb.velocity = Vector2.up * jumpForce;
-        //            jumpTimeCounter -= Time.deltaTime;
-        //        } else {
-
-        //            isJump = false;
-        //        }
-        //    }
-        //}
-        //if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) {
-
-        //    isJump = false;
-        //}
-
     }
-
-    void Die()
-    {
-
+    void Die() {
         dead = true;
         anim.SetBool("Dead", true);
         UIManger.instance.gameOverPanel.SetActive(true);
     }
 
-    public void BeAttacked(int _attack)
-    {
+    public void BeAttacked(int _attack) {
         HP -= _attack;
-        if(HP > 0)
+        if (HP > 0)
             anim.SetTrigger("Hurt");
     }
 
@@ -306,5 +273,13 @@ public class Player : MonoBehaviour
     public void ResetAttackCount() {
         attackCount = 0;
         anim.SetInteger("Attack", attackCount);
+    }
+
+    private void AddHoriVelocity(float val) {
+        rb.velocity = new Vector2(val, 0);
+    }
+
+    private void AddVertVelocity(float val) {
+        rb.velocity = new Vector2(0, val);
     }
 }

@@ -13,37 +13,37 @@ public class SkillActionManger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-           if(GameManger.instance.goodManger.goodInfoList[UIManger.instance.quickSkill1.gameObject.GetComponent<BagItem>().index].goodInfo == null)
+           if(GameManager.instance.goodManger.goodInfoList[UIManger.instance.quickSkill1.gameObject.GetComponent<BagItem>().index].goodInfo == null)
             {
                 return;
             }
-           GameManger.instance.skillActionManger.SendMessage(GameManger.instance.goodManger.goodInfoList[UIManger.instance.quickSkill1.gameObject.GetComponent<BagItem>().index].goodInfo.skill.Action);
+           GameManager.instance.skillActionManger.SendMessage(GameManager.instance.goodManger.goodInfoList[UIManger.instance.quickSkill1.gameObject.GetComponent<BagItem>().index].goodInfo.skill.Action);
             
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
-            if (GameManger.instance.goodManger.goodInfoList[UIManger.instance.quickSkill2.gameObject.GetComponent<BagItem>().index].goodInfo == null)
+            if (GameManager.instance.goodManger.goodInfoList[UIManger.instance.quickSkill2.gameObject.GetComponent<BagItem>().index].goodInfo == null)
             {
                 return;
             }
-            GameManger.instance.skillActionManger.SendMessage(GameManger.instance.goodManger.goodInfoList[UIManger.instance.quickSkill2.gameObject.GetComponent<BagItem>().index].goodInfo.skill.Action);
+            GameManager.instance.skillActionManger.SendMessage(GameManager.instance.goodManger.goodInfoList[UIManger.instance.quickSkill2.gameObject.GetComponent<BagItem>().index].goodInfo.skill.Action);
 
 
         }
     }
     public void Fireball()
     {      
-        GameManger.instance.skillParticleCreator.CreateFireball(GameManger.instance.playerScript.AttackPoint.position, new Vector2(GameManger.instance.player.transform.GetComponent<Player>().dir, 0));
+        GameManager.instance.skillParticleCreator.CreateFireball(GameManager.instance.player.attackPoint.position, new Vector2(GameManager.instance.player.transform.GetComponent<Player>().dir, 0), 0.5f, Util.SkillCollection.playerFireBall);
     }
     public void Jinhua()
     {
-        GameManger.instance.player.GetComponent<SpriteRenderer>().color = Color.green;
+        GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.green;
         Invoke("JinhuaBack",0.2f);
     }
     public void JinhuaBack()
     {
-        GameManger.instance.player.GetComponent<SpriteRenderer>().color = Color.white;
-        GameManger.instance.playerScript.HP += 10;
+        GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.white;
+        GameManager.instance.player.HP += 10;
     }
 }
 

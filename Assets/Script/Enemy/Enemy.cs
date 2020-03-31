@@ -2,58 +2,59 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnemyType {
+    OnGround = 0,
+    InSky
+}
 public class Enemy : MonoBehaviour {
     //玩家属性
     [Header("基础属性")]
-    [Header("父类属性")]
-    
-    public int MaxHP;
-    public int _HP;
+    public int maxHP;
+    private int _HP;
     public int speed;
-    public int AttDis = 5;
-    public bool dead = false;
-    public bool isAttacking = false;
-    public bool isHurt = false;
+    public int dir = -1;
     public int attack = 7;
     public int HP {
         get { return _HP; }
         set {
-            _HP = Mathf.Clamp(value, 0, MaxHP);
+            _HP = Mathf.Clamp(value, 0, maxHP);
             if (_HP <= 0) {
                 Die();
             }
         }
     }
 
-    public GameObject Player;
     public Animator anim;
     public Rigidbody2D rd;
+    public EnemyType type;
+
+    public bool dead = false;
+    private bool isAttacking = false;
+    private bool isHurt = false;
+
 
     [Header("巡逻属性")]
     //巡逻属性
     public float chaseDis = 2;
     public int attackRange = 1;
 
-    public int SkillID;
+    public int skillID;
 
-    public void Start() {
+
+    public virtual void Start() {
         anim = GetComponent<Animator>();
         rd = GetComponent<Rigidbody2D>();
-        Player = GameObject.FindGameObjectWithTag("Player");
-        HP = MaxHP;
+        HP = maxHP;
         Begin();
 
     }
     public virtual void Begin() {
 
     }
-    public virtual void DataUp() {
 
-    }
     private void Update() {
         if (dead)
             return;
-        DataUp();
 
         if (isAttacking)
             return;
@@ -62,20 +63,32 @@ public class Enemy : MonoBehaviour {
         MoveOperation();
     }
 
+    private bool ShouldChase() {
+        return Vector2.Distance(GameManager.instance.player.transform.position, transform.position) < chaseDis;
+    }
+
+    public virtual bool CanAttack() {
+        return true;
+    }
+
     private void MoveOperation() {
-        if (Player != null && Vector2.Distance(Player.transform.position, transform.position) < chaseDis) {
-            if (Vector2.Distance(Player.transform.position, transform.position) > attackRange) {
-                Chase();
-                if (anim != null) { anim.SetBool("Walk", true); }
-             
-            } else {
-                if (anim != null) { anim.SetBool("Walk", false); }
+        if (GameManager.instance.player != null && ShouldChase()) {
+            if (CanAttack()) {
+                if (type == EnemyType.OnGround) {
+                    anim.SetBool("Walk", false);
+                }
                 Attack();
-              
+            } else {
+                if (type == EnemyType.OnGround) {
+                    anim.SetBool("Walk", true);
+                }
+                Chase();
             }
         } else {
+            if (type == EnemyType.OnGround) {
+                anim.SetBool("Walk", true);
+            }
             Seek();
-            if (anim != null) { anim.SetBool("Walk", true); }
         }
     }
 
@@ -103,8 +116,9 @@ public class Enemy : MonoBehaviour {
 
     public virtual void Die() {
         dead = true;
-        GameManger.instance.skillStoneCreator.CreateSkillStone(SkillID, transform.position);
+        GameManager.instance.skillStoneCreator.CreateSkillStone(skillID, transform.position);
     }
+
 
     public void ResetAttackState() {
         isAttacking = false;
@@ -113,5 +127,4 @@ public class Enemy : MonoBehaviour {
     public void ResetHurtState() {
         isHurt = false;
     }
-
 }

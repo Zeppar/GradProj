@@ -9,6 +9,6 @@ public class CheatPanel : MonoBehaviour
     
    public void AddItem()
     {
-        GameManger.instance.goodManger.AddItemToPanel(GoodInfo.GoodType.Skill,int.Parse(idField.text));       
+        GameManager.instance.goodManger.AddItemToPanel(GoodInfo.GoodType.Skill,int.Parse(idField.text));       
     }
 }

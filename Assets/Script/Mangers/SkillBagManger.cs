@@ -18,7 +18,7 @@ public class SkillBagManger : MonoBehaviour
     SkillManager skillManager;
     public void InitSkillPanel()
     {
-        skillManager = GameManger.instance.skillManager;
+        skillManager = GameManager.instance.skillManager;
         skillPanel = GameObject.Find("Slot Panel");
 
         for (int i = 0; i < bugCount; i++)

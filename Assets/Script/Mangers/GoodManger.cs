@@ -20,7 +20,7 @@ public class GoodManger
         {
             if(goodInfoList[i].goodInfo!= null &&
                 goodInfoList[i].goodInfo.goodType == GoodInfo.GoodType.Skill &&
-                GameManger.instance.skillManager.FindSkillWithID(id) == goodInfoList[i].goodInfo.skill)
+                GameManager.instance.skillManager.FindSkillWithID(id) == goodInfoList[i].goodInfo.skill)
             {               
                 goodInfoList[i].goodInfo.count++;
                 Debug.Log("叠加成立:"+ goodInfoList[i].goodInfo.count);
@@ -33,7 +33,7 @@ public class GoodManger
                 goodInfoList[i].goodInfo.goodType = _goodType;
                 if(_goodType == GoodInfo.GoodType.Skill)
                 {
-                    goodInfoList[i].goodInfo.skill = GameManger.instance.skillManager.FindSkillWithID(id);
+                    goodInfoList[i].goodInfo.skill = GameManager.instance.skillManager.FindSkillWithID(id);
                   
                    UIManger.instance.bagPanel.UpdataItem();
                     return;

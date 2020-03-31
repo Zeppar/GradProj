@@ -1,22 +1,26 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Enemy/EnemyWarrior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Util.cs">
     <Files>
-      <File FileName="Assets/Script/Mangers/GoodManger.cs" Line="49" Column="1" />
-      <File FileName="Assets/Script/UI/BagPanel.cs" />
-      <File FileName="Assets/Script/Mangers/GameManger.cs" />
-      <File FileName="Assets/Script/Mangers/UIManger.cs" />
-      <File FileName="Assets/Script/Player/Player.cs" Line="56" Column="17" />
-      <File FileName="Assets/Script/Mangers/Terrain/Trap/Stab.cs" />
+      <File FileName="Assets/Script/Cheat/CheatPanel.cs" Line="12" Column="15" />
+      <File FileName="Assets/Script/Mangers/GameManager.cs" />
+      <File FileName="Assets/Script/Enemy/EnemyWarrior/EnemyWarrior.cs" Line="16" Column="34" />
+      <File FileName="Assets/Script/Enemy/EnemyBird/EnemyBird.cs" Line="12" Column="38" />
+      <File FileName="Assets/Script/Enemy/EnemyBird/EnemyBirdFireBall.cs" />
       <File FileName="Assets/Script/Mangers/SkillParticleCreator.cs" />
-      <File FileName="Assets/Script/Item/Fireball.cs" />
-      <File FileName="Assets/Script/Item/FireBallExplosion.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="57" Column="9" />
-      <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" Line="57" Column="43" />
+      <File FileName="Assets/Script/Player/Player.cs" Line="280" Column="6" />
+      <File FileName="Assets/Script/Mangers/SkillActionManger.cs" />
+      <File FileName="Assets/Script/Player/PlayerAttackChecker.cs" />
+      <File FileName="Assets/Script/UI/BagPanel.cs" />
+      <File FileName="Assets/Script/Mangers/SkillManager.cs" />
+      <File FileName="Assets/Script/Enemy/Enemy.cs" />
+      <File FileName="Assets/Script/Item/SkillStone.cs" Line="24" Column="1" />
+      <File FileName="Assets/Script/UI/GoodItem.cs" Line="48" Column="80" />
+      <File FileName="Assets/Script/Util.cs" Line="19" Column="64" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f0d9105c-bfa4-40ff-9b46-24f287b23e4b" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="96e2b48c-a722-4c01-981b-a062d955fbb3" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

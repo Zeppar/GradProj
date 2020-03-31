@@ -33,7 +33,7 @@ public class GoodItem : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragH
     public void OnEndDrag(PointerEventData eventData)
     {
        
-        transform.SetParent(GameManger.instance.goodManger.goodInfoList[SlotInedx].transform);
+        transform.SetParent(GameManager.instance.goodManger.goodInfoList[SlotInedx].transform);
         transform.position = transform.parent.position;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
@@ -44,8 +44,8 @@ public class GoodItem : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragH
        
         describePanel.SetActive(true);
         describePanel.transform.position = Input.mousePosition;
-        describePanel.GetComponent<describePanel>().Title.text = GameManger.instance.goodManger.goodInfoList[SlotInedx].goodInfo.skill.Title;
-        describePanel.GetComponent<describePanel>().Describe.text = GameManger.instance.goodManger.goodInfoList[SlotInedx].goodInfo.skill.Describe;
+        describePanel.GetComponent<describePanel>().Title.text = GameManager.instance.goodManger.goodInfoList[SlotInedx].goodInfo.skill.Title;
+        describePanel.GetComponent<describePanel>().Describe.text = GameManager.instance.goodManger.goodInfoList[SlotInedx].goodInfo.skill.Describe;
     }
 
     public void OnPointerExit(PointerEventData eventData)

@@ -2,115 +2,102 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBird : Enemy
-{
+public class EnemyBird : Enemy {
     [Header("敌人属性")]
-    public float birdHight;
-    public float birdFly;
-    public GameObject Fireball;
-    public int dir = 1;
+    public float fallSpeed;
+    public float chaseHeight;
 
     [Header("攻击属性")]
     public float attackInterval;
     private float lastAttackTime = 0;
-    public Transform AttackPoint;
+    public Transform attackPoint;
 
-    [Header("其他")]
-    public bool isSeek = true;
-    public override void Seek()
-    {
-        if (!isSeek) { return; }
-        transform.GetComponent<SpriteRenderer>().color = Color.white;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(dir*-0.5f, -1), birdHight, LayerMask.GetMask("Ground"));
-
-        if (hit.collider != null)
-        {
-       
-            transform.position = new Vector2(transform.position.x + speed * Time.deltaTime * dir, transform.position.y);
-        }
-        else//飞行过高降低
-        {
-            transform.position = new Vector2(transform.position.x, transform.position.y - speed * Time.deltaTime);
-        }
-        //飞行过升高
-        RaycastHit2D hight_hit = Physics2D.Raycast(transform.position, new Vector2(-0.5f*dir, -1), birdFly, LayerMask.GetMask("Ground"));
-        if(hight_hit.collider != null)
-        {
-            transform.position = new Vector2(transform.position.x, transform.position.y + speed * Time.deltaTime);
-        }
-        RaycastHit2D move_hit = Physics2D.Raycast(transform.localPosition, new Vector2(dir, 0), 5, LayerMask.GetMask("Ground"));
-        if (move_hit.collider != null)
-        {
-            dir = -dir;
-            transform.localScale = new Vector2(dir * 7,transform.localScale.y);
-            print("砖头");         
-        }
-      
-
-
-
+    [Header("飞行位置")]
+    public Transform leftPos;
+    public Transform rightPos;
+    private Vector2 targetPos;
+    public override void Start() {
+        base.Start();
+        targetPos = FindRandomPosition();
     }
-    public override void Chase()
-    {
 
-        //尝试不让怪物穿墙
-        Debug.DrawLine(transform.position, GameManger.instance.player.transform.position, Color.red);
-        bool grounded = Physics2D.Linecast(transform.position, GameManger.instance.player.transform.position, LayerMask.GetMask("Ground"));
-        if (grounded)
-        {
-            Seek();
-            return;
-        }
+    private Vector2 FindRandomPosition() {
+        Vector2 pos = new Vector2(Random.Range(leftPos.position.x, rightPos.position.x), Random.Range(leftPos.position.y, rightPos.position.y));
+        return pos;
+    }
 
+    public override void Seek() {
 
-        transform.GetComponent<SpriteRenderer>().color = Color.red;
-        //转向
-        if (transform.position.x>= GameManger.instance.player.transform.position.x)
-        {
+        if (targetPos.x > transform.position.x && dir < 0) {
+            dir = 1;
+        } else if (targetPos.x < transform.position.x && dir > 0) {
             dir = -1;
-           
-        } 
-        else
-        {
-            dir = 1;          
         }
         transform.localScale = new Vector2(dir * 7, transform.localScale.y);
 
-        //高度
-        if (transform.position.y > GameManger.instance.player.transform.position.y)
-        {
-
-            transform.position = new Vector2(transform.position.x, transform.position.y - speed * Time.deltaTime);
-        }
-        else
-        {
-            transform.position = new Vector2(transform.position.x, transform.position.y + speed * Time.deltaTime);
+        if (Vector2.Distance(transform.position, targetPos) < 0.1f) {
+            targetPos = FindRandomPosition();
+            transform.localScale = new Vector2(dir * 7, transform.localScale.y);
+        } else {
+            transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
         }
 
-        Attack();
     }
-    public override void Attack()
-    {
-        if (Time.time - lastAttackTime < attackInterval) { 
+
+    public override bool CanAttack() {
+        if (Mathf.Abs(transform.position.y - GameManager.instance.player.transform.position.y) <= chaseHeight
+            && Vector2.Distance(GameManager.instance.player.transform.position, transform.position) <= attackRange) {
+            return true;
+        }
+        return false;
+    }
+
+    private float tempX, tempY;
+    public override void Chase() {
+        if (transform.position.x >= GameManager.instance.player.transform.position.x) {
+            dir = -1;
+        } else {
+            dir = 1;
+        }
+        transform.localScale = new Vector2(dir * 7, transform.localScale.y);
+
+        if(transform.position.x > GameManager.instance.player.transform.position.x) {
+            tempX = transform.position.x - speed * Time.deltaTime;
+        } else {
+            tempX = transform.position.x + speed * Time.deltaTime;
+        }
+
+        if (transform.position.y > GameManager.instance.player.transform.position.y + chaseHeight) {
+            tempY = transform.position.y - fallSpeed * Time.deltaTime;
+        } else if(transform.position.y < GameManager.instance.player.transform.position.y - chaseHeight) {
+            tempY = transform.position.y + fallSpeed * Time.deltaTime;
+        } else {
+            tempY = transform.position.y;
+        }
+
+        transform.position = new Vector2(tempX, tempY);
+    }
+
+    public override void BeAttacked(int IntCount) {
+        if (HP > 0) {
+            base.BeAttacked(IntCount);
+            anim.SetTrigger("Hurt");
+            lastAttackTime = Time.time;//打断攻击
+        }
+    }
+
+    public override void Attack() {
+        if (Time.time - lastAttackTime < attackInterval) {
             return;
         }
         base.Attack();
-        GameObject fireball = Instantiate(Fireball);
-        fireball.transform.position = AttackPoint.position;
-        fireball.GetComponent<EnemyBirdFireBall>().vector2_dir = new Vector2(dir, 0);
-        fireball.GetComponent<EnemyBirdFireBall>().attack = attack;
+        anim.SetTrigger("Attack");
         lastAttackTime = Time.time;
-        ResetAttackState();
+        GameManager.instance.skillParticleCreator.CreateFireball(attackPoint.position, new Vector2(dir, 0), 0.5f, Util.SkillCollection.enemyFireBall);
     }
-    public override void BeAttacked(int IntCount)
-    {
-        
-        base.BeAttacked(IntCount);
-        isHurt = false;
-    }
-    public override void Die()
-    {
-        base.Die();
+
+
+    public override void Die() {
         Destroy(gameObject);
     }
 }

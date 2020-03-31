@@ -2,33 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillStone : MonoBehaviour
-{
-  
-   
-  public SkillInfo skillInfo;
-    private void Awake()
-    {
-     
-    }
-    void Start()
-    {
-       
-    }
+public class SkillStone : MonoBehaviour {
+    public SkillInfo skillInfo;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private void OnTriggerEnter2D(Collider2D collision) {
 
-    private void OnTriggerStay2D(Collider2D collision) {
-      
-        if (collision.CompareTag(Util.playerTag)) {
+        if (collision.CompareTag(Util.TagCollection.playerTag)) {
             UIManger.instance.GetItemHelp.SetActive(true);
-            if (Input.GetKey(KeyCode.E))
-            {
-                GameManger.instance.goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, skillInfo.ID);
+            if (Input.GetKey(KeyCode.E)) {
+                GameManager.instance.goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, skillInfo.ID);
 
                 Destroy(gameObject);
             }
