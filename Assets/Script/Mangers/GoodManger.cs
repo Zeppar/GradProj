@@ -1,13 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GoodManger
 {
     public int bagCount = 16;
-
+   
+ 
     public List<BagItem> goodInfoList = new List<BagItem>();
-
+   
     public bool isDirty = false;
    
 
@@ -51,6 +53,14 @@ public class GoodManger
         }
         isDirty = true;
         UIManger.instance.bagPanel.UpdataItem();
+    }
+
+    public void AddItemToPanel(GoodInfo.GoodType _goodType, int id,int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            AddItemToPanel(_goodType, id);
+        }
     }
     void Start()
     {

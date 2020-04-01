@@ -106,7 +106,7 @@
     <Compile Include="Assets\3rd\Cinemachine\PostFX\Editor\CinemachinePostProcessingEditor.cs" />
     <Compile Include="Assets\3rd\Cinemachine\PostFX\Editor\PostFXAutoImport.cs" />
     <Compile Include="Assets\3rd\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
-    <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+    <Compile Include="Assets\3rd\EffectExamples\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\Plus\unity-ui-extensions\Editor\AccordionElementEditor.cs" />
     <Compile Include="Assets\Plus\unity-ui-extensions\Editor\BezierLineRendererEditor.cs" />
     <Compile Include="Assets\Plus\unity-ui-extensions\Editor\BoxSliderEditor.cs" />
@@ -120,7 +120,7 @@
     <Compile Include="Assets\Plus\unity-ui-extensions\Editor\TextPicEditor.cs" />
     <Compile Include="Assets\Plus\unity-ui-extensions\Editor\UIExtensionsMenuOptions.cs" />
     <Compile Include="Assets\Plus\unity-ui-extensions\Editor\uGUITools.cs" />
-    <None Include="Assets\EffectExamples\Editor\PackageManagerAssembly\PackageImportList.txt" />
+    <None Include="Assets\3rd\EffectExamples\Editor\PackageManagerAssembly\PackageImportList.txt" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
@@ -177,6 +177,9 @@
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
@@ -380,7 +383,7 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="PackageManagerAssembly">
-      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/3rd/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/Plus/Demigiant/DOTween/DOTween.dll</HintPath>
@@ -753,9 +756,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{B0D38B4E-5524-9BA2-BC2F-04363E9725ED}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{38817E81-5FEC-FE10-9C2D-3D2F61270BB6}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{442F5F72-80F8-A1E6-9122-BABBB50A11A8}</Project>
+      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
