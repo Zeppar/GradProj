@@ -19,15 +19,20 @@ public class GameManager : MonoBehaviour
     
     void Awake()
     {
-        instance = this;//实例化自己
+        if (instance == null) {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else if(instance != this) {
+            Destroy(gameObject);
+        }
     }
     void Start()
     {
         skillManager.InitSkill();//初始化技能
              
-      goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 0);//测试！！！  创建两个物品用于测试
-      goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 2);
-      goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 1);
+        goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 0);//测试！！！  创建两个物品用于测试
+        goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 2);
+        goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 1);
     }
 
 }

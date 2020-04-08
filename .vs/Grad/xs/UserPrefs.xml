@@ -1,26 +1,33 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Util.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Player/PlayerDash.cs">
     <Files>
       <File FileName="Assets/Script/Cheat/CheatPanel.cs" Line="12" Column="15" />
       <File FileName="Assets/Script/Mangers/GameManager.cs" />
-      <File FileName="Assets/Script/Enemy/EnemyWarrior/EnemyWarrior.cs" Line="16" Column="34" />
-      <File FileName="Assets/Script/Enemy/EnemyBird/EnemyBird.cs" Line="12" Column="38" />
-      <File FileName="Assets/Script/Enemy/EnemyBird/EnemyBirdFireBall.cs" />
+      <File FileName="Assets/Script/Enemy/EnemyWarrior/EnemyWarrior.cs" />
+      <File FileName="Assets/Script/Enemy/EnemyBird/EnemyBird.cs" />
       <File FileName="Assets/Script/Mangers/SkillParticleCreator.cs" />
-      <File FileName="Assets/Script/Player/Player.cs" Line="280" Column="6" />
       <File FileName="Assets/Script/Mangers/SkillActionManger.cs" />
-      <File FileName="Assets/Script/Player/PlayerAttackChecker.cs" />
       <File FileName="Assets/Script/UI/BagPanel.cs" />
       <File FileName="Assets/Script/Mangers/SkillManager.cs" />
       <File FileName="Assets/Script/Enemy/Enemy.cs" />
-      <File FileName="Assets/Script/Item/SkillStone.cs" Line="24" Column="1" />
-      <File FileName="Assets/Script/UI/GoodItem.cs" Line="48" Column="80" />
-      <File FileName="Assets/Script/Util.cs" Line="19" Column="64" />
+      <File FileName="Assets/Script/Item/SkillStone.cs" />
+      <File FileName="Assets/Script/UI/GoodItem.cs" />
+      <File FileName="Assets/Script/Util.cs" />
+      <File FileName="Assets/Script/Terrain/Trap/Stab.cs" />
+      <File FileName="Assets/Script/Player/Player.cs" />
+      <File FileName="Assets/Script/Mangers/SoundManager.cs" />
+      <File FileName="Assets/Script/Item/FireBallExplosion.cs" />
+      <File FileName="Assets/Script/Item/PlayerFireBall.cs" />
+      <File FileName="Assets/Plus/Plugins/Pixelplacement/iTween/iTween.cs" />
+      <File FileName="Assets/Script/Player/AttackChecker.cs" />
+      <File FileName="Assets/Script/Player/PlayerAirAttack.cs" Line="18" Column="87" />
+      <File FileName="Assets/Script/ObjectPool.cs" Line="8" Column="24" />
+      <File FileName="Assets/Script/Player/PlayerDash.cs" Line="19" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="96e2b48c-a722-4c01-981b-a062d955fbb3" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="427e40e9-b743-477c-9e7a-7cb592e13760" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

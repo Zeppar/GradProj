@@ -28,7 +28,7 @@ public class EnemyWarrior : Enemy {
     public override void Begin() {
         contactFilter.useTriggers = false;
         contactFilter.useLayerMask = true;
-        contactFilter.SetLayerMask(LayerMask.GetMask("Ground"));
+        contactFilter.SetLayerMask(LayerMask.GetMask(Util.LayerCollection.groundLayer));
     }
 
     public override void Attack() {
@@ -41,25 +41,22 @@ public class EnemyWarrior : Enemy {
     }
 
     public override bool CanAttack() {
-        return Vector2.Distance(GameManager.instance.player.transform.position, transform.position) <= attackRange;
+        float yDiff = Mathf.Abs(GameManager.instance.player.transform.position.y - transform.position.y);
+        float xDiff = Mathf.Abs(GameManager.instance.player.transform.position.x - transform.position.x);
+        return (yDiff < 1.0f
+            && Vector2.Distance(GameManager.instance.player.transform.position, transform.position) <= attackRange)
+            || (yDiff > 1.0f && yDiff < 3.0f && xDiff < 1.0f);
     }
 
     public void CheckAttackPlayer() {
-        Collider2D[] collArr = Physics2D.OverlapBoxAll(attackPoint.position, new Vector2(checkAttackRange, checkAttackRange), 0);
-        if (collArr.Length == 0) { return; }
-
-        foreach (var coll in collArr) {
-            if (coll.CompareTag(Util.TagCollection.playerTag)) {
-                GameManager.instance.player.BeAttacked(10);
-                iTween.MoveBy(GameManager.instance.player.gameObject, iTween.Hash("x", dir * 2, "y", 1, "looktime", 0.5f));
-                break;
-            }
-        }
+        AddVelocity(new Vector2(dir * 0.8f, 0));
+        attackChecker.CheckAttack(WarriorAttackType.NormalAttack, this);
     }
 
     public override void BeAttacked(int IntCount) {
         if (HP > 0) {
             base.BeAttacked(IntCount);
+            iTween.MoveBy(GameManager.instance.player.gameObject, iTween.Hash("x", dir * 2, "y", 1, "looktime", 0.5f));
             anim.SetTrigger("Hurt");
             lastAttackTime = Time.time;//打断攻击
         }
@@ -68,12 +65,12 @@ public class EnemyWarrior : Enemy {
     public override void Seek() {//巡逻
         
         anim.SetBool("Walk", true);
-        int count = rd.Cast(new Vector2(dir * 5, 0), contactFilter, resultArr, 5 + 0.01f);
+        int count = rb.Cast(new Vector2(dir * 5, 0), contactFilter, resultArr, 5 + 0.01f);
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(dir * 5, 0), new Vector2(0, -1), 2);
 
         if (count > 0 || hit.collider == null) {
-            dir *= -1; ;
+            dir *= -1;
         }
         transform.localScale = new Vector2(dir * 10, transform.localScale.y);
         transform.position = new Vector2(transform.position.x + speed * Time.deltaTime * dir, transform.position.y);

@@ -8,17 +8,17 @@ public class Stab : MonoBehaviour
     public int attack = 10;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag(Util.TagCollection.playerTag))
         {
-            iTween.MoveBy(collision.gameObject, iTween.Hash("x", collision.gameObject.GetComponent<Player>().dir* -3, "y", 4, "looktime", 0.5f));
-            collision.gameObject.GetComponent<Player>().BeAttacked(attack);
+            GameManager.instance.player.BeAttackedAndBeatBack(-GameManager.instance.player.dir, 5, 7, attack);
+            GameManager.instance.player.BeAttacked(attack);
         }
     }
 
     private void OnCollisionStay2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Player")) {
-            iTween.MoveBy(collision.gameObject, iTween.Hash("x", collision.gameObject.GetComponent<Player>().dir * -3, "y", 4, "looktime", 0.5f));
-            collision.gameObject.GetComponent<Player>().BeAttacked(attack);
+        if (collision.gameObject.CompareTag(Util.TagCollection.playerTag)) {
+            GameManager.instance.player.BeAttackedAndBeatBack(-GameManager.instance.player.dir, 5, 7, attack);
+            GameManager.instance.player.BeAttacked(attack);
         }
     }
 }

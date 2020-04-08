@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum EnemyType {
     OnGround = 0,
@@ -25,7 +26,7 @@ public class Enemy : MonoBehaviour {
     }
 
     public Animator anim;
-    public Rigidbody2D rd;
+    public Rigidbody2D rb;
     public EnemyType type;
 
     public bool dead = false;
@@ -39,12 +40,14 @@ public class Enemy : MonoBehaviour {
     public int attackRange = 1;
 
     public int skillID;
-
+    public Slider hpSlider;
+    public AttackChecker attackChecker;
 
     public virtual void Start() {
         anim = GetComponent<Animator>();
-        rd = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         HP = maxHP;
+        hpSlider.value = 1.0f;
         Begin();
 
     }
@@ -52,15 +55,19 @@ public class Enemy : MonoBehaviour {
 
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         if (dead)
             return;
-
-        if (isAttacking)
-            return;
+        UpdateState();
         if (isHurt)
             return;
-        MoveOperation();
+        if (isAttacking)
+            return;
+        BehaviourOperation();
+    }
+
+    private void UpdateState() {
+        hpSlider.transform.localScale = new Vector2(-dir, 1.0f);
     }
 
     private bool ShouldChase() {
@@ -71,7 +78,7 @@ public class Enemy : MonoBehaviour {
         return true;
     }
 
-    private void MoveOperation() {
+    private void BehaviourOperation() {
         if (GameManager.instance.player != null && ShouldChase()) {
             if (CanAttack()) {
                 if (type == EnemyType.OnGround) {
@@ -101,7 +108,7 @@ public class Enemy : MonoBehaviour {
         {
             isHurt = true;
             HP -= IntCount;
-            rd.AddForce(new Vector2(100000, 1000));
+            hpSlider.value = (float)HP / maxHP; 
             ResetAttackState();
         }
     }
@@ -126,5 +133,16 @@ public class Enemy : MonoBehaviour {
 
     public void ResetHurtState() {
         isHurt = false;
+    }
+
+    public void AddVelocity(Vector2 vec) {
+        rb.velocity = vec;
+    }
+
+    public void BeAttackedAndBeatBack(float xForce, float yForce) {
+        isHurt = true;
+        AddVelocity(new Vector2(dir * xForce, yForce));
+        anim.SetTrigger("BeatBack");
+        Invoke("ResetHurtState", 1.0f);
     }
 }
