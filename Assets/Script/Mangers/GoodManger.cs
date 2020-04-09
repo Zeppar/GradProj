@@ -28,7 +28,7 @@ public class GoodManger
                 GameManager.instance.skillManager.FindSkillWithID(id) == goodInfoList[i].goodInfo.skill)
             {               
                 goodInfoList[i].goodInfo.count++;
-                Debug.Log("叠加成立:"+ goodInfoList[i].goodInfo.count);
+
                 UIManger.instance.bagPanel.UpdataItem();
                 return;
             }

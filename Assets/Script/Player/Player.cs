@@ -91,6 +91,7 @@ public class Player : MonoBehaviour {
     }
 
     void SkillAttack() {
+        return;
         if (Input.GetKeyDown(KeyCode.I)) {
             GameManager.instance.skillParticleCreator.CreateShadow(transform.position, dir);
         }
