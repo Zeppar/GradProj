@@ -350,6 +350,7 @@
     <Compile Include="Assets\Script\Item\PlayerFireBall.cs" />
     <Compile Include="Assets\Script\Item\PlayerShadow.cs" />
     <Compile Include="Assets\Script\Item\SkillStone.cs" />
+    <Compile Include="Assets\Script\Item\TanTanBall.cs" />
     <Compile Include="Assets\Script\Mangers\GameManager.cs" />
     <Compile Include="Assets\Script\Mangers\GameSaveManger.cs" />
     <Compile Include="Assets\Script\Mangers\GoodManger.cs" />
@@ -358,11 +359,13 @@
     <Compile Include="Assets\Script\Mangers\SkillManager.cs" />
     <Compile Include="Assets\Script\Mangers\SkillParticleCreator.cs" />
     <Compile Include="Assets\Script\Mangers\SkillStoneCreator.cs" />
+    <Compile Include="Assets\Script\Mangers\TanTanBallManger.cs" />
     <Compile Include="Assets\Script\Mangers\UIKeyManger.cs" />
     <Compile Include="Assets\Script\Mangers\UIManger.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
     <Compile Include="Assets\Script\Player\Player3D.cs" />
     <Compile Include="Assets\Script\Player\PlayerAttackChecker.cs" />
+    <Compile Include="Assets\Script\Player\PlayerLight.cs" />
     <Compile Include="Assets\Script\Terrain\MoveCube.cs" />
     <Compile Include="Assets\Script\Terrain\Trap\Magma.cs" />
     <Compile Include="Assets\Script\Terrain\Trap\Stab.cs" />
@@ -427,8 +430,14 @@
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.SpriteShape.Editor">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Path.Editor">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
@@ -454,8 +463,17 @@
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.001">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Runtime">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
@@ -463,14 +481,26 @@
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.SpriteShape.Runtime">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Editor">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

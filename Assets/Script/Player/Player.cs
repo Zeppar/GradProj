@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Rendering;
 
 public class Player : MonoBehaviour {
     public int maxHP;
@@ -17,6 +18,8 @@ public class Player : MonoBehaviour {
     public Transform feetPos;
     public float checkRadius;
     public LayerMask groundLayer;
+
+    public GameObject playerLight;
 
     public int HP {
         get {
@@ -70,8 +73,19 @@ public class Player : MonoBehaviour {
         Jump();
         SwitchFall();
         CreateShadow();
+        PlayerLight();
     }
-
+    void PlayerLight()
+    {
+        if (Input.GetKey(KeyCode.O))
+        {
+            playerLight.SetActive(true);
+        }
+        else
+        {
+            playerLight.SetActive(false);
+        }
+    }
     private void UpdateState() {
         currentState = anim.GetCurrentAnimatorStateInfo(0);
         isGrounded = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
@@ -174,9 +188,8 @@ public class Player : MonoBehaviour {
         if (GetComponent<Player>().attackCount > 0)
             return;
 
-        if (transform.position.y < -40.0f) {
-            Destroy(gameObject);
-            return;
+        if (transform.position.y < -240.0f) {
+            HP -= 1000000000;
         }
 
         moveInput = Input.GetAxisRaw("Horizontal");

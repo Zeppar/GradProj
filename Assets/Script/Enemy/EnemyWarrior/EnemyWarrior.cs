@@ -38,6 +38,7 @@ public class EnemyWarrior : Enemy {
         base.Attack();
         anim.SetTrigger("Attack");
         lastAttackTime = Time.time;
+       
     }
 
     public override bool CanAttack() {

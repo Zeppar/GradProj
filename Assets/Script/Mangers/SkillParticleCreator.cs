@@ -13,6 +13,7 @@ public class SkillParticleCreator : MonoBehaviour
         fireball.GetComponent<Fireball>().tag = targetTag;      
         fireball.GetComponent<Fireball>().fireBallExplosion = fireBallExplosion;      
         fireball.GetComponent<Rigidbody2D>().AddForce(dir * speed);
+     
     }
 
     public void CreateShadow(Vector2 pos, int dir) {

@@ -103,6 +103,10 @@ public class UIManger : MonoBehaviour {
     public void LoadLevel(int index) {
         SceneManager.LoadScene(index);
     }
+    public void ReLoadLevell()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
 
 }
