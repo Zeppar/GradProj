@@ -11,9 +11,11 @@ public enum PlayerAttackType {
     AirAttack3
 }
 
-public enum WarriorAttackType {
-    NormalAttack = 1
+public enum EnemyAttackType {
+    NormalAttack1 = 1,
+    NormalAttack2
 }
+
 
 public class AttackChecker : MonoBehaviour {
     public PolygonCollider2D[] colliders;
@@ -34,7 +36,7 @@ public class AttackChecker : MonoBehaviour {
         StartCoroutine(HideCollider(idx - 1));
     }
 
-    public void CheckAttack(WarriorAttackType type, Enemy _enemy) {
+    public void CheckAttack(EnemyAttackType type, Enemy _enemy) {
         isPlayer = false;
         enemy = _enemy;
         int idx = (int)type;
@@ -52,7 +54,6 @@ public class AttackChecker : MonoBehaviour {
             collision.GetComponent<Enemy>().BeAttacked(GameManager.instance.player.attack);
         }
         if (collision.gameObject.CompareTag(Util.TagCollection.playerTag)) {
-            Debug.Log("BeAttackedAndBeatBack");
             collision.GetComponent<Player>().BeAttackedAndBeatBack(enemy.dir, 5, 7, enemy.attack); 
         }
     }

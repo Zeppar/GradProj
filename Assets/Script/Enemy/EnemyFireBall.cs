@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
 
-public class EnemyBirdFireBall : MonoBehaviour
+public class EnemyFireBall : MonoBehaviour
 {
     public int attack = 35;
 

@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour {
     public int speed;
     public int dir = -1;
     public int attack = 7;
+    public float scaleMulti;
     public int HP {
         get { return _HP; }
         set {
@@ -25,8 +26,6 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    public Animator anim;
-    public Rigidbody2D rb;
     public EnemyType type;
 
     public bool dead = false;
@@ -40,17 +39,27 @@ public class Enemy : MonoBehaviour {
     public int attackRange = 1;
 
     public int skillID;
+    public bool hasSlider = true;
     public Slider hpSlider;
     public AttackChecker attackChecker;
+
+    public float attackInterval;
+    [HideInInspector]
+    public float lastAttackTime = 0;
+    [HideInInspector]
+    public Animator anim;
+    [HideInInspector]
+    public Rigidbody2D rb;
 
     public virtual void Start() {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         HP = maxHP;
-        hpSlider.value = 1.0f;
-        Begin();
-
+        if (hasSlider)
+            hpSlider.value = 1.0f;
+        scaleMulti = Mathf.Abs(transform.localScale.x);
     }
+
     public virtual void Begin() {
 
     }
@@ -66,11 +75,12 @@ public class Enemy : MonoBehaviour {
         BehaviourOperation();
     }
 
-    private void UpdateState() {
-        hpSlider.transform.localScale = new Vector2(-dir, 1.0f);
+    public virtual void UpdateState() {
+        if(hasSlider)
+            hpSlider.transform.localScale = new Vector2(-dir, 1.0f);
     }
 
-    private bool ShouldChase() {
+    public virtual bool ShouldChase() {
         return Vector2.Distance(GameManager.instance.player.transform.position, transform.position) < chaseDis;
     }
 
@@ -108,7 +118,8 @@ public class Enemy : MonoBehaviour {
         {
             isHurt = true;
             HP -= IntCount;
-            hpSlider.value = (float)HP / maxHP; 
+            if(hasSlider)
+                hpSlider.value = (float)HP / maxHP; 
             ResetAttackState();
         }
     }
@@ -127,7 +138,7 @@ public class Enemy : MonoBehaviour {
     }
 
 
-    public void ResetAttackState() {
+    public virtual void ResetAttackState() {
         isAttacking = false;
     }
 

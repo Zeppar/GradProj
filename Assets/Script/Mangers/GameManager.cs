@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public SkillStoneCreator skillStoneCreator;//技能石创建器
     public SkillParticleCreator skillParticleCreator;//技能特效创建器
     public SkillActionManger skillActionManger;
+    public PlayerHitManger playerHitManager;
    
     
     void Awake()

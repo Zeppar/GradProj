@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBird : Enemy {
-    [Header("敌人属性")]
+
     public float fallSpeed;
     public float chaseHeight;
-
-    [Header("攻击属性")]
-    public float attackInterval;
-    private float lastAttackTime = 0;
     public Transform attackPoint;
 
-    [Header("飞行位置")]
+    // 飞行位置
     public Transform leftPos;
     public Transform rightPos;
     private Vector2 targetPos;
@@ -33,11 +29,11 @@ public class EnemyBird : Enemy {
         } else if (targetPos.x < transform.position.x && dir > 0) {
             dir = -1;
         }
-        transform.localScale = new Vector2(dir * 7, transform.localScale.y);
+        transform.localScale = new Vector2(dir * scaleMulti, transform.localScale.y);
 
         if (Vector2.Distance(transform.position, targetPos) < 0.1f) {
             targetPos = FindRandomPosition();
-            transform.localScale = new Vector2(dir * 7, transform.localScale.y);
+            transform.localScale = new Vector2(dir * scaleMulti, transform.localScale.y);
         } else {
             transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
         }
@@ -59,7 +55,7 @@ public class EnemyBird : Enemy {
         } else {
             dir = 1;
         }
-        transform.localScale = new Vector2(dir * 7, transform.localScale.y);
+        transform.localScale = new Vector2(dir * scaleMulti, transform.localScale.y);
 
         if(transform.position.x > GameManager.instance.player.transform.position.x) {
             tempX = transform.position.x - speed * Time.deltaTime;

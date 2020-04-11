@@ -14,6 +14,8 @@ public class Player : MonoBehaviour {
     public float dashSpeed;
     private float dashTime;
     public float dashTotalTime;
+    private float dashCreateCurTime;
+    public float dashCreateTime;
 
     public float jumpForce;
     public float fallForce;
@@ -91,7 +93,7 @@ public class Player : MonoBehaviour {
 
     private void UpdateState() {
         currentState = anim.GetCurrentAnimatorStateInfo(0);
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !jumpPressed) {
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded) {
             jumpPressed = true;
         }
         if(Input.GetKeyDown(KeyCode.H) && !isDash) {
@@ -159,13 +161,13 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.J)) {
             if ((currentState.IsName(Util.PlayerAnimCollection.idle) || currentState.IsName(Util.PlayerAnimCollection.walk)) && attackCount == 0) {
-                AddHoriVelocity(dir * 2.0f);
+                AddHoriVelocity(dir * 0.6f);
                 SetAttackVal(1);
             } else if (currentState.IsName(Util.PlayerAnimCollection.attack1) && currentState.normalizedTime > 0.5f) {
-                AddHoriVelocity(dir * 3.0f);
+                AddHoriVelocity(dir * 1.0f);
                 SetAttackVal(2);
             } else if (currentState.IsName(Util.PlayerAnimCollection.attack2) && currentState.normalizedTime > 0.5f) {
-                AddHoriVelocity(dir * 5.0f);
+                AddHoriVelocity(dir * 2.0f);
                 SetAttackVal(3);
             }
         }
@@ -185,9 +187,13 @@ public class Player : MonoBehaviour {
         if (!isDash)
             return;
         if (dashTime <= dashTotalTime) {
-            AddVelocity(new Vector2(dir * dashSpeed, Mathf.Max(0, rb.velocity.y)));
+            AddVelocity(new Vector2(dir * dashSpeed, rb.velocity.y));
             dashTime += Time.deltaTime;
-            ObjectPool.instance.GetItem().transform.position = transform.position;
+            dashCreateCurTime += Time.deltaTime;
+            if (dashCreateCurTime >= dashCreateTime) {
+                dashCreateCurTime = 0;
+                ObjectPool.instance.GetItem().transform.position = transform.position;
+            }
         } else {
             dashTime = 0;
             isDash = false;

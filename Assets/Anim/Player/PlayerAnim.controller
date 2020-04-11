@@ -679,7 +679,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Adventurer
+  m_Name: PlayerAnim
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Attack
