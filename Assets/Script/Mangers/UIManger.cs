@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class UIManger : MonoBehaviour {
 
+
+    public GameObject Canvas;
     [Header("快捷技能")]
     public Image quickSkill1;
     public Image quickSkill2;
@@ -18,6 +20,7 @@ public class UIManger : MonoBehaviour {
     public Sprite heartHelf;
     public Sprite heartNull;
 
+  
     [Header("道具背包")]
     public BagPanel bagPanel;
     public GameObject describePanel;
@@ -37,10 +40,16 @@ public class UIManger : MonoBehaviour {
     public GameObject GotItemHelpText;
     private void Awake() {
         instance = this;
-        bagPanel.InitSlot();
+       
     }
     private void Update() {
         UpdateHpBar(GameManager.instance.player.HP);
+    }
+
+    public void Init()
+    {
+        Canvas.SetActive(true);
+        bagPanel.InitSlot();
     }
 
     //技能图标更新

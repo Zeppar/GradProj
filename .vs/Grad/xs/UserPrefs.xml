@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Player/Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Enemy/EnemyBird.cs">
     <Files>
-      <File FileName="Assets/Script/Enemy/EnemyBoss.cs" Line="32" Column="70" />
+      <File FileName="Assets/Script/Enemy/EnemyBoss.cs" Line="41" Column="61" />
       <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" />
-      <File FileName="Assets/Script/Player/Player.cs" Line="264" Column="42" />
+      <File FileName="Assets/Script/Player/Player.cs" />
       <File FileName="Assets/Script/Enemy/EnemyGround.cs" />
-      <File FileName="Assets/Script/Enemy/EnemyBird.cs" />
-      <File FileName="Assets/Script/Enemy/Enemy.cs" />
+      <File FileName="Assets/Script/Enemy/EnemyBird.cs" Line="18" Column="35" />
+      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="137" Column="94" />
       <File FileName="Assets/Script/Player/AttackChecker.cs" />
       <File FileName="Assets/Script/Player/PlayerAirAttack.cs" />
       <File FileName="Assets/Script/Mangers/PlayerHitManger.cs" />
@@ -14,8 +14,11 @@
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Assembly-CSharp-firstpass.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="09116189-9c55-41b9-8407-0bda4e5abe24" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="98fb6d43-9e77-4865-ad3a-783cf7d713ce" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

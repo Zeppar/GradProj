@@ -10,6 +10,8 @@ public class GoodItem : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragH
     public int SlotInedx;
     public GameObject describePanel;
 
+    public Image Mask;
+
     private void Awake()
     {
         describePanel = UIManger.instance.describePanel;

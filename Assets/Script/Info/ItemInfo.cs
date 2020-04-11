@@ -10,8 +10,8 @@ using UnityEngine;
         public int Value { get; set; }
         public int Range { get; set; }
         public string Describe { get; set; }
-        public string Icon { get; set; }
-
+        public string Icon { get; set; }      
+        public int CD { get; set; }
         public string Action{ get; set; }
     public SkillInfo()
         {

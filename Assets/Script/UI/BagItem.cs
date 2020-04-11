@@ -1,13 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class BagItem : MonoBehaviour, IDropHandler
 {
     public GoodInfo goodInfo;//每个BagItem，都有一个GoodInfo
     public int index;
     public ItemType itemType = ItemType.Slot;
+
+   
     //public GameObject skillAction = null;
     public void OnDrop(PointerEventData eventData)//但作为目标
     {

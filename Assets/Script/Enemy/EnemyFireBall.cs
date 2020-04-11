@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyFireBall : MonoBehaviour
 {
-    public int attack = 35;
+    public int attack;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

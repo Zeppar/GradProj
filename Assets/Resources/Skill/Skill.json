@@ -2,10 +2,11 @@
 	{
 		"id": 0,
 		"title": "火球术#0",
-		"value": 10,
+		"value": 100,
 		"range": 5,
 		"describe": "向前面发射一个火球",
 		"icon": "Icon/Skill/HuoQiu",
+		"cd":5,
 		"action": "Fireball"
 	},
 	{
@@ -15,6 +16,7 @@
 		"range": 5,
 		"describe": "增加血量",
 		"icon": "Icon/Skill/JinHua",
+		"cd":5,
 		"action": "Jinhua"
 	},
 	{
@@ -24,6 +26,7 @@
 		"range": 5,
 		"describe": "<color=red>此技能正在开发中....</color>",
 		"icon": "Icon/Skill/WanJianQiFa",
+		"cd":5,
 		"action": "SkillAction/WanJianQiFa"
 		
 	}

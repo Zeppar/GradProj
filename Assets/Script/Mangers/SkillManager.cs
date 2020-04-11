@@ -21,6 +21,7 @@ public class SkillManager
             info.Title = skilldata[i]["title"].ToString();
             info.Value = (int)skilldata[i]["value"];
             info.Range = (int)skilldata[i]["range"];
+            info.CD = (int)skilldata[i]["cd"];
             info.Describe = skilldata[i]["describe"].ToString();
             info.Icon = skilldata[i]["icon"].ToString();
             info.Action = skilldata[i]["action"].ToString();

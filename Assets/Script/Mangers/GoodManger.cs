@@ -1,13 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GoodManger
 {
     public int bagCount = 16;
-
+   
+ 
     public List<BagItem> goodInfoList = new List<BagItem>();
-
+   
     public bool isDirty = false;
    
 
@@ -15,7 +17,10 @@ public class GoodManger
 
     public void AddItemToPanel(GoodInfo.GoodType _goodType,int id)
     {
-        UIManger.instance.GotItemHelpText.SetActive(true);
+        if (UIManger.instance.GotItemHelpText != null)
+        {
+            UIManger.instance.GotItemHelpText.SetActive(true);
+        }
         for (int i = 0; i < goodInfoList.Count; i++) //还未检查检查检查检查检查
         {
             if(goodInfoList[i].goodInfo!= null &&
@@ -23,7 +28,7 @@ public class GoodManger
                 GameManager.instance.skillManager.FindSkillWithID(id) == goodInfoList[i].goodInfo.skill)
             {               
                 goodInfoList[i].goodInfo.count++;
-                Debug.Log("叠加成立:"+ goodInfoList[i].goodInfo.count);
+
                 UIManger.instance.bagPanel.UpdataItem();
                 return;
             }
@@ -48,6 +53,14 @@ public class GoodManger
         }
         isDirty = true;
         UIManger.instance.bagPanel.UpdataItem();
+    }
+
+    public void AddItemToPanel(GoodInfo.GoodType _goodType, int id,int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            AddItemToPanel(_goodType, id);
+        }
     }
     void Start()
     {
