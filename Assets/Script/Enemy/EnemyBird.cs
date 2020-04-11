@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -89,7 +89,7 @@ public class EnemyBird : Enemy {
         base.Attack();
         anim.SetTrigger("Attack");
         lastAttackTime = Time.time;
-        GameManager.instance.skillParticleCreator.CreateFireball(attackPoint.position, new Vector2(dir, 0), 0.5f, Util.SkillCollection.enemyFireBall);
+        GameManager.instance.skillParticleCreator.CreateFireball(attackPoint.position, new Vector2(dir, 0), 0.5f, Util.SkillCollection.enemyFireBall,attack,Util.TagCollection.playerTag,Util.EffectCollection.enemyFireBallExplosion);
     }
 
 

@@ -109,12 +109,13 @@ public class Player : MonoBehaviour {
 
     private void CreateShadow() {
         if (Input.GetKeyDown(KeyCode.L)) {
-            GameManager.instance.skillParticleCreator.CreateFireball(attackPoint.position, new Vector2(dir, 0), 0.5f, Util.SkillCollection.playerFireBall);
+            //GameManager.instance.skillParticleCreator.CreateFireball(attackPoint.position, new Vector2(dir, 0), 0.5f, Util.SkillCollection.playerFireBall,attack);
         }
     }
 
     void SkillAttack() {
-        if (Input.GetKeyDown(KeyCode.K)) {
+        return;
+        if (Input.GetKeyDown(KeyCode.I)) {
             GameManager.instance.skillParticleCreator.CreateShadow(transform.position, dir);
         }
     }
@@ -253,7 +254,6 @@ public class Player : MonoBehaviour {
         } else if(rb.velocity.y < 0){
             rb.velocity += Vector2.down * fallForce;
         }
-
     }
     void Die() {
         dead = true;
