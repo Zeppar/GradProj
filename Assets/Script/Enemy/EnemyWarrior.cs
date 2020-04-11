@@ -30,7 +30,8 @@ public class EnemyWarrior : EnemyGround {
     public override void BeAttacked(int IntCount) {
         if (HP > 0) {
             base.BeAttacked(IntCount);
-            iTween.MoveBy(GameManager.instance.player.gameObject, iTween.Hash("x", dir * 2, "y", 1, "looktime", 0.5f));
+            //iTween.MoveBy(GameManager.instance.player.gameObject, iTween.Hash("x", dir * 2, "y", 1, "looktime", 0.5f));
+            AddVelocity(new Vector2(GameManager.instance.player.dir * 3, 1f));
             anim.SetTrigger("Hurt");
             lastAttackTime = Time.time;//打断攻击
         }
