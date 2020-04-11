@@ -40,7 +40,7 @@ public class UIManger : MonoBehaviour {
     public GameObject GotItemHelpText;
     private void Awake() {
         instance = this;
-       
+        Init();
     }
     private void Update() {
         UpdateHpBar(GameManager.instance.player.HP);
@@ -50,25 +50,6 @@ public class UIManger : MonoBehaviour {
     {
         Canvas.SetActive(true);
         bagPanel.InitSlot();
-    }
-
-    //技能图标更新
-    public void UpdataSkillIcon(List<SkillInfo> currentSkillList) {
-        /////////////
-        ///暂停使用
-        ////////////
-        for (int i = 0; i < currentSkillList.Count; i++) {
-            if (i == 0) {
-
-                // SkillIcon1.sprite = Resources.Load<Sprite>(currentSkillList[i].Icon);
-            } else if (i == 1) {
-                //   SkillIcon2.sprite = Resources.Load<Sprite>(currentSkillList[i].Icon);
-                print("1");
-            } else {
-                Debug.LogError("同志，你有多少技能啊");
-            }
-
-        }
     }
 
     //血条更新

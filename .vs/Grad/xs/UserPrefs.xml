@@ -1,16 +1,22 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Enemy/EnemyBird.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/3rd/Mirza Beig/Particle Systems/_Common/Scripts/_Demo/DemoManager.cs">
     <Files>
       <File FileName="Assets/Script/Enemy/EnemyBoss.cs" Line="41" Column="61" />
       <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" />
       <File FileName="Assets/Script/Player/Player.cs" />
       <File FileName="Assets/Script/Enemy/EnemyGround.cs" />
-      <File FileName="Assets/Script/Enemy/EnemyBird.cs" Line="18" Column="35" />
-      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="137" Column="94" />
+      <File FileName="Assets/Script/Enemy/EnemyBird.cs" />
+      <File FileName="Assets/Script/Enemy/Enemy.cs" />
       <File FileName="Assets/Script/Player/AttackChecker.cs" />
       <File FileName="Assets/Script/Player/PlayerAirAttack.cs" />
       <File FileName="Assets/Script/Mangers/PlayerHitManger.cs" />
       <File FileName="Assets/Script/Mangers/GameManager.cs" />
+      <File FileName="Assets/Script/Mangers/SkillActionManger.cs" Line="14" Column="50" />
+      <File FileName="Assets/Script/Mangers/GoodManger.cs" Line="37" Column="24" />
+      <File FileName="Assets/Script/UI/BagPanel.cs" Line="66" Column="22" />
+      <File FileName="Assets/Script/Mangers/UIManger.cs" Line="84" Column="26" />
+      <File FileName="Assets/Script/Mangers/UIKeyManger.cs" Line="1" Column="1" />
+      <File FileName="Assets/3rd/Mirza Beig/Particle Systems/_Common/Scripts/_Demo/DemoManager.cs" Line="373" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -18,7 +24,7 @@
     <String>Assembly-CSharp-firstpass.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="98fb6d43-9e77-4865-ad3a-783cf7d713ce" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b0bb3739-2014-45b4-aa0c-2086068630ac" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

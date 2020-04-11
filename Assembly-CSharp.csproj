@@ -116,23 +116,40 @@
     <Compile Include="Assets\3rd\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\3rd\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\3rd\Cinemachine\Timeline\CinemachineTrack.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
-    <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\AnimatedLight.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\CameraShake.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\DemoManager.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FPSDisplay.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FPSTest.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\LoopingParticleSystemsManager.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\MouseFollow.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\OneshotParticleSystemsManager.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\ParticleManager.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\ES2Init.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Examples\Creating an Automatic Save Structure\ES2UniqueID.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Examples\Creating an Automatic Save Structure\UniqueGameLogic.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Examples\Creating an Automatic Save Structure\UniqueObjectManager.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Examples\Creating an Automatic Save Structure\UniqueSaveManager.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Examples\Save and Load Prefabs Instantiated at Runtime\PrefabManager.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Examples\Shared Assets\Scripts\MyExampleScript.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Examples\Upload and Download a Texture\UploadDownloadTexture.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Types\ES2UserType_UnityEngineCanvasRenderer.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Types\ES2UserType_UnityEngineLineRenderer.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Types\ES2UserType_UnityEngineRectTransform.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Types\ES2UserType_UnityEngineUIText.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Types\ES2_AudioClip.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Types\ES2_GameObject.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Types\ES2_RawTexture2D.cs" />
+    <Compile Include="Assets\3rd\Easy Save 2\Types\ES2_Sprite.cs" />
+    <Compile Include="Assets\3rd\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+    <Compile Include="Assets\3rd\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
+    <Compile Include="Assets\3rd\EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\3rd\EffectExamples\Shared\Scripts\GunShoot.cs" />
+    <Compile Include="Assets\3rd\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+    <Compile Include="Assets\3rd\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
+    <Compile Include="Assets\3rd\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\3rd\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\3rd\Mirza Beig\Particle Systems\_Common\Scripts\AnimatedLight.cs" />
+    <Compile Include="Assets\3rd\Mirza Beig\Particle Systems\_Common\Scripts\CameraShake.cs" />
+    <Compile Include="Assets\3rd\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\DemoManager.cs" />
+    <Compile Include="Assets\3rd\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FPSDisplay.cs" />
+    <Compile Include="Assets\3rd\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FPSTest.cs" />
+    <Compile Include="Assets\3rd\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\LoopingParticleSystemsManager.cs" />
+    <Compile Include="Assets\3rd\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\MouseFollow.cs" />
+    <Compile Include="Assets\3rd\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\OneshotParticleSystemsManager.cs" />
+    <Compile Include="Assets\3rd\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\ParticleManager.cs" />
+    <Compile Include="Assets\DonotBeDestroyOnLoad.cs" />
     <Compile Include="Assets\Plus\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Plus\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Plus\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
@@ -330,10 +347,13 @@
     <Compile Include="Assets\Script\Info\GoodInfo.cs" />
     <Compile Include="Assets\Script\Info\ItemInfo.cs" />
     <Compile Include="Assets\Script\Item\FireBallExplosion.cs" />
+    <Compile Include="Assets\Script\Item\Fireball.cs" />
+    <Compile Include="Assets\Script\Item\LevelWin.cs" />
     <Compile Include="Assets\Script\Item\PlayerFireBall.cs" />
     <Compile Include="Assets\Script\Item\PlayerShadow.cs" />
     <Compile Include="Assets\Script\Item\SkillStone.cs" />
     <Compile Include="Assets\Script\Mangers\GameManager.cs" />
+    <Compile Include="Assets\Script\Mangers\GameSaveManger.cs" />
     <Compile Include="Assets\Script\Mangers\GoodManger.cs" />
     <Compile Include="Assets\Script\Mangers\ObjectPool.cs" />
     <Compile Include="Assets\Script\Mangers\PlayerHitManger.cs" />
@@ -349,6 +369,8 @@
     <Compile Include="Assets\Script\Player\Player.cs" />
     <Compile Include="Assets\Script\Player\PlayerAirAttack.cs" />
     <Compile Include="Assets\Script\Player\PlayerDash.cs" />
+    <Compile Include="Assets\Script\Terrain\MoveCube.cs" />
+    <Compile Include="Assets\Script\Terrain\Trap\Magma.cs" />
     <Compile Include="Assets\Script\Terrain\Trap\Stab.cs" />
     <Compile Include="Assets\Script\UI\BagItem.cs" />
     <Compile Include="Assets\Script\UI\BagPanel.cs" />
@@ -361,10 +383,11 @@
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UIAdditive.shader" />
     <None Include="Assets\Texture\Effects\wills_pixel_explosions_sample\round_explosion\spritesheet\spritesheet.txt" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UI Particle Add.shader" />
-    <None Include="Assets\free01 King ghost\Documentation\Instructions and notes.txt" />
-    <None Include="Assets\Mirza Beig\_DOCS\README - Inferno VFX.txt" />
+    <None Include="Assets\Texture\free01 King ghost\Documentation\Instructions and notes.txt" />
+    <None Include="Assets\3rd\Mirza Beig\_DOCS\README - Inferno VFX.txt" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UIScreen.shader" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UI Particle Multiply.shader" />
+    <None Include="Assets\SimplePixelUI\font\license.txt" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UIMultiply.shader" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UILinearDodge.shader" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UI Particle Alpha Blend.shader" />
@@ -373,6 +396,7 @@
     <None Include="Assets\Texture\Effects\wills_pixel_explosions_sample\license.txt" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UI Particle Premultiply Blend.shader" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UI Particle VertexLit Blended.shader" />
+    <None Include="Assets\3rd\Easy Save 2\changelog.txt" />
     <None Include="Assets\Plus\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UI Particle MultiplyDouble.shader" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UI Particle AddMultiply.shader" />
@@ -383,11 +407,14 @@
     <None Include="Assets\Texture\Effects\wills_pixel_explosions_sample\X_plosion\spritesheet\spritesheet.txt" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UISoftAdditive.shader" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UI Particle AddSmooth.shader" />
+    <None Include="Assets\SimplePixelUI\font\readme.txt" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UIImageCrop.shader" />
     <None Include="Assets\Plus\Demigiant\DOTween\readme.txt" />
-    <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
+    <None Include="Assets\3rd\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
+    <None Include="Assets\link.xml" />
     <None Include="Assets\Texture\Effects\wills_pixel_explosions_sample\round_vortex\spritesheet\spritesheet.txt" />
     <None Include="Assets\Plus\Pixel Arsenal\Pixel Arsenal - ReadMe.txt" />
+    <None Include="Assets\3rd\Easy Save 2\readme.txt" />
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UIParticleHidden.shader" />
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
       <HintPath>/Users/magene/Desktop/Grad/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
@@ -451,6 +478,9 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/magene/Desktop/Grad/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>/Users/magene/Desktop/Grad/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.0f6/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -989,6 +1019,20 @@
     <Reference Include="Boo.Lang">
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.0f6/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{28EA739C-D64F-7DDA-78D2-F039FCE8B93D}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
+      <Project>{78BE5628-D58F-D7B6-BAB1-A102A774AD7D}</Project>
+      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
+      <Project>{A5E046BA-CC66-6BA8-4DCC-784DE8F857F1}</Project>
+      <Name>Unity.2D.Tilemap.Extras</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
