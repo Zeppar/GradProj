@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyGround : Enemy
 {
-    public BoxCollider2D feetCollider;
-    public bool isGrounded = true;
+    public Transform feetPos;
+    public bool onGround = true;
 
     public ContactFilter2D contactFilter;
     public RaycastHit2D[] resultArr = new RaycastHit2D[16];
@@ -26,11 +26,12 @@ public class EnemyGround : Enemy
     }
 
     public override void UpdateState() {
-        isGrounded = feetCollider.IsTouchingLayers(LayerMask.GetMask(Util.LayerCollection.groundLayer));
+        //isGrounded = feetCollider.IsTouchingLayers(LayerMask.GetMask(Util.LayerCollection.groundLayer));
+        onGround = Physics2D.OverlapCircle(feetPos.position, 2.0f, LayerMask.GetMask(Util.LayerCollection.groundLayer));
     }
 
     public override void Seek() {//巡逻
-        if (!isGrounded) {
+        if (!onGround) {
             return;
         }
         anim.SetBool("Walk", true);
@@ -44,7 +45,7 @@ public class EnemyGround : Enemy
     }
 
     public override void Chase() {//追逐
-        if (!isGrounded) {
+        if (!onGround) {
             return;
         }
         anim.SetBool("Walk", true);

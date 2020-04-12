@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour {
 
     }
 
-    private void FixedUpdate() {
+    private void Update() {
         if (dead)
             return;
         UpdateState();
@@ -121,6 +121,7 @@ public class Enemy : MonoBehaviour {
             if(hasSlider)
                 hpSlider.value = (float)HP / maxHP; 
             ResetAttackState();
+            Invoke("ResetHurtState", 0.2f);
         }
     }
 
@@ -139,6 +140,12 @@ public class Enemy : MonoBehaviour {
 
 
     public virtual void ResetAttackState() {
+        StartCoroutine(ResetAttackFlag());
+    }
+
+    IEnumerator ResetAttackFlag() {
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
         isAttacking = false;
     }
 
@@ -155,5 +162,6 @@ public class Enemy : MonoBehaviour {
         AddVelocity(new Vector2(dir * xForce, yForce));
         anim.SetTrigger("BeatBack");
         Invoke("ResetHurtState", 1.0f);
+        ResetAttackState();
     }
 }
