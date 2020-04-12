@@ -78,7 +78,6 @@ public class Player : MonoBehaviour {
         UpdateState();
         AirAttack();
         GroundAttack();
-        SkillAttack();
         CreateShadow();
     }
     
@@ -98,6 +97,7 @@ public class Player : MonoBehaviour {
         }
         if(Input.GetKeyDown(KeyCode.H) && !isDash) {
             isDash = true;
+            GameManager.instance.effectManager.ShakeCamera();
         }
     }
 
@@ -108,15 +108,8 @@ public class Player : MonoBehaviour {
     }
 
     private void CreateShadow() {
-        if (Input.GetKeyDown(KeyCode.L)) {
+        if (Input.GetKeyDown(KeyCode.U)) {
             //GameManager.instance.skillParticleCreator.CreateFireball(attackPoint.position, new Vector2(dir, 0), 0.5f, Util.SkillCollection.playerFireBall,attack);
-        }
-    }
-
-    void SkillAttack() {
-        return;
-        if (Input.GetKeyDown(KeyCode.I)) {
-            GameManager.instance.skillParticleCreator.CreateShadow(transform.position, dir);
         }
     }
 
@@ -124,6 +117,7 @@ public class Player : MonoBehaviour {
         if (isGrounded) {
             if (currentState.IsName(Util.PlayerAnimCollection.airAttack3)) {
                 SetAttackVal(7);
+                GameManager.instance.effectManager.ShakeCamera();
             }
             return;
         }

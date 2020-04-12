@@ -289,6 +289,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/magene/Desktop/Grad/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>/Users/magene/Desktop/Grad/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>/Users/magene/Desktop/Grad/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
@@ -336,6 +339,9 @@
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>/Users/magene/Desktop/Grad/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>/Users/magene/Desktop/Grad/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>/Users/magene/Desktop/Grad/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>

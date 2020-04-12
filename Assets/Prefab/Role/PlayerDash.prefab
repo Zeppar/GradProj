@@ -94,5 +94,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7271a27824ff43a686f9e425b9f3c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  removeTime: 1.5
-  alphaMulti: 0.97
+  removeTime: 1.2
+  alphaMulti: 0.98
