@@ -16,7 +16,7 @@
 		"range": 5,
 		"describe": "增加血量",
 		"icon": "Icon/Skill/JinHua",
-		"cd":5,
+		"cd":50,
 		"action": "Jinhua"
 	},
 	{

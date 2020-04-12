@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class SkillActionManger : MonoBehaviour
 {
-    public float lastActionA = 0;
-    public float lastActionB= 0;
+    private float lastActionA = 0;
+    private float lastActionB= 0;
 
     // Update is called once per frame
     void Update()
