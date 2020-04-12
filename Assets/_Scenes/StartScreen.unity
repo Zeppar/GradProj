@@ -661,8 +661,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.0000076294, y: -72.900024}
-  m_SizeDelta: {x: 354.4, y: 145.79999}
+  m_AnchoredPosition: {x: -0.0000076294, y: -50.52}
+  m_SizeDelta: {x: 354.4, y: 101.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449724168
 MonoBehaviour:
@@ -710,7 +710,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5BFB\u72D7\u542F\u793A"
+  m_Text: "\u9010\u5149"
 --- !u!222 &1449724170
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -954,6 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2a045ce0dc1e5419406a297f607d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Canvas: {fileID: 0}
   quickSkill1: {fileID: 0}
   quickSkill2: {fileID: 0}
   heart_list: []
@@ -964,6 +965,9 @@ MonoBehaviour:
   describePanel: {fileID: 0}
   BagPanel_Obj: {fileID: 0}
   Cheat_Obj: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  GetItemHelp: {fileID: 0}
+  GotItemHelpText: {fileID: 0}
 --- !u!4 &1765515148
 Transform:
   m_ObjectHideFlags: 0
