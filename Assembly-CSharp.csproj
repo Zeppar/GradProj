@@ -407,7 +407,7 @@
     <None Include="Assets\Plus\unity-ui-extensions\Shaders\UIImageCrop.shader" />
     <None Include="Assets\Plus\Demigiant\DOTween\readme.txt" />
     <None Include="Assets\3rd\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
-    <None Include="Assets\link.xml" />
+    <None Include="Assets\Test\link.xml" />
     <None Include="Assets\Texture\Effects\wills_pixel_explosions_sample\round_vortex\spritesheet\spritesheet.txt" />
     <None Include="Assets\Plus\Pixel Arsenal\Pixel Arsenal - ReadMe.txt" />
     <None Include="Assets\3rd\Easy Save 2\readme.txt" />
