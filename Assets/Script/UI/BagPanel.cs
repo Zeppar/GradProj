@@ -17,11 +17,23 @@ public class BagPanel : MonoBehaviour {
 
 
     private void Awake() {
+
+      
+    }
+    public void Init()
+    {
         manger = GameManager.instance.goodManger;//初始化物品管理器内容
         goodPanel = GameObject.Find("Slot Panel");//初始化背包面板内容
+        InitPanel();
+      
     }
-    void InitQuitBag()//初始化快捷背包
+    void InitPanel()
+    {   
+        InitSlot();
+    }
+   void InitQuitBag()//初始化快捷背包
     {
+       
         BagItem skill1 = UIManger.instance.quickSkill1.GetComponent<BagItem>();
         BagItem skill2 = UIManger.instance.quickSkill2.GetComponent<BagItem>();
         skill1.index = manger.goodInfoList.Count;
@@ -31,7 +43,7 @@ public class BagPanel : MonoBehaviour {
         //  skill2.goodInfo.count = 0;
         manger.goodInfoList.Add(skill2);
     }
-    public void InitSlot()//初始化背包格子
+   void InitSlot()//初始化背包格子
     {
         manger = GameManager.instance.goodManger;//初始化物品管理器内容
         goodPanel = GameObject.Find("Slot Panel");//初始化背包面板内容

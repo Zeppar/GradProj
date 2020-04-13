@@ -1,22 +1,15 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/3rd/Mirza Beig/Particle Systems/_Common/Scripts/_Demo/DemoManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Mangers/UIManger.cs">
     <Files>
-      <File FileName="Assets/Script/Enemy/EnemyBoss.cs" Line="41" Column="61" />
-      <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" />
-      <File FileName="Assets/Script/Player/Player.cs" />
-      <File FileName="Assets/Script/Enemy/EnemyGround.cs" />
-      <File FileName="Assets/Script/Enemy/EnemyBird.cs" />
+      <File FileName="Assets/Script/Enemy/EnemyGround.cs" Line="54" Column="39" />
       <File FileName="Assets/Script/Enemy/Enemy.cs" />
-      <File FileName="Assets/Script/Player/AttackChecker.cs" />
-      <File FileName="Assets/Script/Player/PlayerAirAttack.cs" />
-      <File FileName="Assets/Script/Mangers/PlayerHitManger.cs" />
+      <File FileName="Assets/Script/Enemy/EnemyBoss.cs" />
+      <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" />
+      <File FileName="Assets/Script/Player/Player.cs" Line="112" Column="56" />
       <File FileName="Assets/Script/Mangers/GameManager.cs" />
-      <File FileName="Assets/Script/Mangers/SkillActionManger.cs" Line="14" Column="50" />
-      <File FileName="Assets/Script/Mangers/GoodManger.cs" Line="37" Column="24" />
-      <File FileName="Assets/Script/UI/BagPanel.cs" Line="66" Column="22" />
-      <File FileName="Assets/Script/Mangers/UIManger.cs" Line="84" Column="26" />
-      <File FileName="Assets/Script/Mangers/UIKeyManger.cs" Line="1" Column="1" />
-      <File FileName="Assets/3rd/Mirza Beig/Particle Systems/_Common/Scripts/_Demo/DemoManager.cs" Line="373" Column="42" />
+      <File FileName="Assets/Script/Mangers/SkillParticleCreator.cs" Line="21" Column="6" />
+      <File FileName="Assets/Script/Mangers/SkillActionManger.cs" Line="11" Column="16" />
+      <File FileName="Assets/Script/Mangers/UIManger.cs" Line="46" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -24,7 +17,7 @@
     <String>Assembly-CSharp-firstpass.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b0bb3739-2014-45b4-aa0c-2086068630ac" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="aefafd86-28bb-402b-8e96-ff009d037570" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

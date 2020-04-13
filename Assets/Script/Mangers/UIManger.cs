@@ -7,29 +7,20 @@ using UnityEngine.SceneManagement;
 public class UIManger : MonoBehaviour {
 
 
-    public GameObject Canvas;
+
     [Header("快捷技能")]
     public Image quickSkill1;
     public Image quickSkill2;
-
-    [Header("主角血条")]
-
-    public List<Image> heart_list;
-
-    public Sprite heartFull;
-    public Sprite heartHelf;
-    public Sprite heartNull;
-
+ 
   
     [Header("道具背包")]
     public BagPanel bagPanel;
     public GameObject describePanel;
 
-
-
     [Header("面板物体")]
     public GameObject BagPanel_Obj;
     public GameObject Cheat_Obj;
+    public HPBarPanel hpBarPabel;
 
     [Header("死亡界面")]
     public GameObject gameOverPanel;
@@ -40,50 +31,16 @@ public class UIManger : MonoBehaviour {
     public GameObject GotItemHelpText;
     private void Awake() {
         instance = this;
-        Init();
+        //Init();
     }
-    private void Update() {
-        UpdateHpBar(GameManager.instance.player.HP);
-    }
-
+ 
     public void Init()
-    {
-        Canvas.SetActive(true);
-        bagPanel.InitSlot();
-    }
-
-    //血条更新
-    public void UpdateHpBar(int hp) {
-
-        if (hp % 2 == 0) {
-
-            for (int i = 0; i < heart_list.Count; i++) {
-                if (i + 1 <= hp / 2) {
-                    heart_list[i].sprite = heartFull;
-                } else {
-                    heart_list[i].sprite = heartNull;
-                }
-            }
-        } else {
-
-            for (int i = 0; i < heart_list.Count; i++) {
-
-                if (i + 1 <= hp / 2) {
-                    heart_list[i].sprite = heartFull;
-                } else if (i + 1 == (hp / 2) + 1) {
-                    heart_list[i].sprite = heartHelf;
-                } else {
-                    heart_list[i].sprite = heartNull;
-                }
-
-            }
-        }
-
+    {                  
+        hpBarPabel.UpdateHpBar(GameManager.instance.player.HP);
+        bagPanel.Init();
     }
 
     public void LoadLevel(int index) {
         SceneManager.LoadScene(index);
     }
-
-
 }

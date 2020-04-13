@@ -13,12 +13,27 @@ public class BagItem : MonoBehaviour, IDropHandler
 
    
     //public GameObject skillAction = null;
-    public void OnDrop(PointerEventData eventData)//但作为目标
+    public void OnDrop(PointerEventData eventData)//当作为目标
     {
         
         GoodItem dropedItem = eventData.pointerDrag.GetComponent<GoodItem>();
-        
-        if (goodInfo == null) //需要修改修改修改修改
+
+       
+        if (dropedItem.Mask.fillAmount != 0 )
+        {
+            Debug.Log("技能还未冷却，不能移动技能");
+            return;
+        }
+        if (GetComponentInChildren<GoodItem>() != null)
+        {
+            if (GetComponentInChildren<GoodItem>().Mask.fillAmount != 0)
+            {
+                Debug.Log("技能还未冷却，不能移动技能");
+                return;
+            }
+        }
+
+        if (goodInfo == null) 
         {
             goodInfo = new GoodInfo();//先将自己的GoodInfo赋值           
             goodInfo.goodType = GameManager.instance.goodManger.goodInfoList[dropedItem.SlotInedx].goodInfo.goodType;//同步物品类型        
@@ -29,9 +44,7 @@ public class BagItem : MonoBehaviour, IDropHandler
             dropedItem.SlotInedx = index;//设置物品的格子索引为自己         
             UIManger.instance.bagPanel.UpdataItem();
         }
-        else if(goodInfo == GameManager.instance.goodManger.goodInfoList[dropedItem.SlotInedx].goodInfo) {
-           // Debug.LogError("...");
-               
+        else if(goodInfo == GameManager.instance.goodManger.goodInfoList[dropedItem.SlotInedx].goodInfo) {                   
         }        
         else if(goodInfo.skill.ID == GameManager.instance.goodManger.goodInfoList[dropedItem.SlotInedx].goodInfo.skill.ID && goodInfo != GameManager.instance.goodManger.goodInfoList[dropedItem.SlotInedx].goodInfo) { //相同物品可叠加
             

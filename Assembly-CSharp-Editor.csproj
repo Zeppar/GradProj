@@ -63,64 +63,105 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineBasicMultiChannelPerlinEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineBlendListCameraEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineBlenderSettingsEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineBrainEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineClearShotEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineColliderEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineComposerEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineConfinerEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineExternalCameraEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineFramingTransposerEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineFreeLookEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineGroupComposerEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineHardLockToTargetEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineHardLookAtEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineMixingCameraEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineOrbitalTransposerEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachinePOVEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachinePathEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineScreenComposerGuides.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineSmoothPathEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineStateDrivenCameraEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineTargetGroupEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineTrackedDollyEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineTransposerEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraBaseEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Menus\CinemachineMenu.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\PropertyDrawers\CinemachineBlendDefinitionPropertyDrawer.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\PropertyDrawers\CinemachineTagFieldPropertyDrawer.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\PropertyDrawers\GetSetDrawer.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\PropertyDrawers\LensSettingsPropertyDrawer.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\PropertyDrawers\MinDrawer.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Utility\BaseEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Utility\EmbeddedAssetHelpers.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Utility\SaveDuringPlay.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Utility\ScriptableObjectUtility.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Utility\SerializedPropertyHelper.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Windows\AboutWindow.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Windows\CinemachineColliderPrefs.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Base\Editor\Windows\CinemachineSettings.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\PostFX\Editor\CinemachinePostProcessingEditor.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\PostFX\Editor\PostFXAutoImport.cs" />
-    <Compile Include="Assets\3rd\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
     <Compile Include="Assets\3rd\EffectExamples\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\AccordionElementEditor.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\BezierLineRendererEditor.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\BoxSliderEditor.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\CUIBezierCurveEditor.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\CUIGraphicEditor.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\CUIImageEditor.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\CUITextEditor.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\CanvasGroupActivator.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\NonDrawingGraphicEditor.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\ReadOnlyDrawer.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\TextPicEditor.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\UIExtensionsMenuOptions.cs" />
-    <Compile Include="Assets\Plus\unity-ui-extensions\Editor\uGUITools.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\AutoSave\ES2EditorAutoSaveHierarchy.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\AutoSave\ES2EditorAutoSaveInspector.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\AutoSave\ES2EditorAutoSavePrefabs.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\AutoSave\ES2EditorAutoSaveScene.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\AutoSave\ES2EditorAutoSaveSettings.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\AutoSave\ES2EditorAutoSaveUtility.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\ES2AutoInspector.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\ES2DefaultSettingsInspector.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\ES2EditorFileEditor.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\ES2EditorManageTypes.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\ES2EditorReflection.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\ES2EditorSettings.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\ES2EditorTools.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\ES2EditorUninstall.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\GUI\ES2EditorColumn.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\GUI\ES2EditorMenu.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\GUI\ES2EditorUtility.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\GUI\ES2EditorWindow.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Settings\ES2EditorSettingsChangeLog.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Settings\ES2EditorSettingsGeneral.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Settings\ES2EditorSettingsInformation.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Settings\ES2EditorSettingsReadme.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Settings\ES2EditorSettingsTools.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Templates\ES2EditorTemplates.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_AudioClip.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_BoneWeight.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Bounds.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Color.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Color32.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Enum.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Material.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Matrix4x4.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Mesh.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Quaternion.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Rect.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Texture2D.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Vector2.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Vector3.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Basic Types\ES2Editor_Vector4.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Components\ES2Editor_BoxCollider.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Components\ES2Editor_CapsuleCollider.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Components\ES2Editor_MeshCollider.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Components\ES2Editor_SkinnedMeshRenderer.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Components\ES2Editor_SphereCollider.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Components\ES2Editor_Transform.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\ES2EditorType.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\ES2EditorTypeUtility.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_bool.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_byte.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_char.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_decimal.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_double.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_float.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_int.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_long.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_sbyte.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_short.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_string.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_uint.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_ulong.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 2\Editor\Types\Primitives\ES2Editor_ushort.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\AddES3Prefab.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\AutoSaveWindow.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3AutoSaveEditor.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3AutoSaveMgrEditor.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3EditorStyle.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3EditorUtility.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3InspectorInfoEditor.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3PlayMakerEditor.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3Postprocessor.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3PrefabEditor.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3ReferenceMgrEditor.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3SettingsEditor.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3Window.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\HomeWindow.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\SettingsWindow.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\ToolsWindow.cs" />
+    <Compile Include="Assets\3rd\Plugins\Easy Save 3\Editor\TypesWindow.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\AccordionElementEditor.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\BezierLineRendererEditor.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\BoxSliderEditor.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\CUIBezierCurveEditor.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\CUIGraphicEditor.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\CUIImageEditor.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\CUITextEditor.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\CanvasGroupActivator.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\NonDrawingGraphicEditor.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\ReadOnlyDrawer.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\TextPicEditor.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\UIExtensionsMenuOptions.cs" />
+    <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\uGUITools.cs" />
+    <None Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3ValueTypeTemplate.txt" />
+    <None Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3ComponentTypeTemplate.txt" />
+    <None Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3TypeTemplate.txt" />
+    <None Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3Type_MaterialTemplate.txt" />
+    <None Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3ScriptableObjectTypeTemplate.txt" />
     <None Include="Assets\3rd\EffectExamples\Editor\PackageManagerAssembly\PackageImportList.txt" />
+    <None Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3ClassTypeTemplate.txt" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
@@ -132,6 +173,9 @@
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
@@ -180,6 +224,9 @@
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
@@ -386,13 +433,13 @@
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/3rd/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/Plus/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/3rd/Plus/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenEditor">
-      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/Plus/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/3rd/Plus/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="LitJson">
-      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/Plus/LitJson/LitJson.dll</HintPath>
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/3rd/Plus/LitJson/LitJson.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/PackageCache/com.unity.render-pipelines.core@7.2.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
@@ -756,17 +803,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{B0D38B4E-5524-9BA2-BC2F-04363E9725ED}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{38817E81-5FEC-FE10-9C2D-3D2F61270BB6}</Project>
       <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{442F5F72-80F8-A1E6-9122-BABBB50A11A8}</Project>
-      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
       <Project>{C38241DD-16C8-4922-C030-4EA322606EC1}</Project>

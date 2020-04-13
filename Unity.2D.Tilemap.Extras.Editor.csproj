@@ -290,13 +290,13 @@
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/3rd/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/Plus/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/3rd/Plus/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenEditor">
-      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/Plus/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/3rd/Plus/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="LitJson">
-      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/Plus/LitJson/LitJson.dll</HintPath>
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/3rd/Plus/LitJson/LitJson.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/PackageCache/com.unity.render-pipelines.core@7.2.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>

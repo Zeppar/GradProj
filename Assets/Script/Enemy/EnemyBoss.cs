@@ -15,20 +15,16 @@ public class EnemyBoss : EnemyGround
         // choose attack
         SetAttackCount(attackType);
         attackType = Random.Range(1, 3);
-        Debug.Log("set : " + attackType);
+        //Debug.Log("set : " + attackType);
         lastAttackTime = Time.time;
     }
 
     public override bool ShouldChase() {
-        if (attackType == 3)
-            return false;
         return base.ShouldChase();
     }
 
     public override void CheckAttackPlayer() {
         base.CheckAttackPlayer();
-        if (attackType == 3)
-            return;
         attackChecker.CheckAttack((EnemyAttackType)attackType, this);
     }
 
@@ -54,8 +50,8 @@ public class EnemyBoss : EnemyGround
     }
 
     public override void ResetAttackState() {
-        base.ResetAttackState();
         SetAttackCount(0);
+        base.ResetAttackState();
     }
 
     public void Defend() {
