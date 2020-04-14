@@ -58,8 +58,7 @@ public class BagPanel : MonoBehaviour {
 
         }
         InitQuitBag();
-        UIManger.instance.BagPanel_Obj.SetActive(false);
-
+        gameObject.SetActive(false);
     }
     public void UpdataItem() {
         for (int i = 0; i < GoodWasAdded.Count; i++)//清空装备

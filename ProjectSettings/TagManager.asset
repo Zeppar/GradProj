@@ -7,10 +7,7 @@ TagManager:
   - Enemy
   - Trap
   - Bullet
-  - PBullet
-  - OBS
-  - NPC
-  - Prize
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -296,3 +296,130 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1696497621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1696497625}
+  - component: {fileID: 1696497624}
+  - component: {fileID: 1696497623}
+  - component: {fileID: 1696497622}
+  m_Layer: 0
+  m_Name: Easy Save 3 Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1696497622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696497621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9107aee0ced90422da95f0b31680501f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 002f1199-52b8-47b2-a521-2578e8ca9db0
+  saveEvent: 1
+  loadEvent: 1
+  settings:
+    _location: 0
+    path: SaveData.es3
+    encryptionType: 0
+    encryptionPassword: password
+    directory: 0
+    format: 0
+    bufferSize: 2048
+    typeChecking: 1
+    safeReflection: 1
+    memberReferenceMode: 0
+    referenceMode: 2
+    assemblyNames:
+    - Assembly-CSharp
+    - Assembly-CSharp-firstpass
+    showAdvancedSettings: 0
+  autoSaves: []
+--- !u!114 &1696497623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696497621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a83408fcc9044c4fbc7e5d09a369ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openReferences: 0
+  openPrefabs: 0
+  idRef:
+    _Keys: 84271e2ee4e163704449c965075c631f0bfefdd5480e6879f2d9a52bb9fc8d2a71511b4a79177c43629db262f133940b26371d988ebe9d74405bde427970d64844610b4abee7592184bf8b54a3f977266eb151f01925b930ef8f0a1d383aca2d74fa1e90274a4c3e2204e2b2b50de8461c472b38e11ad1693e83f31f6005837231f69211c0854868d318ca25720d43651f5a70bdeb828319a4ba9e13196ab30554f0ef7fdc1fd47b62c0d85048e2db7282f628c9465d5219494e53bc9d3c5227bc9edf1a8df48519
+    _Values:
+    - {fileID: 1180895571}
+    - {fileID: 1180895570}
+    - {fileID: 1180895572}
+    - {fileID: 1460925046}
+    - {fileID: 1460925045}
+    - {fileID: 1180895569}
+    - {fileID: 1460925044}
+    - {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 4800000, guid: e260cfa7296ee7642b167f1eb5be5023, type: 3}
+    - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - {fileID: 21300014, guid: ae3918a914038694d852d0bb81f62473, type: 3}
+    - {fileID: 2800000, guid: ae3918a914038694d852d0bb81f62473, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 11500000, guid: ed6c77934f7af4caf85a23d8fcd54ee9, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 5412049517939530185, guid: 508b7bc72bc7d42899e80527397c738f, type: 3}
+    - {fileID: 5412049518494061119, guid: 508b7bc72bc7d42899e80527397c738f, type: 3}
+    - {fileID: 5412049518494061116, guid: 508b7bc72bc7d42899e80527397c738f, type: 3}
+    - {fileID: 5412049517939530230, guid: 508b7bc72bc7d42899e80527397c738f, type: 3}
+    - {fileID: 5412049518494061118, guid: 508b7bc72bc7d42899e80527397c738f, type: 3}
+    - {fileID: 5412049518494061117, guid: 508b7bc72bc7d42899e80527397c738f, type: 3}
+  prefabs: []
+--- !u!114 &1696497624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696497621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8714d999c5ae749538494c1347e5a3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: 'The Easy Save 3 Manager is required in any scenes which use Easy Save,
+    and is automatically added to your scene when you enter Play mode.
+
+
+    To stop
+    this from automatically being added to your scene, go to ''Window > Easy Save
+    3 > Settings'' and deselect the ''Auto Add Manager to Scene'' checkbox.'
+--- !u!4 &1696497625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696497621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -14,7 +14,7 @@ public class GoodItem : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragH
 
     private void Awake()
     {
-        describePanel = UIManger.instance.describePanel;
+        describePanel = UIManger.instance.describePanel.gameObject;
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -46,8 +46,8 @@ public class GoodItem : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragH
        
         describePanel.SetActive(true);
         describePanel.transform.position = Input.mousePosition;
-        describePanel.GetComponent<describePanel>().Title.text = GameManager.instance.goodManger.goodInfoList[SlotInedx].goodInfo.skill.Title;
-        describePanel.GetComponent<describePanel>().Describe.text = GameManager.instance.goodManger.goodInfoList[SlotInedx].goodInfo.skill.Describe;
+        describePanel.GetComponent<DescribePanel>().Title.text = GameManager.instance.goodManger.goodInfoList[SlotInedx].goodInfo.skill.Title;
+        describePanel.GetComponent<DescribePanel>().Describe.text = GameManager.instance.goodManger.goodInfoList[SlotInedx].goodInfo.skill.Describe;
     }
 
     public void OnPointerExit(PointerEventData eventData)
