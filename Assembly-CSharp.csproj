@@ -526,7 +526,7 @@
     <Compile Include="Assets\Script\Mangers\SkillParticleCreator.cs" />
     <Compile Include="Assets\Script\Mangers\SkillStoneCreator.cs" />
     <Compile Include="Assets\Script\Mangers\SoundManager.cs" />
-    <Compile Include="Assets\Script\Mangers\UIKeyManger.cs" />
+    <Compile Include="Assets\Script\Mangers\UIKeyManager.cs" />
     <Compile Include="Assets\Script\Mangers\UIManager.cs" />
     <Compile Include="Assets\Script\Player\AttackChecker.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
