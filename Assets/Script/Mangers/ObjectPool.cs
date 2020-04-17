@@ -5,8 +5,8 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool instance = null;
-    public Queue<PlayerDash> queue = new Queue<PlayerDash>();
-    public PlayerDash prefab;
+    private Dictionary<string, Queue<GameObject>> queueDict = new Dictionary<string, Queue<GameObject>>();
+    private Dictionary<string, GameObject> prefabDict = new Dictionary<string, GameObject>();
     public int initCount = 10;
 
     private void Awake() {
@@ -18,26 +18,32 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    private void FillObjectPool() {
+    private void FillObjectPool(string name) {
+        if(!prefabDict.ContainsKey(name)) {
+            prefabDict[name] = Resources.Load<GameObject>("ObjectPool/" + name);
+            queueDict[name] = new Queue<GameObject>();
+        }
+        var prefab = prefabDict[name];
         for(int i = 0; i < initCount; i++) {
-            PlayerDash pd = Instantiate(prefab);
+            GameObject pd = Instantiate(prefab);
+            pd.name = name;
             pd.transform.SetParent(transform, false);
             pd.gameObject.SetActive(false);
-            queue.Enqueue(pd);
+            queueDict[name].Enqueue(pd);
         }
     }
 
-    public PlayerDash GetItem() {
-        if(queue.Count == 0) {
-            FillObjectPool();
+    public GameObject GetItem(string name) {
+        if(!queueDict.ContainsKey(name) || queueDict[name].Count == 0) {
+            FillObjectPool(name);
         }
-        PlayerDash pd = queue.Dequeue();
-        pd.gameObject.SetActive(true);
-        return pd;
+        GameObject go = queueDict[name].Dequeue();
+        go.SetActive(true);
+        return go;
     }
 
-    public void ReturnToPool(PlayerDash pd) {
-        pd.gameObject.SetActive(false);
-        queue.Enqueue(pd);
+    public void ReturnToPool(GameObject go) {
+        go.SetActive(false);
+        queueDict[go.transform.name].Enqueue(go);
     }
 }

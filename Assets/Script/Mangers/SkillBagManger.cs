@@ -38,13 +38,13 @@ public class SkillBagManger : MonoBehaviour
         SkillInfo skillToAdd = skillManager.FindSkillWithID(_id);
         for (int i = 0; i < skills.Count; i++)
         {
-            if (skills[i].ID == -1)
+            if (skills[i].id == -1)
             {
                 skills[i] = skillToAdd;
                 GameObject skillObj = Instantiate(item);
                 skillObj.transform.SetParent(slots[i].transform);
                 skillObj.transform.position = Vector2.zero;
-                skillObj.name = skillToAdd.Title;
+                skillObj.name = skillToAdd.name;
                // skillObj.GetComponent<Image>().sprite = Resources.Load<Sprite>(skills[i].Icon);
                 skillObj.GetComponent<SkillData>().skill = skillToAdd;
                 skillObj.GetComponent<SkillData>().SlotInedx = i;

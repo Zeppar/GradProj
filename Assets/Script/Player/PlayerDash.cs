@@ -22,7 +22,7 @@ public class PlayerDash : MonoBehaviour
     void Update()
     {
         if(Time.time - dashStartTime > removeTime) {
-            ObjectPool.instance.ReturnToPool(this);
+            ObjectPool.instance.ReturnToPool(gameObject);
             return;
         }
         float alpha = sr.color.a * alphaMulti;

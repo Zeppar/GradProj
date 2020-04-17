@@ -9,7 +9,7 @@ public class SlotData : MonoBehaviour,IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         SkillData dropedSkill = eventData.pointerDrag.GetComponent<SkillData>();
-        if(bag.skills[SlotID].ID == -1)
+        if(bag.skills[SlotID].id == -1)
         {
             bag.skills[dropedSkill.SlotInedx] = new SkillInfo();
             dropedSkill.SlotInedx = SlotID;

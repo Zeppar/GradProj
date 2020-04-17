@@ -4,58 +4,63 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GoodItem : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragHandler,IPointerEnterHandler,IPointerExitHandler
-{
-   
-    public int SlotInedx;
-    public GameObject describePanel;
+// 对于背包来说 index 赋值的是背包的index
+// 对于技能来说 index 赋值的是技能的index
+public enum GoodItemType {
+    Skill = 0,
+    Normal
+}
 
-    public Image Mask;
+public class GoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler {
+    //public int SlotInedx;
+    public int index;
+    public Image maskImage;
+    public Image goodImage;
+    public GoodItemType itemType;
 
-    private void Awake()
-    {
-        describePanel = UIManger.instance.describePanel;
+    public GoodInfo goodInfo;
+    public float percentValue;
+    private Transform parent;
+
+    
+
+    public void SetContent(GoodInfo info, int idx, GoodItemType type) {
+        goodInfo = info;
+        index = idx;
+        itemType = type;
+        if (info == null)
+            return;
+        goodImage.sprite = info.skillInfo.iconSprite;
+        transform.name = info.skillInfo.name;
     }
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        
-            this.transform.SetParent(transform.parent.parent.parent.parent,false);
-            this.transform.position = eventData.position;
-            GetComponent<CanvasGroup>().blocksRaycasts = false;
-        
+
+    private void Update() {
+        maskImage.fillAmount = percentValue;
     }
 
-    public void OnDrag(PointerEventData eventData)
-    {
-       
-            this.transform.position = eventData.position;
-        
+    public void OnBeginDrag(PointerEventData eventData) {
+        parent = transform.parent;
+        transform.SetParent(UIManager.instance.goodItemMidParent, false);
+        transform.position = eventData.position;
+        GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
-    {
-       
-        transform.SetParent(GameManager.instance.goodManger.goodInfoList[SlotInedx].transform,false);
+    public void OnDrag(PointerEventData eventData) {
+        transform.position = eventData.position;
+    }
+
+    public void OnEndDrag(PointerEventData eventData) {
+        transform.SetParent(parent, false);
+        transform.SetAsFirstSibling();
         transform.position = transform.parent.position;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-       
-       
-        describePanel.SetActive(true);
-        describePanel.transform.position = Input.mousePosition;
-        describePanel.GetComponent<describePanel>().Title.text = GameManager.instance.goodManger.goodInfoList[SlotInedx].goodInfo.skill.Title;
-        describePanel.GetComponent<describePanel>().Describe.text = GameManager.instance.goodManger.goodInfoList[SlotInedx].goodInfo.skill.Describe;
+    public void OnPointerEnter(PointerEventData eventData) {
+        UIManager.instance.describePanel.Show(goodInfo.skillInfo.name, goodInfo.skillInfo.describe, Input.mousePosition);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-
-        describePanel.SetActive(false);
-
+    public void OnPointerExit(PointerEventData eventData) {
+        UIManager.instance.describePanel.Hide();
     }
-
-  
 }

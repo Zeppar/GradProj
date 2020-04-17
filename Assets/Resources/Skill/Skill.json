@@ -5,8 +5,8 @@
 		"value": 100,
 		"range": 5,
 		"describe": "向前面发射一个火球",
-		"icon": "Icon/Skill/HuoQiu",
-		"cd":5,
+		"iconPath": "Icon/Skill/Fireball",
+		"cd": 5,
 		"action": "Fireball"
 	},
 	{
@@ -15,9 +15,9 @@
 		"value": 100,
 		"range": 5,
 		"describe": "增加血量",
-		"icon": "Icon/Skill/JinHua",
-		"cd":50,
-		"action": "Jinhua"
+		"iconPath": "Icon/Skill/Levelup",
+		"cd": 50,
+		"action": "Levelup"
 	},
 	{
 		"id": 2,
@@ -25,9 +25,9 @@
 		"value": 100,
 		"range": 5,
 		"describe": "<color=red>此技能正在开发中....</color>",
-		"icon": "Icon/Skill/WanJianQiFa",
-		"cd":5,
-		"action": "SkillAction/WanJianQiFa"
-		
+		"iconPath": "Icon/Skill/ManyArrows",
+		"cd": 5,
+		"action": "ManyArrows"
+
 	}
 ]

@@ -77,9 +77,11 @@ public class Enemy : MonoBehaviour {
         BehaviourOperation();
     }
 
+
     public virtual void UpdateState() {
-        if(hasSlider)
+        if (hasSlider)
             hpSlider.transform.localScale = new Vector2(-dir, 1.0f);
+
     }
 
     public virtual bool ShouldChase() {
@@ -116,12 +118,13 @@ public class Enemy : MonoBehaviour {
     }
 
     public virtual void BeAttacked(int IntCount) {
-        if (HP > 0)
-        {
+        if (HP > 0) {
             isHurt = true;
-            HP -= IntCount;
-            if(hasSlider)
-                hpSlider.value = (float)HP / maxHP; 
+            var hpMins = UnityEngine.Random.Range(IntCount - 2, IntCount + 2); ;
+            HP -= hpMins;
+            if (hasSlider)
+                hpSlider.value = (float)HP / maxHP;
+            UIManager.instance.ShowHPUI(this, hpMins);
             ResetAttackState();
             Invoke("ResetHurtState", 0.2f);
         }
@@ -137,7 +140,7 @@ public class Enemy : MonoBehaviour {
 
     public virtual void Die() {
         dead = true;
-        int skillID = UnityEngine.Random.Range(0, GameManager.instance.skillManager.skill_Dic.Count);
+        int skillID = UnityEngine.Random.Range(0, GameManager.instance.skillManager.skillDict.Count);
         GameManager.instance.skillStoneCreator.CreateSkillStone(skillID, transform.position);
     }
 

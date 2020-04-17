@@ -8,14 +8,14 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;//实例
 
     public SkillManager skillManager = new SkillManager();//技能管理器实例
-    public GoodManger goodManger = new GoodManger();//物品管理器实例
+    public GoodManager goodManager = new GoodManager();//物品管理器实例
 
     public Player player;//玩家脚本
 
     public SkillStoneCreator skillStoneCreator;//技能石创建器
     public SkillParticleCreator skillParticleCreator;//技能特效创建器
-    public SkillActionManger skillActionManger;
-    public EffectManger effectManager;
+    public SkillActionManager skillActionManager;
+    public EffectManager effectManager;
    
     
     void Awake()
@@ -31,14 +31,14 @@ public class GameManager : MonoBehaviour
     {
         skillManager.InitSkill();//初始化技能
 
-       // goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 0);//测试！！！  创建两个物品用于测试
-        //goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 2);
-       // goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 1);
-        UIInit();
+        goodManager.InitGoods();
+        skillActionManager.InitSkillCallback();
+        InitUI();
+
     }
-    void UIInit()
+    void InitUI()
     {
-        UIManger ui = Instantiate(Resources.Load("UI/UIController") as GameObject).GetComponent<UIManger>();
+        UIManager ui = Instantiate(Resources.Load("UI/UIManager") as GameObject).GetComponent<UIManager>();
         ui.Init();
 
     }
