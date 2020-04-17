@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,24 +105,34 @@ MonoBehaviour:
   speed: 6
   dir: -1
   attack: 7
-  anim: {fileID: 0}
-  rd: {fileID: 0}
+  scaleMulti: 0
   type: 0
   dead: 0
   chaseDis: 10
   attackRange: 2
-  skillID: 1
+  hasSlider: 1
   hpSlider: {fileID: 8330678033537722217}
   attackChecker: {fileID: 1504209850}
   attackInterval: 1.05
-  attackPoint: {fileID: 2337351730273177644}
-  checkAttackRange: 1
-  feetPos: {fileID: 2337351730444290523}
-  checkRadius: 0.2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  isGrounded: 1
+  lastAttackTime: 0
+  anim: {fileID: 0}
+  rb: {fileID: 0}
+  feetPos: {fileID: 0}
+  onGround: 1
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!50 &2337351729575536576
 Rigidbody2D:
   serializedVersion: 4

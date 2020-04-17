@@ -31,9 +31,9 @@ public class GameManager : MonoBehaviour
     {
         skillManager.InitSkill();//初始化技能
 
-        //goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 0);//测试！！！  创建两个物品用于测试
-        // goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 2);
-        // goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 1);
+       // goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 0);//测试！！！  创建两个物品用于测试
+        //goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 2);
+       // goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, 1);
         UIInit();
     }
     void UIInit()

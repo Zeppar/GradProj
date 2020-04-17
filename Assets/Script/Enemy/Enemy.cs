@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 public enum EnemyType {
@@ -38,7 +40,7 @@ public class Enemy : MonoBehaviour {
     public float chaseDis = 2;
     public int attackRange = 1;
 
-    public int skillID;
+    //public int skillID;
     public bool hasSlider = true;
     public Slider hpSlider;
     public AttackChecker attackChecker;
@@ -135,6 +137,7 @@ public class Enemy : MonoBehaviour {
 
     public virtual void Die() {
         dead = true;
+        int skillID = UnityEngine.Random.Range(0, GameManager.instance.skillManager.skill_Dic.Count);
         GameManager.instance.skillStoneCreator.CreateSkillStone(skillID, transform.position);
     }
 

@@ -8,15 +8,25 @@ public class SkillActionManger : MonoBehaviour
     private float lastActionA = 0;
     private float lastActionB= 0;
 
+    private BagItem bagItemA;
+    private  BagItem bagItemB;
 
+    
+
+
+    private void Start()
+    {
+        bagItemA = GameManager.instance.goodManger.goodInfoList[UIManger.instance.quickSkill1.gameObject.GetComponent<BagItem>().index];
+        bagItemB = GameManager.instance.goodManger.goodInfoList[UIManger.instance.quickSkill2.gameObject.GetComponent<BagItem>().index];
+    }
     // Update is called once per frame
     void Update() {
-        if (GameManager.instance.goodManger.goodInfoList[UIManger.instance.quickSkill1.gameObject.GetComponent<BagItem>().index].goodInfo != null) {
-            int cdA = GameManager.instance.goodManger.goodInfoList[UIManger.instance.quickSkill1.gameObject.GetComponent<BagItem>().index].goodInfo.skill.CD;
+        if (bagItemA.goodInfo != null) {
+            int cdA = bagItemA.goodInfo.skill.CD;
             UIManger.instance.quickSkill1.GetComponentInChildren<GoodItem>().Mask.fillAmount = 1 - ((Time.time - lastActionA) / cdA);
         }
-        if (GameManager.instance.goodManger.goodInfoList[UIManger.instance.quickSkill2.gameObject.GetComponent<BagItem>().index].goodInfo != null) {
-            int cdB = GameManager.instance.goodManger.goodInfoList[UIManger.instance.quickSkill2.gameObject.GetComponent<BagItem>().index].goodInfo.skill.CD;
+        if (bagItemB.goodInfo != null) {
+            int cdB = bagItemB.goodInfo.skill.CD;
             UIManger.instance.quickSkill2.GetComponentInChildren<GoodItem>().Mask.fillAmount = 1 - ((Time.time - lastActionB) / cdB);
         }
 
@@ -57,6 +67,8 @@ public class SkillActionManger : MonoBehaviour
     public void JinhuaBack() {
         GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.white;
         GameManager.instance.player.HP += 10;
+        int bagitem = 0;
+        bagitem += 1;
     }
 }
 

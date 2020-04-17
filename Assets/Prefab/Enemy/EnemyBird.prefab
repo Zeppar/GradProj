@@ -146,7 +146,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -194,18 +194,20 @@ MonoBehaviour:
   speed: 5
   dir: -1
   attack: 7
-  anim: {fileID: 0}
-  rd: {fileID: 0}
+  scaleMulti: 0
   type: 1
   dead: 0
   chaseDis: 30
   attackRange: 25
-  skillID: 0
-  birdHight: 10
-  birdFly: 5
-  Fireball: {fileID: 4448689579823373873, guid: 72ba3d11ee42194488fe2302c1a3a646,
-    type: 3}
+  hasSlider: 1
+  hpSlider: {fileID: 0}
+  attackChecker: {fileID: 0}
   attackInterval: 3
+  lastAttackTime: 0
+  anim: {fileID: 0}
+  rb: {fileID: 0}
+  fallSpeed: 0
+  chaseHeight: 0
   attackPoint: {fileID: 1817283899416620840}
   leftPos: {fileID: 475364141}
   rightPos: {fileID: 1479609805}
