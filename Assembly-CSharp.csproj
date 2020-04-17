@@ -538,6 +538,7 @@
     <Compile Include="Assets\Script\Terrain\Trap\Stab.cs" />
     <Compile Include="Assets\Script\UI\BagItem.cs" />
     <Compile Include="Assets\Script\UI\BagPanel.cs" />
+    <Compile Include="Assets\Script\UI\DescribePanel.cs" />
     <Compile Include="Assets\Script\UI\EnemyHpCanvas.cs" />
     <Compile Include="Assets\Script\UI\GoodItem.cs" />
     <Compile Include="Assets\Script\UI\HPBarPanel.cs" />
@@ -546,7 +547,6 @@
     <Compile Include="Assets\Script\UI\QuickSkillPanel.cs" />
     <Compile Include="Assets\Script\UI\SkillData.cs" />
     <Compile Include="Assets\Script\UI\SlotData.cs" />
-    <Compile Include="Assets\Script\UI\describePanel.cs" />
     <Compile Include="Assets\Script\Util\BackgroundParallax.cs" />
     <Compile Include="Assets\Script\Util\Util.cs" />
     <None Include="Assets\3rd\Plus\unity-ui-extensions\Shaders\UIAdditive.shader" />

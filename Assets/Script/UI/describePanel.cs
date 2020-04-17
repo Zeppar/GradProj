@@ -4,7 +4,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class describePanel : MonoBehaviour
+public class DescribePanel : MonoBehaviour
 {
     public Text titleText;
     public Text describeText;
