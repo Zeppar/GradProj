@@ -2716,7 +2716,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc9426213e4fe84bb6d86bf369f292c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart_list: []
+  heart_list:
+  - {fileID: 1808349834855182587}
+  - {fileID: 1808349836398302345}
+  - {fileID: 1808349835376383514}
+  - {fileID: 1808349836170614018}
+  - {fileID: 1808349836967050464}
+  - {fileID: 1808349835923645640}
+  - {fileID: 1808349836603626808}
+  - {fileID: 1808349835154664122}
+  - {fileID: 1808349835795214475}
+  - {fileID: 1808349834855735523}
   heartFull: {fileID: -902086654454736923, guid: 9d56b8f470a38d141a56051580aa08ff,
     type: 3}
   heartHelf: {fileID: 134086666222474253, guid: 9d56b8f470a38d141a56051580aa08ff,
