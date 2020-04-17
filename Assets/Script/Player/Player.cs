@@ -56,7 +56,7 @@ public class Player : MonoBehaviour {
     public bool isHurt = false;
     public int dir = 1;
     public BoxCollider2D feetCollider;
-    
+
 
     void Start() {
         HP = maxHP;
@@ -80,7 +80,7 @@ public class Player : MonoBehaviour {
         GroundAttack();
         CreateShadow();
     }
-    
+
 
     private void CheckAirAttack() {
         airAttack.gameObject.SetActive(attackCount == 6 && !isGrounded);
@@ -95,7 +95,7 @@ public class Player : MonoBehaviour {
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded) {
             jumpPressed = true;
         }
-        if(Input.GetKeyDown(KeyCode.H) && !isDash) {
+        if (Input.GetKeyDown(KeyCode.H) && !isDash) {
             isDash = true;
             GameManager.instance.effectManager.ShakeCamera();
         }
@@ -187,7 +187,8 @@ public class Player : MonoBehaviour {
             dashCreateCurTime += Time.deltaTime;
             if (dashCreateCurTime >= dashCreateTime) {
                 dashCreateCurTime = 0;
-                ObjectPool.instance.GetItem().transform.position = transform.position;
+                var dash = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.playerDash);
+                dash.transform.position = transform.position;
             }
         } else {
             dashTime = 0;
@@ -234,7 +235,7 @@ public class Player : MonoBehaviour {
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
     }
-    
+
     private void Jump() {
         anim.SetBool("IsGround", isGrounded);
         if (isGrounded) {
@@ -245,14 +246,14 @@ public class Player : MonoBehaviour {
                 rb.velocity = Vector2.up * jumpForce;
                 jumpPressed = false;
             }
-        } else if(rb.velocity.y < 0){
+        } else if (rb.velocity.y < 0) {
             rb.velocity += Vector2.down * fallForce;
         }
     }
     void Die() {
         dead = true;
         anim.SetBool("Dead", true);
-        UIManger.instance.gameOverPanel.SetActive(true);
+        UIManager.instance.gameOverPanel.SetActive(true);
     }
 
     public void BeAttacked(int _attack) {
@@ -295,7 +296,7 @@ public class Player : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.CompareTag(Util.TagCollection.enemyTag) && !isGrounded && attackCount != 6) {
+        if (collision.gameObject.CompareTag(Util.TagCollection.enemyTag) && !isGrounded && attackCount != 6) {
             BeAttackedAndBeatBack(-dir, 10, 3, collision.gameObject.GetComponent<Enemy>().attack);
         }
     }

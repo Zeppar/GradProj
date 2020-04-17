@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class UIManger : MonoBehaviour {
+public class UIManager : MonoBehaviour {
 
-    public static UIManger instance;
+    public static UIManager instance;
 
     [Header("快捷技能")]
     public Image quickSkill1;
@@ -25,8 +25,13 @@ public class UIManger : MonoBehaviour {
     public GameObject gameOverPanel;
 
     [Header("提示界面")]
-    public GameObject GetItemHelp;
-    public GameObject GotItemHelpText;
+    public HelpPanel helpPanel;
+
+    [Header("血量背景")]
+    public Transform hpPanelParent;
+
+    [Header("通用")]
+    public Transform goodItemMidParent;
 
     private void Awake() {
         instance = this;
@@ -39,6 +44,13 @@ public class UIManger : MonoBehaviour {
 
     public void LoadLevel(int index) {
         SceneManager.LoadScene(index);
+    }
+
+    public void ShowHPUI(Enemy enemy, int hp) {
+        var hpUI = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.EnemyHpCanvas);
+        hpUI.transform.SetParent(hpPanelParent, false);
+        hpUI.transform.position = Camera.main.WorldToScreenPoint(enemy.transform.position + new Vector3(0, 1, 0)); 
+        hpUI.GetComponent<EnemyHpCanvas>().ShowHPUI(hp);
     }
 
     private void Update() {

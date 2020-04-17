@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -9160785520713146351}
   - component: {fileID: 6613944061674481227}
   m_Layer: 5
-  m_Name: Item
+  m_Name: GoodItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,9 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79330e2bf3b48da41832888a57594c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SlotInedx: 0
-  describePanel: {fileID: 0}
-  Mask: {fileID: 6574356670163543960}
+  index: 0
+  maskImage: {fileID: 6574356670163543960}
+  goodImage: {fileID: 1618978549197757284}
+  percentValue: 0
 --- !u!1 &4111686979757023541
 GameObject:
   m_ObjectHideFlags: 0

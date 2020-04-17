@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class EffectManger : MonoBehaviour
+public class EffectManager : MonoBehaviour
 {
     public float timeScale;
     public float duration;

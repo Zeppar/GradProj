@@ -3,33 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SkillStone : MonoBehaviour {
+
     public SkillInfo skillInfo;
     public bool isEnter = false;
 
     private void OnTriggerEnter2D(Collider2D collision) {
-
         if (collision.CompareTag(Util.TagCollection.playerTag)) {
             isEnter = true;
-            UIManger.instance.GetItemHelp.SetActive(true);          
+            //UIManager.instance.GetItemHelp.SetActive(true);
+            UIManager.instance.helpPanel.ShowGetItemTip();
         }
 
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-         UIManger.instance.GetItemHelp.SetActive(false);
-        isEnter = false;
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.CompareTag(Util.TagCollection.playerTag)) {
+            //UIManager.instance.GetItemHelp.SetActive(false);
+            UIManager.instance.helpPanel.HideGetItemTip();
+            isEnter = false;
+        }
     }
 
-   
 
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.E) && isEnter)
-        {
-            GameManager.instance.goodManger.AddItemToPanel(GoodInfo.GoodType.Skill, skillInfo.ID);
 
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.E) && isEnter) {
+            GameManager.instance.goodManager.AddGoodInfo(new GoodInfo(skillInfo, 1));
+            UIManager.instance.helpPanel.ShowOwnItemTip();
             Destroy(gameObject);
         }
-
     }
 }

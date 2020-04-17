@@ -8,6 +8,10 @@ TagManager:
   - Trap
   - Bullet
   - Ground
+  - PBullet
+  - NPC
+  - Prize
+  - OBS
   layers:
   - Default
   - TransparentFX

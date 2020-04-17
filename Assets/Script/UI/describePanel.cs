@@ -6,6 +6,17 @@ using UnityEngine.UI;
 
 public class DescribePanel : MonoBehaviour
 {
-    public Text Title;
-    public Text Describe;
+    public Text titleText;
+    public Text describeText;
+
+    public void Show(string title, string des, Vector3 pos) {
+        gameObject.SetActive(true);
+        titleText.text = title;
+        describeText.text = des;
+        transform.position = pos;
+    }
+
+    public void Hide() {
+        gameObject.SetActive(false);
+    }
 }

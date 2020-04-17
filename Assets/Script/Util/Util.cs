@@ -4,6 +4,9 @@ using UnityEngine;
 
 public static class Util 
 {
+
+    public delegate void NoParmsCallBack();
+
     public static class TagCollection {
         public static string playerTag = "Player";
         public static string groundTag = "Ground";
@@ -41,6 +44,12 @@ public static class Util
     public static class ClipNameCollection {
         public static string attack = "Attack";
         public static string explosion = "Explosion";
+    }
+
+    public static class ObjectItemNameCollection {
+        public static string playerDash = "PlayerDash";
+        public static string bossFireBall = "BossFireBall";
+        public static string EnemyHpCanvas = "EnemyHpCanvas";
     }
 
 }

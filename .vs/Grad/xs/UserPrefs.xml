@@ -1,22 +1,17 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Terrain/Gin/LaserGin.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/UI/QuickSkillItem.cs">
     <Files>
-      <File FileName="Assets/Script/Enemy/EnemyGround.cs" Line="54" Column="39" />
-      <File FileName="Assets/Script/Enemy/Enemy.cs" />
-      <File FileName="Assets/Script/Enemy/EnemyBoss.cs" />
-      <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" />
-      <File FileName="Assets/Script/Player/Player.cs" />
-      <File FileName="Assets/Script/Mangers/GameManager.cs" />
-      <File FileName="Assets/Script/Mangers/SkillParticleCreator.cs" />
-      <File FileName="Assets/Script/Mangers/SkillActionManger.cs" />
-      <File FileName="Assets/Script/Mangers/UIManger.cs" />
-      <File FileName="Assets/Script/UI/HPBarPanel.cs" />
-      <File FileName="Assets/Script/Mangers/UIKeyManger.cs" />
-      <File FileName="Assets/Script/UI/BagPanel.cs" />
-      <File FileName="Assets/Script/UI/describePanel.cs" />
-      <File FileName="Assets/Script/UI/GoodItem.cs" Line="50" Column="26" />
-      <File FileName="Assets/Script/Terrain/Gin/LaserGin.cs" Line="37" Column="38" />
-      <File FileName="Assets/Script/Enemy/EnemyBird.cs" Line="41" Column="6" />
+      <File FileName="Assets/Script/UI/BagPanel.cs" Line="10" Column="1" />
+      <File FileName="Assets/Script/UI/QuickSkillPanel.cs" Line="10" Column="46" />
+      <File FileName="Assets/Script/UI/DescribePanel.cs" Line="14" Column="1" />
+      <File FileName="Assets/Script/UI/GoodItem.cs" Line="27" Column="27" />
+      <File FileName="Assets/Script/UI/BagItem.cs" Line="8" Column="51" />
+      <File FileName="Assets/Script/UI/QuickSkillItem.cs" Line="11" Column="13" />
+      <File FileName="Assets/Script/Mangers/GameManager.cs" Line="11" Column="18" />
+      <File FileName="Assets/Script/Mangers/UIManager.cs" Line="33" Column="16" />
+      <File FileName="Assets/Script/Mangers/SkillManager.cs" Line="49" Column="24" />
+      <File FileName="Assets/Script/Mangers/SkillActionManager.cs" Line="32" Column="37" />
+      <File FileName="Assets/Resources/Skill/Skill.json" Line="10" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -24,7 +19,7 @@
     <String>Assembly-CSharp-firstpass.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a92dfbda-c527-42e9-8cf7-d5003343f9ad" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a7af8dcf-45b5-4898-bf58-b891a3539bd6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

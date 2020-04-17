@@ -76,7 +76,7 @@ public class Enemy : MonoBehaviour {
     }
 
     public virtual void UpdateState() {
-        if(hasSlider)
+        if (hasSlider)
             hpSlider.transform.localScale = new Vector2(-dir, 1.0f);
     }
 
@@ -114,12 +114,13 @@ public class Enemy : MonoBehaviour {
     }
 
     public virtual void BeAttacked(int IntCount) {
-        if (HP > 0)
-        {
+        if (HP > 0) {
             isHurt = true;
-            HP -= IntCount;
-            if(hasSlider)
-                hpSlider.value = (float)HP / maxHP; 
+            var hpMins = Random.Range(IntCount - 2, IntCount + 2); ;
+            HP -= hpMins;
+            if (hasSlider)
+                hpSlider.value = (float)HP / maxHP;
+            UIManager.instance.ShowHPUI(this, hpMins);
             ResetAttackState();
             Invoke("ResetHurtState", 0.2f);
         }

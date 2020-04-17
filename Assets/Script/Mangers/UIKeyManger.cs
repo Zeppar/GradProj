@@ -11,8 +11,8 @@ public class UIKeyManger : MonoBehaviour
   
     void Update()
     {
-        OpenPanel(UIManger.instance.bagPanel.gameObject, KeyCode.B);
-        OpenPanel(UIManger.instance.cheatPanel.gameObject, KeyCode.F7);
+        OpenPanel(UIManager.instance.bagPanel.gameObject, KeyCode.B);
+        OpenPanel(UIManager.instance.cheatPanel.gameObject, KeyCode.F7);
     }
    public void OpenPanel(GameObject gameObject,KeyCode keyCode)
     {
