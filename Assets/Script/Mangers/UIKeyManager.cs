@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIKeyManger : MonoBehaviour
+public class UIKeyManager : MonoBehaviour
 {  
     void Start()
     {
@@ -14,16 +14,12 @@ public class UIKeyManger : MonoBehaviour
         OpenPanel(UIManager.instance.bagPanel.gameObject, KeyCode.B);
         OpenPanel(UIManager.instance.cheatPanel.gameObject, KeyCode.F7);
     }
-   public void OpenPanel(GameObject gameObject,KeyCode keyCode)
-    {
-        if (Input.GetKeyUp(keyCode))
-        {
-            if (!gameObject.activeSelf)
-            {
+
+    public void OpenPanel(GameObject gameObject, KeyCode keyCode) {
+        if (Input.GetKeyUp(keyCode)) {
+            if (!gameObject.activeSelf) {
                 gameObject.SetActive(true);
-            }
-            else
-            {
+            } else {
                 gameObject.SetActive(false);
             }
         }

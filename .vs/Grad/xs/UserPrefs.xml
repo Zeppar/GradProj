@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/UI/QuickSkillItem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Mangers/UIKeyManger.cs">
     <Files>
       <File FileName="Assets/Script/UI/BagPanel.cs" Line="10" Column="1" />
-      <File FileName="Assets/Script/UI/QuickSkillPanel.cs" Line="10" Column="46" />
-      <File FileName="Assets/Script/UI/DescribePanel.cs" Line="14" Column="1" />
-      <File FileName="Assets/Script/UI/GoodItem.cs" Line="27" Column="27" />
-      <File FileName="Assets/Script/UI/BagItem.cs" Line="8" Column="51" />
-      <File FileName="Assets/Script/UI/QuickSkillItem.cs" Line="11" Column="13" />
-      <File FileName="Assets/Script/Mangers/GameManager.cs" Line="11" Column="18" />
-      <File FileName="Assets/Script/Mangers/UIManager.cs" Line="33" Column="16" />
-      <File FileName="Assets/Script/Mangers/SkillManager.cs" Line="49" Column="24" />
-      <File FileName="Assets/Script/Mangers/SkillActionManager.cs" Line="32" Column="37" />
-      <File FileName="Assets/Resources/Skill/Skill.json" Line="10" Column="23" />
+      <File FileName="Assets/Script/UI/QuickSkillPanel.cs" />
+      <File FileName="Assets/Script/UI/DescribePanel.cs" />
+      <File FileName="Assets/Script/UI/GoodItem.cs" />
+      <File FileName="Assets/Script/UI/BagItem.cs" />
+      <File FileName="Assets/Script/UI/QuickSkillItem.cs" />
+      <File FileName="Assets/Script/Mangers/GameManager.cs" />
+      <File FileName="Assets/Script/Mangers/UIManager.cs" />
+      <File FileName="Assets/Script/Mangers/SkillManager.cs" />
+      <File FileName="Assets/Script/Mangers/SkillActionManager.cs" />
+      <File FileName="Assets/Resources/Skill/Skill.json" />
+      <File FileName="Assets/Script/Mangers/UIKeyManger.cs" Line="26" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
