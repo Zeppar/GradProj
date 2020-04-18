@@ -14,6 +14,7 @@ public class QuickSkillItem : MonoBehaviour, IDropHandler {
         goodInfo = info;
         index = idx;
         if (goodInfo == null) {
+            GameManager.instance.skillActionManager.SetKeyCode(curKeyCode, null);
             if (goodItem != null)
                 goodItem.gameObject.SetActive(false);
             return;
@@ -36,14 +37,15 @@ public class QuickSkillItem : MonoBehaviour, IDropHandler {
             Debug.Log("技能还未冷却，不能移动技能");
             return;
         }
-        
+
+        var info = dropedItem.goodInfo;
         if (dropedItem.itemType == GoodItemType.Normal) {
-            var info = dropedItem.goodInfo;
             GameManager.instance.goodManager.ChangeGoodInfo(dropedItem.index, goodInfo);
             GameManager.instance.skillManager.ChangeQuickSkill(index, info);
             GameManager.instance.skillActionManager.SetKeyCode(curKeyCode, info);
         } else {
             GameManager.instance.skillManager.ExchangeGoodInfo(index, dropedItem.index);
+            GameManager.instance.skillActionManager.ExchangeKeyCode(goodInfo, info);
         }
     }
 }
