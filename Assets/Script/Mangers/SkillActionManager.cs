@@ -19,8 +19,9 @@ public class SkillActionManager : MonoBehaviour
     public void InitSkillCallback() {
         foreach(var kv in GameManager.instance.skillManager.skillDict) {
             AddSkillCallBack(kv.Value, () => {
-                // TODO
+                // TODO 设置callback
                 Debug.Log("skill : " + kv.Value.name);
+                SendMessage(kv.Value.action, kv.Value);
             });
         }
         for(int i = 0;i < keyCodeList.Count; i++) {
@@ -40,24 +41,49 @@ public class SkillActionManager : MonoBehaviour
         queue.Enqueue(info);
     }
 
+    public void ExchangeKeyCode(GoodInfo info1, GoodInfo info2) {
+        KeyCode key1 = KeyCode.None, key2 = KeyCode.None;
+        foreach(var kv in keyCodeDict) {
+            if(kv.Value == info1) {
+                key1 = kv.Key; 
+            } else if(kv.Value == info2) {
+                key2 = kv.Key;
+            }
+        }
+        keyCodeDict[key1] = info2;
+        keyCodeDict[key2] = info1;
+    }
+
     private IEnumerator SkillRoutinue() {
-        while(queue.Count > 0) {
-            SkillInfo info = queue.Dequeue();
-            if(skillDict.ContainsKey(info.id)) {
-                skillDict[info.id]();
+        while (true) {
+            if (queue.Count > 0) {
+                SkillInfo info = queue.Dequeue();
+                if (skillDict.ContainsKey(info.id)) {
+                    skillDict[info.id]();
+                }
             }
             yield return null;
         }
     }
 
+    private void Fireball(SkillInfo info) {
+        GameManager.instance.skillParticleCreator.CreateFireball(GameManager.instance.player.attackPoint.position, new Vector2(GameManager.instance.player.transform.GetComponent<Player>().dir, 0), 0.5f, Util.SkillCollection.playerFireBall, info.value, Util.TagCollection.enemyTag, Util.EffectCollection.playerFireBallExplosion);
+    }
+    private void Levelup(SkillInfo info) {
+        GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.green;
+        Invoke("JinhuaBack", 0.2f);
+    }
+    private void ManyArrows(SkillInfo info) {
+        Debug.Log("ManyArrows");
+    }
+
     private void OnGUI() {
-        // A = 97
-        //if(Input.anyKeyDown) {
-        //    Event e = Event.current;
-        //    if(e != null && keyCodeDict.ContainsKey(e.keyCode)) {
-        //        ExecuteSkillAction(keyCodeDict[e.keyCode]);
-        //    }
-        //}
+        if (Input.anyKeyDown) {
+            Event e = Event.current;
+            if (e != null && e.isKey && keyCodeDict.ContainsKey(e.keyCode) && keyCodeDict[e.keyCode] != null) {
+                ExecuteSkillAction(keyCodeDict[e.keyCode].skillInfo);
+            }
+        }
     }
 
     /*private float lastActionA = 0;

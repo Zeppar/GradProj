@@ -60,4 +60,5 @@ public class BagItem : MonoBehaviour, IDropHandler {
             GameManager.instance.skillManager.ChangeQuickSkill(dropedItem.index, info);
         }
     }
+
 }
