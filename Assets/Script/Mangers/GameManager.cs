@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +17,8 @@ public class GameManager : MonoBehaviour
     public SkillParticleCreator skillParticleCreator;//技能特效创建器
     public SkillActionManager skillActionManager;
     public EffectManager effectManager;
-   
+
+    public CinemachineVirtualCamera virtualCamera;
     
     void Awake()
     {
@@ -29,18 +31,21 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        skillManager.InitSkill();//初始化技能
-
+        skillManager.InitSkill();
         goodManager.InitGoods();
         skillActionManager.InitSkillCallback();
         InitUI();
+        InitPlayer();
 
     }
-    void InitUI()
-    {
+    void InitUI() { 
         UIManager ui = Instantiate(Resources.Load("UI/UIManager") as GameObject).GetComponent<UIManager>();
-        ui.Init();
-
+        ui.Init();   
+    }
+    void InitPlayer()
+    {
+        player =  Instantiate(Resources.Load("Player/Player") as GameObject).GetComponent<Player>();
+        virtualCamera.Follow = player.transform;
     }
 
 }

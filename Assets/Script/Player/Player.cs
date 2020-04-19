@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 public class Player : MonoBehaviour {
     public int maxHP;
@@ -208,10 +209,10 @@ public class Player : MonoBehaviour {
         moveInput = Input.GetAxisRaw("Horizontal");
 
         if (moveInput > 0) {
-            transform.rotation = new Quaternion(0, 0, 0, 0);
+            transform.localScale = new Vector2(Math.Abs(transform.localScale.x),transform.localScale.y);
             dir = 1;
         } else if (moveInput < 0) {
-            transform.rotation = new Quaternion(0, 180, 0, 0);
+            transform.localScale = new Vector2(-Math.Abs(transform.localScale.x), transform.localScale.y);
             dir = -1;
         }
 

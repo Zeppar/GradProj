@@ -52,6 +52,8 @@ public class AttackChecker : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag(Util.TagCollection.enemyTag)) {
             collision.GetComponent<Enemy>().BeAttacked(GameManager.instance.player.attack);
+
+            GameManager.instance.skillParticleCreator.CreateBood(collision.gameObject.transform);
         }
         if (collision.gameObject.CompareTag(Util.TagCollection.playerTag)) {
             collision.GetComponent<Player>().BeAttackedAndBeatBack(enemy.dir, 5, 7, enemy.attack); 

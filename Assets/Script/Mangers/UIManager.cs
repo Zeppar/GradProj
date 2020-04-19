@@ -33,6 +33,8 @@ public class UIManager : MonoBehaviour {
     [Header("通用")]
     public Transform goodItemMidParent;
 
+    public LevelUpPanel levelUpPanel;
+
     private void Awake() {
         instance = this;
     }
@@ -44,7 +46,13 @@ public class UIManager : MonoBehaviour {
 
     public void LoadLevel(int index) {
         SceneManager.LoadScene(index);
+    }    
+    public void LevelUP() {
+        LoadLevel(SceneManager.GetActiveScene().buildIndex+1);
+    } public void ReLoadLevel(int index) {
+        LoadLevel(SceneManager.GetActiveScene().buildIndex);
     }
+   
 
     public void ShowHPUI(Enemy enemy, int hp) {
         var hpUI = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.EnemyHpCanvas);
