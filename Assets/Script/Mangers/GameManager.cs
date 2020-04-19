@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -46,6 +47,19 @@ public class GameManager : MonoBehaviour
     {
         player =  Instantiate(Resources.Load("Player/Player") as GameObject).GetComponent<Player>();
         virtualCamera.Follow = player.transform;
+    }
+
+    public void LoadLevel(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
+    public void LevelUP()
+    {
+        LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    public void ReLoadLevel(int index)
+    {
+        LoadLevel(SceneManager.GetActiveScene().buildIndex);
     }
 
 }

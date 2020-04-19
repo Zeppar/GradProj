@@ -9,8 +9,8 @@ public class LevelUpPanel : MonoBehaviour
     public Button BackTitle;
     private void Start()
     {
-        NextLevel.onClick.AddListener(()=> { UIManager.instance.LevelUP(); });
-        BackTitle.onClick.AddListener(()=> { UIManager.instance.LoadLevel(0); });
+        NextLevel.onClick.AddListener(()=> { GameManager.instance.LevelUP(); });
+        BackTitle.onClick.AddListener(()=> { GameManager.instance.LoadLevel(0); });
     }
     public void ShowPanel()
     {

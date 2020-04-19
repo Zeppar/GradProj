@@ -44,14 +44,7 @@ public class UIManager : MonoBehaviour {
         bagPanel.Init();
     }
 
-    public void LoadLevel(int index) {
-        SceneManager.LoadScene(index);
-    }    
-    public void LevelUP() {
-        LoadLevel(SceneManager.GetActiveScene().buildIndex+1);
-    } public void ReLoadLevel(int index) {
-        LoadLevel(SceneManager.GetActiveScene().buildIndex);
-    }
+    
    
 
     public void ShowHPUI(Enemy enemy, int hp) {
