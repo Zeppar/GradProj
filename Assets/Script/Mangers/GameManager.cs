@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public SkillManager skillManager = new SkillManager();//技能管理器实例
     public GoodManager goodManager = new GoodManager();//物品管理器实例
+    public EnergyManager energyManager = new EnergyManager(75.0f, 100.0f);
 
     public Player player;//玩家脚本
 
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     public SkillParticleCreator skillParticleCreator;//技能特效创建器
     public SkillActionManager skillActionManager;
     public EffectManager effectManager;
+
 
     public CinemachineVirtualCamera virtualCamera;
     
@@ -53,11 +55,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(index);
     }
-    public void LevelUP()
+    public void LevelUp()
     {
         LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void ReLoadLevel(int index)
+    public void ReLoadLevel()
     {
         LoadLevel(SceneManager.GetActiveScene().buildIndex);
     }

@@ -287,6 +287,9 @@
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>/Users/magene/Desktop/Grad/Library/PackageCache/com.unity.render-pipelines.core@7.2.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
+    <Reference Include="JMOAssets_CartoonFXFreeWelcome">
+      <HintPath>/Users/magene/Desktop/Grad/Assets/JMO Assets/Editor/JMOAssets_CartoonFXFreeWelcome.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.0f6/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
     </Reference>

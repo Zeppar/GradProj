@@ -29,6 +29,8 @@ public class SkillStone : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.E) && isEnter) {
             GameManager.instance.goodManager.AddGoodInfo(new GoodInfo(skillInfo, 1));
             UIManager.instance.helpPanel.ShowOwnItemTip();
+            GameManager.instance.energyManager.ChangeEnergy(20.0f);
+            GameManager.instance.skillParticleCreator.CreateEffect(GameManager.instance.player.transform.position, Util.ObjectItemNameCollection.getItemEffect);
             Destroy(gameObject);
         }
     }

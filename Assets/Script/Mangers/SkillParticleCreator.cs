@@ -4,33 +4,45 @@ using UnityEngine;
 
 public class SkillParticleCreator : MonoBehaviour
 {
-    public PlayerShadow shadowPrefab;
-#warning 需要修改
-    public GameObject Blood;
+    public void CreateFireball(Vector2 pos, Vector2 dir, float speed, int attack, bool isPlayer) {
+        string objectName = "";
+        string targetTag = "";
+        string fireBallExplosion = "";
+        if(isPlayer) {
+            objectName = Util.SkillCollection.playerFireBall;
+            targetTag = Util.TagCollection.enemyTag;
+            fireBallExplosion = Util.EffectCollection.playerFireBallExplosion;
+        } else {
+            objectName = Util.SkillCollection.enemyFireBall;
+            targetTag = Util.TagCollection.playerTag;
+            fireBallExplosion = Util.EffectCollection.enemyFireBallExplosion;
+        }
+        CreateFireball(pos, dir, speed, attack, objectName, targetTag, fireBallExplosion);
+    }
 
-    public void CreateFireball(Vector2 pos, Vector2 dir, float speed, string tag,int attack,string targetTag,string fireBallExplosion) {
-        var fb = Resources.Load<GameObject>("Skill/" + tag);
-        GameObject fireball = Instantiate(fb, pos, Quaternion.identity);     
-        fireball.GetComponent<Fireball>().attack = attack;      
-        fireball.GetComponent<Fireball>().tag = targetTag;      
-        fireball.GetComponent<Fireball>().fireBallExplosion = fireBallExplosion;      
-        fireball.GetComponent<Rigidbody2D>().AddForce(dir * speed);
+    private void CreateFireball(Vector2 pos, Vector2 dir, float speed, int attack, string objectName, string targetTag, string fireBallExplosion) {
+        Fireball fireBall = ObjectPool.instance.GetItem(objectName).GetComponent<Fireball>();
+        fireBall.transform.position = pos;
+        fireBall.SetContent(attack, targetTag, fireBallExplosion);
+        fireBall.GetComponent<Rigidbody2D>().AddForce(dir * speed);
     }
 
     public void CreateShadow(Vector2 pos, int dir) {
-        PlayerShadow shadow = Instantiate(shadowPrefab, pos, Quaternion.identity);
+        var shadow = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.playerShadow);
+        shadow.transform.position = pos;
         shadow.transform.localScale = new Vector2(Mathf.Abs(shadow.transform.localScale.x) * dir, shadow.transform.localScale.y);
     }
 
     public void CreateEffect(Vector2 pos, string tag) {
-        var effect = Resources.Load<GameObject>("Effect/" + tag);
-        Instantiate(effect, pos, Quaternion.identity);
+        var effect = ObjectPool.instance.GetItem(tag);
+        effect.transform.position = pos;
     }
 
-
-    //TODO 
     public void CreateBlood(Transform tran)
     {
-        Instantiate(Blood, tran.position,tran.rotation).transform.localScale =new Vector2(GameManager.instance.player.dir, 1);
+        Vector3 posAdd = new Vector3(GameManager.instance.player.dir * 0.5f, 0.2f);
+        GameObject blood = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.blood);
+        blood.transform.position = tran.position + posAdd;
+        blood.transform.localScale = new Vector2(-GameManager.instance.player.dir * 2.0f, 2.0f);
     }
 }

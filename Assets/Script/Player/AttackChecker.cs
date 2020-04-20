@@ -55,6 +55,7 @@ public class AttackChecker : MonoBehaviour {
         if (collision.gameObject.CompareTag(Util.TagCollection.enemyTag)) {
             collision.GetComponent<Enemy>().BeAttacked(GameManager.instance.player.attack);
             GameManager.instance.skillParticleCreator.CreateBlood(collision.gameObject.transform);
+            UIManager.instance.comboPanel.Show();
         }
         if (collision.gameObject.CompareTag(Util.TagCollection.playerTag)) {
             UIManager.instance.screenEffect.Show();

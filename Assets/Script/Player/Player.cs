@@ -64,6 +64,14 @@ public class Player : MonoBehaviour {
         anim = GetComponent<Animator>();
         currentState = anim.GetCurrentAnimatorStateInfo(0);
         rb = gameObject.GetComponent<Rigidbody2D>();
+        StartCoroutine(ChangeEnergy());
+    }
+
+    private IEnumerator ChangeEnergy() {
+        while(true) {
+            yield return new WaitForSecondsRealtime(1.0f);
+            GameManager.instance.energyManager.ChangeEnergy(-1.0f);
+        }
     }
 
     void FixedUpdate() {

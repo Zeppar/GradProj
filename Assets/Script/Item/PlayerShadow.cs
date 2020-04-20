@@ -6,7 +6,7 @@ public class PlayerShadow : MonoBehaviour
 {
     public float deltaAlpha = 0.05f;
     public GameObject explosionEffect;
-    private SpriteRenderer sr;
+    public SpriteRenderer sr;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,6 @@ public class PlayerShadow : MonoBehaviour
     }
 
     IEnumerator DestroySelf() {
-        sr = GetComponent<SpriteRenderer>();
         sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0.3f);
         Color color = new Color(sr.color.r, sr.color.g, sr.color.b, 0);
         while (true) {
