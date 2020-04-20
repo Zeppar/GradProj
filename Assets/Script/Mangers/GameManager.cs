@@ -19,8 +19,9 @@ public class GameManager : MonoBehaviour
     public SkillActionManager skillActionManager;
     public EffectManager effectManager;
 
-    public CinemachineVirtualCamera virtualCamera;
-    
+    //public CinemachineVirtualCamera virtualCamera;
+
+ //   public Transform spawn;
     void Awake()
     {
         if (instance == null) {
@@ -35,19 +36,24 @@ public class GameManager : MonoBehaviour
         skillManager.InitSkill();
         goodManager.InitGoods();
         skillActionManager.InitSkillCallback();
-        InitUI();
-        InitPlayer();
+      ///  InitUI();
+      //  InitPlayer();
 
     }
-    void InitUI() { 
-        UIManager ui = Instantiate(Resources.Load("UI/UIManager") as GameObject).GetComponent<UIManager>();
-        ui.Init();   
-    }
-    void InitPlayer()
-    {
-        player =  Instantiate(Resources.Load("Player/Player") as GameObject).GetComponent<Player>();
-        virtualCamera.Follow = player.transform;
-    }
+  //  void InitUI() { 
+    //    UIManager ui = Instantiate(Resources.Load("UI/UIManager") as GameObject).GetComponent<UIManager>();
+     //   ui.Init();   
+ //   }
+  //  void InitPlayer()
+  //  {
+   //     if(virtualCamera == null) { virtualCamera = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>(); }
+   //     player =  Instantiate(Resources.Load("Player/Player") as GameObject).GetComponent<Player>();
+     //   virtualCamera.Follow = player.transform;
+    //    if (spawn != null)
+     //   {
+     //       player.transform.position = spawn.position;
+//        }
+//    }
 
     public void LoadLevel(int index)
     {
