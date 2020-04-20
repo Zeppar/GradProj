@@ -536,6 +536,7 @@
     <Compile Include="Assets\Script\Terrain\MoveCube.cs" />
     <Compile Include="Assets\Script\Terrain\Trap\Magma.cs" />
     <Compile Include="Assets\Script\Terrain\Trap\Stab.cs" />
+    <Compile Include="Assets\Script\UI\AttackScreenEffect.cs" />
     <Compile Include="Assets\Script\UI\BagItem.cs" />
     <Compile Include="Assets\Script\UI\BagPanel.cs" />
     <Compile Include="Assets\Script\UI\DescribePanel.cs" />

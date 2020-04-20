@@ -1,18 +1,20 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/UI/OwnItemTip.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Mangers/EffectManager.cs">
     <Files>
-      <File FileName="Assets/Script/UI/BagPanel.cs" Line="10" Column="1" />
-      <File FileName="Assets/Script/UI/QuickSkillPanel.cs" />
-      <File FileName="Assets/Script/UI/DescribePanel.cs" />
-      <File FileName="Assets/Script/UI/GoodItem.cs" />
-      <File FileName="Assets/Script/UI/BagItem.cs" />
-      <File FileName="Assets/Script/UI/QuickSkillItem.cs" />
-      <File FileName="Assets/Script/Mangers/GameManager.cs" />
-      <File FileName="Assets/Script/Mangers/UIManager.cs" />
-      <File FileName="Assets/Script/Mangers/SkillManager.cs" />
+      <File FileName="Assets/Script/Enemy/EnemyBird.cs" Line="99" Column="1" />
+      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="78" Column="6" />
+      <File FileName="Assets/Script/Item/FireBallExplosion.cs" />
+      <File FileName="Assets/Script/Item/PlayerFireBall.cs" />
+      <File FileName="Assets/Script/Util/Util.cs" />
       <File FileName="Assets/Script/Mangers/SkillActionManager.cs" />
-      <File FileName="Assets/Resources/Skill/Skill.json" />
-      <File FileName="Assets/Script/UI/OwnItemTip.cs" Line="7" Column="26" />
+      <File FileName="Assets/Script/Player/AttackChecker.cs" Line="63" Column="1" />
+      <File FileName="Assets/Script/Mangers/ObjectPool.cs" />
+      <File FileName="Assets/Script/Player/Player.cs" Line="182" Column="32" />
+      <File FileName="Assets/Script/Enemy/EnemyGround.cs" Line="7" Column="30" />
+      <File FileName="Assets/Script/Mangers/EffectManager.cs" Line="19" Column="13" />
+      <File FileName="Assets/Script/Mangers/SoundManager.cs" Line="23" Column="43" />
+      <File FileName="Assets/Script/UI/AttackScreenEffect.cs" Line="21" Column="107" />
+      <File FileName="Assets/Script/Mangers/UIManager.cs" Line="9" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -20,7 +22,7 @@
     <String>Assembly-CSharp-firstpass.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a7af8dcf-45b5-4898-bf58-b891a3539bd6" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4d3e9a2d-808e-4fd4-83d9-f08ed6285ed0" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

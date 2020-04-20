@@ -7,11 +7,6 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour {
 
     public static UIManager instance;
-
-    [Header("快捷技能")]
-    public Image quickSkill1;
-    public Image quickSkill2;
- 
   
     [Header("道具背包")]
     public BagPanel bagPanel;
@@ -32,6 +27,7 @@ public class UIManager : MonoBehaviour {
 
     [Header("通用")]
     public Transform goodItemMidParent;
+    public AttackScreenEffect screenEffect;
 
     private void Awake() {
         instance = this;

@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// 设计模式 isDirty 
+// 脏数据
+// 消息队列
+// 单例模式
+// 对象池
+
 public class SkillActionManager : MonoBehaviour
 {
-    //消息队列
     // TODO cd
     public Dictionary<int, Util.NoParmsCallBack> skillDict = new Dictionary<int, Util.NoParmsCallBack>();
     public Dictionary<KeyCode, GoodInfo> keyCodeDict = new Dictionary<KeyCode, GoodInfo>();
@@ -71,7 +76,10 @@ public class SkillActionManager : MonoBehaviour
     }
     private void Levelup(SkillInfo info) {
         GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.green;
-        Invoke("JinhuaBack", 0.2f);
+        GameManager.instance.StartCoroutine(Util.DelayExecute(0.2f, () => {
+            GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.white;
+            GameManager.instance.player.HP += 10;
+        }));
     }
     private void ManyArrows(SkillInfo info) {
         Debug.Log("ManyArrows");
@@ -85,60 +93,6 @@ public class SkillActionManager : MonoBehaviour
             }
         }
     }
-
-    /*private float lastActionA = 0;
-    private float lastActionB = 0;
-
-
-    // Update is called once per frame
-    void Update() {
-        if (GameManager.instance.goodManager.goodInfoList[UIManager.instance.quickSkill1.gameObject.GetComponent<BagItem>().index].goodInfo != null) {
-            int cdA = GameManager.instance.goodManager.goodInfoList[UIManager.instance.quickSkill1.gameObject.GetComponent<BagItem>().index].goodInfo.skillInfo.cd;
-            UIManager.instance.quickSkill1.GetComponentInChildren<GoodItem>().maskImage.fillAmount = 1 - ((Time.time - lastActionA) / cdA);
-        }
-        if (GameManager.instance.goodManager.goodInfoList[UIManager.instance.quickSkill2.gameObject.GetComponent<BagItem>().index].goodInfo != null) {
-            int cdB = GameManager.instance.goodManager.goodInfoList[UIManager.instance.quickSkill2.gameObject.GetComponent<BagItem>().index].goodInfo.skillInfo.cd;
-            UIManager.instance.quickSkill2.GetComponentInChildren<GoodItem>().maskImage.fillAmount = 1 - ((Time.time - lastActionB) / cdB);
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.K)) {
-            if (GameManager.instance.goodManager.goodInfoList[UIManager.instance.quickSkill1.gameObject.GetComponent<BagItem>().index].goodInfo == null) {
-                return;
-            }
-            int cd = GameManager.instance.goodManager.goodInfoList[UIManager.instance.quickSkill1.gameObject.GetComponent<BagItem>().index].goodInfo.skillInfo.cd;
-            if (Time.time - lastActionA > cd) {
-                GameManager.instance.skillActionManager.SendMessage(GameManager.instance.goodManager.goodInfoList[UIManager.instance.quickSkill1.gameObject.GetComponent<BagItem>().index].goodInfo.skillInfo.action, GameManager.instance.goodManager.goodInfoList[UIManager.instance.quickSkill1.gameObject.GetComponent<BagItem>().index].goodInfo.skillInfo);
-                lastActionA = Time.time;
-            } else {
-                print("Nono");
-            }
-
-        }
-        if (Input.GetKeyDown(KeyCode.L)) {
-            if (GameManager.instance.goodManager.goodInfoList[UIManager.instance.quickSkill2.gameObject.GetComponent<BagItem>().index].goodInfo == null) {
-                return;
-            }
-            int cd = GameManager.instance.goodManager.goodInfoList[UIManager.instance.quickSkill2.gameObject.GetComponent<BagItem>().index].goodInfo.skillInfo.cd;
-
-            if (Time.time - lastActionB > cd) {
-                GameManager.instance.skillActionManager.SendMessage(GameManager.instance.goodManager.goodInfoList[UIManager.instance.quickSkill2.gameObject.GetComponent<BagItem>().index].goodInfo.skillInfo.action, GameManager.instance.goodManager.goodInfoList[UIManager.instance.quickSkill2.gameObject.GetComponent<BagItem>().index].goodInfo.skillInfo);
-                lastActionB = Time.time;
-            }
-
-        }
-    }
-    public void Fireball(SkillInfo info) {
-        GameManager.instance.skillParticleCreator.CreateFireball(GameManager.instance.player.attackPoint.position, new Vector2(GameManager.instance.player.transform.GetComponent<Player>().dir, 0), 0.5f, Util.SkillCollection.playerFireBall, info.value, Util.TagCollection.enemyTag, Util.EffectCollection.playerFireBallExplosion);
-    }
-    public void Jinhua(SkillInfo info) {
-        GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.green;
-        Invoke("JinhuaBack", 0.2f);
-    }
-    public void JinhuaBack() {
-        GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.white;
-        GameManager.instance.player.HP += 10;
-    }*/
 }
 
 

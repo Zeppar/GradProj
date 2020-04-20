@@ -22,6 +22,7 @@ public class AttackChecker : MonoBehaviour {
     public float[] colliderHideTimes;
     private bool isPlayer;
     private Enemy enemy;
+    private bool attackDetected;
 
     private void Start() {
         for (int i = 0; i < colliders.Length; i++) {
@@ -33,6 +34,7 @@ public class AttackChecker : MonoBehaviour {
         isPlayer = true;
         int idx = (int)type;
         colliders[idx - 1].enabled = true;
+        attackDetected = true;
         StartCoroutine(HideCollider(idx - 1));
     }
 
@@ -51,9 +53,14 @@ public class AttackChecker : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag(Util.TagCollection.enemyTag)) {
+            //if(attackDetected) {
+            //    attackDetected = false;
+            //    GameManager.instance.effectManager.ShowHitEffect();
+            //}
             collision.GetComponent<Enemy>().BeAttacked(GameManager.instance.player.attack);
         }
         if (collision.gameObject.CompareTag(Util.TagCollection.playerTag)) {
+            UIManager.instance.screenEffect.Show();
             collision.GetComponent<Player>().BeAttackedAndBeatBack(enemy.dir, 5, 7, enemy.attack); 
         }
     }

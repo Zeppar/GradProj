@@ -69,7 +69,6 @@ public class Player : MonoBehaviour {
         UpdateGroundState();
         Move();
         Jump();
-        SwitchFall();
         CheckAirAttack();
         Dash();
     }
@@ -79,6 +78,7 @@ public class Player : MonoBehaviour {
         AirAttack();
         GroundAttack();
         CreateShadow();
+        SwitchFall();
     }
 
 
@@ -95,6 +95,9 @@ public class Player : MonoBehaviour {
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded) {
             jumpPressed = true;
         }
+        if((Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))) {
+            jumpPressed = false;
+        }
         if (Input.GetKeyDown(KeyCode.H) && !isDash) {
             isDash = true;
             GameManager.instance.effectManager.ShakeCamera();
@@ -102,7 +105,7 @@ public class Player : MonoBehaviour {
     }
 
     private void SwitchFall() {
-        if (currentState.IsName(Util.PlayerAnimCollection.jump) && !isGrounded && rb.velocity.y < -0.1f) {
+        if (currentState.IsName(Util.PlayerAnimCollection.jump) && !isGrounded && rb.velocity.y < -0.5f) {
             anim.SetTrigger("Fall");
         }
     }
@@ -118,13 +121,15 @@ public class Player : MonoBehaviour {
             if (currentState.IsName(Util.PlayerAnimCollection.airAttack3)) {
                 SetAttackVal(7);
                 GameManager.instance.effectManager.ShakeCamera();
+            } else if(currentState.IsName(Util.PlayerAnimCollection.airAttack2)) {
+                SetAttackVal(0);
             }
             return;
         }
-        if (currentState.IsName(Util.PlayerAnimCollection.airAttack1) && currentState.normalizedTime > 1.0f) {
+        if (currentState.IsName(Util.PlayerAnimCollection.airAttack1) && currentState.normalizedTime > 1.3f) {
             SetAttackVal(0);
         }
-        if (currentState.IsName(Util.PlayerAnimCollection.airAttack2) && currentState.normalizedTime > 1.0f) {
+        if (currentState.IsName(Util.PlayerAnimCollection.airAttack2) && currentState.normalizedTime > 1.3f) {
             SetAttackVal(0);
         }
 
@@ -132,7 +137,7 @@ public class Player : MonoBehaviour {
             if (currentState.IsName(Util.PlayerAnimCollection.jump) && attackCount == 0) {
                 AddVertVelocity(7.5f);
                 SetAttackVal(4);
-            } else if (currentState.IsName(Util.PlayerAnimCollection.airAttack1) && currentState.normalizedTime > 0.5F) {
+            } else if (currentState.IsName(Util.PlayerAnimCollection.airAttack1) && currentState.normalizedTime > 0.3F) {
                 AddVertVelocity(20.5f);
                 SetAttackVal(5);
             } else if (currentState.IsName(Util.PlayerAnimCollection.airAttack2) && currentState.normalizedTime > 0.5F) {
@@ -147,10 +152,10 @@ public class Player : MonoBehaviour {
         if (!isGrounded)
             return;
 
-        if (currentState.IsName(Util.PlayerAnimCollection.attack1) && currentState.normalizedTime > 1.0f) {
+        if (currentState.IsName(Util.PlayerAnimCollection.attack1) && currentState.normalizedTime > 1.3f) {
             SetAttackVal(0);
         }
-        if (currentState.IsName(Util.PlayerAnimCollection.attack2) && currentState.normalizedTime > 1.0f) {
+        if (currentState.IsName(Util.PlayerAnimCollection.attack2) && currentState.normalizedTime > 1.3f) {
             SetAttackVal(0);
         }
 
@@ -158,7 +163,7 @@ public class Player : MonoBehaviour {
             if ((currentState.IsName(Util.PlayerAnimCollection.idle) || currentState.IsName(Util.PlayerAnimCollection.walk)) && attackCount == 0) {
                 AddHoriVelocity(dir * 0.6f);
                 SetAttackVal(1);
-            } else if (currentState.IsName(Util.PlayerAnimCollection.attack1) && currentState.normalizedTime > 0.5f) {
+            } else if (currentState.IsName(Util.PlayerAnimCollection.attack1) && currentState.normalizedTime > 0.8f) {
                 AddHoriVelocity(dir * 1.0f);
                 SetAttackVal(2);
             } else if (currentState.IsName(Util.PlayerAnimCollection.attack2) && currentState.normalizedTime > 0.5f) {
@@ -244,9 +249,8 @@ public class Player : MonoBehaviour {
                 anim.SetTrigger("Jump");
                 isJump = true;
                 rb.velocity = Vector2.up * jumpForce;
-                jumpPressed = false;
             }
-        } else if (rb.velocity.y < 0) {
+        } else if (rb.velocity.y < 0 || !jumpPressed) {
             rb.velocity += Vector2.down * fallForce;
         }
     }

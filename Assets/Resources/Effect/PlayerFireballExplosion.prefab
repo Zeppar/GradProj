@@ -4779,6 +4779,7 @@ GameObject:
   - component: {fileID: 19834144}
   - component: {fileID: 19958438}
   - component: {fileID: 8283052}
+  - component: {fileID: -5814276008296478235}
   m_Layer: 0
   m_Name: PlayerFireballExplosion
   m_TagString: Untagged
@@ -4811,7 +4812,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164310}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5f0d24fde8ef4ffe9df2bd0b80d70b1, type: 3}
   m_Name: 
@@ -9557,6 +9558,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!210 &-5814276008296478235
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164310}
+  m_Enabled: 1
+  m_SortingLayerID: -1433932375
+  m_SortingLayer: 2
+  m_SortingOrder: 0
 --- !u!1 &171962
 GameObject:
   m_ObjectHideFlags: 0

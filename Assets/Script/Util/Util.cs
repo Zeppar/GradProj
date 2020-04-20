@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public static class Util 
@@ -50,6 +49,11 @@ public static class Util
         public static string playerDash = "PlayerDash";
         public static string bossFireBall = "BossFireBall";
         public static string EnemyHpCanvas = "EnemyHpCanvas";
+    }
+
+    public static System.Collections.IEnumerator DelayExecute(float time, NoParmsCallBack callback) {
+        yield return new WaitForSecondsRealtime(time);
+        callback?.Invoke();
     }
 
 }

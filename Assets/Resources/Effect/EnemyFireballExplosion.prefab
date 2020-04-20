@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4070352531514855758}
   - component: {fileID: 19812676}
   - component: {fileID: 19983718}
+  - component: {fileID: -8120335940335424428}
   m_Layer: 0
   m_Name: EnemyFireballExplosion
   m_TagString: Untagged
@@ -4694,6 +4695,17 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!210 &-8120335940335424428
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107778}
+  m_Enabled: 1
+  m_SortingLayerID: -1433932375
+  m_SortingLayer: 2
+  m_SortingOrder: 0
 --- !u!1 &145736
 GameObject:
   m_ObjectHideFlags: 0

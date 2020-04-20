@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Enemy
   - Trap
-  - Bullet
   - Ground
   - PBullet
   - NPC
@@ -23,7 +22,7 @@ TagManager:
   - 
   - Ground
   - Trap
-  - PlayerBullut
+  - PlayerBullet
   - EnemyBullet
   - Enemy
   - Player

@@ -96,4 +96,5 @@ public class EnemyBird : Enemy {
     public override void Die() {
         Destroy(gameObject);
     }
+
 }
