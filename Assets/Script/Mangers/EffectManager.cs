@@ -17,7 +17,7 @@ public class EffectManager : MonoBehaviour
         Time.timeScale = timeScale;
         StartCoroutine(Reset());
     }
-
+    
     public void ShakeCamera() {
         cinemaInpulse.GenerateImpulse();
     }

@@ -29,6 +29,8 @@ public class UIManager : MonoBehaviour {
     public Transform goodItemMidParent;
     public AttackScreenEffect screenEffect;
 
+    public LevelUpPanel levelUpPanel;
+
     private void Awake() {
         instance = this;
     }
@@ -38,9 +40,8 @@ public class UIManager : MonoBehaviour {
         bagPanel.Init();
     }
 
-    public void LoadLevel(int index) {
-        SceneManager.LoadScene(index);
-    }
+    
+   
 
     public void ShowHPUI(Enemy enemy, int hp) {
         var hpUI = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.EnemyHpCanvas);

@@ -544,6 +544,7 @@
     <Compile Include="Assets\Script\UI\GoodItem.cs" />
     <Compile Include="Assets\Script\UI\HPBarPanel.cs" />
     <Compile Include="Assets\Script\UI\HelpPanel.cs" />
+    <Compile Include="Assets\Script\UI\LevelUpPanel.cs" />
     <Compile Include="Assets\Script\UI\OwnItemTip.cs" />
     <Compile Include="Assets\Script\UI\QuickSkillItem.cs" />
     <Compile Include="Assets\Script\UI\QuickSkillPanel.cs" />

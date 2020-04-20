@@ -84,8 +84,13 @@ public class SkillActionManager : MonoBehaviour
     private void ManyArrows(SkillInfo info) {
         Debug.Log("ManyArrows");
     }
+    public void JinhuaBack()
+    {
+        GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.white;
+        GameManager.instance.player.HP += 10;
+        }
 
-    private void OnGUI() {
+        private void OnGUI() {
         if (Input.anyKeyDown) {
             Event e = Event.current;
             if (e != null && e.isKey && keyCodeDict.ContainsKey(e.keyCode) && keyCodeDict[e.keyCode] != null) {

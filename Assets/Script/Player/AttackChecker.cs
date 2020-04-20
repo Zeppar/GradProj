@@ -53,11 +53,8 @@ public class AttackChecker : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag(Util.TagCollection.enemyTag)) {
-            //if(attackDetected) {
-            //    attackDetected = false;
-            //    GameManager.instance.effectManager.ShowHitEffect();
-            //}
             collision.GetComponent<Enemy>().BeAttacked(GameManager.instance.player.attack);
+            GameManager.instance.skillParticleCreator.CreateBlood(collision.gameObject.transform);
         }
         if (collision.gameObject.CompareTag(Util.TagCollection.playerTag)) {
             UIManager.instance.screenEffect.Show();

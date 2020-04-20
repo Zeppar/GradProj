@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class LevelWin : MonoBehaviour
 {
-   
+  
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameManager.instance.player.dead = true;
-       // UIManger.instance.winPanel.SetActive(true);
+        UIManager.instance.levelUpPanel.ShowPanel();
     }
 }
