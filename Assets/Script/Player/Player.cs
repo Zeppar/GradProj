@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using System;
+using UnityEngine.Networking;
+using UnityEngine.Rendering;
+
 
 public class Player : MonoBehaviour {
     public int maxHP;
@@ -28,6 +31,8 @@ public class Player : MonoBehaviour {
     public LayerMask groundLayer;
     public AttackChecker attackChecker;
     public PlayerAirAttack airAttack;
+
+    public GameObject playerLight;
 
     public int HP {
         get {
@@ -80,7 +85,20 @@ public class Player : MonoBehaviour {
         AirAttack();
         GroundAttack();
         CreateShadow();
+        PlayerLight();
     }
+    void PlayerLight()
+    {
+        if (Input.GetKey(KeyCode.O))
+        {
+            playerLight.SetActive(true);
+        }
+        else
+        {
+            playerLight.SetActive(false);
+        }
+    }
+<<<<<<< HEAD
 
 
     private void CheckAirAttack() {
@@ -91,6 +109,8 @@ public class Player : MonoBehaviour {
         isGrounded = feetCollider.IsTouchingLayers(LayerMask.GetMask(Util.LayerCollection.groundLayer));
     }
 
+=======
+>>>>>>> origin/master
     private void UpdateState() {
         currentState = anim.GetCurrentAnimatorStateInfo(0);
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded) {
@@ -201,9 +221,8 @@ public class Player : MonoBehaviour {
         if (isHurt || GetComponent<Player>().attackCount > 0)
             return;
 
-        if (transform.position.y < -40.0f) {
-            Destroy(gameObject);
-            return;
+        if (transform.position.y < -240.0f) {
+            HP -= 1000000000;
         }
 
         moveInput = Input.GetAxisRaw("Horizontal");
