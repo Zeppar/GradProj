@@ -155,6 +155,7 @@
     <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\TextPicEditor.cs" />
     <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\UIExtensionsMenuOptions.cs" />
     <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Editor\uGUITools.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
     <None Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3ValueTypeTemplate.txt" />
     <None Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3ComponentTypeTemplate.txt" />
     <None Include="Assets\3rd\Plugins\Easy Save 3\Editor\ES3TypeTemplate.txt" />
@@ -440,6 +441,9 @@
     </Reference>
     <Reference Include="LitJson">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/3rd/Plus/LitJson/LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="JMOAssets_CartoonFXFreeWelcome">
+      <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Assets/JMO Assets/Editor/JMOAssets_CartoonFXFreeWelcome.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>G:/Source Files/Unity File/GradProject/GradProject_2020.3.21/GradProj/Library/PackageCache/com.unity.render-pipelines.core@7.2.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>

@@ -6,7 +6,7 @@ public class PlayerAirAttack : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag(Util.TagCollection.enemyTag)) {
-            collision.gameObject.GetComponent<Enemy>().BeAttackedAndBeatBack(-10.0f, 3f);
+            collision.gameObject.GetComponent<Enemy>().BeAttackedAndBeatBack(-10.0f, 3f, GameManager.instance.player.attack * 2);
             GameManager.instance.effectManager.ShowHitEffect();
         }
     }

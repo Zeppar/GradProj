@@ -6,12 +6,13 @@ TagManager:
   tags:
   - Enemy
   - Trap
-  - Bullet
   - Ground
   - PBullet
   - NPC
   - Prize
   - OBS
+  - FxTemporaire
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - 
   - Ground
   - Trap
-  - PlayerBullut
+  - PlayerBullet
   - EnemyBullet
   - Enemy
   - Player
@@ -57,4 +58,10 @@ TagManager:
     locked: 0
   - name: Role
     uniqueID: 3438037061
+    locked: 0
+  - name: Effect
+    uniqueID: 1713068587
+    locked: 0
+  - name: Magam
+    uniqueID: 428163011
     locked: 0

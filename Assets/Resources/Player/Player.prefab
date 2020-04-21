@@ -261,7 +261,6 @@ GameObject:
   - component: {fileID: 88370439081291694}
   - component: {fileID: 88370439081291691}
   - component: {fileID: 229351834562881748}
-  - component: {fileID: 3048735453650121773}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -277,7 +276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88370439081291695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.6, y: 7.1, z: 0}
+  m_LocalPosition: {x: 14.1, y: 6.6, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 88370439311796174}
@@ -302,8 +301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f44eeb50cf0d447a9ed80a1bfccfab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 20
-  attack: 5
+  maxHP: 20000
+  attack: 10
   range: 1
   attackInterval: 0.75
   dead: 0
@@ -361,8 +360,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -856930235
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0ef3cd5c3b2ab2948bce01dba207fe69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -426,22 +425,6 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0050828457, y: -0.03897908}
-  m_Size: {x: 0.12900554, y: 0.26137358}
-  m_Direction: 0
---- !u!70 &3048735453650121773
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88370439081291695}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0050828457, y: -0.03897908}

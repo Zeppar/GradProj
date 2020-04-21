@@ -16,4 +16,5 @@ public class PlayerFireBall : MonoBehaviour
         GameManager.instance.skillParticleCreator.CreateEffect(pos, Util.EffectCollection.playerFireBallExplosion);
         Destroy(gameObject);
     }
+
 }

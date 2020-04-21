@@ -46,6 +46,7 @@ public class Enemy : MonoBehaviour {
     public AttackChecker attackChecker;
 
     public float attackInterval;
+    public float originInterval;
     [HideInInspector]
     public float lastAttackTime = 0;
     [HideInInspector]
@@ -120,14 +121,18 @@ public class Enemy : MonoBehaviour {
     public virtual void BeAttacked(int IntCount) {
         if (HP > 0) {
             isHurt = true;
-            var hpMins = UnityEngine.Random.Range(IntCount - 2, IntCount + 2); ;
-            HP -= hpMins;
-            if (hasSlider)
-                hpSlider.value = (float)HP / maxHP;
-            UIManager.instance.ShowHPUI(this, hpMins);
+            UpdateHP(IntCount);
             ResetAttackState();
             Invoke("ResetHurtState", 0.2f);
         }
+    }
+
+    private void UpdateHP(int IntCount) {
+        var hpMins = UnityEngine.Random.Range(IntCount - 2, IntCount + 2); ;
+        HP -= hpMins;
+        if (hasSlider)
+            hpSlider.value = (float)HP / maxHP;
+        UIManager.instance.ShowHPUI(this, hpMins);
     }
 
     public virtual void Seek() {
@@ -142,6 +147,7 @@ public class Enemy : MonoBehaviour {
         dead = true;
         int skillID = UnityEngine.Random.Range(0, GameManager.instance.skillManager.skillDict.Count);
         GameManager.instance.skillStoneCreator.CreateSkillStone(skillID, transform.position);
+        GameManager.instance.skillParticleCreator.CreateEffect(transform.position, Util.ObjectItemNameCollection.enemyDie);
     }
 
 
@@ -163,9 +169,10 @@ public class Enemy : MonoBehaviour {
         rb.velocity = vec;
     }
 
-    public void BeAttackedAndBeatBack(float xForce, float yForce) {
+    public void BeAttackedAndBeatBack(float xForce, float yForce, int attack) {
         isHurt = true;
         AddVelocity(new Vector2(dir * xForce, yForce));
+        UpdateHP(attack);
         anim.SetTrigger("BeatBack");
         Invoke("ResetHurtState", 1.0f);
         ResetAttackState();

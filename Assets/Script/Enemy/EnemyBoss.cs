@@ -17,6 +17,7 @@ public class EnemyBoss : EnemyGround
         attackType = Random.Range(1, 3);
         //Debug.Log("set : " + attackType);
         lastAttackTime = Time.time;
+        attackInterval = Random.Range(originInterval * 0.9f, originInterval * 1.1f);
     }
 
     public override bool ShouldChase() {

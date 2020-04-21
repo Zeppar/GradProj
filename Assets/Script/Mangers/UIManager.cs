@@ -7,11 +7,6 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour {
 
     public static UIManager instance;
-
-    [Header("快捷技能")]
-    public Image quickSkill1;
-    public Image quickSkill2;
- 
   
     [Header("道具背包")]
     public BagPanel bagPanel;
@@ -32,6 +27,8 @@ public class UIManager : MonoBehaviour {
 
     [Header("通用")]
     public Transform goodItemMidParent;
+    public AttackScreenEffect screenEffect;
+    public ComboPanel comboPanel;
 
     public LevelUpPanel levelUpPanel;
 
@@ -44,11 +41,8 @@ public class UIManager : MonoBehaviour {
         bagPanel.Init();
     }
 
-    
-   
-
     public void ShowHPUI(Enemy enemy, int hp) {
-        var hpUI = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.EnemyHpCanvas);
+        var hpUI = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.enemyHpCanvas);
         hpUI.transform.SetParent(hpPanelParent, false);
         hpUI.transform.position = Camera.main.WorldToScreenPoint(enemy.transform.position + new Vector3(0, 1, 0)); 
         hpUI.GetComponent<EnemyHpCanvas>().ShowHPUI(hp);

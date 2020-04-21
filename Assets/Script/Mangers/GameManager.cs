@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public SkillManager skillManager = new SkillManager();//技能管理器实例
     public GoodManager goodManager = new GoodManager();//物品管理器实例
+    public EnergyManager energyManager = new EnergyManager(75.0f, 100.0f);
 
     public Player player;//玩家脚本
 
@@ -19,9 +20,11 @@ public class GameManager : MonoBehaviour
     public SkillActionManager skillActionManager;
     public EffectManager effectManager;
 
-    //public CinemachineVirtualCamera virtualCamera;
 
- //   public Transform spawn;
+    public CinemachineVirtualCamera virtualCamera;
+
+    public Transform spawn;
+    
     void Awake()
     {
         if (instance == null) {
@@ -36,34 +39,31 @@ public class GameManager : MonoBehaviour
         skillManager.InitSkill();
         goodManager.InitGoods();
         skillActionManager.InitSkillCallback();
-      ///  InitUI();
-      //  InitPlayer();
+        InitUI();
+        InitPlayer();
 
     }
-  //  void InitUI() { 
-    //    UIManager ui = Instantiate(Resources.Load("UI/UIManager") as GameObject).GetComponent<UIManager>();
-     //   ui.Init();   
- //   }
-  //  void InitPlayer()
-  //  {
-   //     if(virtualCamera == null) { virtualCamera = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>(); }
-   //     player =  Instantiate(Resources.Load("Player/Player") as GameObject).GetComponent<Player>();
-     //   virtualCamera.Follow = player.transform;
-    //    if (spawn != null)
-     //   {
-     //       player.transform.position = spawn.position;
-//        }
-//    }
+    void InitUI() { 
+        UIManager ui = Instantiate(Resources.Load("UI/UIManager") as GameObject).GetComponent<UIManager>();
+        ui.Init();   
+    }
+    void InitPlayer()
+    {
+        if (virtualCamera == null) { virtualCamera = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>(); }
+        player =  Instantiate(Resources.Load("Player/Player") as GameObject).GetComponent<Player>();       
+        if(spawn != null) { player.transform.position = spawn.position; }
+        virtualCamera.Follow = player.transform;
+    }
 
     public void LoadLevel(int index)
     {
         SceneManager.LoadScene(index);
     }
-    public void LevelUP()
+    public void LevelUp()
     {
         LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void ReLoadLevel(int index)
+    public void ReLoadLevel()
     {
         LoadLevel(SceneManager.GetActiveScene().buildIndex);
     }

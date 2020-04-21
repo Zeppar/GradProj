@@ -12,6 +12,7 @@ public class EnemyWarrior : EnemyGround {
         base.Attack();
         anim.SetTrigger("Attack");
         lastAttackTime = Time.time;
+        attackInterval = Random.Range(originInterval * 0.9f, originInterval * 1.1f);
     }
 
     public override void CheckAttackPlayer() {
