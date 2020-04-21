@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 
 
     public CinemachineVirtualCamera virtualCamera;
+
+    public Transform spawn;
     
     void Awake()
     {
@@ -47,7 +49,9 @@ public class GameManager : MonoBehaviour
     }
     void InitPlayer()
     {
-        player =  Instantiate(Resources.Load("Player/Player") as GameObject).GetComponent<Player>();
+        if (virtualCamera == null) { virtualCamera = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>(); }
+        player =  Instantiate(Resources.Load("Player/Player") as GameObject).GetComponent<Player>();       
+        if(spawn != null) { player.transform.position = spawn.position; }
         virtualCamera.Follow = player.transform;
     }
 

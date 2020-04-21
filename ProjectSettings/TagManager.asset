@@ -62,3 +62,6 @@ TagManager:
   - name: Effect
     uniqueID: 1713068587
     locked: 0
+  - name: Magam
+    uniqueID: 428163011
+    locked: 0
