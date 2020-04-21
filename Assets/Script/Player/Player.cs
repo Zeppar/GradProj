@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using System;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class Player : MonoBehaviour {
     public int maxHP;
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour {
     public LayerMask groundLayer;
     public AttackChecker attackChecker;
     public PlayerAirAttack airAttack;
+    public Light2D selfLight;
 
     public int HP {
         get {

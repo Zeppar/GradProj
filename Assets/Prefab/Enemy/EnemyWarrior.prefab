@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f14ed8da376b541ba887629a6c3709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 2000
+  maxHP: 100
   speed: 6
   dir: -1
   attack: 3
@@ -118,8 +118,10 @@ MonoBehaviour:
   lastAttackTime: 0
   anim: {fileID: 0}
   rb: {fileID: 0}
+  attackPoint: {fileID: 0}
   feetPos: {fileID: 2579605402278975913}
   onGround: 1
+  canSeek: 1
   contactFilter:
     useTriggers: 0
     useLayerMask: 0

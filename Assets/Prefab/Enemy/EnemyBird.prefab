@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07c36c4139a3d2042921018ba6d14331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 200
   speed: 5
   dir: -1
   attack: 7
@@ -146,9 +146,9 @@ MonoBehaviour:
   lastAttackTime: 0
   anim: {fileID: 0}
   rb: {fileID: 0}
+  attackPoint: {fileID: 1817283899416620840}
   fallSpeed: 7.5
   chaseHeight: 0.2
-  attackPoint: {fileID: 1817283899416620840}
   leftPos: {fileID: 0}
   rightPos: {fileID: 0}
 --- !u!50 &1817283901076952813

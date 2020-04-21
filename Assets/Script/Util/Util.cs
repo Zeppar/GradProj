@@ -60,6 +60,7 @@ public static class Util
         public static string playerShadow = "PlayerShadow";
         public static string enemyDie = "EnemyDie";
         public static string blood = "Blood";
+        public static string bossFireBallRain = "BossFireBallRain";
     }
 
     public static System.Collections.IEnumerator DelayExecute(float time, NoParmsCallBack callback) {

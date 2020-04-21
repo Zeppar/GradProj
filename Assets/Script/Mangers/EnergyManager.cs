@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class EnergyManager
 {
-    public float totalEnergy;
+    public float curEnemgy;
     public float maxEnergy;
 
     public EnergyManager(float total, float max) {
-        totalEnergy = total;
+        curEnemgy = total;
         maxEnergy = max;
     }
 
     public void ChangeEnergy(float value) {
-        totalEnergy = Mathf.Max(totalEnergy + value, 0);
+        curEnemgy = Mathf.Max(curEnemgy + value, 0);
     }
 
     public float GetPercentValue() {
-        return totalEnergy / maxEnergy;
+        return curEnemgy / maxEnergy;
     }
 }

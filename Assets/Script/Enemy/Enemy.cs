@@ -94,7 +94,7 @@ public class Enemy : MonoBehaviour {
         return true;
     }
 
-    private void BehaviourOperation() {
+    public virtual void BehaviourOperation() {
         if (GameManager.instance.player != null && ShouldChase()) {
             if (CanAttack()) {
                 if (type == EnemyType.OnGround) {

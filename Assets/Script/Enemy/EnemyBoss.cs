@@ -11,7 +11,9 @@ public class EnemyBoss : EnemyGround
         Charge
     }
 
+
     private BossAttackType attackType = BossAttackType.FireBall;
+    private bool inStandSkill = false;
 
     public override void Attack() {
         if (Time.time - lastAttackTime < attackInterval) {
@@ -20,7 +22,7 @@ public class EnemyBoss : EnemyGround
         base.Attack();
         // choose attack
         SetAttackType(attackType);
-        attackType = (BossAttackType)Random.Range(1, 3);
+        attackType = (BossAttackType)Random.Range(1, 4);
         lastAttackTime = Time.time;
         attackInterval = Random.Range(originInterval * 0.9f, originInterval * 1.1f);
     }
@@ -71,10 +73,35 @@ public class EnemyBoss : EnemyGround
                 }));
                 break;
             case BossAttackType.FireBallRain:
+                inStandSkill = true;
+                StartCoroutine(FireBallRain());
                 break;
             case BossAttackType.Charge:
                 break;
         }
+    }
+
+    private RaycastHit2D[] results = new RaycastHit2D[1];
+    private IEnumerator FireBallRain() {
+        for(int i = 0; i < 5; i++) {
+            int count = Physics2D.Raycast(GameManager.instance.player.transform.position, Vector2.down, contactFilter, results);
+            if(count > 0) {
+                GameManager.instance.skillParticleCreator.CreateEffect(results[0].point, Util.ObjectItemNameCollection.bossFireBallRain);
+                yield return new WaitForSecondsRealtime(0.4f);
+                GameManager.instance.skillParticleCreator.CreateFireball(results[0].point + new Vector2(0, 20.0f), Vector2.down, 0.05f, attack, Util.FireBallType.Boss);
+                yield return new WaitForSecondsRealtime(0.3f);
+            } else {
+                yield return new WaitForSecondsRealtime(0.1f);
+            }   
+        }
+        inStandSkill = false;
+        ResetAttackState();
+    }
+
+    public override void BehaviourOperation() {
+        if (inStandSkill)
+            return;
+        base.BehaviourOperation();
     }
 
     public override void ResetAttackState() {
