@@ -516,13 +516,11 @@
     <Compile Include="Assets\Script\Enemy\Enemy.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyBird.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyBoss.cs" />
-    <Compile Include="Assets\Script\Enemy\EnemyFireBall.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyGround.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyWarrior.cs" />
     <Compile Include="Assets\Script\Item\FireBallExplosion.cs" />
     <Compile Include="Assets\Script\Item\Fireball.cs" />
     <Compile Include="Assets\Script\Item\LevelWin.cs" />
-    <Compile Include="Assets\Script\Item\PlayerFireBall.cs" />
     <Compile Include="Assets\Script\Item\PlayerShadow.cs" />
     <Compile Include="Assets\Script\Item\SkillStone.cs" />
     <Compile Include="Assets\Script\Mangers\EffectManager.cs" />

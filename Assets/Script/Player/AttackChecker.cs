@@ -46,6 +46,14 @@ public class AttackChecker : MonoBehaviour {
         StartCoroutine(HideCollider(idx - 1));
     }
 
+    public void CheckAttack(int colliderIdx, Enemy _enemy) {
+        isPlayer = false;
+        enemy = _enemy;
+        int idx = colliderIdx;
+        colliders[idx - 1].enabled = true;
+        StartCoroutine(HideCollider(idx - 1));
+    }
+
     private IEnumerator HideCollider(int idx) {
         yield return new WaitForSecondsRealtime(colliderHideTimes[idx]);
         colliders[idx].enabled = false;

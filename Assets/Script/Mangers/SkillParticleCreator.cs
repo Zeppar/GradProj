@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class SkillParticleCreator : MonoBehaviour
 {
-    public void CreateFireball(Vector2 pos, Vector2 dir, float speed, int attack, bool isPlayer) {
+    public void CreateFireball(Vector2 pos, Vector2 dir, float speed, int attack, Util.FireBallType type) {
         string objectName = "";
         string targetTag = "";
         string fireBallExplosion = "";
-        if(isPlayer) {
+        if(type == Util.FireBallType.Player) {
             objectName = Util.SkillCollection.playerFireBall;
             targetTag = Util.TagCollection.enemyTag;
             fireBallExplosion = Util.EffectCollection.playerFireBallExplosion;
-        } else {
+        } else if (type == Util.FireBallType.Enemy) {
             objectName = Util.SkillCollection.enemyFireBall;
             targetTag = Util.TagCollection.playerTag;
             fireBallExplosion = Util.EffectCollection.enemyFireBallExplosion;
+        } else if (type == Util.FireBallType.Boss) {
+            objectName = Util.SkillCollection.bossFireBall;
+            targetTag = Util.TagCollection.playerTag;
+            fireBallExplosion = Util.EffectCollection.bossFireBallExplosion;
         }
         CreateFireball(pos, dir, speed, attack, objectName, targetTag, fireBallExplosion);
     }

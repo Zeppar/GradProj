@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour {
     [Header("基础属性")]
     public int maxHP;
     private int _HP;
-    public int speed;
+    public float speed;
     public int dir = -1;
     public int attack = 7;
     public float scaleMulti;
@@ -38,9 +38,8 @@ public class Enemy : MonoBehaviour {
     [Header("巡逻属性")]
     //巡逻属性
     public float chaseDis = 2;
-    public int attackRange = 1;
+    public float attackRange = 1;
 
-    //public int skillID;
     public bool hasSlider = true;
     public Slider hpSlider;
     public AttackChecker attackChecker;
@@ -53,6 +52,8 @@ public class Enemy : MonoBehaviour {
     public Animator anim;
     [HideInInspector]
     public Rigidbody2D rb;
+    public Transform attackPoint;
+
 
     public virtual void Start() {
         anim = GetComponent<Animator>();
@@ -146,6 +147,7 @@ public class Enemy : MonoBehaviour {
     public virtual void Die() {
         dead = true;
         int skillID = UnityEngine.Random.Range(0, GameManager.instance.skillManager.skillDict.Count);
+        Debug.Log(skillID);
         GameManager.instance.skillStoneCreator.CreateSkillStone(skillID, transform.position);
         GameManager.instance.skillParticleCreator.CreateEffect(transform.position, Util.ObjectItemNameCollection.enemyDie);
     }

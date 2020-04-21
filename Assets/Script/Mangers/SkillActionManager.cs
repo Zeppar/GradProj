@@ -72,7 +72,7 @@ public class SkillActionManager : MonoBehaviour
     }
 
     private void Fireball(SkillInfo info) {
-        GameManager.instance.skillParticleCreator.CreateFireball(GameManager.instance.player.attackPoint.position, new Vector2(GameManager.instance.player.transform.GetComponent<Player>().dir, 0), 0.5f, info.value, true);
+        GameManager.instance.skillParticleCreator.CreateFireball(GameManager.instance.player.attackPoint.position, new Vector2(GameManager.instance.player.transform.GetComponent<Player>().dir, 0), 0.25f, info.value, Util.FireBallType.Player);
     }
     private void Levelup(SkillInfo info) {
         GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.green;

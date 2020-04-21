@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Fireball: MonoBehaviour
 {
-    public int attack;
-    public string tag;
-    public string fireBallExplosion;
+    private int attack;
+    private string tag;
+    private string fireBallExplosion;
 
     public void SetContent(int _attack, string _tag, string _fireBallExplosion) {
         attack = _attack;
@@ -16,7 +16,7 @@ public class Fireball: MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Vector3 pos = collision.gameObject.transform.position;
+        var pos = transform.position;
         if (collision.gameObject.CompareTag(tag)) {
             if (collision.gameObject.GetComponent<Player>() != null) {
                 collision.gameObject.GetComponent<Player>().BeAttacked(attack);

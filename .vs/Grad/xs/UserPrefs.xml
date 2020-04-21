@@ -1,20 +1,25 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Mangers/ObjectPool.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Skill/Skill.json">
     <Files>
-      <File FileName="Assets/Script/Mangers/SkillParticleCreator.cs" Line="36" Column="17" />
-      <File FileName="Assets/Script/Enemy/EnemyFireBall.cs" Line="17" Column="51" />
-      <File FileName="Assets/Script/Util/Util.cs" Line="55" Column="46" />
-      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="48" Column="32" />
-      <File FileName="Assets/Script/Item/SkillStone.cs" Line="33" Column="114" />
-      <File FileName="Assets/Script/Mangers/SkillStoneCreator.cs" Line="15" Column="94" />
+      <File FileName="Assets/Script/Mangers/SkillParticleCreator.cs" Line="27" Column="70" />
+      <File FileName="Assets/Script/Util/Util.cs" Line="65" Column="50" />
+      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="151" Column="61" />
+      <File FileName="Assets/Script/Item/SkillStone.cs" Line="33" Column="55" />
+      <File FileName="Assets/Script/Mangers/SkillStoneCreator.cs" Line="9" Column="64" />
       <File FileName="Assets/Script/Player/PlayerAirAttack.cs" Line="14" Column="1" />
-      <File FileName="Assets/Script/Item/Fireball.cs" Line="22" Column="43" />
-      <File FileName="Assets/Script/Mangers/GameManager.cs" Line="51" Column="9" />
-      <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" Line="15" Column="9" />
-      <File FileName="Assets/Script/Enemy/EnemyBird.cs" Line="5" Column="14" />
-      <File FileName="Assets/Script/Enemy/EnemyGround.cs" Line="5" Column="14" />
-      <File FileName="Assets/Script/Enemy/EnemyBoss.cs" Line="25" Column="6" />
-      <File FileName="Assets/Script/Mangers/ObjectPool.cs" Line="17" Column="13" />
+      <File FileName="Assets/Script/Item/Fireball.cs" Line="19" Column="19" />
+      <File FileName="Assets/Script/Mangers/GameManager.cs" />
+      <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" Line="16" Column="6" />
+      <File FileName="Assets/Script/Enemy/EnemyBird.cs" Line="91" Column="112" />
+      <File FileName="Assets/Script/Enemy/EnemyGround.cs" Line="39" Column="85" />
+      <File FileName="Assets/Script/Enemy/EnemyBoss.cs" Line="83" Column="36" />
+      <File FileName="Assets/Script/Mangers/ObjectPool.cs" Line="28" Column="1" />
+      <File FileName="Assets/Script/Player/AttackChecker.cs" Line="52" Column="19" />
+      <File FileName="Assets/Script/Mangers/SkillActionManager.cs" Line="75" Column="201" />
+      <File FileName="Assets/Script/Mangers/SkillBagManger.cs" Line="13" Column="28" />
+      <File FileName="Assets/Script/Mangers/GoodManager.cs" Line="39" Column="33" />
+      <File FileName="Assets/Script/Mangers/SkillManager.cs" Line="52" Column="22" />
+      <File FileName="Assets/Resources/Skill/Skill.json" Line="32" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
