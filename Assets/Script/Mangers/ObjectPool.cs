@@ -46,4 +46,13 @@ public class ObjectPool : MonoBehaviour
         go.SetActive(false);
         queueDict[go.transform.name].Enqueue(go);
     }
+
+#warning 测试研究
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.T))
+        {
+            GetItem("Blood").transform.position = GameManager.instance.player.transform.position;
+        }
+    }
 }
