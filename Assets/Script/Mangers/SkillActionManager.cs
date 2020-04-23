@@ -81,8 +81,8 @@ public class SkillActionManager : MonoBehaviour
             GameManager.instance.player.HP += 10;
         }));
     }
-    private void ManyArrows(SkillInfo info) {
-        Debug.Log("ManyArrows");
+    private void ManyFireBalls(SkillInfo info) {
+        Debug.Log("ManyFireBalls");
     }
     public void JinhuaBack()
     {

@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour {
     public Transform goodItemMidParent;
     public AttackScreenEffect screenEffect;
     public ComboPanel comboPanel;
-
+    public EnergyPanel energyPanel;
     public LevelUpPanel levelUpPanel;
 
     private void Awake() {

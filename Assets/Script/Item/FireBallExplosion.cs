@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBallExplosion : MonoBehaviour
+public class FireBallExplosion : ObjectPoolItem
 {
-    private IEnumerator Start() {
+    public override void OnEnable() {
         SoundManager.instance.PlayEffect(Util.ClipNameCollection.explosion);
-        yield return new WaitForSecondsRealtime(4.0f);
-        ObjectPool.instance.ReturnToPool(gameObject);
+        base.OnEnable();
     }
 }

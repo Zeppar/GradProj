@@ -71,8 +71,13 @@ public class Player : MonoBehaviour {
 
     private IEnumerator ChangeEnergy() {
         while(true) {
-            yield return new WaitForSecondsRealtime(1.0f);
-            GameManager.instance.energyManager.ChangeEnergy(-1.0f);
+            if (GameManager.instance.energyManager.inEnergyInCrease) {
+                yield return null;
+                GameManager.instance.energyManager.IncreaseEnergy(0.1f);
+            } else {
+                yield return new WaitForSecondsRealtime(0.1f);
+                GameManager.instance.energyManager.ChangeEnergy(-0.1f);
+            }
         }
     }
 

@@ -21,13 +21,13 @@
 	},
 	{
 		"id": 2,
-		"title": "万箭齐发#2",
+		"title": "火球雨#2",
 		"value": 100,
 		"range": 5,
-		"describe": "<color=red>此技能正在开发中....</color>",
-		"iconPath": "Icon/Skill/ManyArrows",
+		"describe": "<color=red>(向前方发射数个火球)此技能正在开发中（....</color>",
+		"iconPath": "Icon/Skill/ManyFireBalls",
 		"cd": 5,
-		"action": "ManyArrows"
+		"action": "ManyFireBalls"
 
 	}
 ]

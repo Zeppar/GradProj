@@ -9,17 +9,17 @@ public class SkillParticleCreator : MonoBehaviour
         string targetTag = "";
         string fireBallExplosion = "";
         if(type == Util.FireBallType.Player) {
-            objectName = Util.SkillCollection.playerFireBall;
+            objectName = Util.ObjectItemNameCollection.playerFireBall;
             targetTag = Util.TagCollection.enemyTag;
-            fireBallExplosion = Util.EffectCollection.playerFireBallExplosion;
+            fireBallExplosion = Util.ObjectItemNameCollection.playerFireBallExplosion;
         } else if (type == Util.FireBallType.Enemy) {
-            objectName = Util.SkillCollection.enemyFireBall;
+            objectName = Util.ObjectItemNameCollection.enemyFireBall;
             targetTag = Util.TagCollection.playerTag;
-            fireBallExplosion = Util.EffectCollection.enemyFireBallExplosion;
+            fireBallExplosion = Util.ObjectItemNameCollection.enemyFireBallExplosion;
         } else if (type == Util.FireBallType.Boss) {
-            objectName = Util.SkillCollection.bossFireBall;
+            objectName = Util.ObjectItemNameCollection.bossFireBall;
             targetTag = Util.TagCollection.playerTag;
-            fireBallExplosion = Util.EffectCollection.bossFireBallExplosion;
+            fireBallExplosion = Util.ObjectItemNameCollection.bossFireBallExplosion;
         }
         CreateFireball(pos, dir, speed, attack, objectName, targetTag, fireBallExplosion);
     }

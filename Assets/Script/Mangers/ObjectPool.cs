@@ -7,7 +7,8 @@ public class ObjectPool : MonoBehaviour
     public static ObjectPool instance = null;
     private Dictionary<string, Queue<GameObject>> queueDict = new Dictionary<string, Queue<GameObject>>();
     private Dictionary<string, GameObject> prefabDict = new Dictionary<string, GameObject>();
-    public int initCount = 10;
+    //public int initCount = 10;
+
 
     private void Awake() {
         if(instance == null) {
@@ -24,7 +25,11 @@ public class ObjectPool : MonoBehaviour
             queueDict[name] = new Queue<GameObject>();
         }
         var prefab = prefabDict[name];
-        for(int i = 0; i < initCount; i++) {
+        if(!Util.objectInitCountDict.ContainsKey(name)) {
+            Debug.LogError("Can not find key : " + name);
+            return;
+        }
+        for(int i = 0; i < Util.objectInitCountDict[name]; i++) {
             GameObject pd = Instantiate(prefab);
             pd.name = name;
             pd.transform.SetParent(transform, false);

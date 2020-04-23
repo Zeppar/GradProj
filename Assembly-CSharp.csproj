@@ -520,7 +520,9 @@
     <Compile Include="Assets\Script\Enemy\EnemyWarrior.cs" />
     <Compile Include="Assets\Script\Item\FireBallExplosion.cs" />
     <Compile Include="Assets\Script\Item\Fireball.cs" />
+    <Compile Include="Assets\Script\Item\GetItemLightEffect.cs" />
     <Compile Include="Assets\Script\Item\LevelWin.cs" />
+    <Compile Include="Assets\Script\Item\ObjectPoolItem.cs" />
     <Compile Include="Assets\Script\Item\PlayerShadow.cs" />
     <Compile Include="Assets\Script\Item\SkillStone.cs" />
     <Compile Include="Assets\Script\Mangers\EffectManager.cs" />
@@ -599,7 +601,6 @@
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
     <None Include="Assets\3rd\Plus\unity-ui-extensions\Shaders\UIImageCrop.shader" />
     <None Include="Assets\3rd\Plus\Demigiant\DOTween\readme.txt" />
-    <None Include="Assets\SpellBookPreface\ReadMe.txt" />
     <None Include="Assets\3rd\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\Texture\Effects\wills_pixel_explosions_sample\round_vortex\spritesheet\spritesheet.txt" />
     <None Include="Assets\3rd\Plus\Pixel Arsenal\Pixel Arsenal - ReadMe.txt" />

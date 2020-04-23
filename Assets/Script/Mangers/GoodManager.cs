@@ -36,6 +36,9 @@ public class GoodManager
         bool find = false;
         for (int i = 0; i < goodInfoList.Count; i++) //还未检查检查检查检查检查
         {
+            if (goodInfoList[i] == null)
+                continue;
+            Debug.Log(goodInfoList[i].skillInfo.id);
             if(goodInfo.skillInfo.id == goodInfoList[i].skillInfo.id)
             {
                 goodInfoList[i].count += 1;
