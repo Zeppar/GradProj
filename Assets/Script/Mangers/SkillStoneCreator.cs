@@ -10,9 +10,9 @@ public class SkillStoneCreator : MonoBehaviour {
         if (info == null) {
             Debug.LogError("Skill Info Is Null");
             return;
-            
         }
-        SkillStone ss = Instantiate(skillStonePerfab, pos, transform.rotation);
-        ss.skillInfo = info;
+        SkillStone skillStone = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.skillStone).GetComponent<SkillStone>();
+        skillStone.transform.position = pos;
+        skillStone.skillInfo = info;
     }
 }

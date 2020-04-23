@@ -147,7 +147,6 @@ public class Enemy : MonoBehaviour {
     public virtual void Die() {
         dead = true;
         int skillID = UnityEngine.Random.Range(0, GameManager.instance.skillManager.skillDict.Count);
-        Debug.Log(skillID);
         GameManager.instance.skillStoneCreator.CreateSkillStone(skillID, transform.position);
         GameManager.instance.skillParticleCreator.CreateEffect(transform.position, Util.ObjectItemNameCollection.enemyDie);
     }
