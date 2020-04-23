@@ -22,7 +22,7 @@ public class EnemyBoss : EnemyGround
         base.Attack();
         // choose attack
         SetAttackType(attackType);
-        attackType = (BossAttackType)Random.Range(3, 4);
+        attackType = (BossAttackType)Random.Range(1, 4);
         lastAttackTime = Time.time;
         attackInterval = Random.Range(originInterval * 0.9f, originInterval * 1.1f);
     }

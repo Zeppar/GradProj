@@ -1,35 +1,35 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Mangers/SkillStoneCreator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Enemy/EnemyBoss.cs">
     <Files>
       <File FileName="Assets/Script/Mangers/SkillParticleCreator.cs" Line="22" Column="62" />
-      <File FileName="Assets/Script/Util/Util.cs" Line="76" Column="44" />
+      <File FileName="Assets/Script/Util/Util.cs" />
       <File FileName="Assets/Script/Enemy/Enemy.cs" />
-      <File FileName="Assets/Script/Player/PlayerAirAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Player/PlayerAirAttack.cs" />
       <File FileName="Assets/Script/Item/Fireball.cs" />
       <File FileName="Assets/Script/Mangers/GameManager.cs" />
       <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" />
       <File FileName="Assets/Script/Enemy/EnemyBird.cs" />
       <File FileName="Assets/Script/Enemy/EnemyGround.cs" />
-      <File FileName="Assets/Script/Enemy/EnemyBoss.cs" />
-      <File FileName="Assets/Script/Mangers/ObjectPool.cs" Line="7" Column="30" />
+      <File FileName="Assets/Script/Enemy/EnemyBoss.cs" Line="25" Column="52" />
+      <File FileName="Assets/Script/Mangers/ObjectPool.cs" />
       <File FileName="Assets/Script/Player/AttackChecker.cs" />
-      <File FileName="Assets/Script/Mangers/SkillActionManager.cs" Line="89" Column="88" />
+      <File FileName="Assets/Script/Mangers/SkillActionManager.cs" />
       <File FileName="Assets/Script/Mangers/SkillBagManger.cs" />
       <File FileName="Assets/Script/Mangers/GoodManager.cs" />
       <File FileName="Assets/Script/Mangers/SkillManager.cs" />
-      <File FileName="Assets/Resources/Skill/Skill.json" Line="30" Column="27" />
+      <File FileName="Assets/Resources/Skill/Skill.json" />
       <File FileName="Assets/Script/Mangers/LightManager.cs" />
       <File FileName="Assets/Script/Terrain/Gin/LaserGin.cs" />
       <File FileName="Assets/Script/Item/FireBallExplosion.cs" />
       <File FileName="Assets/Script/Item/ObjectPoolItem.cs" />
-      <File FileName="Assets/Script/Mangers/SoundManager.cs" Line="22" Column="1" />
-      <File FileName="Assets/Script/Item/GetItemLightEffect.cs" Line="20" Column="55" />
-      <File FileName="Assets/Script/UI/EnergyPanel.cs" Line="13" Column="65" />
-      <File FileName="Assets/Script/Mangers/UIManager.cs" Line="32" Column="16" />
-      <File FileName="Assets/Script/UI/HelpPanel.cs" Line="5" Column="14" />
-      <File FileName="Assets/Script/Item/SkillStone.cs" Line="33" Column="59" />
-      <File FileName="Assets/Script/Mangers/EnergyManager.cs" Line="13" Column="17" />
-      <File FileName="Assets/Script/Player/Player.cs" Line="210" Column="48" />
+      <File FileName="Assets/Script/Mangers/SoundManager.cs" />
+      <File FileName="Assets/Script/Item/GetItemLightEffect.cs" />
+      <File FileName="Assets/Script/UI/EnergyPanel.cs" />
+      <File FileName="Assets/Script/Mangers/UIManager.cs" />
+      <File FileName="Assets/Script/UI/HelpPanel.cs" />
+      <File FileName="Assets/Script/Item/SkillStone.cs" />
+      <File FileName="Assets/Script/Mangers/EnergyManager.cs" />
+      <File FileName="Assets/Script/Player/Player.cs" />
       <File FileName="Assets/Script/Mangers/SkillStoneCreator.cs" Line="19" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
@@ -38,7 +38,7 @@
     <String>Assembly-CSharp-firstpass.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1c625be0-13fc-4e03-b3b3-7261b77be3ff" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cf18c9fa-4c99-4e61-9ce2-dc2e04245844" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
