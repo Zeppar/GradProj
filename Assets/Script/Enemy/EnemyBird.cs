@@ -6,7 +6,6 @@ public class EnemyBird : Enemy {
 
     public float fallSpeed;
     public float chaseHeight;
-    public Transform attackPoint;
 
     // 飞行位置
     public Transform leftPos;
@@ -89,7 +88,7 @@ public class EnemyBird : Enemy {
         base.Attack();
         anim.SetTrigger("Attack");
         lastAttackTime = Time.time;
-        GameManager.instance.skillParticleCreator.CreateFireball(attackPoint.position, new Vector2(dir, 0), 0.5f, attack, false);
+        GameManager.instance.skillParticleCreator.CreateFireball(attackPoint.position, new Vector2(dir, 0), 0.15f, attack, Util.FireBallType.Enemy);
         attackInterval = Random.Range(originInterval * 0.9f, originInterval * 1.1f);
     }
 

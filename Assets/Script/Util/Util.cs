@@ -3,8 +3,13 @@ using UnityEngine;
 
 public static class Util 
 {
-
     public delegate void NoParmsCallBack();
+
+    public enum FireBallType {
+        Player = 0,
+        Enemy,
+        Boss
+    }
 
     public static class TagCollection {
         public static string playerTag = "Player";
@@ -33,11 +38,13 @@ public static class Util
     public static class EffectCollection {
         public static string playerFireBallExplosion = "PlayerFireBallExplosion";
         public static string enemyFireBallExplosion = "EnemyFireBallExplosion";
+        public static string bossFireBallExplosion = "BossFireBallExplosion";
     }
 
     public static class SkillCollection {
         public static string playerFireBall = "PlayerFireBall";
         public static string enemyFireBall = "EnemyFireBall";
+        public static string bossFireBall = "BossFireBall";
     }
 
     public static class ClipNameCollection {
@@ -53,6 +60,7 @@ public static class Util
         public static string playerShadow = "PlayerShadow";
         public static string enemyDie = "EnemyDie";
         public static string blood = "Blood";
+        public static string bossFireBallRain = "BossFireBallRain";
     }
 
     public static System.Collections.IEnumerator DelayExecute(float time, NoParmsCallBack callback) {

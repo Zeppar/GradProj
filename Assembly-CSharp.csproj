@@ -516,13 +516,11 @@
     <Compile Include="Assets\Script\Enemy\Enemy.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyBird.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyBoss.cs" />
-    <Compile Include="Assets\Script\Enemy\EnemyFireBall.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyGround.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyWarrior.cs" />
     <Compile Include="Assets\Script\Item\FireBallExplosion.cs" />
     <Compile Include="Assets\Script\Item\Fireball.cs" />
     <Compile Include="Assets\Script\Item\LevelWin.cs" />
-    <Compile Include="Assets\Script\Item\PlayerFireBall.cs" />
     <Compile Include="Assets\Script\Item\PlayerShadow.cs" />
     <Compile Include="Assets\Script\Item\SkillStone.cs" />
     <Compile Include="Assets\Script\Mangers\EffectManager.cs" />
@@ -531,6 +529,7 @@
     <Compile Include="Assets\Script\Mangers\GameManager.cs" />
     <Compile Include="Assets\Script\Mangers\GameSaveManger.cs" />
     <Compile Include="Assets\Script\Mangers\GoodManager.cs" />
+    <Compile Include="Assets\Script\Mangers\LightManager.cs" />
     <Compile Include="Assets\Script\Mangers\ObjectPool.cs" />
     <Compile Include="Assets\Script\Mangers\SkillActionManager.cs" />
     <Compile Include="Assets\Script\Mangers\SkillBagManger.cs" />
@@ -600,6 +599,7 @@
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
     <None Include="Assets\3rd\Plus\unity-ui-extensions\Shaders\UIImageCrop.shader" />
     <None Include="Assets\3rd\Plus\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\SpellBookPreface\ReadMe.txt" />
     <None Include="Assets\3rd\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\Texture\Effects\wills_pixel_explosions_sample\round_vortex\spritesheet\spritesheet.txt" />
     <None Include="Assets\3rd\Plus\Pixel Arsenal\Pixel Arsenal - ReadMe.txt" />

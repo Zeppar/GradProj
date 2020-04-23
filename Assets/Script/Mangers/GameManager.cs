@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -47,11 +48,12 @@ public class GameManager : MonoBehaviour
         UIManager ui = Instantiate(Resources.Load("UI/UIManager") as GameObject).GetComponent<UIManager>();
         ui.Init();   
     }
-    void InitPlayer()
-    {
+    void InitPlayer() {
         if (virtualCamera == null) { virtualCamera = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>(); }
-        player =  Instantiate(Resources.Load("Player/Player") as GameObject).GetComponent<Player>();       
-        if(spawn != null) { player.transform.position = spawn.position; }
+        player = Instantiate(Resources.Load("Player/Player") as GameObject).GetComponent<Player>();
+        if (spawn != null) {
+            player.transform.position = spawn.position;
+        }
         virtualCamera.Follow = player.transform;
     }
 

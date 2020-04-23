@@ -14,6 +14,7 @@ public class SkillActionManager : MonoBehaviour
     // TODO cd
     public Dictionary<int, Util.NoParmsCallBack> skillDict = new Dictionary<int, Util.NoParmsCallBack>();
     public Dictionary<KeyCode, GoodInfo> keyCodeDict = new Dictionary<KeyCode, GoodInfo>();
+    public Dictionary<int, float> cdDict = new Dictionary<int, float>();
     public List<KeyCode> keyCodeList = new List<KeyCode> { KeyCode.U, KeyCode.I};
     public Queue<SkillInfo> queue = new Queue<SkillInfo>();
 
@@ -32,7 +33,12 @@ public class SkillActionManager : MonoBehaviour
         for(int i = 0;i < keyCodeList.Count; i++) {
             keyCodeDict[keyCodeList[i]] = null;
         }
-    }
+        foreach (var kv in GameManager.instance.skillManager.skillDict)
+        { 
+
+        
+        }
+        }
 
     public void SetKeyCode(KeyCode keyCode, GoodInfo info) {
         keyCodeDict[keyCode] = info;
@@ -40,6 +46,7 @@ public class SkillActionManager : MonoBehaviour
 
     public void AddSkillCallBack(SkillInfo info, Util.NoParmsCallBack callBack) {
         skillDict[info.id] = callBack;
+        cdDict[info.id] = 0;
     }
 
     public void ExecuteSkillAction(SkillInfo info) {
@@ -63,8 +70,15 @@ public class SkillActionManager : MonoBehaviour
         while (true) {
             if (queue.Count > 0) {
                 SkillInfo info = queue.Dequeue();
-                if (skillDict.ContainsKey(info.id)) {
-                    skillDict[info.id]();
+                if (skillDict.ContainsKey(info.id)) {              
+                    if (cdDict.ContainsKey(info.id)){                   
+                        if(Time.time - cdDict[info.id] > info.cd)
+                        {                            
+                            cdDict[info.id] = Time.time;
+                            skillDict[info.id]();
+                        }                    
+                    }
+                  
                 }
             }
             yield return null;
@@ -72,7 +86,7 @@ public class SkillActionManager : MonoBehaviour
     }
 
     private void Fireball(SkillInfo info) {
-        GameManager.instance.skillParticleCreator.CreateFireball(GameManager.instance.player.attackPoint.position, new Vector2(GameManager.instance.player.transform.GetComponent<Player>().dir, 0), 0.5f, info.value, true);
+        GameManager.instance.skillParticleCreator.CreateFireball(GameManager.instance.player.attackPoint.position, new Vector2(GameManager.instance.player.transform.GetComponent<Player>().dir, 0), 0.25f, info.value, Util.FireBallType.Player);
     }
     private void Levelup(SkillInfo info) {
         GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.green;
