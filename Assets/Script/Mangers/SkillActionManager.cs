@@ -46,7 +46,7 @@ public class SkillActionManager : MonoBehaviour
 
     public void AddSkillCallBack(SkillInfo info, Util.NoParmsCallBack callBack) {
         skillDict[info.id] = callBack;
-        cdDict[info.id] = 0;
+        cdDict[info.id] = -info.cd;
     }
 
     public void ExecuteSkillAction(SkillInfo info) {
