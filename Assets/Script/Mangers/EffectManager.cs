@@ -19,7 +19,12 @@ public class EffectManager : MonoBehaviour
     }
     
     public void ShakeCamera() {
+        if(cinemaInpulse == null)
+        {
+            cinemaInpulse = GameManager.instance.virtualCamera.GetComponent<CinemachineCollisionImpulseSource>();
+        }
         cinemaInpulse.GenerateImpulse();
+      
     }
 
     IEnumerator Reset() {

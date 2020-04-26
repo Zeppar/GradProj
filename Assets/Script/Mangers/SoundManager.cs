@@ -17,8 +17,7 @@ public class SoundManager : MonoBehaviour
         AudioClip[] clips = Resources.LoadAll<AudioClip>("Music/Effect");
         for(int i = 0; i < clips.Length; i++) {
             audioDict.Add(clips[i].name, clips[i]);
-        }
-    }
+        }}
 
     public void PlayEffect(string clipName) {
         if (!audioDict.ContainsKey(clipName))

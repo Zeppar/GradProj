@@ -1546,7 +1546,7 @@ GameObject:
   - component: {fileID: 1808349835955919525}
   - component: {fileID: 1808349835955919526}
   - component: {fileID: 1808349835955919524}
-  - component: {fileID: 445962547910539876}
+  - component: {fileID: 8392326249401203141}
   m_Layer: 5
   m_Name: DescribePanel
   m_TagString: Untagged
@@ -1611,7 +1611,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &445962547910539876
+--- !u!114 &8392326249401203141
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1808349835955919522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d3d95c210000000085d95c210000000, type: 3}
+  m_Script: {fileID: 11500000, guid: bd144db07ab37a44f8c0569595d1c14b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: {fileID: 3533083546280604286}
@@ -2525,7 +2525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bagPanel: {fileID: 1808349836297614400}
-  describePanel: {fileID: 445962547910539876}
+  describePanel: {fileID: 8392326249401203141}
   cheatPanel: {fileID: 2143890641743575766}
   hpBarPanel: {fileID: 269627523}
   gameOverPanel: {fileID: 5083366721715879133}

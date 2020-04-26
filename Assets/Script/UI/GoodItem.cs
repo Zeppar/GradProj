@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -34,7 +35,14 @@ public class GoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         transform.name = info.skillInfo.name;
     }
 
-    private void Update() {
+    private void Update() {     
+      
+        percentValue =1- (Time.time- GameManager.instance.skillActionManager.cdDict[goodInfo.skillInfo.id]) / goodInfo.skillInfo.cd;
+    
+        if (percentValue < 0)
+        {
+            percentValue = 0;
+        }
         maskImage.fillAmount = percentValue;
     }
 

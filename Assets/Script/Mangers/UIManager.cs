@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour {
   
     [Header("道具背包")]
     public BagPanel bagPanel;
-    public DescribePanel describePanel;
+    public describePanel describePanel;
 
     [Header("面板物体")]
     public CheatPanel cheatPanel;
