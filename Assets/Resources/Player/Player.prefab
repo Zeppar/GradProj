@@ -310,6 +310,7 @@ MonoBehaviour:
   dashSpeed: 40
   dashTotalTime: 0.3
   dashCreateTime: 0.06
+  dashCD: 12
   jumpForce: 20
   fallForce: 1.1
   attackPoint: {fileID: 229351834566959205}

@@ -6,7 +6,7 @@ using System;
 using UnityEngine.Experimental.Rendering.Universal;
 
 public class Player : MonoBehaviour {
-    public int maxHP;
+    public float maxHP;
     public int attack;
     public float range;
     public float attackInterval;
@@ -18,6 +18,8 @@ public class Player : MonoBehaviour {
     public float dashTotalTime;
     private float dashCreateCurTime;
     public float dashCreateTime;
+    public float dashCD;
+    private float dashCDRemain;
 
     public float jumpForce;
     public float fallForce;
@@ -31,7 +33,7 @@ public class Player : MonoBehaviour {
     public PlayerAirAttack airAttack;
     public Light2D selfLight;
 
-    public int HP {
+    public float HP {
         get {
             return _hp;
         }
@@ -42,7 +44,7 @@ public class Player : MonoBehaviour {
             }
         }
     }
-    private int _hp;
+    private float _hp;
 
     private int attackCount = 0;
     private AnimatorStateInfo currentState;
@@ -67,6 +69,7 @@ public class Player : MonoBehaviour {
         currentState = anim.GetCurrentAnimatorStateInfo(0);
         rb = gameObject.GetComponent<Rigidbody2D>();
         StartCoroutine(ChangeEnergy());
+        dashCDRemain = 0;
     }
 
     private IEnumerator ChangeEnergy() {
@@ -114,7 +117,13 @@ public class Player : MonoBehaviour {
         if((Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))) {
             jumpPressed = false;
         }
-        if (Input.GetKeyDown(KeyCode.H) && !isDash) {
+
+        if (dashCDRemain > 0) {
+            dashCDRemain -= Time.fixedDeltaTime;
+            dashCDRemain = Mathf.Max(dashCDRemain, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.H) && !isDash && Mathf.Approximately(dashCDRemain, 0)) {
             isDash = true;
             GameManager.instance.effectManager.ShakeCamera();
         }
@@ -198,10 +207,15 @@ public class Player : MonoBehaviour {
         }
     }
 
+    public float GetDashCDPercent() {
+        return 1.0f - dashCDRemain / dashCD;
+    }
+
     private void Dash() {
         if (!isDash)
             return;
         if (dashTime <= dashTotalTime) {
+            gameObject.layer = 14;
             AddVelocity(new Vector2(dir * dashSpeed, rb.velocity.y));
             dashTime += Time.deltaTime;
             dashCreateCurTime += Time.deltaTime;
@@ -211,8 +225,10 @@ public class Player : MonoBehaviour {
                 dash.transform.position = transform.position;
             }
         } else {
+            gameObject.layer = 13;
             dashTime = 0;
             isDash = false;
+            dashCDRemain = dashCD;
         }
     }
 
@@ -277,7 +293,8 @@ public class Player : MonoBehaviour {
 
     public void BeAttacked(int _attack) {
         SetAttackVal(0);
-        HP -= _attack;
+        HP -= _attack * GameManager.instance.energyManager.GetEnemyAttackRatio();
+        UIManager.instance.screenEffect.Show();
         if (HP > 0)
             anim.SetTrigger("Hurt");
     }

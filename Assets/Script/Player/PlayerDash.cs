@@ -15,7 +15,7 @@ public class PlayerDash : MonoBehaviour
         if(sr == null)
             sr = GetComponent<SpriteRenderer>();
         sr.sprite = GameManager.instance.player.GetComponent<SpriteRenderer>().sprite;
-        sr.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1.0f);
     }
 
     // Update is called once per frame
@@ -26,6 +26,6 @@ public class PlayerDash : MonoBehaviour
             return;
         }
         float alpha = sr.color.a * alphaMulti;
-        sr.color = new Color(1.0f, 1.0f, 1.0f, alpha);
+        sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, alpha);
     }
 }

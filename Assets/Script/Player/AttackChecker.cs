@@ -66,7 +66,6 @@ public class AttackChecker : MonoBehaviour {
             UIManager.instance.comboPanel.Show();
         }
         if (collision.gameObject.CompareTag(Util.TagCollection.playerTag)) {
-            UIManager.instance.screenEffect.Show();
             collision.GetComponent<Player>().BeAttackedAndBeatBack(enemy.dir, 5, 7, enemy.attack); 
         }
     }

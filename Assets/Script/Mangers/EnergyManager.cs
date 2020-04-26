@@ -36,4 +36,16 @@ public class EnergyManager
     public float GetPercentValue() {
         return curEnemgy / maxEnergy;
     }
+
+    public float GetEnemyAttackRatio() {
+        // 75 % 以上 0.9   50 % 以上 1.0  50% 一下 加成 最高两倍 50 - 1 0 -> 2
+        float percent = GetPercentValue();
+        if(percent > 0.75f) {
+            return 0.9f;
+        } else if(percent > 0.5f) {
+            return 1.0f;
+        } else {
+            return (0.5f - percent) * 2 + 1f;
+        }
+    }
 }

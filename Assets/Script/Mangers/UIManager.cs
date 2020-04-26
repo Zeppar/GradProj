@@ -31,6 +31,7 @@ public class UIManager : MonoBehaviour {
     public ComboPanel comboPanel;
     public EnergyPanel energyPanel;
     public LevelUpPanel levelUpPanel;
+    public DashFlag dashFlag;
 
     private void Awake() {
         instance = this;
@@ -50,5 +51,6 @@ public class UIManager : MonoBehaviour {
 
     private void Update() {
         hpBarPanel.UpdateHpBar(GameManager.instance.player.HP);
+        dashFlag.SetValue(GameManager.instance.player.GetDashCDPercent());
     }
 }

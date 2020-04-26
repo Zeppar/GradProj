@@ -10,10 +10,9 @@ public class HPBarPanel : MonoBehaviour {
     public Sprite heartFull;
     public Sprite heartHelf;
     public Sprite heartNull;
-    public void UpdateHpBar(int hp) {
-
+    public void UpdateHpBar(float hp) {
+        hp = (int)hp;
         if (hp % 2 == 0) {
-
             for (int i = 0; i < heart_list.Count; i++) {
                 if (i + 1 <= hp / 2) {
                     heart_list[i].sprite = heartFull;
@@ -22,9 +21,7 @@ public class HPBarPanel : MonoBehaviour {
                 }
             }
         } else {
-
             for (int i = 0; i < heart_list.Count; i++) {
-
                 if (i + 1 <= hp / 2) {
                     heart_list[i].sprite = heartFull;
                 } else if (i + 1 == (hp / 2) + 1) {
@@ -32,7 +29,6 @@ public class HPBarPanel : MonoBehaviour {
                 } else {
                     heart_list[i].sprite = heartNull;
                 }
-
             }
         }
 

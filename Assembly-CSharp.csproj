@@ -553,6 +553,7 @@
     <Compile Include="Assets\Script\UI\BagItem.cs" />
     <Compile Include="Assets\Script\UI\BagPanel.cs" />
     <Compile Include="Assets\Script\UI\ComboPanel.cs" />
+    <Compile Include="Assets\Script\UI\DashFlag.cs" />
     <Compile Include="Assets\Script\UI\DescribePanel.cs" />
     <Compile Include="Assets\Script\UI\EnemyHpCanvas.cs" />
     <Compile Include="Assets\Script\UI\EnergyPanel.cs" />
