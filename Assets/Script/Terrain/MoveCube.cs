@@ -6,8 +6,6 @@ public class MoveCube : MonoBehaviour
 {
     public int moveVar;
     public float speed = 3;
-
-
     int dir = 1;
     int i_MoveVar;
     void Update()

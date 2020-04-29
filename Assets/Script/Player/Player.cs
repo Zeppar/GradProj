@@ -220,8 +220,8 @@ public class Player : MonoBehaviour {
         if (isHurt || GetComponent<Player>().attackCount > 0)
             return;
 
-        if (transform.position.y < -40.0f) {
-            Destroy(gameObject);
+        if (transform.position.y < -160.0f) {
+            HP -= 100000;
             return;
         }
 

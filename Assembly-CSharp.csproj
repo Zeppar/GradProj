@@ -547,6 +547,9 @@
     <Compile Include="Assets\Script\Player\PlayerDash.cs" />
     <Compile Include="Assets\Script\Terrain\Gin\LaserGin.cs" />
     <Compile Include="Assets\Script\Terrain\MoveCube.cs" />
+    <Compile Include="Assets\Script\Terrain\MovePlatform.cs" />
+    <Compile Include="Assets\Script\Terrain\Trap\Gear\Gear.cs" />
+    <Compile Include="Assets\Script\Terrain\Trap\Gear\RotationGear.cs" />
     <Compile Include="Assets\Script\Terrain\Trap\Magma.cs" />
     <Compile Include="Assets\Script\Terrain\Trap\Stab.cs" />
     <Compile Include="Assets\Script\UI\AttackScreenEffect.cs" />
@@ -555,6 +558,7 @@
     <Compile Include="Assets\Script\UI\ComboPanel.cs" />
     <Compile Include="Assets\Script\UI\EnemyHpCanvas.cs" />
     <Compile Include="Assets\Script\UI\EnergyPanel.cs" />
+    <Compile Include="Assets\Script\UI\GameOverPanel.cs" />
     <Compile Include="Assets\Script\UI\GoodItem.cs" />
     <Compile Include="Assets\Script\UI\HPBarPanel.cs" />
     <Compile Include="Assets\Script\UI\HelpPanel.cs" />
