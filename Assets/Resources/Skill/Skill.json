@@ -29,5 +29,25 @@
 		"cd": 5,
 		"action": "ManyFireBalls"
 
+	},
+	{
+		"id": 3,
+		"title": "探测光球#3",
+		"value": 100,
+		"range": 5,
+		"describe": "向前方发射一个持续5秒的探测光球 照明视野",
+		"iconPath": "Icon/Skill/LightBall",
+		"cd": 30,
+		"action": "LightBall"
+	},
+	{
+		"id": 4,
+		"title": "光明之眼#3",
+		"value": 100,
+		"range": 5,
+		"describe": "消耗一点血量 显示周围大范围内怪物及陷阱的位置 5秒后恢复并获取10%的光照能量",
+		"iconPath": "Icon/Skill/ShowEnemy",
+		"cd": 35,
+		"action": "ShowEnemy"
 	}
 ]

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Stab : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int attack = 10;
+    public float attack = 10;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(Util.TagCollection.playerTag))

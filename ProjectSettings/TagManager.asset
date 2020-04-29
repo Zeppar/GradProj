@@ -29,7 +29,7 @@ TagManager:
   - Enemy
   - Player
   - PlayerDash
-  - 
+  - Obstract
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Light
     uniqueID: 2861034921
+    locked: 0
+  - name: Item
+    uniqueID: 3099629837
     locked: 0
   - name: Role
     uniqueID: 3438037061

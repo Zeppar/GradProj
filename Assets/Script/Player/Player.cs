@@ -75,11 +75,11 @@ public class Player : MonoBehaviour {
     private IEnumerator ChangeEnergy() {
         while(true) {
             if (GameManager.instance.energyManager.inEnergyInCrease) {
+                GameManager.instance.energyManager.IncreaseEnergy(0.2f);
                 yield return null;
-                GameManager.instance.energyManager.IncreaseEnergy(0.1f);
             } else {
-                yield return new WaitForSecondsRealtime(0.1f);
                 GameManager.instance.energyManager.ChangeEnergy(-0.1f);
+                yield return new WaitForSecondsRealtime(0.1f);
             }
         }
     }
@@ -223,6 +223,7 @@ public class Player : MonoBehaviour {
                 dashCreateCurTime = 0;
                 var dash = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.playerDash);
                 dash.transform.position = transform.position;
+                dash.transform.localScale = new Vector2(dir * Mathf.Abs(dash.transform.localScale.x), Mathf.Abs(dash.transform.localScale.y));
             }
         } else {
             gameObject.layer = 13;
@@ -291,7 +292,7 @@ public class Player : MonoBehaviour {
         UIManager.instance.gameOverPanel.SetActive(true);
     }
 
-    public void BeAttacked(int _attack) {
+    public void BeAttacked(float _attack) {
         SetAttackVal(0);
         HP -= _attack * GameManager.instance.energyManager.GetEnemyAttackRatio();
         UIManager.instance.screenEffect.Show();
@@ -320,7 +321,7 @@ public class Player : MonoBehaviour {
         rb.velocity = vec;
     }
 
-    public void BeAttackedAndBeatBack(int dir, float xForce, float yForce, int attackVal) {
+    public void BeAttackedAndBeatBack(int dir, float xForce, float yForce, float attackVal) {
         BeAttacked(attackVal);
         isHurt = true;
         AddVelocity(new Vector2(dir * xForce, yForce));
