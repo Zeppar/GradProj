@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Assets/Script/UI/DescribeAlert.cs
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,15 @@ using UnityEngine.UI;
 
 public class DescribeAlert : MonoBehaviour
 {
+=======
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class describePanel : MonoBehaviour
+{
+>>>>>>> origin/v1.0:Assets/Script/UI/describePanel.cs
     public Text titleText;
     public Text describeText;
 

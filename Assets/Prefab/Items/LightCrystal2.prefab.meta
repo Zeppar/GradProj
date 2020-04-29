@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefab/Items/LightCrystal2.prefab.meta
 guid: 53f5278ec0cdf4a598e630f294af4a67
 PrefabImporter:
+=======
+guid: c6b7de41543abed46a38d513a8c1f847
+folderAsset: yes
+DefaultImporter:
+>>>>>>> origin/v1.0:Assets/Script/Terrain/Gear.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

@@ -30,18 +30,20 @@ public class GameManager : MonoBehaviour
     {
         if (instance == null) {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+           // DontDestroyOnLoad(gameObject);
         } else if(instance != this) {
             Destroy(gameObject);
         }
-    }
-    void Start()
-    {
+
         skillManager.InitSkill();
         goodManager.InitGoods();
         skillActionManager.InitSkillCallback();
         InitUI();
         InitPlayer();
+    }
+    void Start()
+    {
+       
 
     }
     void InitUI() { 
