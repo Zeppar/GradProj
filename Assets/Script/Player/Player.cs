@@ -216,7 +216,7 @@ public class Player : MonoBehaviour {
             return;
         if (dashTime <= dashTotalTime) {
             gameObject.layer = 14;
-            AddVelocity(new Vector2(dir * dashSpeed, rb.velocity.y));
+            AddVelocity(new Vector2(dir * dashSpeed, 0));
             dashTime += Time.deltaTime;
             dashCreateCurTime += Time.deltaTime;
             if (dashCreateCurTime >= dashCreateTime) {
