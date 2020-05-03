@@ -18,7 +18,8 @@ public static class Util {
         { ObjectItemNameCollection.enemyFireBallExplosion, 3},
         { ObjectItemNameCollection.playerFireBallExplosion, 3},
         { ObjectItemNameCollection.getItemLightEffect, 3},
-        { ObjectItemNameCollection.skillStone, 3}
+        { ObjectItemNameCollection.skillStone, 3},
+        { ObjectItemNameCollection.lightBall, 2}
     };
     //type
     public delegate void NoParmsCallBack();
@@ -75,6 +76,7 @@ public static class Util {
         public static string enemyFireBallExplosion = "EnemyFireBallExplosion";
         public static string bossFireBallExplosion = "BossFireBallExplosion";
         public static string skillStone = "SkillStone";
+        public static string lightBall = "LightBall";
     }
 
     // function

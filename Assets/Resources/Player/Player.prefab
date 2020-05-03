@@ -307,9 +307,9 @@ MonoBehaviour:
   attackInterval: 0.75
   dead: 0
   speed: 14
-  dashSpeed: 40
-  dashTotalTime: 0.3
-  dashCreateTime: 0.06
+  dashSpeed: 80
+  dashTotalTime: 0.1
+  dashCreateTime: 0.02
   dashCD: 12
   jumpForce: 20
   fallForce: 1.1
@@ -363,7 +363,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -856930235
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0ef3cd5c3b2ab2948bce01dba207fe69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

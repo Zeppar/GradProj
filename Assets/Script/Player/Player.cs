@@ -233,6 +233,11 @@ public class Player : MonoBehaviour {
         }
     }
 
+    public void ResetDashCD() {
+        // TODO
+      
+    }
+
     private void Move() {
         if (isHurt || GetComponent<Player>().attackCount > 0)
             return;

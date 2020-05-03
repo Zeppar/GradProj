@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ObjectPoolItem : MonoBehaviour
 {
-    public int destoryTime;
+    public float destoryTime;
     public virtual void OnEnable() {
+        Debug.Log(destoryTime);
         StartCoroutine(Util.DelayExecute(destoryTime, () => {
             ObjectPool.instance.ReturnToPool(gameObject);
         }));

@@ -12,7 +12,7 @@ public class EnergyManager
 
     public void StartIncreate(float val) {
         inEnergyInCrease = true;
-        increaseValue = val;
+        increaseValue += val;
     }
 
     public EnergyManager(float total, float max) {

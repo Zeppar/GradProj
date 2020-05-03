@@ -91,6 +91,11 @@ public class SkillActionManager : MonoBehaviour {
             GameManager.instance.player.HP += 10;
         }));
     }
+
+    private void LightBall(SkillInfo info) {
+        GameManager.instance.skillParticleCreator.CreateLightBall(GameManager.instance.player.attackPoint.position, new Vector2(GameManager.instance.player.transform.GetComponent<Player>().dir, 0), 0.05f, info.value);
+    }
+
     private void ManyFireBalls(SkillInfo info) {
         Debug.Log("ManyFireBalls");
     }

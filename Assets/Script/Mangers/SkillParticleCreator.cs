@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// TODO
+// 修改待定
 public class SkillParticleCreator : MonoBehaviour
 {
     public void CreateFireball(Vector2 pos, Vector2 dir, float speed, int attack, Util.FireBallType type) {
@@ -35,6 +38,13 @@ public class SkillParticleCreator : MonoBehaviour
         var shadow = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.playerShadow);
         shadow.transform.position = pos;
         shadow.transform.localScale = new Vector2(Mathf.Abs(shadow.transform.localScale.x) * dir, shadow.transform.localScale.y);
+    }
+
+    public void CreateLightBall(Vector2 pos, Vector2 dir, float speed, float remain) {
+        var lightBall = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.lightBall);
+        lightBall.transform.position = pos + new Vector2(dir.x * 2.0f, dir.y);
+        lightBall.GetComponent<Rigidbody2D>().AddForce(dir * speed);
+        //lightBall.GetComponent<ObjectPoolItem>().destoryTime = remain;
     }
 
     public void CreateEffect(Vector2 pos, string tag) {

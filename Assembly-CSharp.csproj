@@ -522,6 +522,7 @@
     <Compile Include="Assets\Script\Item\Fireball.cs" />
     <Compile Include="Assets\Script\Item\GetItemLightEffect.cs" />
     <Compile Include="Assets\Script\Item\LevelWin.cs" />
+    <Compile Include="Assets\Script\Item\LightBall.cs" />
     <Compile Include="Assets\Script\Item\LightCrystal.cs" />
     <Compile Include="Assets\Script\Item\ObjectPoolItem.cs" />
     <Compile Include="Assets\Script\Item\PlayerShadow.cs" />
@@ -551,7 +552,6 @@
     <Compile Include="Assets\Script\Terrain\LaserGin.cs" />
     <Compile Include="Assets\Script\Terrain\Magma.cs" />
     <Compile Include="Assets\Script\Terrain\MoveCube.cs" />
-    <Compile Include="Assets\Script\Terrain\MovePlatform.cs" />
     <Compile Include="Assets\Script\Terrain\Platform.cs" />
     <Compile Include="Assets\Script\Terrain\Stab.cs" />
     <Compile Include="Assets\Script\UI\AttackScreenEffect.cs" />

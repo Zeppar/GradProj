@@ -37,7 +37,7 @@
 		"range": 5,
 		"describe": "向前方发射一个持续5秒的探测光球 照明视野",
 		"iconPath": "Icon/Skill/LightBall",
-		"cd": 30,
+		"cd": 3,
 		"action": "LightBall"
 	},
 	{
