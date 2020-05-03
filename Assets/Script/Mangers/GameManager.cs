@@ -25,7 +25,9 @@ public class GameManager : MonoBehaviour
     public CinemachineVirtualCamera virtualCamera;
 
     public Transform spawn;
-    
+
+    public float worldend;
+
     void Awake()
     {
         if (instance == null) {

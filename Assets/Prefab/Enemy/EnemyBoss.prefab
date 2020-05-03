@@ -122,7 +122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4582750840449313704
 Transform:
   m_ObjectHideFlags: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6f22367d1304bdd88b397bf346373f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 400
+  maxHP: 300
   speed: 4
   dir: -1
   attack: 10
@@ -225,7 +225,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -856930235
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 4
   m_Sprite: {fileID: 8952541655908761084, guid: 0fcfceaed0004d3439489b53aaea464b,
     type: 3}

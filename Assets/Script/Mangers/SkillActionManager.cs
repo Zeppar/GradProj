@@ -44,7 +44,7 @@ public class SkillActionManager : MonoBehaviour {
 
     public void AddSkillCallBack(SkillInfo info, Util.NoParmsCallBack callBack) {
         skillDict[info.id] = callBack;
-        cdDict[info.id] = 0;
+        cdDict[info.id] = -info.cd;
     }
 
     public void ExecuteSkillAction(SkillInfo info) {
@@ -86,6 +86,7 @@ public class SkillActionManager : MonoBehaviour {
     }
     private void Levelup(SkillInfo info) {
         GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.green;
+        SoundManager.instance.PlayEffect("Recovery");
         GameManager.instance.StartCoroutine(Util.DelayExecute(0.2f, () => {
             GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.white;
             GameManager.instance.player.HP += 10;
@@ -99,10 +100,7 @@ public class SkillActionManager : MonoBehaviour {
     private void ManyFireBalls(SkillInfo info) {
         Debug.Log("ManyFireBalls");
     }
-    public void JinhuaBack() {
-        GameManager.instance.player.GetComponent<SpriteRenderer>().color = Color.white;
-        GameManager.instance.player.HP += 10;
-    }
+   
 
     private void OnGUI() {
         if (Input.anyKeyDown) {

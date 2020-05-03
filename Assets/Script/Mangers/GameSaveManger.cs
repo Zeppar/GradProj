@@ -8,21 +8,21 @@ public class GameSaveManger : MonoBehaviour
 {
     public void SaveGame()
     {
-        //ES3.Save<List<BagItem>>("GoodInfoList", GameManager.instance.goodManager.goodInfoList);
-
-        //List<BagItem> bagItems = ES3.LoadInto <List<BagItem>>("GoodInfoList");
-        //int goodCount = 0;
+        ES3.Save<List<GoodInfo>>("GoodInfoList", GameManager.instance.goodManager.goodInfoList);
+        
+        List<GoodInfo> bagItems = ES3.LoadInto <List<GoodInfo>>("GoodInfoList");
+        int goodCount = 0;
 
         
-        //for (int i = 0; i < GameManager.instance.goodManager.goodInfoList.Count; i++)
-        //{
-        //    BagItem b = GameManager.instance.goodManager.goodInfoList[i];
-        //    if(b.goodInfo != null && b.goodInfo.skillInfo != null)
-        //    {
-        //        goodCount++;
-        //    }
-        //}
-        //print(goodCount);
+        for (int i = 0; i < GameManager.instance.goodManager.goodInfoList.Count; i++)
+        {
+            GoodInfo b = GameManager.instance.goodManager.goodInfoList[i];
+            if(b != null && b.skillInfo != null)
+            {
+                goodCount++;
+            }
+        }
+        print(goodCount);
           
     }
         
@@ -32,41 +32,25 @@ public class GameSaveManger : MonoBehaviour
     public void LoadGame()
     {
         ////增加物品时，记住增加各自中的物品数量个物品
-        //if (!ES3.KeyExists("GoodInfoList"))
-        //{
-        //    Debug.LogError("There hasn't GoodInfo List");
-        //    return;
-        //}
-        ////List<BagItem> bagItems = ES3.LoadInto<List<BagItem>>("GoodInfoList");
-        //List<BagItem> bagItems = GameManager.instance.goodManager.goodInfoList;
-        //int goodCount = 0;
-        //for (int i = 0; i < bagItems.Count; i++)
-        //{
-        //    if (bagItems[i].goodInfo != null)
-        //    {
-        //        BagItem b = bagItems[i];
-        //        GameManager.instance.goodManager.AddItemToPanel(b.goodInfo.goodType,b.goodInfo.skillInfo.id,b.goodInfo.count);
-        //        goodCount++;
-        //    }
-        //}
-        //print(goodCount);
+        if (!ES3.KeyExists("GoodInfoList")) { 
+        
+            Debug.LogError("There hasn't GoodInfo List");
+            return;
+        }
+        List<GoodInfo> goodItems = ES3.LoadInto<List<GoodInfo>>("GoodInfoList");       
+        int goodCount = 0;
+        for (int i = 0; i < goodItems.Count; i++)
+        {
+            if (goodItems[i] != null)
+           {
+                GoodInfo b = goodItems[i];
+               GameManager.instance.goodManager.AddGoodInfo(b);
+                goodCount++;
+            }
+        }
+        print(goodCount);
     }
+    
 
-    public void SerializeObject(object toSerializeObject)
-    {
-        FileStream fs = new FileStream("demo.bin", FileMode.OpenOrCreate);
-        BinaryFormatter bf = new BinaryFormatter();
-        bf.Serialize(fs, toSerializeObject);
-        fs.Close();
-        Debug.LogError("write done");
-    }
-    public object UnSerializeObject<T>()
-    {
-        FileStream fs = new FileStream("demo.bin", FileMode.Open);
-        BinaryFormatter bf = new BinaryFormatter();
-        object toUnObject = bf.Deserialize(fs) as object;
-        fs.Close();
-       return toUnObject;
 
-    }
 }

@@ -10,7 +10,12 @@ public class SoundManager : MonoBehaviour
     public Dictionary<string, AudioClip> audioDict = new Dictionary<string, AudioClip>();
 
     private void Awake() {
-        instance = this;
+        if (instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+            
+        }
     }
 
     private void Start() {
@@ -25,5 +30,16 @@ public class SoundManager : MonoBehaviour
         effect.clip = audioDict[clipName];
         effect.Play();
     }
+    public void PlayerAttackEffect()
+    {
+        int effid = Random.Range(0, 3);
+        PlayEffect("Attack" + effid);
+    } 
+    public void PlayerHitEffect()
+    {
+        int effid = Random.Range(1, 4);
+        PlayEffect("hit" + effid);
+    }
+
 
 }

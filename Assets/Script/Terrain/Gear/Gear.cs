@@ -10,7 +10,7 @@ public class Gear : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(Util.TagCollection.playerTag))
         {
-            collision.gameObject.GetComponent<Player>().HP -= attack;
+            collision.gameObject.GetComponent<Player>().BeAttackedAndBeatBack(-GameManager.instance.player.dir, 10, 5, attack);
         }
     }
 }

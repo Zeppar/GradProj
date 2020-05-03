@@ -26,6 +26,11 @@ public class EnemyBoss : EnemyGround
         lastAttackTime = Time.time;
         attackInterval = Random.Range(originInterval * 0.9f, originInterval * 1.1f);
     }
+    public override void Die()
+    {
+        base.Die();
+        GameManager.instance.LevelUp();
+    }
 
     public override bool ShouldChase() {
         if (attackType == BossAttackType.FireBall || attackType == BossAttackType.FireBallRain)

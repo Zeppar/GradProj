@@ -38,6 +38,11 @@ public class Player : MonoBehaviour {
             return _hp;
         }
         set {
+            if(_hp > value)
+            {
+                SoundManager.instance.PlayerHitEffect();
+                UIManager.instance.screenEffect.Show();
+            }
             _hp = Mathf.Clamp(value, 0, maxHP);
             if (_hp <= 0) {
                 Die();
@@ -125,6 +130,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.H) && !isDash && Mathf.Approximately(dashCDRemain, 0)) {
             isDash = true;
+            SoundManager.instance.PlayEffect("Dash");
             GameManager.instance.effectManager.ShakeCamera();
         }
     }
@@ -202,7 +208,8 @@ public class Player : MonoBehaviour {
         attackCount = value;
         anim.SetInteger("Attack", value);
         if (value >= 1 && value <= 6) {
-            SoundManager.instance.PlayEffect(Util.ClipNameCollection.attack);
+            SoundManager.instance.PlayEffect("Attack0");
+            //SoundManager.instance.PlayerAttackEffect();
             attackChecker.CheckAttack((PlayerAttackType)value);
         }
     }
@@ -215,9 +222,10 @@ public class Player : MonoBehaviour {
         if (!isDash)
             return;
         if (dashTime <= dashTotalTime) {
+           
             gameObject.layer = 14;
             AddVelocity(new Vector2(dir * dashSpeed, 0));
-            dashTime += Time.deltaTime;
+            dashTime += Time.deltaTime;           
             dashCreateCurTime += Time.deltaTime;
             if (dashCreateCurTime >= dashCreateTime) {
                 dashCreateCurTime = 0;
@@ -242,7 +250,7 @@ public class Player : MonoBehaviour {
         if (isHurt || GetComponent<Player>().attackCount > 0)
             return;
 
-        if (transform.position.y < -160.0f) {
+        if (transform.position.y < GameManager.instance.worldend) {
             HP -= 100000;
             return;
         }
@@ -262,18 +270,7 @@ public class Player : MonoBehaviour {
         } else {
             anim.SetBool("Walk", false);
         }
-        //  添加摩擦力避免与墙碰撞 射线影响性能
-        //if (!Mathf.Approximately(moveInput, 0)) {
-        //    anim.SetBool("Walk", true);
-        //    RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(moveInput * 1.2f, 0, 0), new Vector2(moveInput, 0), 0.1f);
-        //    if (hit.collider != null && hit.collider.gameObject.layer == LayerMask.NameToLayer(Util.LayerCollection.groundLayer)) {
-        //        rb.velocity = new Vector2(0, rb.velocity.y);
-        //        return;
-        //    }
-        //} else {
-        //    anim.SetBool("Walk", false);
-        //}
-
+     
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
     }
@@ -286,6 +283,7 @@ public class Player : MonoBehaviour {
                 anim.SetTrigger("Jump");
                 isJump = true;
                 rb.velocity = Vector2.up * jumpForce;
+                SoundManager.instance.PlayEffect("Jump");
             }
         } else if (rb.velocity.y < 0 || !jumpPressed) {
             rb.velocity += Vector2.down * fallForce;
@@ -299,8 +297,7 @@ public class Player : MonoBehaviour {
 
     public void BeAttacked(float _attack) {
         SetAttackVal(0);
-        HP -= _attack * GameManager.instance.energyManager.GetEnemyAttackRatio();
-        UIManager.instance.screenEffect.Show();
+        HP -= _attack * GameManager.instance.energyManager.GetEnemyAttackRatio();      
         if (HP > 0)
             anim.SetTrigger("Hurt");
     }

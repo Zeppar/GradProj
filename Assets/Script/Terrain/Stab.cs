@@ -15,10 +15,5 @@ public class Stab : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag(Util.TagCollection.playerTag)) {
-            GameManager.instance.player.BeAttackedAndBeatBack(-GameManager.instance.player.dir, 5, 7, attack);
-            GameManager.instance.player.BeAttacked(attack);
-        }
-    }
+   
 }
