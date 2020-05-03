@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -221,7 +221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &168994099
 RectTransform:
   m_ObjectHideFlags: 0
@@ -347,7 +347,7 @@ MonoBehaviour:
   openReferences: 0
   openPrefabs: 0
   idRef:
-    _Keys: ff5b07e3943abf17e4fe3d6c5835134de126e5d675f99d2edca2aad956d4340e6e2612fe3465bf08cfc01512177ec5050e44475fe23f8d04bfd907f290e6c046ceb42681b7ed7e7b67dd07b4e48a165ddda5cb128dd42b2d66f2c0a5a133871700cf446358444d1fc7ccf80438d820343d55ea14e55146067707185552dce2669ae04aeaba4cfb68a854b33e23d80b3fed0b98b3b78dcd50eab425a0a35c8d5daf5e9f18220bee0fa77d936e62f81c61fcd8425e74961d27ae9aff06275bc44bc656ed827823621e1d880d39f95eee1c2f795b35e5d017447cc6c6bd0af5370143df35b8e59fd92775247afda356210c78e3ca5e4905ce6993cd01c115dfd627aef409e6d6cac8705fcc55f5b4eb172de9d346272ad8b83dee34d9e862e7ed55065db150b3c4c941ac3abe155ac31e7ee62fd84198aefc78ac46f7a1f0e00e78220005ed62971e230a057bf01aa3e24dada7326e3fd111569fc703054394cd734936f45abe301b4dee4ac86cccf3a14fd7bab167ed834850115073d565dc9961d3efa7e3ae878f7c8de45c89997d225425b3dcfd4535603a125c94f05c0e4c125099c043657a014f2c35da0827bfb6708d384f4e0064e408af1e09f5e4802764326f3a00bddfee5f4bd4d685ef969e2e12047c945e9b12144b470c7c7b09cc54a3c029487b4a4c52b60ffbd472a0e746bc38e2df03920632834f4b04eb6bdb53a22b28b0c0e6a93748d621b160c15d555fc5c04226ed5010baf6caca95503e2115b089623667f95de21a27d9b4b7933f0e099c4ed4e2857184c695494e8b326715429cb037fa1e38be1d600cc6775c02628bbc8cb4ef4c08ca05190202bd5356e7bfeef75443770928d490b68278aa0c966c183c30594c04705a85c3ebdfc401c90925068965ae1f13b264df5f9686515a0c976fd69087410bf286f9bdb41d49108eec7953a383051c3850e3bd2b6326d43468de47552b3982e4fb96deb4615f6be5302f56f2014989928a0ee06afe37aa53db76b4c1fe4563b3f76fa8ed272f9aaf78d8fa34cf3836b255b5cb1d5817e5c3403190d71356e7eb9209e971f26496a5586f1d28cd747c5d5398e84cef46a620761a530a6071c4cff20fa2c64f58a5ba4a7075c8340d6f4a4bcd7c85913225279c370528ef75ba1853b2c9422d4353530cd1fe812f6e5684ab08bf92f43e
+    _Keys: ff5b07e3943abf17e4fe3d6c5835134de126e5d675f99d2edca2aad956d4340e6e2612fe3465bf08cfc01512177ec5050e44475fe23f8d04bfd907f290e6c046ceb42681b7ed7e7b67dd07b4e48a165ddda5cb128dd42b2d66f2c0a5a133871700cf446358444d1fc7ccf80438d820343d55ea14e55146067707185552dce2669ae04aeaba4cfb68a854b33e23d80b3fed0b98b3b78dcd50eab425a0a35c8d5daf5e9f18220bee0fa77d936e62f81c61fcd8425e74961d27ae9aff06275bc44bc656ed827823621e1d880d39f95eee1c2f795b35e5d017447cc6c6bd0af5370143df35b8e59fd92775247afda356210c78e3ca5e4905ce6993cd01c115dfd627aef409e6d6cac8705fcc55f5b4eb172de9d346272ad8b83dee34d9e862e7ed55065db150b3c4c941ac3abe155ac31e7ee62fd84198aefc78ac46f7a1f0e00e78220005ed62971e230a057bf01aa3e24dada7326e3fd111569fc703054394cd734936f45abe301b4dee4ac86cccf3a14fd7bab167ed834850115073d565dc9961d3efa7e3ae878f7c8de45c89997d225425b3dcfd4535603a125c94f05c0e4c125099c043657a014f2c35da0827bfb6708d384f4e0064e408af1e09f5e4802764326f3a00bddfee5f4bd4d685ef969e2e12047c945e9b12144b470c7c7b09cc54a3c029487b4a4c52b60ffbd472a0e746bc38e2df03920632834f4b04eb6bdb53a22b28b0c0e6a93748d621b160c15d555fc5c04226ed5010baf6caca95503e2115b089623667f95de21a27d9b4b7933f0e099c4ed4e2857184c695494e8b326715429cb037fa1e38be1d600cc6775c02628bbc8cb4ef4c08ca05190202bd5356e7bfeef75443770928d490b68278aa0c966c183c30594c04705a85c3ebdfc401c90925068965ae1f13b264df5f9686515a0c976fd69087410bf286f9bdb41d49108eec7953a383051c3850e3bd2b6326d43468de47552b3982e4fb96deb4615f6be5302f56f2014989928a0ee06afe37aa53db76b4c1fe4563b3f76fa8ed272f9aaf78d8fa34cf3836b255b5cb1d5817e5c3403190d71356e7eb9209e971f26496a5586f1d28cd747c5d5398e84cef46a620761a530a6071c4cff20fa2c64f58a5ba4a7075c8340d6f4a4bcd7c85913225279c370528ef75ba1853b2c9422d4353530cd1fe812f6e5684ab08bf92f43e3e06b3a6b72d6e75d759f89c2dff274d6ec3a30da40a8f1a
     _Values:
     - {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
     - {fileID: 2100000, guid: 726b16b7c9dec894dadd881e843a9b1a, type: 3}
@@ -415,7 +415,7 @@ MonoBehaviour:
     - {fileID: 894444190}
     - {fileID: 1512754748}
     - {fileID: 2800000, guid: 66de0e5ca3a3b1d478b4cf7795f17024, type: 3}
-    - {fileID: 919924601}
+    - {fileID: 0}
     - {fileID: 1036353280}
     - {fileID: 1630816223}
     - {fileID: 1630816222}
@@ -439,22 +439,25 @@ MonoBehaviour:
     - {fileID: 157467696}
     - {fileID: 1808482401}
     - {fileID: 1036353277}
-    - {fileID: 919924600}
+    - {fileID: 0}
     - {fileID: 1449724167}
     - {fileID: 1948923042}
     - {fileID: 425815150}
     - {fileID: 168994100}
-    - {fileID: 919924599}
+    - {fileID: 0}
     - {fileID: 1808482400}
     - {fileID: 425815152}
-    - {fileID: 919924597}
+    - {fileID: 0}
     - {fileID: 894444188}
-    - {fileID: 919924598}
+    - {fileID: 0}
     - {fileID: 519537030}
     - {fileID: 1512754752}
     - {fileID: 168994098}
     - {fileID: 519537027}
     - {fileID: 1795635831}
+    - {fileID: 12800000, guid: 3fd3747559a757248a9f4e6aa55d1b22, type: 3}
+    - {fileID: 2800000, guid: 3fd3747559a757248a9f4e6aa55d1b22, type: 3}
+    - {fileID: 2100000, guid: 3fd3747559a757248a9f4e6aa55d1b22, type: 3}
   prefabs: []
 --- !u!114 &204328394
 MonoBehaviour:
@@ -670,6 +673,7 @@ MonoBehaviour:
   effectManager: {fileID: 0}
   virtualCamera: {fileID: 0}
   spawn: {fileID: 0}
+  worldend: 0
 --- !u!4 &425815152
 Transform:
   m_ObjectHideFlags: 0
@@ -874,7 +878,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8e387dc3f3df4e24ca5d4745dc119a73, type: 3}
+    m_Font: {fileID: 12800000, guid: 3fd3747559a757248a9f4e6aa55d1b22, type: 3}
     m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
@@ -972,99 +976,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894444187}
   m_CullTransparentMesh: 0
---- !u!1 &919924597
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 919924598}
-  - component: {fileID: 919924601}
-  - component: {fileID: 919924600}
-  - component: {fileID: 919924599}
-  m_Layer: 5
-  m_Name: Title (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &919924598
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919924597}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1449724167}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 96.21, y: -132.53}
-  m_SizeDelta: {x: 161.97, y: 61.18}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &919924599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919924597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 0, y: -2}
-  m_UseGraphicAlpha: 1
---- !u!114 &919924600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919924597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 726b16b7c9dec894dadd881e843a9b1a, type: 3}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 100
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\u62A2\u5148\u8BD5\u73A9\u7248V1.1"
---- !u!222 &919924601
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919924597}
-  m_CullTransparentMesh: 0
 --- !u!1 &1036353277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,14 +1071,13 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 919924598}
+  m_Children: []
   m_Father: {fileID: 1630816221}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.0000076294, y: -50.52}
+  m_AnchoredPosition: {x: -0.0000076294, y: -55.9}
   m_SizeDelta: {x: 354.4, y: 101.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449724168
@@ -1198,13 +1108,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 0.63512623, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 726b16b7c9dec894dadd881e843a9b1a, type: 3}
+    m_Font: {fileID: 12800000, guid: 3fd3747559a757248a9f4e6aa55d1b22, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -1216,7 +1126,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9010\u5149"
+  m_Text: "\u9010\u5149\xB7\u62A2\u5148\u8BD5\u73A9\u7248"
 --- !u!222 &1449724170
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1742,7 +1652,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8e387dc3f3df4e24ca5d4745dc119a73, type: 3}
+    m_Font: {fileID: 12800000, guid: 3fd3747559a757248a9f4e6aa55d1b22, type: 3}
     m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0

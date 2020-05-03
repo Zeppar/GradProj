@@ -107,6 +107,7 @@ namespace ES3Internal
 			{
 				if(throwException)
 					throw new NotSupportedException(string.Format("ES3Type.type is null when trying to create an ES3Type for {0}, possibly because the element type is not supported.", type));
+					Add(type, es3Type);
 
 				return null;
 			}

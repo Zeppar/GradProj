@@ -8,12 +8,12 @@ public class Magma : MonoBehaviour
     {
         if (collision.CompareTag(Util.TagCollection.playerTag))
         {
-            
-            GameManager.instance.player.HP -= 1;
+
+            GameManager.instance.player.BeAttacked(1);
         }
         if (collision.CompareTag(Util.TagCollection.enemyTag))
         {
-            collision.GetComponent<Enemy>().HP -= 1;
+            collision.GetComponent<Enemy>().BeAttacked(1);
         }
     }
 }
