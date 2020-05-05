@@ -1,37 +1,18 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Item/LevelWin.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Managers/EnergyManager.cs">
     <Files>
-      <File FileName="Assets/Script/Util/Util.cs" Line="27" Column="20" />
-      <File FileName="Assets/Script/Player/Player.cs" />
-      <File FileName="Assets/Script/UI/DashFlag.cs" />
-      <File FileName="Assets/Shader/skingShader.shader" />
-      <File FileName="Assets/Script/UI/QuickSkillPanel.cs" />
-      <File FileName="Assets/Script/Player/AttackChecker.cs" />
-      <File FileName="Assets/Script/Enemy/Enemy.cs" />
-      <File FileName="Assets/Script/Mangers/UIManager.cs" />
-      <File FileName="Assets/Script/UI/EnemyHpCanvas.cs" />
-      <File FileName="Assets/Script/UI/AttackScreenEffect.cs" />
-      <File FileName="Assets/Script/Mangers/GameManager.cs" />
-      <File FileName="Assets/Script/Item/SkillStone.cs" />
-      <File FileName="Assets/Script/UI/HelpPanel.cs" />
-      <File FileName="Assets/Script/Item/GetItemLightEffect.cs" />
-      <File FileName="Assets/Resources/Skill/Skill.json" />
-      <File FileName="Assets/Script/Terrain/Platform.cs" />
-      <File FileName="Assets/Script/Enemy/EnemyBird.cs" />
-      <File FileName="Assets/Script/Terrain/Stab.cs" />
-      <File FileName="Assets/Script/UI/HPBarPanel.cs" />
-      <File FileName="Assets/Script/Mangers/LightManager.cs" />
-      <File FileName="Assets/Script/UI/DescribeAlert.cs" />
-      <File FileName="Assets/Script/Item/LightCrystal.cs" />
-      <File FileName="Assets/Script/Mangers/EnergyManager.cs" />
-      <File FileName="Assets/Script/Mangers/SkillActionManager.cs" />
-      <File FileName="Assets/Script/Mangers/SkillParticleCreator.cs" />
-      <File FileName="Assets/Script/Item/ObjectPoolItem.cs" />
-      <File FileName="Assets/Script/Mangers/ObjectPool.cs" />
-      <File FileName="Assets/Script/Item/FireBallExplosion.cs" />
-      <File FileName="Assets/Script/Item/LightBall.cs" />
-      <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" />
-      <File FileName="Assets/Script/Item/LevelWin.cs" Line="9" Column="6" />
+      <File FileName="Assets/Script/Managers/UIManager.cs" Line="57" Column="9" />
+      <File FileName="Assets/Script/Util/Util.cs" Line="73" Column="29" />
+      <File FileName="Assets/Script/Managers/UIKeyManager.cs" Line="23" Column="6" />
+      <File FileName="Assets/Script/Item/ObjectPoolItem.cs" Line="8" Column="37" />
+      <File FileName="Assets/Script/Item/SkillStone.cs" Line="35" Column="76" />
+      <File FileName="Assets/Script/Player/Player.cs" Line="43" Column="54" />
+      <File FileName="Assets/Script/Item/LightCrystal.cs" Line="16" Column="1" />
+      <File FileName="Assets/Script/Managers/SoundManager.cs" Line="26" Column="1" />
+      <File FileName="Assets/Script/Player/AttackChecker.cs" Line="67" Column="38" />
+      <File FileName="Assets/Script/Managers/SkillActionManager.cs" Line="92" Column="43" />
+      <File FileName="Assets/Script/Managers/LightManager.cs" Line="19" Column="87" />
+      <File FileName="Assets/Script/Managers/EnergyManager.cs" Line="36" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -39,7 +20,7 @@
     <String>Assembly-CSharp-firstpass.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="95a8a7c3-c582-4d8a-a897-994b5b23a0d9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="104c7542-ac37-4653-9fe8-09cf21a20963" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
