@@ -12,7 +12,7 @@
       <File FileName="Assets/Script/Player/AttackChecker.cs" Line="67" Column="38" />
       <File FileName="Assets/Script/Managers/SkillActionManager.cs" Line="92" Column="43" />
       <File FileName="Assets/Script/Managers/LightManager.cs" Line="19" Column="87" />
-      <File FileName="Assets/Script/Managers/EnergyManager.cs" Line="36" Column="37" />
+      <File FileName="Assets/Script/Managers/EnergyManager.cs" Line="40" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
