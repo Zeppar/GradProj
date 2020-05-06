@@ -64,7 +64,7 @@ public class AttackChecker : MonoBehaviour {
             collision.GetComponent<Enemy>().BeAttacked(GameManager.instance.player.attack);
             GameManager.instance.skillParticleCreator.CreateBlood(collision.gameObject.transform);
             UIManager.instance.comboPanel.Show();
-            SoundManager.instance.PlayEffect("Attack1");
+            SoundManager.instance.PlayEffect(Util.ClipNameCollection.attack1);
         }
         if (collision.gameObject.CompareTag(Util.TagCollection.playerTag)) {
             collision.GetComponent<Player>().BeAttackedAndBeatBack(enemy.dir, 5, 7, enemy.attack); 

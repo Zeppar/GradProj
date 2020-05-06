@@ -1,6 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+public static class GameObjectExtension {
+    public static void SetActiveFast(this GameObject go, bool active) {
+        if (go.activeInHierarchy != active)
+            go.SetActive(active);
+    }
+}
+
 public static class Util {
     // data
     public static Dictionary<string, int> objectInitCountDict = new Dictionary<string, int> {
@@ -55,9 +62,15 @@ public static class Util {
     }
 
     public static class ClipNameCollection {
-        public static string attack = "Attack";
+        public static string attack0 = "Attack0";
+        public static string attack1 = "Attack1";
         public static string explosion = "Explosion";
         public static string getItem = "GetItem";
+        public static string getLittleLight = "GetLittleLight";
+        public static string getMuchLight = "GetMuchLight";
+        public static string dash = "Dash";
+        public static string jump = "Jump";
+        public static string recovery = "Recovery";
     }
 
     public static class ObjectItemNameCollection {

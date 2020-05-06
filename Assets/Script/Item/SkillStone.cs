@@ -32,6 +32,7 @@ public class SkillStone : MonoBehaviour {
             GameManager.instance.skillParticleCreator.CreateEffect(transform.position, Util.ObjectItemNameCollection.getItemLightEffect);
             UIManager.instance.helpPanel.ShowOwnItemTip();
             GameManager.instance.skillParticleCreator.CreateEffect(GameManager.instance.player.transform.position, Util.ObjectItemNameCollection.getItemEffect);
+            GameManager.instance.levelManager.currentInfo.bagEnable = true;
             Destroy(gameObject);
         }
     }

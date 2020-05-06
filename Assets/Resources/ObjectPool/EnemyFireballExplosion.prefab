@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8283452}
   - component: {fileID: -1999230180345907433}
   m_Layer: 0
-  m_Name: BigFireballImpactRed
+  m_Name: EnemyFireballExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4713,7 +4713,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eec08500f8e731e4988815a75a3ee2de, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.412
   m_Pitch: 1.15
   Loop: 0
   Mute: 0
@@ -4806,7 +4806,7 @@ SortingGroup:
   m_GameObject: {fileID: 104570}
   m_Enabled: 1
   m_SortingLayerID: 1713068587
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
 --- !u!1 &105278
 GameObject:

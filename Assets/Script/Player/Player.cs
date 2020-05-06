@@ -129,9 +129,10 @@ public class Player : MonoBehaviour {
             dashCDRemain = Mathf.Max(dashCDRemain, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && !isDash && Mathf.Approximately(dashCDRemain, 0)) {
+
+        if (Input.GetKeyDown(KeyCode.X) && !isDash && Mathf.Approximately(dashCDRemain, 0) && GameManager.instance.levelManager.currentInfo.dashEnable) {
             isDash = true;
-            SoundManager.instance.PlayEffect("Dash");
+            SoundManager.instance.PlayEffect(Util.ClipNameCollection.dash);
             GameManager.instance.effectManager.ShakeCamera();
         }
     }
@@ -210,8 +211,7 @@ public class Player : MonoBehaviour {
         attackCount = value;
         anim.SetInteger("Attack", value);
         if (value >= 1 && value <= 6) {
-            SoundManager.instance.PlayEffect("Attack0");
-            //SoundManager.instance.PlayerAttackEffect();
+            SoundManager.instance.PlayEffect(Util.ClipNameCollection.attack0);
             attackChecker.CheckAttack((PlayerAttackType)value);
         }
     }
@@ -287,7 +287,7 @@ public class Player : MonoBehaviour {
                 anim.SetTrigger("Jump");
                 isJump = true;
                 rb.velocity = Vector2.up * jumpForce;
-                SoundManager.instance.PlayEffect("Jump");
+                SoundManager.instance.PlayEffect(Util.ClipNameCollection.jump);
             }
         } else if (rb.velocity.y < 0 || !jumpPressed) {
             rb.velocity += Vector2.down * fallForce;

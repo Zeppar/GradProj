@@ -1,0 +1,15 @@
+[{
+	"id": 0,
+	"DashEnable":false,
+	"BagEnable":false
+},
+{
+	"id": 1,
+	"DashEnable":true,
+	"BagEnable":true
+},
+{
+	"id": 2,
+	"DashEnable":true,
+	"BagEnable":true
+}]
