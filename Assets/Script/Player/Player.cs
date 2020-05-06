@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using System;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     public float maxHP;
@@ -116,10 +117,10 @@ public class Player : MonoBehaviour {
 
     private void UpdateState() {
         currentState = anim.GetCurrentAnimatorStateInfo(0);
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded) {
+        if ((Input.GetKeyDown(KeyCode.L)) && isGrounded) {
             jumpPressed = true;
         }
-        if((Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))) {
+        if( Input.GetKeyUp(KeyCode.L)) {
             jumpPressed = false;
         }
 
@@ -128,7 +129,7 @@ public class Player : MonoBehaviour {
             dashCDRemain = Mathf.Max(dashCDRemain, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.H) && !isDash && Mathf.Approximately(dashCDRemain, 0)) {
+        if (Input.GetKeyDown(KeyCode.X) && !isDash && Mathf.Approximately(dashCDRemain, 0)) {
             isDash = true;
             SoundManager.instance.PlayEffect("Dash");
             GameManager.instance.effectManager.ShakeCamera();
@@ -159,6 +160,7 @@ public class Player : MonoBehaviour {
         }
         if (currentState.IsName(Util.PlayerAnimCollection.airAttack1) && currentState.normalizedTime > 1.3f) {
             SetAttackVal(0);
+            
         }
         if (currentState.IsName(Util.PlayerAnimCollection.airAttack2) && currentState.normalizedTime > 1.3f) {
             SetAttackVal(0);
@@ -267,6 +269,8 @@ public class Player : MonoBehaviour {
 
         if (!Mathf.Approximately(moveInput, 0)) {
             anim.SetBool("Walk", true);
+            
+
         } else {
             anim.SetBool("Walk", false);
         }
