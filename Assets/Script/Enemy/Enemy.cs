@@ -58,9 +58,15 @@ public class Enemy : MonoBehaviour {
 
 
     public virtual void Start() {
-        enemyinfo = GameManager.instance.enemyManager.FindEnemyWithID(id);
+
         maxHP = GameManager.instance.enemyManager.GetHPInfo(id,level);
         attack = GameManager.instance.enemyManager.GetAttackInfo(id,level);
+
+        enemyinfo = GameManager.instance.enemyManager.FindEnemyWithID(id);
+
+        speed = enemyinfo.speed;
+        attackInterval = enemyinfo.attackInterval;
+      
 
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();

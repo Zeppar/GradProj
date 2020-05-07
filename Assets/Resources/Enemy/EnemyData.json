@@ -5,7 +5,9 @@
 	"attack":3,
 	"attack_add":1,
 	"hp":100,
-	"hp_add":10
+	"hp_add":10,
+	"speed":6,
+	"attackInterval":"1.05"
 },
 {
 	"id":1,
@@ -13,7 +15,9 @@
 	"attack":7,
 	"attack_add":2,
 	"hp":30,
-	"hp_add":4
+	"hp_add":4,
+	"speed":5,
+	"attackInterval":"3"
 },
 {
 	"id":2,
@@ -21,6 +25,8 @@
 	"attack":2,
 	"attack_add":1,
 	"hp":300,
-	"hp_add":20
+	"hp_add":20,
+	"speed":4,
+	"attackInterval":"0.9"
 }
 ]
