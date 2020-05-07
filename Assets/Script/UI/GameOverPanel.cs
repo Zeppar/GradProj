@@ -15,6 +15,8 @@ public class GameOverPanel : MonoBehaviour {
     void Start() {
         retryBtn.onClick.AddListener(() => {
             GameManager.instance.ReLoadLevel();
+            //gameObject.SetActiveFast(false);
+            //GameManager.instance.InitPlayer(GameManager.instance.spawn.position);
         });
         quitBtn.onClick.AddListener(() => {
             GameManager.instance.LoadLevel(0);

@@ -533,6 +533,7 @@
     <Compile Include="Assets\Script\Item\SkillStone.cs" />
     <Compile Include="Assets\Script\Managers\AutoSaveManager.cs" />
     <Compile Include="Assets\Script\Managers\EffectManager.cs" />
+    <Compile Include="Assets\Script\Managers\EnemyManager.cs" />
     <Compile Include="Assets\Script\Managers\EnergyManager.cs" />
     <Compile Include="Assets\Script\Managers\GameInitManager.cs" />
     <Compile Include="Assets\Script\Managers\GameManager.cs" />

@@ -6,6 +6,7 @@ public class AutoSaveManager
 {
     public bool hasSaved;
     public Vector3 rebornPos;
+    // TODO energy
 
     public void Reset() {
         hasSaved = false;

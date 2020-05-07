@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 
     public SkillManager skillManager = new SkillManager();//技能管理器实例
     public GoodManager goodManager = new GoodManager();//物品管理器实例
+    public EnemyManager enemyManager = new EnemyManager();//怪物管理器实例
     public EnergyManager energyManager = new EnergyManager(0, 100.0f);
     public LevelManager levelManager = new LevelManager();
     public AutoSaveManager autoSaveManager = new AutoSaveManager();
@@ -33,23 +34,27 @@ public class GameManager : MonoBehaviour {
     void Awake() {
         if (instance == null) {
             instance = this;
-            // DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         } else if (instance != this) {
             Destroy(gameObject);
         }
     }
+
     void Start() {
         skillManager.InitSkill();
         goodManager.InitGoods();
+        enemyManager.InitEmey();
         skillActionManager.InitSkillCallback();
         levelManager.Init();
         InitUI();
         InitPlayer(spawn.position);
     }
+
     void InitUI() {
         UIManager ui = Instantiate(Resources.Load("UI/UIManager") as GameObject).GetComponent<UIManager>();
         ui.Init();
     }
+
     public void InitPlayer(Vector3 pos) {
         if (virtualCamera == null) {
             virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
@@ -62,6 +67,7 @@ public class GameManager : MonoBehaviour {
     public void LoadLevel(int index) {
         SceneManager.LoadScene(index);
     }
+
     public void LevelUp() {
         LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }

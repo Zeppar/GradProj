@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Common/DeadArea.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Enemy/EnemyData.json">
     <Files>
+      <File FileName="Assets/Script/UI/GameOverPanel.cs" Line="12" Column="18" IsPinned="True" />
       <File FileName="Assets/Script/Managers/UIManager.cs" Line="57" Column="9" />
       <File FileName="Assets/Script/Util/Util.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/Managers/UIKeyManager.cs" />
       <File FileName="Assets/Script/Item/ObjectPoolItem.cs" />
-      <File FileName="Assets/Script/Item/SkillStone.cs" Line="18" Column="66" />
+      <File FileName="Assets/Script/Item/SkillStone.cs" Line="13" Column="52" />
       <File FileName="Assets/Script/Player/Player.cs" Line="258" Column="1" />
       <File FileName="Assets/Script/Item/LightCrystal.cs" />
       <File FileName="Assets/Script/Managers/SoundManager.cs" />
@@ -14,19 +15,22 @@
       <File FileName="Assets/Script/Managers/LightManager.cs" Line="23" Column="2" />
       <File FileName="Assets/Script/Managers/EnergyManager.cs" />
       <File FileName="Assets/Script/Camera/LevelBeginShowPoint.cs" />
-      <File FileName="Assets/Script/Managers/GameManager.cs" Line="30" Column="1" />
+      <File FileName="Assets/Script/Managers/GameManager.cs" Line="46" Column="22" />
       <File FileName="Assets/Script/UI/HelpButton.cs" />
       <File FileName="Assets/Script/Terrain/TopTipTrigger.cs" Line="13" Column="55" />
       <File FileName="Assets/Script/Managers/GoodManager.cs" Line="40" Column="26" />
       <File FileName="Assets/Script/UI/eff/Screeneff.cs" />
       <File FileName="Assets/Script/Item/SaveSpot.cs" Line="17" Column="103" />
-      <File FileName="Assets/Script/UI/HelpPanel.cs" Line="16" Column="38" />
+      <File FileName="Assets/Script/UI/HelpPanel.cs" Line="14" Column="17" />
       <File FileName="Assets/Script/Terrain/LaserGin.cs" Line="51" Column="25" />
       <File FileName="Assets/Script/UI/TopTip.cs" Line="9" Column="17" />
-      <File FileName="Assets/Script/Managers/AutoSaveManager.cs" Line="18" Column="6" />
-      <File FileName="Assets/Script/UI/GameOverPanel.cs" Line="26" Column="93" />
-      <File FileName="Assets/Script/Common/DeadArea.cs" Line="9" Column="39" />
-      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="21" Column="16" />
+      <File FileName="Assets/Script/Managers/AutoSaveManager.cs" Line="5" Column="29" />
+      <File FileName="Assets/Script/Common/DeadArea.cs" Line="9" Column="53" />
+      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="47" Column="39" />
+      <File FileName="Assets/Script/Managers/EnemyManager.cs" Line="36" Column="59" />
+      <File FileName="Assets/Script/Enemy/EnemyBoss.cs" Line="5" Column="35" />
+      <File FileName="Assets/Script/Enemy/EnemyGround.cs" Line="5" Column="31" />
+      <File FileName="Assets/Resources/Enemy/EnemyData.json" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
