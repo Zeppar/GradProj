@@ -38,9 +38,7 @@ public class GameManager : MonoBehaviour {
         } else if (instance != this) {
             Destroy(gameObject);
         }
-    }
 
-    void Start() {
         skillManager.InitSkill();
         goodManager.InitGoods();
         enemyManager.InitEmey();
@@ -48,6 +46,10 @@ public class GameManager : MonoBehaviour {
         levelManager.Init();
         InitUI();
         InitPlayer(spawn.position);
+    }
+
+    void Start() {
+      
     }
 
     void InitUI() {

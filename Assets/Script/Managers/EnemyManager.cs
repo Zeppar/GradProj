@@ -1,5 +1,6 @@
 ﻿using JetBrains.Annotations;
 using LitJson;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -15,7 +16,10 @@ public  class EnemyInfo
 
     public int hp;
     public int hpAdd;
-    
+
+    public int speed;
+    public float attackInterval;
+
 }
 
 public class EnemyManager
@@ -36,8 +40,11 @@ public class EnemyManager
             info.attackAdd = (int)enemyData[i]["attack_add"];
             info.hp = (int)enemyData[i]["hp"];           
             info.hpAdd = (int)enemyData[i]["hp_add"]; 
-            
+            info.speed = (int)enemyData[i]["speed"]; 
+            info.attackInterval= Convert.ToSingle(enemyData[i]["attackInterval"].ToString());
+                                                                           
             enemyDict.Add((int)enemyData[i]["id"], info);
+
         }    
     }
 
