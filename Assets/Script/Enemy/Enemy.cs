@@ -10,6 +10,9 @@ public enum EnemyType {
     InSky
 }
 public class Enemy : MonoBehaviour {
+    public int id;
+    public int level = 1;
+    private EnemyInfo enemyinfo;
     //玩家属性
     [Header("基础属性")]
     public int maxHP;
@@ -56,6 +59,10 @@ public class Enemy : MonoBehaviour {
 
 
     public virtual void Start() {
+        enemyinfo = GameManager.instance.enemyManager.FindEnemyWithID(id);
+        maxHP = GameManager.instance.enemyManager.GetHPInfo(id,level);
+        attack = GameManager.instance.enemyManager.GetAttackInfo(id,level);
+
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         HP = maxHP;

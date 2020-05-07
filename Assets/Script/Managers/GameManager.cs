@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public SkillManager skillManager = new SkillManager();//技能管理器实例
     public GoodManager goodManager = new GoodManager();//物品管理器实例
+    public EnemyManager enemyManager = new EnemyManager();//怪物管理器实例
     public EnergyManager energyManager = new EnergyManager(0, 100.0f);
     public LevelManager levelManager = new LevelManager();
 
@@ -41,16 +42,13 @@ public class GameManager : MonoBehaviour
 
         skillManager.InitSkill();
         goodManager.InitGoods();
+        enemyManager.InitEmey();
         skillActionManager.InitSkillCallback();
         levelManager.Init();
         InitUI();
         InitPlayer();
     }
-    void Start()
-    {
-       
-
-    }
+ 
     void InitUI() { 
         UIManager ui = Instantiate(Resources.Load("UI/UIManager") as GameObject).GetComponent<UIManager>();
         ui.Init();   
