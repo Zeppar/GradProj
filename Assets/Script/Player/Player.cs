@@ -66,6 +66,7 @@ public class Player : MonoBehaviour {
 
     public bool isHurt = false;
     public int dir = 1;
+    public Transform elfPos;
     public BoxCollider2D feetCollider;
 
 

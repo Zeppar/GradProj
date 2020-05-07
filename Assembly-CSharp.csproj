@@ -514,6 +514,8 @@
     <Compile Include="Assets\Script\Camera\LevelBeginShowPoint.cs" />
     <Compile Include="Assets\Script\Cheat\CheatPanel.cs" />
     <Compile Include="Assets\Script\Common\DeadArea.cs" />
+    <Compile Include="Assets\Script\Common\FunctionInvoker.cs" />
+    <Compile Include="Assets\Script\Common\MagicElf.cs" />
     <Compile Include="Assets\Script\Effects\Boom.cs" />
     <Compile Include="Assets\Script\Enemy\Enemy.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyBird.cs" />
