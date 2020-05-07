@@ -91,6 +91,8 @@ public class Player : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        if (!GameManager.instance.gameStart)
+            return;
         UpdateGroundState();
         Move();
         Jump();
@@ -99,6 +101,8 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
+        if (!GameManager.instance.gameStart)
+            return;
         UpdateState();
         AirAttack();
         GroundAttack();
@@ -251,11 +255,6 @@ public class Player : MonoBehaviour {
     private void Move() {
         if (isHurt || GetComponent<Player>().attackCount > 0)
             return;
-
-        if (transform.position.y < GameManager.instance.worldend) {
-            HP -= 100000;
-            return;
-        }
 
         moveInput = Input.GetAxisRaw("Horizontal");
 

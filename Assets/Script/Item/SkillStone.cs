@@ -10,14 +10,12 @@ public class SkillStone : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag(Util.TagCollection.playerTag)) {
             isEnter = true;
-            //UIManager.instance.GetItemHelp.SetActive(true);
-            UIManager.instance.helpPanel.ShowGetItemTip();
+            UIManager.instance.helpPanel.ShowGetItemTip("按下E键以拾取");
         }
 
     }
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.CompareTag(Util.TagCollection.playerTag)) {
-            //UIManager.instance.GetItemHelp.SetActive(false);
             UIManager.instance.helpPanel.HideGetItemTip();
             isEnter = false;
         }

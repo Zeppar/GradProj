@@ -38,7 +38,6 @@ public class GoodManager
         {
             if (goodInfoList[i] == null)
                 continue;
-            Debug.Log(goodInfoList[i].skillInfo.id);
             if(goodInfo.skillInfo.id == goodInfoList[i].skillInfo.id)
             {
                 goodInfoList[i].count += 1;

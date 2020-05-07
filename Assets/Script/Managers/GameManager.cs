@@ -5,8 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class GameManager : MonoBehaviour
-{
+public class GameManager : MonoBehaviour {
     // Start is called before the first frame update
     public static GameManager instance;//实例
 
@@ -14,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GoodManager goodManager = new GoodManager();//物品管理器实例
     public EnergyManager energyManager = new EnergyManager(0, 100.0f);
     public LevelManager levelManager = new LevelManager();
+    public AutoSaveManager autoSaveManager = new AutoSaveManager();
 
     public Player player;//玩家脚本
 
@@ -21,59 +21,51 @@ public class GameManager : MonoBehaviour
     public SkillParticleCreator skillParticleCreator;//技能特效创建器
     public SkillActionManager skillActionManager;
     public EffectManager effectManager;
-    
+
 
 
     public CinemachineVirtualCamera virtualCamera;
 
     public Transform spawn;
 
-    public float worldend;
+    public bool gameStart;
 
-    void Awake()
-    {
+    void Awake() {
         if (instance == null) {
             instance = this;
-           // DontDestroyOnLoad(gameObject);
-        } else if(instance != this) {
+            // DontDestroyOnLoad(gameObject);
+        } else if (instance != this) {
             Destroy(gameObject);
         }
-
+    }
+    void Start() {
         skillManager.InitSkill();
         goodManager.InitGoods();
         skillActionManager.InitSkillCallback();
         levelManager.Init();
         InitUI();
-        InitPlayer();
+        InitPlayer(spawn.position);
     }
-    void Start()
-    {
-       
-
-    }
-    void InitUI() { 
+    void InitUI() {
         UIManager ui = Instantiate(Resources.Load("UI/UIManager") as GameObject).GetComponent<UIManager>();
-        ui.Init();   
+        ui.Init();
     }
-    void InitPlayer() {
-        if (virtualCamera == null) { virtualCamera = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>(); }
-        player = Instantiate(Resources.Load("Player/Player") as GameObject).GetComponent<Player>();
-        if (spawn != null) {
-            player.transform.position = spawn.position;
+    public void InitPlayer(Vector3 pos) {
+        if (virtualCamera == null) {
+            virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         }
+        player = Instantiate(Resources.Load("Player/Player") as GameObject).GetComponent<Player>();
+        player.transform.position = pos;
         virtualCamera.Follow = player.transform;
     }
 
-    public void LoadLevel(int index)
-    {
+    public void LoadLevel(int index) {
         SceneManager.LoadScene(index);
     }
-    public void LevelUp()
-    {
+    public void LevelUp() {
         LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void ReLoadLevel()
-    {
+    public void ReLoadLevel() {
         LoadLevel(SceneManager.GetActiveScene().buildIndex);
     }
 

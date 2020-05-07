@@ -54,6 +54,7 @@ public class LevelBeginShowPoint : MonoBehaviour
                 GameManager.instance.StartCoroutine(Util.DelayExecute(2f, () => {
                     Screeneff.instance.setSceneToClear();
                     UIManager.instance.helpPanel.topTip.ShowTopTip(text);
+                    GameManager.instance.gameStart = true;
                 }));
                 
             }

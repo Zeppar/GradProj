@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 20
-  attack: 10
+  attack: 15
   range: 1
   attackInterval: 0.75
   dead: 0

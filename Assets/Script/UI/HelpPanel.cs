@@ -9,7 +9,10 @@ public class HelpPanel : MonoBehaviour
     public GameObject ownItemTipGo;
     public TopTip topTip;
 
-    public void ShowGetItemTip() {
+    public Text getItemText;
+
+    public void ShowGetItemTip(string text) {
+        getItemText.text = text;
         getItemTipGo.SetActive(true);
     }
 

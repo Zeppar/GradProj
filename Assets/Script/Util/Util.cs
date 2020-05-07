@@ -98,4 +98,14 @@ public static class Util {
         callback?.Invoke();
     }
 
+    public static Color ColorFromString(string s, float a) {
+        int R = int.Parse(s.Substring(1, 2),
+            System.Globalization.NumberStyles.HexNumber);
+        int G = int.Parse(s.Substring(3, 2),
+            System.Globalization.NumberStyles.HexNumber);
+        int B = int.Parse(s.Substring(5, 2),
+            System.Globalization.NumberStyles.HexNumber);
+        return new Color(R / 255f, G / 255f, B / 255f, a);
+    }
+
 }
