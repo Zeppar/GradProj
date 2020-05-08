@@ -1,15 +1,19 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Enemy/Enemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Util/Util.cs">
     <Files>
-      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="84" Column="1" />
+      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="131" Column="21" />
       <File FileName="Assets/Script/Enemy/EnemyBird.cs" />
       <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" />
       <File FileName="Assets/Script/Enemy/EnemyGround.cs" />
       <File FileName="Assets/Script/Managers/EnemyManager.cs" />
       <File FileName="Assets/Script/Managers/GameManager.cs" />
       <File FileName="Assets/Script/Common/MagicElf.cs" />
-      <File FileName="Assets/Resources/Enemy/EnemyData.json" Line="32" Column="18" />
+      <File FileName="Assets/Resources/Enemy/EnemyData.json" />
       <File FileName="Assets/Script/UI/HelpButton.cs" />
+      <File FileName="Assets/Script/Util/Util.cs" Line="72" Column="36" />
+      <File FileName="Assets/Script/Player/Player.cs" Line="124" Column="52" />
+      <File FileName="Assets/Script/Managers/SoundManager.cs" Line="26" Column="22" />
+      <File FileName="Assets/Script/Player/AttackChecker.cs" Line="67" Column="73" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -17,7 +21,7 @@
     <String>Assembly-CSharp-firstpass.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e14aa03f-3d1d-4e65-b0c9-c7e4ca6113af" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="82876088-c040-4790-9a1d-89722ad09501" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

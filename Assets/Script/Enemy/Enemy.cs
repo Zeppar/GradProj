@@ -72,7 +72,6 @@ public class Enemy : MonoBehaviour {
         ParseEnemyInfo();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        HP = maxHP;
         if (hasSlider)
             hpSlider.value = 1.0f;
         scaleMulti = Mathf.Abs(transform.localScale.x);
@@ -89,6 +88,7 @@ public class Enemy : MonoBehaviour {
         attackRange = enemyInfo.attackRange;
         hasSlider = enemyInfo.hasSlider;
         type = enemyInfo.type;
+        HP = maxHP;
     }
 
     public virtual void Begin() {
