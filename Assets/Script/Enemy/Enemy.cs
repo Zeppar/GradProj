@@ -63,7 +63,6 @@ public class Enemy : MonoBehaviour {
         attack = GameManager.instance.enemyManager.GetAttackInfo(id,level);
 
         enemyinfo = GameManager.instance.enemyManager.FindEnemyWithID(id);
-
         speed = enemyinfo.speed;
         attackInterval = enemyinfo.attackInterval;
       

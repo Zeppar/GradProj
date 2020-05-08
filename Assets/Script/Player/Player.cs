@@ -121,10 +121,10 @@ public class Player : MonoBehaviour {
 
     private void UpdateState() {
         currentState = anim.GetCurrentAnimatorStateInfo(0);
-        if ((Input.GetKeyDown(KeyCode.L)) && isGrounded) {
+        if ((Input.GetKeyDown(Util.KayCollection.Jump)) && isGrounded) {
             jumpPressed = true;
         }
-        if( Input.GetKeyUp(KeyCode.L)) {
+        if( Input.GetKeyUp(Util.KayCollection.Jump) ){
             jumpPressed = false;
         }
 
@@ -134,7 +134,7 @@ public class Player : MonoBehaviour {
         }
 
 
-        if (Input.GetKeyDown(KeyCode.X) && !isDash && Mathf.Approximately(dashCDRemain, 0) && GameManager.instance.levelManager.currentInfo.dashEnable) {
+        if (Input.GetKeyDown(Util.KayCollection.Dash) && !isDash && Mathf.Approximately(dashCDRemain, 0)) {
             isDash = true;
             SoundManager.instance.PlayEffect(Util.ClipNameCollection.dash);
             GameManager.instance.effectManager.ShakeCamera();
@@ -171,7 +171,7 @@ public class Player : MonoBehaviour {
             SetAttackVal(0);
         }
 
-        if (Input.GetKeyDown(KeyCode.J)) {
+        if (Input.GetKeyDown(Util.KayCollection.Attack)) {
             if (currentState.IsName(Util.PlayerAnimCollection.jump) && attackCount == 0) {
                 AddVertVelocity(7.5f);
                 SetAttackVal(4);
@@ -197,7 +197,7 @@ public class Player : MonoBehaviour {
             SetAttackVal(0);
         }
 
-        if (Input.GetKeyDown(KeyCode.J)) {
+        if (Input.GetKeyDown(Util.KayCollection.Attack)) {
             if ((currentState.IsName(Util.PlayerAnimCollection.idle) || currentState.IsName(Util.PlayerAnimCollection.walk)) && attackCount == 0) {
                 AddHoriVelocity(dir * 0.6f);
                 SetAttackVal(1);
