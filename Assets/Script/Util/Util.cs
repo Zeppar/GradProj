@@ -43,6 +43,15 @@ public static class Util {
         public static string enemyTag = "Enemy";
     }
 
+    public static class KayCollection
+    {
+        public static KeyCode Jump = KeyCode.Space;
+        public static KeyCode Dash = KeyCode.K;
+        public static KeyCode Attack = KeyCode.J;
+
+        public static KeyCode OpenBag = KeyCode.B;
+    }
+
     public static class PlayerAnimCollection {
         public static string idle = "Idle";
         public static string jump = "Jump";
