@@ -47,7 +47,6 @@ public class MagicElf : MonoBehaviour
     }
 
     private void Update() {
-        Debug.Log(transform.position + " - " + GameManager.instance.player.elfPos.position);
         if (transform.position != GameManager.instance.player.elfPos.position) {
             transform.position = Vector2.MoveTowards(transform.position, GameManager.instance.player.elfPos.position, speed * Time.deltaTime);
         }

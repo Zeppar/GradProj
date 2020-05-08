@@ -12,14 +12,19 @@ public enum EnemyType {
 public class Enemy : MonoBehaviour {
     public int id;
     public int level = 1;
-    private EnemyInfo enemyinfo;
-    //玩家属性
+
+    private EnemyInfo enemyInfo;
+
     [Header("基础属性")]
-    public int maxHP;
+    private int maxHP;
     private int _HP;
+    [HideInInspector]
     public float speed;
+    [HideInInspector]
     public int dir = -1;
+    [HideInInspector]
     public int attack = 7;
+    [HideInInspector]
     public float scaleMulti;
     public int HP {
         get { return _HP; }
@@ -31,22 +36,28 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    public EnemyType type;
+    
     private bool dead = false;
     private bool isAttacking = false;
     private bool isHurt = false;
 
+    [HideInInspector]
+    public EnemyType type;
 
     [Header("巡逻属性")]
-    //巡逻属性
-    public float chaseDis = 2;
-    public float attackRange = 1;
-
-    public bool hasSlider = true;
     public Slider hpSlider;
     public AttackChecker attackChecker;
+    public Transform attackPoint;
 
+    [HideInInspector]
+    public bool hasSlider = true;
+    [HideInInspector]
+    public float chaseDis = 2;
+    [HideInInspector]
+    public float attackRange = 1;
+    [HideInInspector]
     public float attackInterval;
+    [HideInInspector]
     public float originInterval;
     [HideInInspector]
     public float lastAttackTime = 0;
@@ -54,26 +65,30 @@ public class Enemy : MonoBehaviour {
     public Animator anim;
     [HideInInspector]
     public Rigidbody2D rb;
-    public Transform attackPoint;
+    
 
 
     public virtual void Start() {
-
-        maxHP = GameManager.instance.enemyManager.GetHPInfo(id,level);
-        attack = GameManager.instance.enemyManager.GetAttackInfo(id,level);
-
-        enemyinfo = GameManager.instance.enemyManager.FindEnemyWithID(id);
-
-        speed = enemyinfo.speed;
-        attackInterval = enemyinfo.attackInterval;
-      
-
+        ParseEnemyInfo();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         HP = maxHP;
         if (hasSlider)
             hpSlider.value = 1.0f;
         scaleMulti = Mathf.Abs(transform.localScale.x);
+    }
+
+    private void ParseEnemyInfo() {
+        enemyInfo = GameManager.instance.enemyManager.GetEnemyInfoWithID(id);
+
+        maxHP = enemyInfo.GetHPByLevel(level);
+        attack = enemyInfo.GetAttackByLevel(level);
+        speed = enemyInfo.speed;
+        attackInterval = enemyInfo.attackInterval;
+        chaseDis = enemyInfo.chaseDis;
+        attackRange = enemyInfo.attackRange;
+        hasSlider = enemyInfo.hasSlider;
+        type = enemyInfo.type;
     }
 
     public virtual void Begin() {

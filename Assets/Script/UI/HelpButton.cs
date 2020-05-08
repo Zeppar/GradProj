@@ -13,6 +13,7 @@ public class HelpButton : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Vector3 normalPos;
 
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();

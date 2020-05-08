@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour {
 
         skillManager.InitSkill();
         goodManager.InitGoods();
-        enemyManager.InitEmey();
+        enemyManager.InitEnemy();
         skillActionManager.InitSkillCallback();
         levelManager.Init();
         InitUI();
