@@ -96,6 +96,7 @@ public class Enemy : MonoBehaviour {
     }
 
     private void Update() {
+        hpSlider.transform.localScale = new Vector2(-dir, 1);
         if (dead)
             return;
         UpdateState();

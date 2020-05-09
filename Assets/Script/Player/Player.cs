@@ -125,6 +125,7 @@ public class Player : MonoBehaviour {
             jumpPressed = true;
         }
         if (Input.GetKeyUp(Util.KeyCollection.Jump)) {
+
             jumpPressed = false;
         }
 

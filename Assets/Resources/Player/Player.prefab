@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.8
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 0000000069c5c39da9ed87aa4548eccc
+  m_ApplyToSortingLayers: 0000000069c5c39da9ed87aa0d99c0b84548eccc2b5a1b66c33f8519d7dab4a4
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -407,7 +407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &88370439311796174
 Transform:
   m_ObjectHideFlags: 0
