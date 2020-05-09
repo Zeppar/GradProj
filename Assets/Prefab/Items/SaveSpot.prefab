@@ -60,6 +60,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   light: {fileID: 5997528727978861888}
+  destroySp: {fileID: 21300000, guid: 8997e129fbf55467098944544daa7da3, type: 3}
+  activeSp: {fileID: 21300000, guid: c6ba0dfc6def9436c89a54bc0a2eabfc, type: 3}
+  spriteRenderer: {fileID: 1341586544057664797}
 --- !u!61 &6233383949353579928
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -531,7 +531,6 @@
     <Compile Include="Assets\Script\Enemy\EnemyBoss.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyGround.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyWarrior.cs" />
-    <Compile Include="Assets\Script\Item\BGM.cs" />
     <Compile Include="Assets\Script\Item\FireBallExplosion.cs" />
     <Compile Include="Assets\Script\Item\Fireball.cs" />
     <Compile Include="Assets\Script\Item\GetItemLightEffect.cs" />
@@ -540,6 +539,7 @@
     <Compile Include="Assets\Script\Item\LightCrystal.cs" />
     <Compile Include="Assets\Script\Item\ObjectPoolItem.cs" />
     <Compile Include="Assets\Script\Item\PlayerShadow.cs" />
+    <Compile Include="Assets\Script\Item\RingControl.cs" />
     <Compile Include="Assets\Script\Item\SaveSpot.cs" />
     <Compile Include="Assets\Script\Item\SkillStone.cs" />
     <Compile Include="Assets\Script\Item\TanTanBall.cs" />

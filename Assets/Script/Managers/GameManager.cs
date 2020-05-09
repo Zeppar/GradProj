@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour {
     public Transform spawn;
 
     public bool gameStart;
+    public bool showEndPoint;
 
     void Awake() {
         if (instance == null) {
