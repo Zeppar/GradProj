@@ -41,6 +41,7 @@ public class EnemyGround : Enemy
         int count = rb.Cast(new Vector2(dir * 5, 0), contactFilter, resultArr, 5 + 0.01f);
         if (count != 0 || downHit.collider == null) {
             dir *= -1;
+           //hpSlider.transform.localScale = new Vector2(-dir, 1);
         }
         transform.localScale = new Vector2(dir * scaleMulti, transform.localScale.y);
         transform.position = new Vector2(transform.position.x + speed * Time.deltaTime * dir, transform.position.y);

@@ -51,7 +51,7 @@ public class UIManager : MonoBehaviour {
     }
 
     private void Update() {
-        hpBarPanel.UpdateHpBar(GameManager.instance.player.HP);
+      //  hpBarPanel.UpdateHpBar(GameManager.instance.player.HP);
         dashFlag.SetValue(GameManager.instance.player.GetDashCDPercent());
         dashFlag.gameObject.SetActiveFast(GameManager.instance.levelManager.currentInfo.dashEnable);
         quickSkillPanel.gameObject.SetActiveFast(GameManager.instance.levelManager.currentInfo.bagEnable);

@@ -50,9 +50,9 @@ public class LevelBeginShowPoint : MonoBehaviour
                 gameObject.GetComponent<LevelBeginShowPoint>().enabled = false;
                 gameObject.GetComponent<CinemachineBrain>().enabled = true;
                 
-                Screeneff.instance.setSceneToClean();
+              //  Screeneff.instance.setSceneToClean();
                 GameManager.instance.StartCoroutine(Util.DelayExecute(2f, () => {
-                    Screeneff.instance.setSceneToClear();
+                 //   Screeneff.instance.setSceneToClear();
                     UIManager.instance.helpPanel.topTip.ShowTopTip(text);
                     GameManager.instance.gameStart = true;
                 }));
