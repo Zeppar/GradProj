@@ -39,8 +39,7 @@ public class Player : MonoBehaviour {
             return _hp;
         }
         set {
-            if(_hp > value)
-            {
+            if (_hp > value) {
                 SoundManager.instance.PlayerHitEffect();
                 UIManager.instance.screenEffect.Show();
             }
@@ -80,7 +79,7 @@ public class Player : MonoBehaviour {
     }
 
     private IEnumerator ChangeEnergy() {
-        while(true) {
+        while (true) {
             if (GameManager.instance.energyManager.inEnergyInCrease) {
                 GameManager.instance.energyManager.IncreaseEnergy(0.2f);
                 yield return null;
@@ -125,7 +124,8 @@ public class Player : MonoBehaviour {
         if ((Input.GetKeyDown(Util.KeyCollection.Jump)) && isGrounded) {
             jumpPressed = true;
         }
-        if( Input.GetKeyUp(Util.KeyCollection.Jump) ){
+        if (Input.GetKeyUp(Util.KeyCollection.Jump)) {
+
             jumpPressed = false;
         }
 
@@ -159,14 +159,14 @@ public class Player : MonoBehaviour {
             if (currentState.IsName(Util.PlayerAnimCollection.airAttack3)) {
                 SetAttackVal(7);
                 GameManager.instance.effectManager.ShakeCamera();
-            } else if(currentState.IsName(Util.PlayerAnimCollection.airAttack2)) {
+            } else if (currentState.IsName(Util.PlayerAnimCollection.airAttack2)) {
                 SetAttackVal(0);
             }
             return;
         }
         if (currentState.IsName(Util.PlayerAnimCollection.airAttack1) && currentState.normalizedTime > 1.3f) {
             SetAttackVal(0);
-            
+
         }
         if (currentState.IsName(Util.PlayerAnimCollection.airAttack2) && currentState.normalizedTime > 1.3f) {
             SetAttackVal(0);
@@ -229,10 +229,10 @@ public class Player : MonoBehaviour {
         if (!isDash)
             return;
         if (dashTime <= dashTotalTime) {
-           
+
             gameObject.layer = 14;
             AddVelocity(new Vector2(dir * dashSpeed, 0));
-            dashTime += Time.deltaTime;           
+            dashTime += Time.deltaTime;
             dashCreateCurTime += Time.deltaTime;
             if (dashCreateCurTime >= dashCreateTime) {
                 dashCreateCurTime = 0;
@@ -250,7 +250,7 @@ public class Player : MonoBehaviour {
 
     public void ResetDashCD() {
         // TODO
-      
+
     }
 
     private void Move() {
@@ -260,7 +260,7 @@ public class Player : MonoBehaviour {
         moveInput = Input.GetAxisRaw("Horizontal");
 
         if (moveInput > 0) {
-            transform.localScale = new Vector2(Math.Abs(transform.localScale.x),transform.localScale.y);
+            transform.localScale = new Vector2(Math.Abs(transform.localScale.x), transform.localScale.y);
             dir = 1;
         } else if (moveInput < 0) {
             transform.localScale = new Vector2(-Math.Abs(transform.localScale.x), transform.localScale.y);
@@ -269,12 +269,12 @@ public class Player : MonoBehaviour {
 
         if (!Mathf.Approximately(moveInput, 0)) {
             anim.SetBool("Walk", true);
-            
+
 
         } else {
             anim.SetBool("Walk", false);
         }
-     
+
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
     }
@@ -301,7 +301,7 @@ public class Player : MonoBehaviour {
 
     public void BeAttacked(float _attack) {
         SetAttackVal(0);
-        HP -= _attack * GameManager.instance.energyManager.GetEnemyAttackRatio();      
+        HP -= _attack * GameManager.instance.energyManager.GetEnemyAttackRatio();
         if (HP > 0)
             anim.SetTrigger("Hurt");
     }

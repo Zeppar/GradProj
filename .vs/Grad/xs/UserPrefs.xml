@@ -1,37 +1,19 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Common/FunctionInvoker.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Util/Util.cs">
     <Files>
-      <File FileName="Assets/Script/UI/GameOverPanel.cs" Line="33" Column="1" IsPinned="True" />
-      <File FileName="Assets/Script/Managers/UIManager.cs" Line="57" Column="9" />
-      <File FileName="Assets/Script/Util/Util.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Managers/UIKeyManager.cs" />
-      <File FileName="Assets/Script/Item/ObjectPoolItem.cs" />
-      <File FileName="Assets/Script/Item/SkillStone.cs" Line="13" Column="52" />
-      <File FileName="Assets/Script/Player/Player.cs" Line="79" Column="26" />
-      <File FileName="Assets/Script/Item/LightCrystal.cs" />
-      <File FileName="Assets/Script/Managers/SoundManager.cs" />
-      <File FileName="Assets/Script/Player/AttackChecker.cs" />
-      <File FileName="Assets/Script/Managers/SkillActionManager.cs" />
-      <File FileName="Assets/Script/Managers/LightManager.cs" Line="23" Column="2" />
-      <File FileName="Assets/Script/Managers/EnergyManager.cs" />
-      <File FileName="Assets/Script/Camera/LevelBeginShowPoint.cs" Line="46" Column="58" />
-      <File FileName="Assets/Script/Managers/GameManager.cs" Line="60" Column="74" />
+      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="131" Column="21" />
+      <File FileName="Assets/Script/Enemy/EnemyBird.cs" />
+      <File FileName="Assets/Script/Enemy/EnemyWarrior.cs" />
+      <File FileName="Assets/Script/Enemy/EnemyGround.cs" />
+      <File FileName="Assets/Script/Managers/EnemyManager.cs" />
+      <File FileName="Assets/Script/Managers/GameManager.cs" />
+      <File FileName="Assets/Script/Common/MagicElf.cs" />
+      <File FileName="Assets/Resources/Enemy/EnemyData.json" />
       <File FileName="Assets/Script/UI/HelpButton.cs" />
-      <File FileName="Assets/Script/Terrain/TopTipTrigger.cs" Line="13" Column="55" />
-      <File FileName="Assets/Script/Managers/GoodManager.cs" Line="40" Column="26" />
-      <File FileName="Assets/Script/UI/eff/Screeneff.cs" />
-      <File FileName="Assets/Script/Item/SaveSpot.cs" Line="17" Column="103" />
-      <File FileName="Assets/Script/UI/HelpPanel.cs" Line="14" Column="17" />
-      <File FileName="Assets/Script/UI/TopTip.cs" Line="9" Column="17" />
-      <File FileName="Assets/Script/Managers/AutoSaveManager.cs" Line="9" Column="19" />
-      <File FileName="Assets/Script/Common/DeadArea.cs" Line="9" Column="53" />
-      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="12" Column="14" />
-      <File FileName="Assets/Script/Managers/EnemyManager.cs" Line="36" Column="59" />
-      <File FileName="Assets/Script/Enemy/EnemyBoss.cs" Line="5" Column="32" />
-      <File FileName="Assets/Script/Enemy/EnemyGround.cs" Line="21" Column="43" />
-      <File FileName="Assets/Resources/Enemy/EnemyData.json" Line="17" Column="3" />
-      <File FileName="Assets/Script/Common/MagicElf.cs" Line="53" Column="10" />
-      <File FileName="Assets/Script/Common/FunctionInvoker.cs" Line="7" Column="23" />
+      <File FileName="Assets/Script/Util/Util.cs" Line="72" Column="36" />
+      <File FileName="Assets/Script/Player/Player.cs" Line="124" Column="52" />
+      <File FileName="Assets/Script/Managers/SoundManager.cs" Line="26" Column="22" />
+      <File FileName="Assets/Script/Player/AttackChecker.cs" Line="67" Column="73" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -39,7 +21,7 @@
     <String>Assembly-CSharp-firstpass.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c1407eac-e237-458d-a300-7a8d6009a513" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="82876088-c040-4790-9a1d-89722ad09501" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

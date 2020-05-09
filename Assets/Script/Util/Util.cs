@@ -48,7 +48,6 @@ public static class Util {
         public static KeyCode Jump = KeyCode.Space;
         public static KeyCode Dash = KeyCode.X;
         public static KeyCode Attack = KeyCode.J;
-
         public static KeyCode OpenBag = KeyCode.B;
     }
 
