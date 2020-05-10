@@ -541,6 +541,7 @@
     <Compile Include="Assets\Script\Item\PlayerShadow.cs" />
     <Compile Include="Assets\Script\Item\RingControl.cs" />
     <Compile Include="Assets\Script\Item\SaveSpot.cs" />
+    <Compile Include="Assets\Script\Item\SavingWheel.cs" />
     <Compile Include="Assets\Script\Item\SkillStone.cs" />
     <Compile Include="Assets\Script\Item\TanTanBall.cs" />
     <Compile Include="Assets\Script\Managers\AutoSaveManager.cs" />

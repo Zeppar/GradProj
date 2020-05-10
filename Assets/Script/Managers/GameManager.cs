@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour {
 
     public void LevelUp() {
         LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        levelManager.EnterNextLevel();
     }
     public void ReLoadLevel() {
         LoadLevel(SceneManager.GetActiveScene().buildIndex);

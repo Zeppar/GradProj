@@ -6,14 +6,17 @@ public class RingControl : MonoBehaviour
 {
     public SpriteRenderer arrow;
     public SpriteRenderer ring;
+    public Animator anim;
 
     private void Update() {
         if(Input.GetMouseButtonDown(1)) {
             ring.enabled = true;
             arrow.enabled = true;
+            anim.enabled = true;
         } else if(Input.GetMouseButtonUp(1)) {
             ring.enabled = true;
             arrow.enabled = true;
+            anim.enabled = false;
         } else if(Input.GetMouseButton(1)) {
             Vector3 screenPos = Camera.main.WorldToScreenPoint(arrow.transform.position);
             float xDiff = Input.mousePosition.x - screenPos.x;

@@ -45,8 +45,8 @@ public static class Util {
 
     public static class KeyCollection
     {
-        public static KeyCode Jump = KeyCode.Space;
-        public static KeyCode Dash = KeyCode.X;
+        public static KeyCode Jump = KeyCode.W;
+        public static KeyCode Dash = KeyCode.K;
         public static KeyCode Attack = KeyCode.J;
         public static KeyCode OpenBag = KeyCode.B;
     }
