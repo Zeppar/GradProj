@@ -6,52 +6,52 @@ using UnityEngine;
 public class KeyInfo
 {
     public string id;
-    public KeyCode key;
-    public string motd;
+    public KeyCode keyCode;
+    public string des;
 
-    public KeyInfo(string id, KeyCode key, string motd)
+    public KeyInfo(string id, KeyCode keyCode, string des)
     {
         this.id = id;
-        this.key = key;
-        this.motd = motd;
+        this.keyCode = keyCode;
+        this.des = des;
     }
         
 }
-public class KeyManager
-{
-   // public List<KeyInfo> keyInfos = new List<KeyInfo>();
+public class KeyManager {
     public Dictionary<string, KeyInfo> keyInfos = new Dictionary<string, KeyInfo>();
-    public  void Init()
-    {
-        //   AddKey(Util.KeyCollection.Attack, KeyCode.J, "攻击");
-        //  AddKey(Util.KeyCollection.Dash, KeyCode.K, "冲刺");
-        //  AddKey(Util.KeyCollection.Jump, KeyCode.W, "跳跃");
-        //  AddKey(Util.KeyCollection.OpenBag, KeyCode.B, "背包");
+    public void Init() {
         InitKey();
     }
-    public void InitKey()
-    {
+
+    public void InitKey() {
         JsonData KeyData = JsonMapper.ToObject(Resources.Load<TextAsset>("Key/KeyInfo").text);
-        for (int i = 0; i < KeyData.Count; i++)
-        {
-            KeyInfo info = new KeyInfo(KeyData[i]["id"].ToString(),(KeyCode)((int)KeyData[i]["key"]),KeyData[i]["motd"].ToString());
-
+        for (int i = 0; i < KeyData.Count; i++) {
+            KeyInfo info = new KeyInfo(KeyData[i]["id"].ToString(), (KeyCode)((int)KeyData[i]["key"]), KeyData[i]["motd"].ToString());
             keyInfos.Add(info.id, info);
-      
-       }
+        }
     }
 
-    public KeyInfo FindKey(string id)
-    {
+    public KeyInfo FindKey(string id) {
+        if (!keyInfos.ContainsKey(id)) {
+            Debug.LogError("Missing Key");
+            return null;
+        }
         return keyInfos[id];
-        //foreach (var item in keyInfos)
-        //{
-         //   if(item.Value.id == id)
-         //   {
-         //       return item.Value;
-         //   }
-     //   }
-      //  return null;
     }
-    
+
+    public void SetKeyData(string id, KeyCode keyCode, KeyCode originKeyCode, Util.NoParmsCallBack callBack) {
+        bool find = false;
+        foreach(var kv in keyInfos) {
+            if(kv.Value.keyCode == keyCode) {
+                find = true;
+                break;
+            }
+        }
+        if (find) {
+            GameManager.instance.keyManager.keyInfos[id].keyCode = originKeyCode;
+        } else {
+            GameManager.instance.keyManager.keyInfos[id].keyCode = keyCode;
+        }
+        callBack?.Invoke();
+    }
 }

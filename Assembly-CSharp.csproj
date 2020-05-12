@@ -592,7 +592,7 @@
     <Compile Include="Assets\Script\UI\HPPanel.cs" />
     <Compile Include="Assets\Script\UI\HelpButton.cs" />
     <Compile Include="Assets\Script\UI\HelpPanel.cs" />
-    <Compile Include="Assets\Script\UI\KeyCount.cs" />
+    <Compile Include="Assets\Script\UI\KeyItem.cs" />
     <Compile Include="Assets\Script\UI\KeySetPanel.cs" />
     <Compile Include="Assets\Script\UI\LevelUpPanel.cs" />
     <Compile Include="Assets\Script\UI\OwnItemTip.cs" />

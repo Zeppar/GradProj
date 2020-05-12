@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KeySetPanel : MonoBehaviour
 {
-    public GameObject keyCount;
+    public KeyItem itemPrefab;
     public Transform InitTran;
     void Start()
     {
@@ -12,11 +12,11 @@ public class KeySetPanel : MonoBehaviour
     }
     void Init()
     {
-        foreach (var item in GameManager.instance.keyManager.keyInfos)
+        foreach (var kv in GameManager.instance.keyManager.keyInfos)
         {
-            GameObject count =  Instantiate(keyCount);
-            count.transform.SetParent(InitTran);
-            count.GetComponent<KeyCount>().SetCount(item.Value.key, item.Value.motd,item.Value.id);
+            KeyItem keyItem =  Instantiate(itemPrefab);
+            keyItem.transform.SetParent(InitTran);
+            keyItem.SetContent(kv.Value);
         }
     }
 }

@@ -121,10 +121,10 @@ public class Player : MonoBehaviour {
 
     private void UpdateState() {
         currentState = anim.GetCurrentAnimatorStateInfo(0);
-        if ((Input.GetKeyDown(GameManager.instance.keyManager.FindKey(Util.KeyCollection.Jump).key) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded) {
+        if ((Input.GetKeyDown(GameManager.instance.keyManager.FindKey(Util.KeyCollection.Jump).keyCode) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded) {
             jumpPressed = true;
         }
-        if (Input.GetKeyUp(GameManager.instance.keyManager.FindKey(Util.KeyCollection.Jump).key) || Input.GetKeyUp(KeyCode.UpArrow)) {
+        if (Input.GetKeyUp(GameManager.instance.keyManager.FindKey(Util.KeyCollection.Jump).keyCode) || Input.GetKeyUp(KeyCode.UpArrow)) {
 
             jumpPressed = false;
         }
@@ -135,7 +135,7 @@ public class Player : MonoBehaviour {
         }
 
 
-        if (Input.GetKeyDown(GameManager.instance.keyManager.FindKey(Util.KeyCollection.Dash).key) && !isDash && Mathf.Approximately(dashCDRemain, 0)) {
+        if (Input.GetKeyDown(GameManager.instance.keyManager.FindKey(Util.KeyCollection.Dash).keyCode) && !isDash && Mathf.Approximately(dashCDRemain, 0)) {
             isDash = true;
             SoundManager.instance.PlayEffect(Util.ClipNameCollection.dash);
             GameManager.instance.effectManager.ShakeCamera();
@@ -172,7 +172,7 @@ public class Player : MonoBehaviour {
             SetAttackVal(0);
         }
 
-        if (Input.GetKeyDown(GameManager.instance.keyManager.FindKey("Attack").key)) {
+        if (Input.GetKeyDown(GameManager.instance.keyManager.FindKey("Attack").keyCode)) {
             if (currentState.IsName(Util.PlayerAnimCollection.jump) && attackCount == 0) {
                 AddVertVelocity(7.5f);
                 SetAttackVal(4);
@@ -198,7 +198,7 @@ public class Player : MonoBehaviour {
             SetAttackVal(0);
         }
 
-        if (Input.GetKeyDown(GameManager.instance.keyManager.FindKey("Attack").key)) {
+        if (Input.GetKeyDown(GameManager.instance.keyManager.FindKey("Attack").keyCode)) {
             if ((currentState.IsName(Util.PlayerAnimCollection.idle) || currentState.IsName(Util.PlayerAnimCollection.walk)) && attackCount == 0) {
                 AddHoriVelocity(dir * 0.6f);
                 SetAttackVal(1);
