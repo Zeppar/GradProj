@@ -33,6 +33,8 @@ public class UIManager : MonoBehaviour {
     public LevelUpPanel levelUpPanel;
     public DashFlag dashFlag;
     public QuickSkillPanel quickSkillPanel;
+    public PausePanel pausePanel;
+    public KeySetPanel keySetPanel;
 
     private void Awake() {
         instance = this;

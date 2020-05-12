@@ -13,8 +13,10 @@ public class UIKeyManager : MonoBehaviour
     {
         OpenPanel(UIManager.instance.bagPanel.gameObject, KeyCode.B, GameManager.instance.levelManager.currentInfo.bagEnable);
         OpenPanel(UIManager.instance.cheatPanel.gameObject, KeyCode.F7);
+        OpenPanel(UIManager.instance.pausePanel.gameObject, KeyCode.Escape);
+        
     }
-
+   
     public void OpenPanel(GameObject gameObject, KeyCode keyCode, bool canInvoke = true) {
         if (!canInvoke)
             return;

@@ -9,6 +9,7 @@ public class SaveSpot : MonoBehaviour
     public Sprite destroySp;
     public Sprite activeSp;
     public SpriteRenderer spriteRenderer;
+    public SavingWheel savingWheel;
     
     private void Start() {
         light.color = Util.ColorFromString("#808080", 1.0f);
@@ -17,10 +18,18 @@ public class SaveSpot : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision) {
         if(collision.gameObject.CompareTag(Util.TagCollection.playerTag)) {
-            light.color = Util.ColorFromString("#FFFFFF", 1.0f);
-            spriteRenderer.sprite = activeSp;
-            GameManager.instance.autoSaveManager.Save(GameManager.instance.player.transform.position);
+            savingWheel.StartSaving(1.0f, () => {
+                light.color = Util.ColorFromString("#FFFFFF", 1.0f);
+                spriteRenderer.sprite = activeSp;
+                GameManager.instance.autoSaveManager.Save(GameManager.instance.player.transform.position);
+            });
         }        
+    }
+
+    public void OnTriggerExit2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag(Util.TagCollection.playerTag)) {
+            savingWheel.Stop();
+        }
     }
 
 }
