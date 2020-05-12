@@ -10,7 +10,7 @@ public class Stab : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(Util.TagCollection.playerTag))
         {
-            GameManager.instance.player.BeAttackedAndBeatBack(-GameManager.instance.player.dir, 5, 7, attack);
+            GameManager.instance.player.BeAttackedAndBeatBackNormal(5, 7, attack);
             GameManager.instance.player.BeAttacked(attack);
         }
     }

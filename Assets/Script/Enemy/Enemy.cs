@@ -41,7 +41,6 @@ public class Enemy : MonoBehaviour {
     private bool isAttacking = false;
     private bool isHurt = false;
 
-    [HideInInspector]
     public EnemyType type;
 
     [Header("巡逻属性")]
@@ -111,7 +110,6 @@ public class Enemy : MonoBehaviour {
     public virtual void UpdateState() {
         if (hasSlider)
             hpSlider.transform.localScale = new Vector2(-dir, 1.0f);
-
     }
 
     public virtual bool ShouldChase() {

@@ -9,14 +9,22 @@ public class RingControl : MonoBehaviour
     public Animator anim;
 
     private void Update() {
-        if(Input.GetMouseButtonDown(1)) {
+
+        if (GameManager.instance.player.dir == 1) {
+            transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        } else if (GameManager.instance.player.dir == -1) {
+            transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
+        }
+
+
+        if (Input.GetMouseButtonDown(1)) {
             ring.enabled = true;
             arrow.enabled = true;
-            anim.enabled = true;
+            anim.SetBool("show", true);
         } else if(Input.GetMouseButtonUp(1)) {
             ring.enabled = true;
             arrow.enabled = true;
-            anim.enabled = false;
+            anim.SetBool("show", false);
         } else if(Input.GetMouseButton(1)) {
             Vector3 screenPos = Camera.main.WorldToScreenPoint(arrow.transform.position);
             float xDiff = Input.mousePosition.x - screenPos.x;

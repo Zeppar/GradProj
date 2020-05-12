@@ -12,7 +12,7 @@ public class AttackScreenEffect : MonoBehaviour
     private bool isShow = false;
 
     public void Show() {
-        if (isShow)
+        if (isShow && selfImage.color.a > 0.5f)
             return;
         isShow = true;
         gameObject.SetActive(true);

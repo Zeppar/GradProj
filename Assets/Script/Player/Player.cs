@@ -172,7 +172,7 @@ public class Player : MonoBehaviour {
             SetAttackVal(0);
         }
 
-        if (Input.GetKeyDown(Util.KeyCollection.Attack)) {
+        if (Input.GetMouseButtonDown(0)) {
             if (currentState.IsName(Util.PlayerAnimCollection.jump) && attackCount == 0) {
                 AddVertVelocity(7.5f);
                 SetAttackVal(4);
@@ -260,10 +260,10 @@ public class Player : MonoBehaviour {
         moveInput = Input.GetAxisRaw("Horizontal");
 
         if (moveInput > 0) {
-            transform.localScale = new Vector2(Math.Abs(transform.localScale.x), transform.localScale.y);
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
             dir = 1;
         } else if (moveInput < 0) {
-            transform.localScale = new Vector2(-Math.Abs(transform.localScale.x), transform.localScale.y);
+            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
             dir = -1;
         }
 
@@ -334,13 +334,17 @@ public class Player : MonoBehaviour {
         Invoke("ResetHurtState", 0.4f);
     }
 
+    public void BeAttackedAndBeatBackNormal(float xForce, float yForce, float attackVal) {
+        BeAttackedAndBeatBack(-dir, xForce, yForce, attackVal);
+    }
+
     private void ResetHurtState() {
         isHurt = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag(Util.TagCollection.enemyTag) && !isGrounded && attackCount != 6) {
-            BeAttackedAndBeatBack(-dir, 10, 3, collision.gameObject.GetComponent<Enemy>().attack);
+            BeAttackedAndBeatBackNormal(10, 3, collision.gameObject.GetComponent<Enemy>().attack);
         }
     }
 }

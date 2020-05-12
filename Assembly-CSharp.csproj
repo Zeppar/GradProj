@@ -570,7 +570,7 @@
     <Compile Include="Assets\Script\Player\PlayerLight.cs" />
     <Compile Include="Assets\Script\Terrain\BossEnter.cs" />
     <Compile Include="Assets\Script\Terrain\Gear\Gear.cs" />
-    <Compile Include="Assets\Script\Terrain\Gear\RotationGear.cs" />
+    <Compile Include="Assets\Script\Terrain\Gear\Rotater.cs" />
     <Compile Include="Assets\Script\Terrain\LaserGin.cs" />
     <Compile Include="Assets\Script\Terrain\Magma.cs" />
     <Compile Include="Assets\Script\Terrain\MoveCube.cs" />
