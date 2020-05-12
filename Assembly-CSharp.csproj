@@ -552,6 +552,7 @@
     <Compile Include="Assets\Script\Managers\GameManager.cs" />
     <Compile Include="Assets\Script\Managers\GameSaveManger.cs" />
     <Compile Include="Assets\Script\Managers\GoodManager.cs" />
+    <Compile Include="Assets\Script\Managers\KeyManager.cs" />
     <Compile Include="Assets\Script\Managers\LevelManager.cs" />
     <Compile Include="Assets\Script\Managers\LightManager.cs" />
     <Compile Include="Assets\Script\Managers\ObjectPool.cs" />
@@ -591,8 +592,11 @@
     <Compile Include="Assets\Script\UI\HPPanel.cs" />
     <Compile Include="Assets\Script\UI\HelpButton.cs" />
     <Compile Include="Assets\Script\UI\HelpPanel.cs" />
+    <Compile Include="Assets\Script\UI\KeyCount.cs" />
+    <Compile Include="Assets\Script\UI\KeySetPanel.cs" />
     <Compile Include="Assets\Script\UI\LevelUpPanel.cs" />
     <Compile Include="Assets\Script\UI\OwnItemTip.cs" />
+    <Compile Include="Assets\Script\UI\PausePanel.cs" />
     <Compile Include="Assets\Script\UI\QuickSkillItem.cs" />
     <Compile Include="Assets\Script\UI\QuickSkillPanel.cs" />
     <Compile Include="Assets\Script\UI\RollCredits.cs" />
@@ -633,6 +637,7 @@
     <None Include="Assets\Texture\Effects\wills_pixel_explosions_sample\vertical_explosion_small\spritesheet\spritesheet.txt" />
     <None Include="Assets\3rd\Plus\unity-ui-extensions\Shaders\UI Particle Blend.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Shader\ImageGreyShader.shader" />
     <None Include="Assets\Texture\Medieval_pixel_art_asset_FREE\pixel_snapping_README.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Texture\Effects\wills_pixel_explosions_sample\vertical_explosion\spritesheet\spritesheet.txt" />

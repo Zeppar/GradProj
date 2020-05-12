@@ -1,0 +1,22 @@
+﻿[
+	{
+		"id":"Attack",
+		"key":106,
+		"motd":"攻击"
+	},
+	{
+		"id":"Dash",
+		"key":107,
+		"motd":"冲刺"
+	},	
+	{
+		"id":"Jump",
+		"key":119,
+		"motd":"跳跃"
+	},
+	{
+		"id":"OpenBag",
+		"key":98,
+		"motd":"背包"
+	}
+]

@@ -45,10 +45,14 @@ public static class Util {
 
     public static class KeyCollection
     {
-        public static KeyCode Jump = KeyCode.W;
-        public static KeyCode Dash = KeyCode.K;
-        public static KeyCode Attack = KeyCode.J;
-        public static KeyCode OpenBag = KeyCode.B;
+        public static string Jump = "Jump";
+        public static string Dash = "Dash";
+        public static string Attack = "Attack";
+        public static string OpenBag = "OpenBag";
+      //  public static KeyCode Jump = KeyCode.W;
+      //  public static KeyCode Dash = KeyCode.K;
+      //  public static KeyCode Attack = KeyCode.J;
+      //  public static KeyCode OpenBag = KeyCode.B;
     }
 
     public static class PlayerAnimCollection {

@@ -1,17 +1,16 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Managers/EnemyManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Player/Player.cs">
     <Files>
-      <File FileName="Assets/Script/Player/Player.cs" Line="302" Column="44" />
-      <File FileName="Assets/Script/Item/RingControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Enemy/Enemy.cs" Line="8" Column="13" />
+      <File FileName="Assets/Script/Player/Player.cs" Line="177" Column="28" />
+      <File FileName="Assets/Script/Item/RingControl.cs" />
+      <File FileName="Assets/Script/Enemy/Enemy.cs" />
       <File FileName="Assets/Script/Enemy/EnemyGround.cs" />
-      <File FileName="Assets/Script/Terrain/Gear/RotateGear.cs" Line="28" Column="44" />
       <File FileName="Assets/Script/Util/Util.cs" />
       <File FileName="Assets/Script/Terrain/Stab.cs" />
-      <File FileName="Assets/Script/Terrain/Gear/Gear.cs" Line="10" Column="91" />
+      <File FileName="Assets/Script/Terrain/Gear/Gear.cs" />
       <File FileName="Assets/Script/Common/MagicElf.cs" />
       <File FileName="Assets/Script/Managers/EnergyManager.cs" />
-      <File FileName="Assets/Script/UI/AttackScreenEffect.cs" Line="15" Column="44" />
+      <File FileName="Assets/Script/UI/AttackScreenEffect.cs" />
       <File FileName="Assets/Script/Managers/EnemyManager.cs" Line="47" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
@@ -20,7 +19,7 @@
     <String>Assembly-CSharp-firstpass.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1431472c-99af-4af5-864a-8301cb39fa28" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6783aca1-fe21-4692-ae92-e615e2ec07b9" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

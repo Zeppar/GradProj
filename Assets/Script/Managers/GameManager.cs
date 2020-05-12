@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
     public EnergyManager energyManager = new EnergyManager(0, 100.0f);
     public LevelManager levelManager = new LevelManager();
     public AutoSaveManager autoSaveManager = new AutoSaveManager();
+    public KeyManager keyManager = new KeyManager();
 
     public Player player;//玩家脚本
 
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour {
     public SkillParticleCreator skillParticleCreator;//技能特效创建器
     public SkillActionManager skillActionManager;
     public EffectManager effectManager;
-
+    
 
 
     public CinemachineVirtualCamera virtualCamera;
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour {
         skillManager.InitSkill();
         goodManager.InitGoods();
         enemyManager.InitEnemy();
+        keyManager.Init();
         skillActionManager.InitSkillCallback();
         levelManager.Init();
         InitUI();
