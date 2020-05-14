@@ -13,7 +13,6 @@ public class UIManager : MonoBehaviour {
     public DescribeAlert describeAlert;
 
     [Header("面板物体")]
-    public CheatPanel cheatPanel;
     public HPBarPanel hpBarPanel;
 
     [Header("死亡界面")]
@@ -35,6 +34,9 @@ public class UIManager : MonoBehaviour {
     public QuickSkillPanel quickSkillPanel;
     public PausePanel pausePanel;
     public KeySetPanel keySetPanel;
+    public CheatPanel cheatPanel;
+
+    public CodePanel codePanel;
 
     private void Awake() {
         instance = this;
@@ -43,6 +45,7 @@ public class UIManager : MonoBehaviour {
     public void Init()
     {
         bagPanel.Init();
+        cheatPanel.Init();
     }
 
     public void ShowHPUI(Enemy enemy, int hp) {

@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour {
 
     public Transform spawn;
 
+    public GameObject MiniMap;
+
     public bool gameStart;
     public bool showEndPoint;
 
@@ -47,17 +49,26 @@ public class GameManager : MonoBehaviour {
         keyManager.Init();
         skillActionManager.InitSkillCallback();
         levelManager.Init();
-        InitUI();
         InitPlayer(spawn.position);
+        InitUI();
+        InitMiniMap();
     }
 
-    void Start() {
-      
+    void InitMiniMap()
+    {
+        if(MiniMap != null)
+        {
+            MiniMap.SetActive(true);
+        }
     }
 
     void InitUI() {
         UIManager ui = Instantiate(Resources.Load("UI/UIManager") as GameObject).GetComponent<UIManager>();
         ui.Init();
+    }
+    public IEnumerator Wait(float t)
+    {
+        yield return new WaitForSeconds(t);
     }
 
     public void InitPlayer(Vector3 pos) {
