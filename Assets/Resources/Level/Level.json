@@ -1,15 +1,29 @@
-[{
-	"id": 0,
-	"DashEnable":false,
-	"BagEnable":false
-},
-{
-	"id": 1,
-	"DashEnable":true,
-	"BagEnable":true
-},
-{
-	"id": 2,
-	"DashEnable":true,
-	"BagEnable":true
-}]
+[
+	{
+		"id": 0,
+		"DashEnable": false,
+		"BagEnable": false,
+		"minLight": 0.2,
+		"maxAddLight": 0.1,
+		"lightDecrease": -0.1,
+        "lightDecreaseTime": 0.1
+	},
+	{
+		"id": 1,
+		"DashEnable": true,
+		"BagEnable": true,
+		"minLight": 0.15,
+		"maxAddLight": 0.1,
+		"lightDecrease": -0.12,
+		"lightDecreaseTime": 0.1
+	},
+	{
+		"id": 2,
+		"DashEnable": true,
+		"BagEnable": true,
+		"minLight": 0.1,
+		"maxAddLight": 0.1,
+		"lightDecrease": -0.15,
+		"lightDecreaseTime": 0.1
+	}
+]

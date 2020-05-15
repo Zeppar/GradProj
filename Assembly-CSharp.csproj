@@ -531,12 +531,12 @@
     <Compile Include="Assets\Script\Enemy\EnemyBoss.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyGround.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyWarrior.cs" />
+    <Compile Include="Assets\Script\Item\Crystal.cs" />
     <Compile Include="Assets\Script\Item\FireBallExplosion.cs" />
     <Compile Include="Assets\Script\Item\Fireball.cs" />
     <Compile Include="Assets\Script\Item\GetItemLightEffect.cs" />
     <Compile Include="Assets\Script\Item\LevelWin.cs" />
     <Compile Include="Assets\Script\Item\LightBall.cs" />
-    <Compile Include="Assets\Script\Item\LightCrystal.cs" />
     <Compile Include="Assets\Script\Item\ObjectPoolItem.cs" />
     <Compile Include="Assets\Script\Item\PlayerShadow.cs" />
     <Compile Include="Assets\Script\Item\RingControl.cs" />
@@ -577,7 +577,6 @@
     <Compile Include="Assets\Script\Terrain\MoveCube.cs" />
     <Compile Include="Assets\Script\Terrain\Platform.cs" />
     <Compile Include="Assets\Script\Terrain\Stab.cs" />
-    <Compile Include="Assets\Script\Terrain\TopTipTrigger.cs" />
     <Compile Include="Assets\Script\UI\AttackScreenEffect.cs" />
     <Compile Include="Assets\Script\UI\BagItem.cs" />
     <Compile Include="Assets\Script\UI\BagPanel.cs" />
@@ -587,8 +586,8 @@
     <Compile Include="Assets\Script\UI\EnemyHpCanvas.cs" />
     <Compile Include="Assets\Script\UI\EnergyPanel.cs" />
     <Compile Include="Assets\Script\UI\GameOverPanel.cs" />
+    <Compile Include="Assets\Script\UI\GetItemCanvas.cs" />
     <Compile Include="Assets\Script\UI\GoodItem.cs" />
-    <Compile Include="Assets\Script\UI\HPBarPanel.cs" />
     <Compile Include="Assets\Script\UI\HPPanel.cs" />
     <Compile Include="Assets\Script\UI\HelpButton.cs" />
     <Compile Include="Assets\Script\UI\HelpPanel.cs" />
@@ -601,6 +600,7 @@
     <Compile Include="Assets\Script\UI\QuickSkillPanel.cs" />
     <Compile Include="Assets\Script\UI\RollCredits.cs" />
     <Compile Include="Assets\Script\UI\TopTip.cs" />
+    <Compile Include="Assets\Script\UI\TopTipTrigger.cs" />
     <Compile Include="Assets\Script\UI\eff\Screeneff.cs" />
     <Compile Include="Assets\Script\Util\BackgroundParallax.cs" />
     <Compile Include="Assets\Script\Util\Util.cs" />

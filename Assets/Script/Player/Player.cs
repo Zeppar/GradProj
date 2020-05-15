@@ -81,11 +81,11 @@ public class Player : MonoBehaviour {
     private IEnumerator ChangeEnergy() {
         while (true) {
             if (GameManager.instance.energyManager.inEnergyInCrease) {
-                GameManager.instance.energyManager.IncreaseEnergy(0.2f);
+                GameManager.instance.energyManager.IncreaseEnergy(0.5f);
                 yield return null;
             } else {
-                GameManager.instance.energyManager.ChangeEnergy(-0.1f);
-                yield return new WaitForSecondsRealtime(0.1f);
+                GameManager.instance.energyManager.ChangeEnergy(GameManager.instance.levelManager.currentInfo.lightDecrease);
+                yield return new WaitForSecondsRealtime(GameManager.instance.levelManager.currentInfo.lightDecreaseTime);
             }
         }
     }
@@ -135,7 +135,8 @@ public class Player : MonoBehaviour {
         }
 
 
-        if (Input.GetKeyDown(GameManager.instance.keyManager.FindKey(Util.KeyCollection.Dash).keyCode) && !isDash && Mathf.Approximately(dashCDRemain, 0)) {
+        if (Input.GetKeyDown(GameManager.instance.keyManager.FindKey(Util.KeyCollection.Dash).keyCode) && !isDash
+            && Mathf.Approximately(dashCDRemain, 0) && GameManager.instance.levelManager.currentInfo.dashEnable) {
             isDash = true;
             SoundManager.instance.PlayEffect(Util.ClipNameCollection.dash);
             GameManager.instance.effectManager.ShakeCamera();

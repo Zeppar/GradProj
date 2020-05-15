@@ -20,7 +20,7 @@ public class UIKeyManager : MonoBehaviour
     public void OpenPanel(GameObject gameObject, KeyCode keyCode, bool canInvoke = true) {
         if (!canInvoke)
             return;
-        if (Input.GetKeyUp(keyCode))
+        if (Input.GetKeyDown(keyCode))
             gameObject.SetActive(!gameObject.activeSelf);
     }
 }

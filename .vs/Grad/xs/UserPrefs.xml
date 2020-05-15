@@ -1,11 +1,24 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Managers/UIKeyManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Common/MagicElf.cs">
     <Files>
-      <File FileName="Assets/Script/UI/KeyItem.cs" Line="48" Column="20" />
-      <File FileName="Assets/Script/UI/KeySetPanel.cs" Line="20" Column="10" />
-      <File FileName="Assets/Script/Managers/KeyManager.cs" Line="9" Column="28" />
-      <File FileName="Assets/Script/Managers/GameManager.cs" Line="18" Column="18" />
-      <File FileName="Assets/Script/Managers/UIKeyManager.cs" Line="16" Column="68" />
+      <File FileName="Assets/Resources/Level/Level.json" Line="12" Column="11" />
+      <File FileName="Assets/Script/Managers/UIManager.cs" />
+      <File FileName="Assets/Script/Util/Util.cs" />
+      <File FileName="Assets/Script/Managers/SkillParticleCreator.cs" />
+      <File FileName="Assets/Script/Player/AttackChecker.cs" />
+      <File FileName="Assets/Script/UI/EnemyHpCanvas.cs" />
+      <File FileName="Assets/Script/Player/Player.cs" />
+      <File FileName="Assets/Script/Managers/LevelManager.cs" />
+      <File FileName="Assets/Script/Managers/GameManager.cs" />
+      <File FileName="Assets/Script/UI/LevelUpPanel.cs" />
+      <File FileName="Assets/Script/Common/FunctionInvoker.cs" />
+      <File FileName="Assets/Script/UI/TopTip.cs" />
+      <File FileName="Assets/Script/Item/SkillStone.cs" />
+      <File FileName="Assets/Script/Managers/SkillStoneCreator.cs" />
+      <File FileName="Assets/Script/Enemy/Enemy.cs" />
+      <File FileName="Assets/Script/UI/HelpPanel.cs" />
+      <File FileName="Assets/Script/Common/MagicElf.cs" Line="55" Column="26" />
+      <File FileName="Assets/Script/Item/RingControl.cs" Line="31" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -13,7 +26,7 @@
     <String>Assembly-CSharp-firstpass.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6783aca1-fe21-4692-ae92-e615e2ec07b9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e78665ce-26d4-4b6b-bc8f-46df0759d8f0" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

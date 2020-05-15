@@ -5,7 +5,7 @@ using UnityEngine;
 public class SkillStoneCreator : MonoBehaviour {
     public SkillStone skillStonePerfab;
 
-    public void CreateSkillStone(int id, Vector2 pos) {
+    public void CreateSkillStone(int id, Vector2 pos, bool addSkill) {
         SkillInfo info = GameManager.instance.skillManager.FindSkillWithID(id);
         if (info == null) {
             Debug.LogError("Skill Info Is Null");
@@ -14,5 +14,6 @@ public class SkillStoneCreator : MonoBehaviour {
         SkillStone skillStone = ObjectPool.instance.GetItem(Util.ObjectItemNameCollection.skillStone).GetComponent<SkillStone>();
         skillStone.transform.position = pos;
         skillStone.skillInfo = info;
+        skillStone.addSkill = addSkill;
     }
 }

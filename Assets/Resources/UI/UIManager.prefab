@@ -2557,10 +2557,9 @@ MonoBehaviour:
   bagPanel: {fileID: 1808349836297614400}
   describeAlert: {fileID: 8392326249401203141}
   cheatPanel: {fileID: 2143890641743575766}
-  hpBarPanel: {fileID: 0}
   gameOverPanel: {fileID: 5083366721715879133}
   helpPanel: {fileID: 2513419837087797216}
-  hpPanelParent: {fileID: 2724342980906629615}
+  UIPanelParent: {fileID: 2724342980906629615}
   goodItemMidParent: {fileID: 6562554599676738731}
   screenEffect: {fileID: 2838268906723068463}
   comboPanel: {fileID: 8952450771307992481}
@@ -5092,7 +5091,7 @@ GameObject:
   - component: {fileID: 2724342980906629615}
   - component: {fileID: 2829313962621439956}
   m_Layer: 0
-  m_Name: EnemyHpParent
+  m_Name: UIParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -58,7 +58,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817283901076952785}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 55.1, y: 10.3, z: 73.7301}
   m_LocalScale: {x: -7, y: 7, z: 1}
   m_Children:
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -856930235
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: f240dfd4814d34d55a9b033f3c9d8a60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -129,24 +129,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07c36c4139a3d2042921018ba6d14331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 200
+  id: 1
+  level: 1
   speed: 5
   dir: -1
   attack: 7
   scaleMulti: 0
   type: 1
-  dead: 0
-  chaseDis: 20
-  attackRange: 10
-  hasSlider: 1
   hpSlider: {fileID: 5016962182378768980}
   attackChecker: {fileID: 0}
+  attackPoint: {fileID: 1817283899416620840}
+  hasSlider: 1
+  chaseDis: 20
+  attackRange: 15
   attackInterval: 3
   originInterval: 3
   lastAttackTime: 0
   anim: {fileID: 0}
   rb: {fileID: 0}
-  attackPoint: {fileID: 1817283899416620840}
   fallSpeed: 7.5
   chaseHeight: 0.2
   leftPos: {fileID: 0}
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.3
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

@@ -80,7 +80,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 99
 --- !u!114 &2266506437827655001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,8 +111,8 @@ MonoBehaviour:
   _gradientMode: 0
   _gradientDir: 0
   _overwriteAllColor: 0
-  _vertex1: {r: 1, g: 0, b: 0, a: 1}
-  _vertex2: {r: 1, g: 1, b: 1, a: 1}
+  _vertex1: {r: 0.6698113, g: 0, b: 0.10617608, a: 1}
+  _vertex2: {r: 1, g: 0, b: 0.05047798, a: 1}
 --- !u!114 &6792577594445974973
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ public class RingControl : MonoBehaviour
     public SpriteRenderer arrow;
     public SpriteRenderer ring;
     public Animator anim;
+    private float timer;
+    private float involerTimer = 0.5f;
 
     private void Update() {
 
@@ -25,7 +27,12 @@ public class RingControl : MonoBehaviour
             ring.enabled = true;
             arrow.enabled = true;
             anim.SetBool("show", false);
+            if(timer >= involerTimer) {
+                MagicElf.instance.StartOperation(new Vector2(2.5f, 1.5f));
+            }
+            timer = 0;
         } else if(Input.GetMouseButton(1)) {
+            timer += Time.deltaTime;
             Vector3 screenPos = Camera.main.WorldToScreenPoint(arrow.transform.position);
             float xDiff = Input.mousePosition.x - screenPos.x;
             float yDiff = Input.mousePosition.y - screenPos.y;

@@ -95,10 +95,10 @@ TextureImporter:
       name: Trees_0
       rect:
         serializedVersion: 2
-        x: 34
+        x: 31
         y: 0
-        width: 57
-        height: 77
+        width: 64
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,10 +116,10 @@ TextureImporter:
       name: Trees_1
       rect:
         serializedVersion: 2
-        x: 167
+        x: 166
         y: 0
-        width: 62
-        height: 108
+        width: 64
+        height: 112
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

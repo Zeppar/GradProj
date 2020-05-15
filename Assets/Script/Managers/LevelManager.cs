@@ -7,6 +7,10 @@ public class LevelInfo {
     public int id;
     public bool dashEnable;
     public bool bagEnable;
+    public float minLight;
+    public float maxAddLight;
+    public float lightDecrease;
+    public float lightDecreaseTime;
 }
 
 public class LevelManager
@@ -22,6 +26,10 @@ public class LevelManager
             info.id = (int)data[i]["id"];
             info.dashEnable = (bool)data[i]["DashEnable"];
             info.bagEnable = (bool)data[i]["BagEnable"];
+            info.minLight = (float)data[i]["minLight"];
+            info.maxAddLight = (float)data[i]["maxAddLight"];
+            info.lightDecrease = (float)data[i]["lightDecrease"];
+            info.lightDecreaseTime = (float)data[i]["lightDecreaseTime"];
             list.Add(info);
             if (i == 0)
                 currentInfo = info;

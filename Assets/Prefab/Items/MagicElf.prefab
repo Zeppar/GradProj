@@ -4736,6 +4736,17 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!210 &1876105674
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8256921238188577415}
+  m_Enabled: 1
+  m_SortingLayerID: -1195337459
+  m_SortingLayer: 3
+  m_SortingOrder: -1
 --- !u!1 &8856797620099831633
 GameObject:
   m_ObjectHideFlags: 0
@@ -4747,7 +4758,8 @@ GameObject:
   - component: {fileID: 8856797620099831632}
   - component: {fileID: 8856797620099831639}
   - component: {fileID: 8346618298844181706}
-  - component: {fileID: 723441333}
+  - component: {fileID: 4553587926504270407}
+  - component: {fileID: 8815736900015619478}
   m_Layer: 0
   m_Name: MagicElf
   m_TagString: Untagged
@@ -4808,8 +4820,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1195337459
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 677959494bb50b548b2ad65e223ac6d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4857,18 +4869,55 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8856797620099831639}
   particleSystem: {fileID: 1153742282984078013}
   light: {fileID: 8856797620322037433}
-  speed: 12
---- !u!210 &723441333
-SortingGroup:
+  speed: 10
+  isMoving: 0
+--- !u!50 &4553587926504270407
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8856797620099831633}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &8815736900015619478
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8856797620099831633}
   m_Enabled: 1
-  m_SortingLayerID: -1195337459
-  m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!1 &8856797620322037435
 GameObject:
   m_ObjectHideFlags: 0
@@ -4879,6 +4928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8856797620322037434}
   - component: {fileID: 8856797620322037433}
+  - component: {fileID: 341602139}
   m_Layer: 0
   m_Name: Point Light 2D
   m_TagString: Untagged
@@ -4941,6 +4991,17 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!210 &341602139
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8856797620322037435}
+  m_Enabled: 1
+  m_SortingLayerID: -1195337459
+  m_SortingLayer: 3
+  m_SortingOrder: 0
 --- !u!1001 &8256921238188482899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5006,6 +5067,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95788260895fe5e488821775f8ab98ab, type: 3}
+--- !u!1 &8256921238188577415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 111572, guid: 95788260895fe5e488821775f8ab98ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 8256921238188482899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8256921238188604377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416394, guid: 95788260895fe5e488821775f8ab98ab,

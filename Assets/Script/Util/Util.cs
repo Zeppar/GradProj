@@ -12,21 +12,22 @@ public static class Util {
     // data
     public static Dictionary<string, int> objectInitCountDict = new Dictionary<string, int> {
         { ObjectItemNameCollection.playerDash, 10},
-        { ObjectItemNameCollection.bossFireBall, 5},
-        { ObjectItemNameCollection.enemyHpCanvas, 10},
+        { ObjectItemNameCollection.bossFireBall, 3},
+        { ObjectItemNameCollection.enemyHpCanvas, 5},
         { ObjectItemNameCollection.getItemEffect, 2},
         { ObjectItemNameCollection.playerShadow, 2},
-        { ObjectItemNameCollection.enemyDie, 5},
+        { ObjectItemNameCollection.enemyDie, 2},
         { ObjectItemNameCollection.blood, 5},
         { ObjectItemNameCollection.bossFireBallRain, 10},
-        { ObjectItemNameCollection.playerFireBall, 5},
-        { ObjectItemNameCollection.enemyFireBall, 5},
+        { ObjectItemNameCollection.playerFireBall, 2},
+        { ObjectItemNameCollection.enemyFireBall, 3},
         { ObjectItemNameCollection.bossFireBallExplosion, 3},
         { ObjectItemNameCollection.enemyFireBallExplosion, 3},
-        { ObjectItemNameCollection.playerFireBallExplosion, 3},
+        { ObjectItemNameCollection.playerFireBallExplosion, 2},
         { ObjectItemNameCollection.getItemLightEffect, 3},
         { ObjectItemNameCollection.skillStone, 3},
-        { ObjectItemNameCollection.lightBall, 2}
+        { ObjectItemNameCollection.lightBall, 2},
+        { ObjectItemNameCollection.getItemCanvas, 1}
     };
     //type
     public delegate void NoParmsCallBack();
@@ -102,6 +103,7 @@ public static class Util {
         public static string bossFireBallExplosion = "BossFireBallExplosion";
         public static string skillStone = "SkillStone";
         public static string lightBall = "LightBall";
+        public static string getItemCanvas = "GetItemCanvas";
     }
 
     // function

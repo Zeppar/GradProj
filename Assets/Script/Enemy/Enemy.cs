@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour {
     private bool isHurt = false;
 
     public EnemyType type;
+    public bool addSkill;
 
     [Header("巡逻属性")]
     public Slider hpSlider;
@@ -173,7 +174,7 @@ public class Enemy : MonoBehaviour {
     public virtual void Die() {
         dead = true;
         int skillID = UnityEngine.Random.Range(0, GameManager.instance.skillManager.skillDict.Count);
-        GameManager.instance.skillStoneCreator.CreateSkillStone(skillID, transform.position);
+        GameManager.instance.skillStoneCreator.CreateSkillStone(skillID, transform.position, addSkill);
         GameManager.instance.skillParticleCreator.CreateEffect(transform.position, Util.ObjectItemNameCollection.enemyDie);
     }
 
