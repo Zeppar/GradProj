@@ -107,6 +107,7 @@ MonoBehaviour:
   dir: -1
   attack: 3
   scaleMulti: 0
+  LevelText: {fileID: 2797731757501939428}
   type: 0
   hpSlider: {fileID: 8330678033537722217}
   attackChecker: {fileID: 1504209850}
@@ -119,6 +120,7 @@ MonoBehaviour:
   lastAttackTime: 0
   anim: {fileID: 0}
   rb: {fileID: 0}
+  Canvas: {fileID: 8330678033589460524}
   feetPos: {fileID: 2579605402278975913}
   contactFilter:
     useTriggers: 0

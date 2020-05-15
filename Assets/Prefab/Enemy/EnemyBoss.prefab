@@ -153,27 +153,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6f22367d1304bdd88b397bf346373f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 300
+  id: 0
+  level: 1
   speed: 4
   dir: -1
   attack: 10
   scaleMulti: 0
+  LevelText: {fileID: 0}
   type: 0
-  dead: 0
-  chaseDis: 5
-  attackRange: 2
-  hasSlider: 0
   hpSlider: {fileID: 0}
   attackChecker: {fileID: 7048938449090796546}
+  attackPoint: {fileID: 7150860828015446486}
+  hasSlider: 0
+  chaseDis: 5
+  attackRange: 2
   attackInterval: 0.9
   originInterval: 0.8
   lastAttackTime: 0
   anim: {fileID: 0}
   rb: {fileID: 0}
-  attackPoint: {fileID: 7150860828015446486}
   feetPos: {fileID: 7048938449750120818}
-  onGround: 1
-  canSeek: 1
   contactFilter:
     useTriggers: 0
     useLayerMask: 0

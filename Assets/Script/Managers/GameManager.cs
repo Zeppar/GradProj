@@ -66,10 +66,6 @@ public class GameManager : MonoBehaviour {
         UIManager ui = Instantiate(Resources.Load("UI/UIManager") as GameObject).GetComponent<UIManager>();
         ui.Init();
     }
-    public IEnumerator Wait(float t)
-    {
-        yield return new WaitForSeconds(t);
-    }
 
     public void InitPlayer(Vector3 pos) {
         if (virtualCamera == null) {

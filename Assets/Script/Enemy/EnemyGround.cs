@@ -27,6 +27,7 @@ public class EnemyGround : Enemy
     }
 
     public override void UpdateState() {
+        base.UpdateState();
         //isGrounded = feetCollider.IsTouchingLayers(LayerMask.GetMask(Util.LayerCollection.groundLayer));
         onGround = Physics2D.OverlapCircle(feetPos.position, 2.0f, LayerMask.GetMask(Util.LayerCollection.groundLayer));
     }
