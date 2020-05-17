@@ -30,13 +30,16 @@ public class GameManager : MonoBehaviour {
 
     public Transform spawn;
 
+    public GameObject MiniMap;
+
     public bool gameStart;
     public bool showEndPoint;
+    public bool disableInput;
 
     void Awake() {
         if (instance == null) {
             instance = this;
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         } else if (instance != this) {
             Destroy(gameObject);
         }
@@ -47,12 +50,8 @@ public class GameManager : MonoBehaviour {
         keyManager.Init();
         skillActionManager.InitSkillCallback();
         levelManager.Init();
-        InitUI();
         InitPlayer(spawn.position);
-    }
-
-    void Start() {
-      
+        InitUI();
     }
 
     void InitUI() {

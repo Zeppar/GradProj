@@ -38,7 +38,7 @@ public class LevelManager
 
     public void EnterNextLevel() {
         try {
-            currentInfo = list[currentInfo.id];
+            currentInfo = list[list.IndexOf(currentInfo) + 1];
         } catch {
             Debug.LogError("Can't find next level");
         }

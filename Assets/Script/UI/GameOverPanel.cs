@@ -15,17 +15,20 @@ public class GameOverPanel : MonoBehaviour {
     void Start() {
         retryBtn.onClick.AddListener(() => {
             GameManager.instance.ReLoadLevel();
+            gameObject.SetActive(false);
             //gameObject.SetActiveFast(false);
             //GameManager.instance.InitPlayer(GameManager.instance.spawn.position);
         });
         quitBtn.onClick.AddListener(() => {
             GameManager.instance.LoadLevel(0);
+            gameObject.SetActive(false);
         });
         rebornBtn.onClick.AddListener(() => {
             if (!GameManager.instance.autoSaveManager.hasSaved)
                 return;
             gameObject.SetActiveFast(false);
             GameManager.instance.InitPlayer(GameManager.instance.autoSaveManager.rebornPos);
+            gameObject.SetActive(false);
         });
     }
 

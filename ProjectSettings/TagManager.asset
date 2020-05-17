@@ -31,7 +31,7 @@ TagManager:
   - Player
   - PlayerDash
   - Obstract
-  - 
+  - MiniMap
   - 
   - 
   - 
@@ -71,4 +71,7 @@ TagManager:
     locked: 0
   - name: 3DUI
     uniqueID: 2763315927
+    locked: 0
+  - name: MiniMap
+    uniqueID: 2207136901
     locked: 0

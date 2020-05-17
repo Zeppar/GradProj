@@ -26,6 +26,8 @@ public class Enemy : MonoBehaviour {
     public int attack = 7;
     [HideInInspector]
     public float scaleMulti;
+
+    public Text LevelText;
     public int HP {
         get { return _HP; }
         set {
@@ -65,7 +67,7 @@ public class Enemy : MonoBehaviour {
     public Animator anim;
     [HideInInspector]
     public Rigidbody2D rb;
-    
+    public GameObject Canvas;
 
 
     public virtual void Start() {
@@ -89,6 +91,8 @@ public class Enemy : MonoBehaviour {
         hasSlider = enemyInfo.hasSlider;
         type = enemyInfo.type;
         HP = maxHP;
+
+        LevelText .text= level.ToString();
     }
 
     public virtual void Begin() {
@@ -109,8 +113,8 @@ public class Enemy : MonoBehaviour {
 
 
     public virtual void UpdateState() {
-        if (hasSlider)
-            hpSlider.transform.localScale = new Vector2(-dir, 1.0f);
+     
+            Canvas.transform.localScale = new Vector2(-dir * 0.001f, -0.001f);
     }
 
     public virtual bool ShouldChase() {

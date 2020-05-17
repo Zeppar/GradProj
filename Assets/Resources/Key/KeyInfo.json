@@ -18,5 +18,15 @@
 		"id":"OpenBag",
 		"key":98,
 		"motd":"背包"
+	},
+	{
+		"id":"Enter",
+		"key":13,
+		"motd":"确认"
+	},
+	{
+		"id":"Cheat",
+		"key":96,
+		"motd":"命令行"
 	}
 ]

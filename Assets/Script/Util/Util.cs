@@ -50,6 +50,8 @@ public static class Util {
         public static string Dash = "Dash";
         public static string Attack = "Attack";
         public static string OpenBag = "OpenBag";
+        public static string Enter = "Enter";
+        public static string Cheat = "Cheat";
       //  public static KeyCode Jump = KeyCode.W;
       //  public static KeyCode Dash = KeyCode.K;
       //  public static KeyCode Attack = KeyCode.J;

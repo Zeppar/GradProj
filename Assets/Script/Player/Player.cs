@@ -91,7 +91,7 @@ public class Player : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        if (!GameManager.instance.gameStart)
+        if (!GameManager.instance.gameStart || GameManager.instance.disableInput)
             return;
         UpdateGroundState();
         Move();
@@ -101,7 +101,7 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
-        if (!GameManager.instance.gameStart)
+        if (!GameManager.instance.gameStart || GameManager.instance.disableInput)
             return;
         UpdateState();
         AirAttack();
@@ -133,7 +133,6 @@ public class Player : MonoBehaviour {
             dashCDRemain -= Time.fixedDeltaTime;
             dashCDRemain = Mathf.Max(dashCDRemain, 0);
         }
-
 
         if (Input.GetKeyDown(GameManager.instance.keyManager.FindKey(Util.KeyCollection.Dash).keyCode) && !isDash
             && Mathf.Approximately(dashCDRemain, 0) && GameManager.instance.levelManager.currentInfo.dashEnable) {
