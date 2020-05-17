@@ -577,6 +577,7 @@
     <Compile Include="Assets\Script\Terrain\Platform.cs" />
     <Compile Include="Assets\Script\Terrain\Stab.cs" />
     <Compile Include="Assets\Script\Terrain\TopTipTrigger.cs" />
+    <Compile Include="Assets\Script\Terrain\Wormhole.cs" />
     <Compile Include="Assets\Script\UI\AttackScreenEffect.cs" />
     <Compile Include="Assets\Script\UI\BagItem.cs" />
     <Compile Include="Assets\Script\UI\BagPanel.cs" />
@@ -633,6 +634,7 @@
     <None Include="Assets\3rd\Plus\unity-ui-extensions\Shaders\UI Particle MultiplyDouble.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\3rd\Plus\unity-ui-extensions\Shaders\UI Particle AddMultiply.shader" />
+    <None Include="Assets\Resources\Key\视频自媒体.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
