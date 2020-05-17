@@ -114,7 +114,7 @@ public class Enemy : MonoBehaviour {
 
     public virtual void UpdateState() {
      
-            Canvas.transform.localScale = new Vector2(-dir * 0.001f, -0.001f);
+            Canvas.transform.localScale = new Vector2(dir * 0.001f, 0.001f);
     }
 
     public virtual bool ShouldChase() {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Channels;
 using UnityEngine;
 
 public class EnemyBird : Enemy {
@@ -11,9 +12,13 @@ public class EnemyBird : Enemy {
     public Transform leftPos;
     public Transform rightPos;
     private Vector2 targetPos;
+
+    public RaycastHit2D[] resultArr = new RaycastHit2D[16];
+    public ContactFilter2D contactFilter;
     public override void Start() {
         base.Start();
         targetPos = FindRandomPosition();
+        contactFilter.SetLayerMask(LayerMask.GetMask(Util.LayerCollection.groundLayer));
     }
 
     private Vector2 FindRandomPosition() {
@@ -22,7 +27,6 @@ public class EnemyBird : Enemy {
     }
 
     public override void Seek() {
-
         if (targetPos.x > transform.position.x && dir < 0) {
             dir = 1;
         } else if (targetPos.x < transform.position.x && dir > 0) {
@@ -45,6 +49,24 @@ public class EnemyBird : Enemy {
             return true;
         }
         return false;
+    }
+    public override bool ShouldChase()
+    {
+
+        RaycastHit2D hit  =  Physics2D.Raycast(transform.position, GameManager.instance.player.transform.position - transform.position, Vector2.Distance(transform.position,GameManager.instance.player.transform.position),LayerMask.GetMask("Ground"));
+        
+        if (hit.transform == null && base.ShouldChase())//TODO
+        {
+            print("true");
+            return true;
+        }
+        else
+        {
+            print("flase");
+            return false;
+        }
+ 
+
     }
 
     private float tempX, tempY;
