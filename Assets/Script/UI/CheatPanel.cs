@@ -33,4 +33,15 @@ public class CheatPanel : MonoBehaviour
         GameManager.instance.player.dashSpeed = float.Parse(dashSpeedField.text);
         GameManager.instance.player.dashCD = float.Parse(dashCDField.text);
     }
+    public void MaxHP()
+    {
+        GameManager.instance.player.HP = GameManager.instance.player.maxHP;
+    }
+    public void MaxLight() { 
+        GameManager.instance.energyManager.StartIncreate(1000);
+    }
+    public void NextLevel()
+    {
+        GameManager.instance.LevelUp();
+    }
 }

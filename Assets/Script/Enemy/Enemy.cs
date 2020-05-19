@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour {
     [HideInInspector]
     public float scaleMulti;
 
-    public Text LevelText;
+
     public int HP {
         get { return _HP; }
         set {
@@ -69,6 +69,8 @@ public class Enemy : MonoBehaviour {
     public Rigidbody2D rb;
     public GameObject Canvas;
 
+    public LevelShowPanel levelShowPanel;
+
 
     public virtual void Start() {
         ParseEnemyInfo();
@@ -91,12 +93,12 @@ public class Enemy : MonoBehaviour {
         hasSlider = enemyInfo.hasSlider;
         type = enemyInfo.type;
         HP = maxHP;
-
-        LevelText .text= level.ToString();
+        levelShowPanel.Init(level);
+     //   LevelText .text= level.ToString();
     }
 
     public virtual void Begin() {
-
+        anim = GetComponent<Animator>();
     }
 
     private void Update() {
@@ -118,7 +120,17 @@ public class Enemy : MonoBehaviour {
     }
 
     public virtual bool ShouldChase() {
-        return Vector2.Distance(GameManager.instance.player.transform.position, transform.position) < chaseDis;
+        bool IsCouldchaseByDis =  Vector2.Distance(GameManager.instance.player.transform.position, transform.position) < chaseDis;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, GameManager.instance.player.transform.position - transform.position, Vector2.Distance(transform.position, GameManager.instance.player.transform.position), LayerMask.GetMask("Ground"));
+
+        if (hit.transform == null && IsCouldchaseByDis)//TODO
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public virtual bool CanAttack() {

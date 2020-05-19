@@ -1,4 +1,5 @@
 ﻿using Cinemachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,13 @@ public class GameManager : MonoBehaviour {
     public EnergyManager energyManager = new EnergyManager(0, 100.0f);
     public LevelManager levelManager = new LevelManager();
     public AutoSaveManager autoSaveManager = new AutoSaveManager();
+
+    internal void InitInstance()
+    {
+            instance = this;
+            DontDestroyOnLoad(gameObject);   
+    }
+
     public KeyManager keyManager = new KeyManager();
 
     public Player player;//玩家脚本
@@ -37,12 +45,6 @@ public class GameManager : MonoBehaviour {
     public bool disableInput;
 
     void Awake() {
-        if (instance == null) {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        } else if (instance != this) {
-            Destroy(gameObject);
-        }
 
         skillManager.InitSkill();
         goodManager.InitGoods();
@@ -60,6 +62,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void InitPlayer(Vector3 pos) {
+        return;
         if (virtualCamera == null) {
             virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         }

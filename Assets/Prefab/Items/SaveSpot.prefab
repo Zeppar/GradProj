@@ -64,7 +64,7 @@ MonoBehaviour:
   destroySp: {fileID: 21300000, guid: 8997e129fbf55467098944544daa7da3, type: 3}
   activeSp: {fileID: 21300000, guid: c6ba0dfc6def9436c89a54bc0a2eabfc, type: 3}
   spriteRenderer: {fileID: 1341586544057664797}
-  savingWheel: {fileID: 8332033769825284398}
+  wheelTip: {fileID: 8332033769825284398}
 --- !u!61 &6233383949353579928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -346,6 +346,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 64ebb00d85b744302b53ff0e8685f829, type: 3}
   - {fileID: 21300000, guid: 911629d9a5de24129a7d9ce8c9239651, type: 3}
   showText: {fileID: 6354816187797122248}
+  doing: "\u6B63\u5728\u5B58\u6863."
+  finish: "\u5B58\u6863\u6210\u529F"
 --- !u!1 &4381148040352659792
 GameObject:
   m_ObjectHideFlags: 0
