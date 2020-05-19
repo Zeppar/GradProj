@@ -561,6 +561,7 @@
     <Compile Include="Assets\Script\Managers\SkillStoneCreator.cs" />
     <Compile Include="Assets\Script\Managers\SoundManager.cs" />
     <Compile Include="Assets\Script\Managers\UIKeyManager.cs" />
+    <Compile Include="Assets\Script\Managers\UILevelManager.cs" />
     <Compile Include="Assets\Script\Managers\UIManager.cs" />
     <Compile Include="Assets\Script\Mangers\TanTanBallManger.cs" />
     <Compile Include="Assets\Script\Player\AttackChecker.cs" />
