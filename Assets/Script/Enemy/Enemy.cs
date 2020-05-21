@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour {
     public float originInterval;
     [HideInInspector]
     public float lastAttackTime = 0;
-    [HideInInspector]
+    //[HideInInspector]
     public Animator anim;
     [HideInInspector]
     public Rigidbody2D rb;
@@ -94,11 +94,10 @@ public class Enemy : MonoBehaviour {
         type = enemyInfo.type;
         HP = maxHP;
         levelShowPanel.Init(level);
-     //   LevelText .text= level.ToString();
     }
 
     public virtual void Begin() {
-        anim = GetComponent<Animator>();
+        // do nothing
     }
 
     private void Update() {

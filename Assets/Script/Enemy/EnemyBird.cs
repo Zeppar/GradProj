@@ -49,23 +49,16 @@ public class EnemyBird : Enemy {
         }
         return false;
     }
-    public override bool ShouldChase()
-    {
+    public override bool ShouldChase() {
 
-        RaycastHit2D hit  =  Physics2D.Raycast(transform.position, GameManager.instance.player.transform.position - transform.position, Vector2.Distance(transform.position,GameManager.instance.player.transform.position),LayerMask.GetMask("Ground"));
-        
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, GameManager.instance.player.transform.position - transform.position, Vector2.Distance(transform.position, GameManager.instance.player.transform.position), LayerMask.GetMask("Ground"));
+
         if (hit.transform == null && base.ShouldChase())//TODO
         {
-            print("true");
             return true;
-        }
-        else
-        {
-            print("flase");
+        } else {
             return false;
         }
- 
-
     }
 
     private float tempX, tempY;

@@ -13,7 +13,6 @@ public class EnemyGround : Enemy
 
     public override void Start() {
         base.Start();
-        Begin();
     }
 
     public override void Begin() {

@@ -18,7 +18,7 @@ public class LevelBeginShowPoint : MonoBehaviour
         }
     }
     void Update() {
-        if (!GameManager.instance.showEndPoint) {
+        if (!GameManager.instance.showEndPoint && UIManager.instance != null) {
             UIManager.instance.helpPanel.topTip.ShowTopTip(text);
             gameObject.GetComponent<LevelBeginShowPoint>().enabled = false;
             gameObject.GetComponent<CinemachineBrain>().enabled = true;

@@ -45,7 +45,6 @@ public class UIManager : MonoBehaviour {
 
     public void Init() {
         bagPanel.Init();
-        cheatPanel.Init();
     }
 
     public void ShowHPUI(Enemy enemy, int hp) {

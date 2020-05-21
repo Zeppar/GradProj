@@ -24,7 +24,6 @@ public class EffectManager : MonoBehaviour
             cinemaInpulse = GameManager.instance.virtualCamera.GetComponent<CinemachineCollisionImpulseSource>();
         }
         cinemaInpulse.GenerateImpulse();
-      
     }
 
     IEnumerator Reset() {

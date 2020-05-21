@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class GameObjectExtension {
     public static void SetActiveFast(this GameObject go, bool active) {
@@ -31,6 +32,7 @@ public static class Util {
     };
     //type
     public delegate void NoParmsCallBack();
+    public delegate bool BoolParmsCallBack();
     public enum FireBallType {
         Player = 0,
         Enemy,
@@ -114,6 +116,13 @@ public static class Util {
         callback?.Invoke();
     }
 
+    public static System.Collections.IEnumerator DelayExecute(BoolParmsCallBack preFunc, NoParmsCallBack callback) {
+        yield return new WaitUntil(() => {
+            return preFunc();
+        });
+        callback?.Invoke();
+    }
+
     public static Color ColorFromString(string s, float a) {
         int R = int.Parse(s.Substring(1, 2),
             System.Globalization.NumberStyles.HexNumber);
@@ -124,4 +133,12 @@ public static class Util {
         return new Color(R / 255f, G / 255f, B / 255f, a);
     }
 
+    public static class LevelOp {
+        public static void LoadLevel(int index) {
+            SceneManager.LoadScene(index);
+        }
+        public static void ReLoadLevel() {
+            LoadLevel(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
 }

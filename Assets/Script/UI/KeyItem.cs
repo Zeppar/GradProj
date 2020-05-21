@@ -15,7 +15,18 @@ public class KeyItem : MonoBehaviour {
     private void Start() {
         keySetButton.onClick.AddListener(() => {
             btnText.text = "...";
-            StartCoroutine("SetKey");
+            StartCoroutine(Util.DelayExecute(() => {
+                if (GetInputKey() != 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }, () => {
+                KeyCode curkey = GetInputKey();
+                GameManager.instance.keyManager.SetKeyData(keyId, curkey, info.keyCode, () => {
+                    SetContent(info);
+                });
+            }));
         });
     }
 
@@ -38,19 +49,4 @@ public class KeyItem : MonoBehaviour {
         }
         return 0;
     }
-
-    public IEnumerator SetKey() {
-        yield return new WaitUntil(() => {
-            if (GetInputKey() != 0) {
-                KeyCode curkey = GetInputKey();
-                GameManager.instance.keyManager.SetKeyData(keyId, curkey, info.keyCode, () => {
-                    SetContent(info);
-                });
-                return true;
-            } else {
-                return false;
-            }
-        });
-    }
-    
 }

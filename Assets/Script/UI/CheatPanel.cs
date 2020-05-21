@@ -13,7 +13,7 @@ public class CheatPanel : MonoBehaviour
     public InputField dashSpeedField;
     public InputField dashCDField;
 
-    public void Init()
+    private void Awake()
     {
         hpField.text = GameManager.instance.player.maxHP.ToString();
         attackField.text = GameManager.instance.player.attack.ToString();
@@ -23,6 +23,7 @@ public class CheatPanel : MonoBehaviour
         dashSpeedField.text = GameManager.instance.player.dashSpeed.ToString();
         dashCDField.text = GameManager.instance.player.dashCD.ToString();
     }
+
     public void Apply()
     {
         GameManager.instance.player.maxHP = int.Parse(hpField.text);
