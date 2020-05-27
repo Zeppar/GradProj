@@ -10,6 +10,8 @@ public class RollCredits : MonoBehaviour
     public float endYPos;
 
     public Button button;
+
+    
     void Update()
     {
         if(transform.position.y <= endYPos)

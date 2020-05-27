@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CodePanel : MonoBehaviour
 {
     public InputField codeField;
+    public Text errorCode;
 
     private void OnEnable() {
         codeField.text = "";
@@ -27,9 +29,13 @@ public class CodePanel : MonoBehaviour
             switch (code)
             {
                 case "CheatPanel":
+                    errorCode.gameObject.SetActive(false);
                     UIManager.instance.cheatPanel.gameObject.SetActive(true);
                     gameObject.SetActive(false);
-                    break;            
+                    break;
+                default:
+                    errorCode.gameObject.SetActive(true);
+                    break;
             }
             codeField.text = "";
         }

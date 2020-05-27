@@ -200,13 +200,13 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(GameManager.instance.keyManager.FindKey("Attack").keyCode)) {
             if ((currentState.IsName(Util.PlayerAnimCollection.idle) || currentState.IsName(Util.PlayerAnimCollection.walk)) && attackCount == 0) {
-                AddHoriVelocity(dir * 0.6f);
+               // AddHoriVelocity(dir * -0.4f);
                 SetAttackVal(1);
             } else if (currentState.IsName(Util.PlayerAnimCollection.attack1) && currentState.normalizedTime > 0.8f) {
-                AddHoriVelocity(dir * 1.0f);
+               // AddHoriVelocity(dir * -0.8f);
                 SetAttackVal(2);
             } else if (currentState.IsName(Util.PlayerAnimCollection.attack2) && currentState.normalizedTime > 0.5f) {
-                AddHoriVelocity(dir * 2.0f);
+              //  AddHoriVelocity(dir * -1.5f);
                 SetAttackVal(3);
             }
         }
@@ -315,7 +315,7 @@ public class Player : MonoBehaviour {
         anim.SetInteger("Attack", attackCount);
     }
 
-    private void AddHoriVelocity(float val) {
+    public void AddHoriVelocity(float val) {
         rb.velocity = new Vector2(val, 0);
     }
 

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
     public LevelManager levelManager = new LevelManager();
     public AutoSaveManager autoSaveManager = new AutoSaveManager();
     public KeyManager keyManager = new KeyManager();
+    public SaveManager saveManager = new SaveManager();
 
     [HideInInspector]
     public Player player;//玩家脚本

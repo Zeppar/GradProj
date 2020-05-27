@@ -62,6 +62,7 @@ public class AttackChecker : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag(Util.TagCollection.enemyTag)) {
             collision.GetComponent<Enemy>().BeAttacked(GameManager.instance.player.attack);
+            GameManager.instance.player.AddHoriVelocity(GameManager.instance.player.dir * 0.8f);
             GameManager.instance.skillParticleCreator.CreateBlood(collision.gameObject.transform);
             UIManager.instance.comboPanel.Show();
             SoundManager.instance.PlayEffect(Util.ClipNameCollection.attack1);
