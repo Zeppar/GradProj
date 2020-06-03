@@ -12,6 +12,10 @@ public class GoodInfo//GoodInfo 数据类
         skillInfo = info;
         count = _count;
     }
+    public GoodInfo()
+    {
+
+    }
 }
 
 public class GoodManager

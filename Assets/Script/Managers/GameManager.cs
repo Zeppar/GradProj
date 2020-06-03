@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour {
     public bool showEndPoint;
     public bool disableInput;
 
+
+
     private void Awake() {
         if(instance == null) {
             instance = this;

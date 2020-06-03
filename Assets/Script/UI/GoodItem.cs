@@ -30,7 +30,10 @@ public class GoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         itemType = type;
         if (info == null)
             return;
-        goodImage.sprite = info.skillInfo.iconSprite;
+ 
+        Sprite sprite;
+        GameManager.instance.skillManager.skillIconDict.TryGetValue(info.skillInfo.id, out sprite);
+        goodImage.sprite = sprite;
         transform.name = info.skillInfo.name;
     }
 

@@ -12,6 +12,7 @@ public static class GameObjectExtension {
 }
 
 public static class Util {
+
     // data
     public static Dictionary<string, int> objectInitCountDict = new Dictionary<string, int> {
         { ObjectItemNameCollection.playerDash, 10},
@@ -35,6 +36,11 @@ public static class Util {
     //type
     public delegate void NoParmsCallBack();
     public delegate bool BoolParmsCallBack();
+
+    public static class Level
+    {
+        public static int nextLevelID = 0;
+    }
     public enum FireBallType {
         Player = 0,
         Enemy,
@@ -136,8 +142,9 @@ public static class Util {
     }
 
     public static class LevelOp {
-        public static void LoadLevel(int index) {
-            SceneManager.LoadScene(index);
+        public static void LoadLevel(int index) {    
+            Util.Level.nextLevelID = index;
+            SceneManager.LoadScene("LoadScene");
         }
         public static void ReLoadLevel() {
             LoadLevel(SceneManager.GetActiveScene().buildIndex);

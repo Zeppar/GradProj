@@ -9,8 +9,8 @@ public class SavePanel : MonoBehaviour
     public Button saveBtn;
     void Start()
     {
-        loadBtn.onClick.AddListener(() => { GameManager.instance.saveManager.LoadGood(); });
-        saveBtn.onClick.AddListener(() => { GameManager.instance.saveManager.SaveGood(); });
+        loadBtn.onClick.AddListener(() => { GameManager.instance.saveManager.Load(); });
+        saveBtn.onClick.AddListener(() => { GameManager.instance.saveManager.Save(); });
     }
 
     // Update is called once per frame

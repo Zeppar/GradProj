@@ -22,6 +22,7 @@ public class SkillManager
 {
   
     public Dictionary<int, SkillInfo> skillDict = new Dictionary<int, SkillInfo>();
+    public Dictionary<int, Sprite> skillIconDict = new Dictionary<int, Sprite>();
     // TODO Goodinfo skillInfo
     public List<GoodInfo> quickSkillList = new List<GoodInfo>();
     public bool isDirty = false;
@@ -40,6 +41,7 @@ public class SkillManager
             info.iconSprite = Resources.Load<Sprite>(iconPath);
             info.action = skilldata[i]["action"].ToString();
             skillDict.Add((int)skilldata[i]["id"],info);
+            skillIconDict.Add((int)skilldata[i]["id"], Resources.Load<Sprite>(iconPath));
         }
 
 

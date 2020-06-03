@@ -34,7 +34,6 @@ public class BagItem : MonoBehaviour, IDropHandler {
         goodItem.SetContent(info, index, GoodItemType.Normal);
         goodItem.transform.SetAsFirstSibling();
         goodItem.gameObject.SetActive(true);
-
         countText.text = info.count.ToString();
         countText.gameObject.SetActive(info.count > 0);
     }

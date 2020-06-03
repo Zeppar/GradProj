@@ -5,8 +5,8 @@ using LitJson;
 
 public class LevelInfo {
     public int id;
-    public bool dashEnable;
-    public bool bagEnable;
+    public bool dashEnable = true;
+    public bool bagEnable = true;
     public float minLight;
     public float maxAddLight;
     public float lightDecrease;

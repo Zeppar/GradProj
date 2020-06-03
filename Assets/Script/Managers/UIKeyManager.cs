@@ -11,7 +11,7 @@ public class UIKeyManager : MonoBehaviour
   
     void Update()
     {
-        OpenPanel(UIManager.instance.bagPanel.gameObject, KeyCode.B, GameManager.instance.levelManager.currentInfo.bagEnable);
+        OpenPanel(UIManager.instance.bagPanel.gameObject, KeyCode.B);
         OpenPanel(UIManager.instance.cheatPanel.gameObject, KeyCode.F7);
         OpenPanel(UIManager.instance.pausePanel.gameObject, KeyCode.Escape);
         OpenPanel(UIManager.instance.codePanel.gameObject, GameManager.instance.keyManager.FindKey(Util.KeyCollection.Cheat).keyCode);

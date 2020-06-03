@@ -9,10 +9,16 @@ public class PausePanel : MonoBehaviour
     public Button setKeyButton;
     public Button BsckMainButton;
 
+    public Button loadBtn;
+    public Button saveBtn;
     void Start()
     {
         resumeButton.onClick.AddListener(OnResume);
         setKeyButton.onClick.AddListener(ShowSetKeyPanel);
+        loadBtn.onClick.AddListener(() => { GameManager.instance.saveManager.Load(); });
+        loadBtn.onClick.AddListener(OnResume);
+        saveBtn.onClick.AddListener(() => { GameManager.instance.saveManager.Save(); });
+        saveBtn.onClick.AddListener(OnResume);
 
         //Time.timeScale = 0;
     }

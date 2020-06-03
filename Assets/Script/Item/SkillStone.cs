@@ -6,14 +6,14 @@ public class SkillStone : MonoBehaviour {
 
     public SkillInfo skillInfo;
     public bool isEnter = false;
-    public bool addSkill;
+    public bool addSkill = true;
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag(Util.TagCollection.playerTag)) {
             isEnter = true;
             UIManager.instance.helpPanel.ShowGetItemTip("按下E键以拾取");
         }
-
+        //
     }
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.CompareTag(Util.TagCollection.playerTag)) {

@@ -520,6 +520,8 @@
     <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Scripts\Utilities\switchToRectTransform.cs" />
     <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Scripts\VR Extensions\VRCursor.cs" />
     <Compile Include="Assets\3rd\Plus\unity-ui-extensions\Scripts\VR Extensions\VRInputModule.cs" />
+    <Compile Include="Assets\Easy Save 3\Types\ES3Type_GoodInfo.cs" />
+    <Compile Include="Assets\Easy Save 3\Types\ES3Type_PlayerData.cs" />
     <Compile Include="Assets\Script\Camera\LevelBeginShowPoint.cs" />
     <Compile Include="Assets\Script\Common\DeadArea.cs" />
     <Compile Include="Assets\Script\Common\FunctionInvoker.cs" />

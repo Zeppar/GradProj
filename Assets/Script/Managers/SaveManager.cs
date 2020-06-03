@@ -5,39 +5,47 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-[System.Serializable]
-public class Save
+public class SaveManager
 {
-    public List<GoodInfo> saveGoodInfo;
-}
-public class SaveManager: ICloneable
-{
-    public void SaveGood()
+    public void Save()
     {
-        Save data = new Save();
-  //      data.saveGoodInfo = new List<GoodInfo>();
-        data.saveGoodInfo = GameManager.instance.goodManager.goodInfoList;
-        ES3.Save<Save>("Good", data);
-     //   List<GoodInfo> deepCopyList = Clone<GoodInfo>(originalList);
-
-
-     //   BinaryFormatter bf = new BinaryFormatter();
-       
-        //FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
-  
-     //   bf.Serialize(file, data);  
-      //  file.Close();            
-
+      //  SaveGood();
+        SavePlayerData();
     }
-    public void LoadGood()
+    public void Load()
     {
-        var obj = (List<GoodInfo>)ES3.LoadInto<object>("Good");
-        GameManager.instance.goodManager.goodInfoList = obj;
+     //   LoadGood();
+        LoadPlayerData();
+    }
+    public void SavePlayerData()
+    {
+        PlayerData data= new PlayerData();
+
+        data.pos= GameManager.instance.player.transform.position;
+        data.goodInfos = GameManager.instance.goodManager.goodInfoList;
+        data.playerHp = GameManager.instance.player.HP;
+        data.energy = GameManager.instance.energyManager.curEnemgy;
+
+        ES3.Save<PlayerData>("PlayerData", data);
+    }
+    public void LoadPlayerData()
+    {
+
+        PlayerData loaddata = ES3.LoadInto<PlayerData>("PlayerData");
+
+        GameManager.instance.player.transform.position = loaddata.pos;
+        GameManager.instance.goodManager.goodInfoList = loaddata.goodInfos;
+        GameManager.instance.player.HP = loaddata.playerHp;
+        GameManager.instance.energyManager.curEnemgy =  loaddata.energy;
         GameManager.instance.goodManager.isDirty = true;
     }
 
-    public object Clone()
-    {
-        throw new NotImplementedException();
-    }
+}
+public class PlayerData
+{
+    public Vector2 pos;
+    public List<GoodInfo> goodInfos;
+    public float playerHp;
+    public float energy;
+   // GameManager.instance.energyManager.GetPercentValue();
 }

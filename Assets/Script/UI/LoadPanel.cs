@@ -11,31 +11,46 @@ public class LoadPanel : MonoBehaviour
     public AsyncOperation operation;
     private void Start()
     {
-       StartCoroutine(LoadLevel());
+        NextLeve();
+    }
+    public void NextLeve()
+    {
+        StartCoroutine(LoadLevel());
     }
     public IEnumerator LoadLevel()
     {
         Debug.Log("HI");
-        operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-
+        operation = SceneManager.LoadSceneAsync(Util.Level.nextLevelID);
         operation.allowSceneActivation = false;
-
-       while (!operation.isDone)
+        int i = 0;
+        while (!operation.isDone)
         {
-            slider.value = operation.progress;
 
-            if(operation.progress >= 0.9f)
+            //Debug.Log(operation.progress);
+            slider.value = operation.progress;
+            doneText.gameObject.SetActive(true);
+            if (operation.progress >= 0.9f)
             {
                 slider.value = 1;
-                doneText.gameObject.SetActive(true);
-                if (Input.anyKeyDown)
-                {
-                   operation.allowSceneActivation = true;
-                   // yield return null;
-                    yield return operation;
-                }
+                yield return null;
             }
-      }
-     
+        }
+      //  operation.allowSceneActivation = true;
+    }
+    public void Update()
+    {
+        Debug.Log(0);
+        if (operation.progress >= 0.9f)
+        {
+            Debug.Log(1);
+            if (Input.anyKeyDown)
+            {
+                Debug.Log(2);
+                operation.allowSceneActivation = true;
+            }
+        }
     }
 }
+
+
+
