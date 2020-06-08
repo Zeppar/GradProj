@@ -20,7 +20,7 @@ public class PausePanel : MonoBehaviour
         saveBtn.onClick.AddListener(() => { GameManager.instance.saveManager.Save(); });
         saveBtn.onClick.AddListener(OnResume);
 
-        //Time.timeScale = 0;
+        //Time.timeScale = 0
     }
     void OnEnable()
     {

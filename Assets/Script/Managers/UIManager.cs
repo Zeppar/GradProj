@@ -33,6 +33,7 @@ public class UIManager : MonoBehaviour {
     public KeySetPanel keySetPanel;
     public CheatPanel cheatPanel;
     public CodePanel codePanel;
+    public DialoguePanel dialoguePanel;
 
     private void Awake() {
         if (instance == null) {

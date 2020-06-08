@@ -533,6 +533,7 @@
     <Compile Include="Assets\Script\Enemy\EnemyGround.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyWarrior.cs" />
     <Compile Include="Assets\Script\Item\Crystal.cs" />
+    <Compile Include="Assets\Script\Item\DialogueInfo.cs" />
     <Compile Include="Assets\Script\Item\FireBallExplosion.cs" />
     <Compile Include="Assets\Script\Item\Fireball.cs" />
     <Compile Include="Assets\Script\Item\GetItemLightEffect.cs" />
@@ -566,11 +567,13 @@
     <Compile Include="Assets\Script\Managers\UIKeyManager.cs" />
     <Compile Include="Assets\Script\Managers\UIManager.cs" />
     <Compile Include="Assets\Script\Mangers\TanTanBallManger.cs" />
+    <Compile Include="Assets\Script\NPC\NPC.cs" />
     <Compile Include="Assets\Script\Player\AttackChecker.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
     <Compile Include="Assets\Script\Player\PlayerAirAttack.cs" />
     <Compile Include="Assets\Script\Player\PlayerDash.cs" />
     <Compile Include="Assets\Script\Player\PlayerLight.cs" />
+    <Compile Include="Assets\Script\ScriptableObject\DialogueAsset.cs" />
     <Compile Include="Assets\Script\Terrain\BossEnter.cs" />
     <Compile Include="Assets\Script\Terrain\Gear\Gear.cs" />
     <Compile Include="Assets\Script\Terrain\Gear\Rotater.cs" />
@@ -588,6 +591,7 @@
     <Compile Include="Assets\Script\UI\ComboPanel.cs" />
     <Compile Include="Assets\Script\UI\DashFlag.cs" />
     <Compile Include="Assets\Script\UI\DescribeAlert.cs" />
+    <Compile Include="Assets\Script\UI\DialoguePanel.cs" />
     <Compile Include="Assets\Script\UI\EnemyHpCanvas.cs" />
     <Compile Include="Assets\Script\UI\EnergyPanel.cs" />
     <Compile Include="Assets\Script\UI\GameOverPanel.cs" />

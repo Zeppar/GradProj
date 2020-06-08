@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e1ce15fe74a1f04b9e8438b05d96d7f, type: 3}
+  m_Name: Blacksmith
+  m_EditorClassIdentifier: 
+  dialogueInfos:
+  - Name: "\u94C1\u5320"
+    Text: "\u4F60\u597D\uFF0C\u5C0F\u4F19\u5B50"
+    Icon: {fileID: 9168396658961621293, guid: 921ddb85fc015e84486e1b86991dc5ff, type: 3}
+  - Name: "\u6211"
+    Text: "\u4F60\u597D\uFF0C\u8BF7\u95EE\u6709\u4EC0\u4E48\u9700\u8981\u5E2E\u52A9\u7684\u5417\uFF1F"
+    Icon: {fileID: 21300000, guid: 0953cb39592f096458fcf16d0183fa28, type: 3}
+  - Name: "\u94C1\u5320"
+    Text: "\u524D\u9762\u6709\u5F88\u591A\u602A\u7269\u6321\u4F4F\u4E86\u6211\u53BB\u57CE\u91CC\u7684\u8DEF\uFF0C\u4F60\u53EF\u4EE5\u5E2E\u6211\u6E05\u695A\u8FD9\u4E9B\u602A\u7269\u5417\uFF1F"
+    Icon: {fileID: 9168396658961621293, guid: 921ddb85fc015e84486e1b86991dc5ff, type: 3}
+  - Name: "\u6211"
+    Text: "\u597D\u7684\uFF0C\u6211\u4F1A\u5E2E\u52A9\u4F60\u7684"
+    Icon: {fileID: 21300000, guid: 0953cb39592f096458fcf16d0183fa28, type: 3}
