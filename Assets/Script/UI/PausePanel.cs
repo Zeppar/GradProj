@@ -19,6 +19,7 @@ public class PausePanel : MonoBehaviour
         loadBtn.onClick.AddListener(OnResume);
         saveBtn.onClick.AddListener(() => { GameManager.instance.saveManager.Save(); });
         saveBtn.onClick.AddListener(OnResume);
+        BsckMainButton.onClick.AddListener(() => { Util.LevelOp.LoadLevel(0); });
 
         //Time.timeScale = 0
     }

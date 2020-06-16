@@ -37,6 +37,8 @@ public static class Util {
     public delegate void NoParmsCallBack();
     public delegate bool BoolParmsCallBack();
 
+    public static MonoBehaviour mono;
+
     public static class Level
     {
         public static int nextLevelID = 0;
@@ -142,9 +144,14 @@ public static class Util {
     }
 
     public static class LevelOp {
-        public static void LoadLevel(int index) {    
-            Util.Level.nextLevelID = index;
-            SceneManager.LoadScene("LoadScene");
+        public static void LoadLevel(int index) {
+            UIManager.instance.screenEffects.loadeff.ToBlack();
+            mono.StartCoroutine(Util.DelayExecute(() => {
+                return !UIManager.instance.screenEffects.loadeff.toBlack;
+            }, () => {
+                Util.Level.nextLevelID = index;
+                SceneManager.LoadScene("LoadScene");
+            }));
         }
         public static void ReLoadLevel() {
             LoadLevel(SceneManager.GetActiveScene().buildIndex);

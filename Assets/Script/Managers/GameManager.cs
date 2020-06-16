@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour {
     private void Awake() {
         if(instance == null) {
             instance = this;
+            Util.mono = this;
             DontDestroyOnLoad(gameObject);
 
             skillManager.InitSkill();

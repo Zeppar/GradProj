@@ -34,6 +34,7 @@ public class UIManager : MonoBehaviour {
     public CheatPanel cheatPanel;
     public CodePanel codePanel;
     public DialoguePanel dialoguePanel;
+    public ScreenEffects screenEffects;
 
     private void Awake() {
         if (instance == null) {
@@ -63,7 +64,10 @@ public class UIManager : MonoBehaviour {
     }
 
     private void Update() {
-        //  hpBarPanel.UpdateHpBar(GameManager.instance.player.HP);
+        if(GameManager.instance.player == null)
+        {
+            return;
+        }
         dashFlag.SetValue(GameManager.instance.player.GetDashCDPercent());
         dashFlag.gameObject.SetActiveFast(GameManager.instance.levelManager.currentInfo.dashEnable);
         quickSkillPanel.gameObject.SetActiveFast(GameManager.instance.levelManager.currentInfo.bagEnable);
