@@ -145,13 +145,23 @@ public static class Util {
 
     public static class LevelOp {
         public static void LoadLevel(int index) {
-            UIManager.instance.screenEffects.loadeff.ToBlack();
-            mono.StartCoroutine(Util.DelayExecute(() => {
-                return !UIManager.instance.screenEffects.loadeff.toBlack;
-            }, () => {
+            if (UIManager.instance != null)
+            {
+                UIManager.instance.screenEffects.loadeff.ToBlack();
+                mono.StartCoroutine(Util.DelayExecute(() =>
+                {
+                    return !UIManager.instance.screenEffects.loadeff.toBlack;
+                }, () =>
+                {
+                    Util.Level.nextLevelID = index;
+                    SceneManager.LoadScene("LoadScene");
+                }));
+            }
+            else
+            {
                 Util.Level.nextLevelID = index;
                 SceneManager.LoadScene("LoadScene");
-            }));
+            }
         }
         public static void ReLoadLevel() {
             LoadLevel(SceneManager.GetActiveScene().buildIndex);
