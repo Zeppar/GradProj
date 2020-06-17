@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour {
     public SkillParticleCreator skillParticleCreator;//技能特效创建器
     public SkillActionManager skillActionManager;
     public EffectManager effectManager;
+    public TaskManager taskManager;
 
     [HideInInspector]
     public CinemachineVirtualCamera virtualCamera;
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour {
             keyManager.Init();
             skillActionManager.InitSkillCallback();
             levelManager.Init();
+            taskManager.Init();
             InitUI();
 
         } else if(instance != this) {

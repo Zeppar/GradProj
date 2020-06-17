@@ -545,6 +545,7 @@
     <Compile Include="Assets\Script\Item\SaveSpot.cs" />
     <Compile Include="Assets\Script\Item\SkillStone.cs" />
     <Compile Include="Assets\Script\Item\TanTanBall.cs" />
+    <Compile Include="Assets\Script\Item\TaskInfo.cs" />
     <Compile Include="Assets\Script\Item\WheelTip.cs" />
     <Compile Include="Assets\Script\Managers\AutoSaveManager.cs" />
     <Compile Include="Assets\Script\Managers\EffectManager.cs" />
@@ -574,6 +575,7 @@
     <Compile Include="Assets\Script\Player\PlayerDash.cs" />
     <Compile Include="Assets\Script\Player\PlayerLight.cs" />
     <Compile Include="Assets\Script\ScriptableObject\DialogueAsset.cs" />
+    <Compile Include="Assets\Script\Task\TaskManager.cs" />
     <Compile Include="Assets\Script\Terrain\BossEnter.cs" />
     <Compile Include="Assets\Script\Terrain\Gear\Gear.cs" />
     <Compile Include="Assets\Script\Terrain\Gear\Rotater.cs" />
@@ -614,6 +616,8 @@
     <Compile Include="Assets\Script\UI\SavePanel.cs" />
     <Compile Include="Assets\Script\UI\StartScreenUI.cs" />
     <Compile Include="Assets\Script\UI\StorySkip.cs" />
+    <Compile Include="Assets\Script\UI\TaskItem.cs" />
+    <Compile Include="Assets\Script\UI\TaskPanel.cs" />
     <Compile Include="Assets\Script\UI\TopTip.cs" />
     <Compile Include="Assets\Script\UI\TopTipTrigger.cs" />
     <Compile Include="Assets\Script\UI\eff\Loadeff.cs" />

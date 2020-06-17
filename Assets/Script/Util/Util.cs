@@ -144,8 +144,14 @@ public static class Util {
     }
 
     public static class LevelOp {
+
         public static void LoadLevel(int index) {
-            if (UIManager.instance != null)
+            if(GameManager.instance == null || !GameManager.instance.gameStart)
+            {
+                SceneManager.LoadScene(index);
+                return;
+            }
+            try
             {
                 UIManager.instance.screenEffects.loadeff.ToBlack();
                 mono.StartCoroutine(Util.DelayExecute(() =>
@@ -157,11 +163,12 @@ public static class Util {
                     SceneManager.LoadScene("LoadScene");
                 }));
             }
-            else
+            catch (System.Exception)
             {
-                Util.Level.nextLevelID = index;
-                SceneManager.LoadScene("LoadScene");
+              
+                SceneManager.LoadScene(index);
             }
+
         }
         public static void ReLoadLevel() {
             LoadLevel(SceneManager.GetActiveScene().buildIndex);

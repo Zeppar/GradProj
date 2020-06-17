@@ -35,6 +35,7 @@ public class UIManager : MonoBehaviour {
     public CodePanel codePanel;
     public DialoguePanel dialoguePanel;
     public ScreenEffects screenEffects;
+    public TaskPanel taskPanel;
 
     private void Awake() {
         if (instance == null) {

@@ -17,7 +17,8 @@ public class StorySkip : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space)) {
             count++;
             if (count >= 70) {
-                Util.LevelOp.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+               // Util.LevelOp.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         } else if (Input.GetKeyUp(KeyCode.Space)) {
             count = 0;

@@ -15,6 +15,7 @@ public class UIKeyManager : MonoBehaviour
         OpenPanel(UIManager.instance.cheatPanel.gameObject, KeyCode.F7);
         OpenPanel(UIManager.instance.pausePanel.gameObject, KeyCode.Escape);
         OpenPanel(UIManager.instance.codePanel.gameObject, GameManager.instance.keyManager.FindKey(Util.KeyCollection.Cheat).keyCode);
+        OpenPanel(UIManager.instance.taskPanel.gameObject, KeyCode.T);
         
     }
    

@@ -16,7 +16,7 @@ public class Loadeff : MonoBehaviour
         rawImage.color = Color.black;
         toBlack = false;
         toClean = true;
-        Debug.Log("ToClean");
+
        
     }  
     public void ToBlack()
