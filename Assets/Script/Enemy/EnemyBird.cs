@@ -85,11 +85,13 @@ public class EnemyBird : Enemy {
         }
 
         transform.position = new Vector2(tempX, tempY);
+
     }
 
     public override void BeAttacked(int IntCount) {
         if (HP > 0) {
             base.BeAttacked(IntCount);
+            AddVelocity(new Vector2(GameManager.instance.player.dir * 3, 1f));
             anim.SetTrigger("Hurt");
             lastAttackTime = Time.time;//打断攻击
         }

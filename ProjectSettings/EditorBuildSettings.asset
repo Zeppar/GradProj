@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/ThankForPlay.unity
     guid: b4495967e6249604897463f95eb92e6f
+  - enabled: 1
+    path: Assets/_Scenes/LoadScene.unity
+    guid: 591373deacf2b4e43afef434e1ccfadf
   m_configObjects: {}

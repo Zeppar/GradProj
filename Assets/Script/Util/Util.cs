@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public static class GameObjectExtension {
     public static void SetActiveFast(this GameObject go, bool active) {
@@ -10,6 +12,7 @@ public static class GameObjectExtension {
 }
 
 public static class Util {
+
     // data
     public static Dictionary<string, int> objectInitCountDict = new Dictionary<string, int> {
         { ObjectItemNameCollection.playerDash, 10},
@@ -33,6 +36,13 @@ public static class Util {
     //type
     public delegate void NoParmsCallBack();
     public delegate bool BoolParmsCallBack();
+
+    public static MonoBehaviour mono;
+
+    public static class Level
+    {
+        public static int nextLevelID = 0;
+    }
     public enum FireBallType {
         Player = 0,
         Enemy,
@@ -134,8 +144,31 @@ public static class Util {
     }
 
     public static class LevelOp {
+
         public static void LoadLevel(int index) {
-            SceneManager.LoadScene(index);
+            if(GameManager.instance == null || !GameManager.instance.gameStart)
+            {
+                SceneManager.LoadScene(index);
+                return;
+            }
+            try
+            {
+                UIManager.instance.screenEffects.loadeff.ToBlack();
+                mono.StartCoroutine(Util.DelayExecute(() =>
+                {
+                    return !UIManager.instance.screenEffects.loadeff.toBlack;
+                }, () =>
+                {
+                    Util.Level.nextLevelID = index;
+                    SceneManager.LoadScene("LoadScene");
+                }));
+            }
+            catch (System.Exception)
+            {
+              
+                SceneManager.LoadScene(index);
+            }
+
         }
         public static void ReLoadLevel() {
             LoadLevel(SceneManager.GetActiveScene().buildIndex);

@@ -4895,6 +4895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 179368029325620108}
   - component: {fileID: 179368029325620111}
+  - component: {fileID: 6156669452510695231}
   m_Layer: 0
   m_Name: signal
   m_TagString: Untagged
@@ -4966,6 +4967,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &6156669452510695231
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179368029325620109}
+  m_Enabled: 1
+  m_SortingLayerID: -1531651369
+  m_SortingLayer: 7
+  m_SortingOrder: 0
 --- !u!1 &179368029336722240
 GameObject:
   m_ObjectHideFlags: 0
@@ -4977,6 +4989,7 @@ GameObject:
   - component: {fileID: 179368029336722243}
   - component: {fileID: 179368029336722245}
   - component: {fileID: 179368029336722242}
+  - component: {fileID: 5287140645748626217}
   m_Layer: 0
   m_Name: wheel
   m_TagString: Untagged
@@ -5067,6 +5080,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!210 &5287140645748626217
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179368029336722240}
+  m_Enabled: 1
+  m_SortingLayerID: -1531651369
+  m_SortingLayer: 7
+  m_SortingOrder: 0
 --- !u!1 &179368029603827471
 GameObject:
   m_ObjectHideFlags: 0
@@ -14352,6 +14376,7 @@ GameObject:
   - component: {fileID: 179368030277821845}
   - component: {fileID: 179368030277821842}
   - component: {fileID: 179368030277821843}
+  - component: {fileID: 5773128044265258351}
   m_Layer: 0
   m_Name: showText
   m_TagString: Untagged
@@ -14434,3 +14459,14 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!210 &5773128044265258351
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179368030277821840}
+  m_Enabled: 1
+  m_SortingLayerID: -1531651369
+  m_SortingLayer: 7
+  m_SortingOrder: 0

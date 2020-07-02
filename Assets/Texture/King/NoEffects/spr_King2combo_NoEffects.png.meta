@@ -1,0 +1,1543 @@
+fileFormatVersion: 2
+guid: 4ed6d5719e0b08443a57193ad013a745
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2228217235009797306
+    second: spr_King2combo_NoEffects_0
+  - first:
+      213: -5354256563541071460
+    second: spr_King2combo_NoEffects_1
+  - first:
+      213: 2509781075734678079
+    second: spr_King2combo_NoEffects_2
+  - first:
+      213: -3823072697029800000
+    second: spr_King2combo_NoEffects_3
+  - first:
+      213: 4672963857372801573
+    second: spr_King2combo_NoEffects_4
+  - first:
+      213: -8543961280621587271
+    second: spr_King2combo_NoEffects_5
+  - first:
+      213: 8319956574922587922
+    second: spr_King2combo_NoEffects_6
+  - first:
+      213: -5420677590764231624
+    second: spr_King2combo_NoEffects_7
+  - first:
+      213: -4759431133102620327
+    second: spr_King2combo_NoEffects_8
+  - first:
+      213: -8286487638760381068
+    second: spr_King2combo_NoEffects_9
+  - first:
+      213: 1471649621927164228
+    second: spr_King2combo_NoEffects_10
+  - first:
+      213: -3362841385272896108
+    second: spr_King2combo_NoEffects_11
+  - first:
+      213: 1830996593774183857
+    second: spr_King2combo_NoEffects_12
+  - first:
+      213: 5850050305029279298
+    second: spr_King2combo_NoEffects_13
+  - first:
+      213: -6875775752614580417
+    second: spr_King2combo_NoEffects_14
+  - first:
+      213: -1244543539312500426
+    second: spr_King2combo_NoEffects_15
+  - first:
+      213: 450070536662442828
+    second: spr_King2combo_NoEffects_16
+  - first:
+      213: 7526300454810294412
+    second: spr_King2combo_NoEffects_17
+  - first:
+      213: 4236185702117248835
+    second: spr_King2combo_NoEffects_18
+  - first:
+      213: -1854256730894976882
+    second: spr_King2combo_NoEffects_19
+  - first:
+      213: 3136086539285540098
+    second: spr_King2combo_NoEffects_20
+  - first:
+      213: -980610858426266554
+    second: spr_King2combo_NoEffects_21
+  - first:
+      213: 3045520212308005824
+    second: spr_King2combo_NoEffects_22
+  - first:
+      213: 7487249953342078163
+    second: spr_King2combo_NoEffects_23
+  - first:
+      213: -6367008170545463366
+    second: spr_King2combo_NoEffects_24
+  - first:
+      213: 2839569037872483703
+    second: spr_King2combo_NoEffects_25
+  - first:
+      213: 7673616498684075738
+    second: spr_King2combo_NoEffects_26
+  - first:
+      213: 7375278604250038410
+    second: spr_King2combo_NoEffects_27
+  - first:
+      213: 8705532556344221676
+    second: spr_King2combo_NoEffects_28
+  - first:
+      213: -1753507347421185936
+    second: spr_King2combo_NoEffects_29
+  - first:
+      213: -5610941843459515772
+    second: spr_King2combo_NoEffects_30
+  - first:
+      213: -2465636558410209925
+    second: spr_King2combo_NoEffects_31
+  - first:
+      213: -8839364297012457879
+    second: spr_King2combo_NoEffects_32
+  - first:
+      213: 7040613259923697165
+    second: spr_King2combo_NoEffects_33
+  - first:
+      213: -8772841822399808237
+    second: spr_King2combo_NoEffects_34
+  - first:
+      213: -4100444762250053224
+    second: spr_King2combo_NoEffects_35
+  - first:
+      213: 6758195547757345174
+    second: spr_King2combo_NoEffects_36
+  - first:
+      213: 1927519380388164522
+    second: spr_King2combo_NoEffects_37
+  - first:
+      213: 8617931889773822794
+    second: spr_King2combo_NoEffects_38
+  - first:
+      213: -3784188143804936636
+    second: spr_King2combo_NoEffects_39
+  - first:
+      213: -141524614809710316
+    second: spr_King2combo_NoEffects_40
+  - first:
+      213: 2189356289773683059
+    second: spr_King2combo_NoEffects_41
+  - first:
+      213: 7205406480404328312
+    second: spr_King2combo_NoEffects_42
+  - first:
+      213: 8747416807440178277
+    second: spr_King2combo_NoEffects_43
+  - first:
+      213: 4414250515659340087
+    second: spr_King2combo_NoEffects_44
+  - first:
+      213: 993441741658444782
+    second: spr_King2combo_NoEffects_45
+  - first:
+      213: 1168226720747535858
+    second: spr_King2combo_NoEffects_46
+  - first:
+      213: -1805539809996976286
+    second: spr_King2combo_NoEffects_47
+  - first:
+      213: -1135202522050967748
+    second: spr_King2combo_NoEffects_48
+  - first:
+      213: -723736871327236217
+    second: spr_King2combo_NoEffects_49
+  - first:
+      213: 7688261430064516259
+    second: spr_King2combo_NoEffects_50
+  - first:
+      213: -1609156967798912481
+    second: spr_King2combo_NoEffects_51
+  - first:
+      213: 53253419462870374
+    second: spr_King2combo_NoEffects_52
+  - first:
+      213: -5214735676016137466
+    second: spr_King2combo_NoEffects_53
+  - first:
+      213: 721202525130859269
+    second: spr_King2combo_NoEffects_54
+  - first:
+      213: -1479248430927843709
+    second: spr_King2combo_NoEffects_55
+  - first:
+      213: 1119841672607695040
+    second: spr_King2combo_NoEffects_56
+  - first:
+      213: -1933101726584416347
+    second: spr_King2combo_NoEffects_57
+  - first:
+      213: 7893267965620941403
+    second: spr_King2combo_NoEffects_58
+  - first:
+      213: 4906054176409320668
+    second: spr_King2combo_NoEffects_59
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64386d8fa38c311e0800000000000000
+      internalID: -2228217235009797306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99a4d5060cd1b5b0800000000000000
+      internalID: -5354256563541071460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_2
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ac92b479884d220800000000000000
+      internalID: 2509781075734678079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_3
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf4b0733a7b1fac0800000000000000
+      internalID: -3823072697029800000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_4
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ae1feaed3b9d040800000000000000
+      internalID: 4672963857372801573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_5
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4dbddab70cd6980800000000000000
+      internalID: -8543961280621587271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_6
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fbfe28c6c667370800000000000000
+      internalID: 8319956574922587922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_7
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834e3908372e5c4b0800000000000000
+      internalID: -5420677590764231624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_8
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951cb7ad99a13fdb0800000000000000
+      internalID: -4759431133102620327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_9
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475a500756b700d80800000000000000
+      internalID: -8286487638760381068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_10
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4497ec4b8895c6410800000000000000
+      internalID: 1471649621927164228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_11
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49593d2c399c451d0800000000000000
+      internalID: -3362841385272896108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_12
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b54cd473b1096910800000000000000
+      internalID: 1830996593774183857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_13
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e8f6de1cd8f2150800000000000000
+      internalID: 5850050305029279298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_14
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3fe926e1665490a0800000000000000
+      internalID: -6875775752614580417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_15
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63165cfae3e7abee0800000000000000
+      internalID: -1244543539312500426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_16
+      rect:
+        serializedVersion: 2
+        x: 2464
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4362adb4c8fe3600800000000000000
+      internalID: 450070536662442828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_17
+      rect:
+        serializedVersion: 2
+        x: 2618
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8814d9336ac27860800000000000000
+      internalID: 7526300454810294412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_18
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f8949a374f9ca30800000000000000
+      internalID: 4236185702117248835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_19
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88b0a8d35b5446e0800000000000000
+      internalID: -1854256730894976882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_20
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20daffe771e958b20800000000000000
+      internalID: 3136086539285540098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_21
+      rect:
+        serializedVersion: 2
+        x: 3234
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c8c98ae9b2462f0800000000000000
+      internalID: -980610858426266554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_22
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c314ea4f7cd34a20800000000000000
+      internalID: 3045520212308005824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_23
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dcb385d92e08e760800000000000000
+      internalID: 7487249953342078163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_24
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfb0a08dc7d3a7a0800000000000000
+      internalID: -6367008170545463366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_25
+      rect:
+        serializedVersion: 2
+        x: 3850
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d4699cefc286720800000000000000
+      internalID: 2839569037872483703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_26
+      rect:
+        serializedVersion: 2
+        x: 4004
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade14aa8c892e7a60800000000000000
+      internalID: 7673616498684075738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_27
+      rect:
+        serializedVersion: 2
+        x: 4158
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80ccdd80d04a5660800000000000000
+      internalID: 7375278604250038410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_28
+      rect:
+        serializedVersion: 2
+        x: 4312
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefde717cb340d870800000000000000
+      internalID: 8705532556344221676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_29
+      rect:
+        serializedVersion: 2
+        x: 4466
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0783ce5ab5a4aa7e0800000000000000
+      internalID: -1753507347421185936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_30
+      rect:
+        serializedVersion: 2
+        x: 4620
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a58351f1ee122b0800000000000000
+      internalID: -5610941843459515772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_31
+      rect:
+        serializedVersion: 2
+        x: 4774
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b752eb61d9c48cdd0800000000000000
+      internalID: -2465636558410209925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_32
+      rect:
+        serializedVersion: 2
+        x: 4928
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e4d4c3105445580800000000000000
+      internalID: -8839364297012457879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_33
+      rect:
+        serializedVersion: 2
+        x: 5082
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e28a6057845b160800000000000000
+      internalID: 7040613259923697165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_34
+      rect:
+        serializedVersion: 2
+        x: 5236
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d3b21d7da904680800000000000000
+      internalID: -8772841822399808237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_35
+      rect:
+        serializedVersion: 2
+        x: 5390
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89979fcb63b4817c0800000000000000
+      internalID: -4100444762250053224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_36
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699f3b25b0fe9cd50800000000000000
+      internalID: 6758195547757345174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_37
+      rect:
+        serializedVersion: 2
+        x: 5698
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3b7bdf9acefba10800000000000000
+      internalID: 1927519380388164522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_38
+      rect:
+        serializedVersion: 2
+        x: 5852
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43ca7cd46b099770800000000000000
+      internalID: 8617931889773822794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_39
+      rect:
+        serializedVersion: 2
+        x: 6006
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e0345ceecdb7bc0800000000000000
+      internalID: -3784188143804936636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_40
+      rect:
+        serializedVersion: 2
+        x: 6160
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4111b47dc14390ef0800000000000000
+      internalID: -141524614809710316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_41
+      rect:
+        serializedVersion: 2
+        x: 6314
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3714ab222f7226e10800000000000000
+      internalID: 2189356289773683059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_42
+      rect:
+        serializedVersion: 2
+        x: 6468
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f2cce940fbef360800000000000000
+      internalID: 7205406480404328312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_43
+      rect:
+        serializedVersion: 2
+        x: 6622
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cd0c59d31156970800000000000000
+      internalID: 8747416807440178277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_44
+      rect:
+        serializedVersion: 2
+        x: 6776
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739b57fc471924d30800000000000000
+      internalID: 4414250515659340087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_45
+      rect:
+        serializedVersion: 2
+        x: 6930
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3d894200a69cd00800000000000000
+      internalID: 993441741658444782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_46
+      rect:
+        serializedVersion: 2
+        x: 7084
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdb6435300663010800000000000000
+      internalID: 1168226720747535858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_47
+      rect:
+        serializedVersion: 2
+        x: 7238
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fcd45eb1f61f6e0800000000000000
+      internalID: -1805539809996976286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_48
+      rect:
+        serializedVersion: 2
+        x: 7392
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37460d1253fe30f0800000000000000
+      internalID: -1135202522050967748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_49
+      rect:
+        serializedVersion: 2
+        x: 7546
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78fffa96625c4f5f0800000000000000
+      internalID: -723736871327236217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_50
+      rect:
+        serializedVersion: 2
+        x: 7700
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac0557590132ba60800000000000000
+      internalID: 7688261430064516259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_51
+      rect:
+        serializedVersion: 2
+        x: 7854
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a408273402ba9e0800000000000000
+      internalID: -1609156967798912481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_52
+      rect:
+        serializedVersion: 2
+        x: 8008
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665c82ee3b13db000800000000000000
+      internalID: 53253419462870374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_53
+      rect:
+        serializedVersion: 2
+        x: 8162
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b6081188981a7b0800000000000000
+      internalID: -5214735676016137466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_54
+      rect:
+        serializedVersion: 2
+        x: 8316
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5032a8120e9320a00800000000000000
+      internalID: 721202525130859269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_55
+      rect:
+        serializedVersion: 2
+        x: 8470
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38eedf3b367a87be0800000000000000
+      internalID: -1479248430927843709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_56
+      rect:
+        serializedVersion: 2
+        x: 8624
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0067c611a7a8f00800000000000000
+      internalID: 1119841672607695040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_57
+      rect:
+        serializedVersion: 2
+        x: 8778
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7dd30c83e3c25e0800000000000000
+      internalID: -1933101726584416347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_58
+      rect:
+        serializedVersion: 2
+        x: 8932
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b527ec7f4658a8d60800000000000000
+      internalID: 7893267965620941403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_King2combo_NoEffects_59
+      rect:
+        serializedVersion: 2
+        x: 9086
+        y: 0
+        width: 154.66667
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdcf2b1b74ec51440800000000000000
+      internalID: 4906054176409320668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

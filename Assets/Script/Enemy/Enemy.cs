@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour {
     private bool isHurt = false;
 
     public EnemyType type;
-    public bool addSkill;
+    public bool addSkill = true;
 
     [Header("巡逻属性")]
     public Slider hpSlider;

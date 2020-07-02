@@ -13,5 +13,13 @@ public class GameInitManager : MonoBehaviour {
         }, () => {
             GameManager.instance.InitPlayer(spawn.position);
         }));
+
+        StartCoroutine(Util.DelayExecute(() => {
+            return UIManager.instance != null;
+        }, () => {
+            UIManager.instance.screenEffects.loadeff.ToClean();
+            GameManager.instance.gameStart = true;
+        }));
+
     }
 }

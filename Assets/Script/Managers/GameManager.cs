@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
     public LevelManager levelManager = new LevelManager();
     public AutoSaveManager autoSaveManager = new AutoSaveManager();
     public KeyManager keyManager = new KeyManager();
+    public SaveManager saveManager = new SaveManager();
 
     [HideInInspector]
     public Player player;//玩家脚本
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour {
     public SkillParticleCreator skillParticleCreator;//技能特效创建器
     public SkillActionManager skillActionManager;
     public EffectManager effectManager;
+    public TaskManager taskManager;
 
     [HideInInspector]
     public CinemachineVirtualCamera virtualCamera;
@@ -33,9 +35,12 @@ public class GameManager : MonoBehaviour {
     public bool showEndPoint;
     public bool disableInput;
 
+
+
     private void Awake() {
         if(instance == null) {
             instance = this;
+            Util.mono = this;
             DontDestroyOnLoad(gameObject);
 
             skillManager.InitSkill();
@@ -44,6 +49,7 @@ public class GameManager : MonoBehaviour {
             keyManager.Init();
             skillActionManager.InitSkillCallback();
             levelManager.Init();
+            taskManager.Init();
             InitUI();
 
         } else if(instance != this) {
