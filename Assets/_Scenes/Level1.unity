@@ -122900,6 +122900,11 @@ PrefabInstance:
       propertyPath: ColorModule.gradient.maxGradient.key1.a
       value: 0.5882353
       objectReference: {fileID: 0}
+    - target: {fileID: 8346618298844181706, guid: dde2e77cee57441259fe1243bd4e1265,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 723441334}
     - target: {fileID: 8815736900015619478, guid: dde2e77cee57441259fe1243bd4e1265,
         type: 3}
       propertyPath: m_IsTrigger
