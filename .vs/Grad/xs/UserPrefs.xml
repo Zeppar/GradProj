@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{6142B76B-9B42-66E9-14A7-A82A3A771924}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Util/Util.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Item/RingControl.cs">
     <Files>
-      <File FileName="Assets/Script/UI/StartScreenUI.cs" Line="12" Column="22" />
-      <File FileName="Assets/Script/Util/Util.cs" Line="137" Column="37" />
-      <File FileName="Assets/Script/Managers/GameManager.cs" />
+      <File FileName="Assets/Script/UI/StartScreenUI.cs" Line="12" Column="13" />
+      <File FileName="Assets/Script/Util/Util.cs" />
+      <File FileName="Assets/Script/Managers/GameManager.cs" Line="53" Column="1" />
       <File FileName="Assets/Script/UI/GameOverPanel.cs" />
       <File FileName="Assets/Script/UI/LevelUpPanel.cs" />
       <File FileName="Assets/Script/UI/StorySkip.cs" />
@@ -14,7 +14,10 @@
       <File FileName="Assets/Script/UI/CheatPanel.cs" />
       <File FileName="Assets/Script/UI/KeyItem.cs" />
       <File FileName="Assets/Script/Managers/GameInitManager.cs" />
-      <File FileName="Assets/Script/Camera/LevelBeginShowPoint.cs" Line="31" Column="26" />
+      <File FileName="Assets/Script/Camera/LevelBeginShowPoint.cs" />
+      <File FileName="Assets/Script/Item/RingControl.cs" Line="21" Column="67" />
+      <File FileName="Assets/Script/Common/MagicElf.cs" />
+      <File FileName="Assets/Script/Player/Player.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -22,7 +25,7 @@
     <String>Assembly-CSharp-firstpass.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a9775f28-3aaf-4c52-8ac5-f47a3216b727" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="eba4dd18-6c24-4168-9fdc-69a43a7b8e05" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

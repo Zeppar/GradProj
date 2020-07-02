@@ -250,7 +250,10 @@ public class Player : MonoBehaviour {
 
     public void ResetDashCD() {
         // TODO
-
+        gameObject.layer = 13;
+        dashTime = 0;
+        isDash = false;
+        dashCDRemain = 0;
     }
 
     private void Move() {

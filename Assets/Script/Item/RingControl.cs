@@ -18,12 +18,15 @@ public class RingControl : MonoBehaviour
             transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
 
+        if (MagicElf.instance.curType != ElfType.StrengthMovement)
+            return;
 
-        if (Input.GetMouseButtonDown(1)) {
+
+        if (/*Input.GetMouseButtonDown(1)*/Input.GetKeyDown(KeyCode.P)) {
             ring.enabled = true;
             arrow.enabled = true;
             anim.SetBool("show", true);
-        } else if(Input.GetMouseButtonUp(1)) {
+        } else if(/*Input.GetMouseButtonUp(1)*/Input.GetKeyUp(KeyCode.P)) {
             ring.enabled = true;
             arrow.enabled = true;
             anim.SetBool("show", false);
@@ -31,7 +34,7 @@ public class RingControl : MonoBehaviour
                 MagicElf.instance.StartOperation(new Vector2(2.5f, 1.5f));
             }
             timer = 0;
-        } else if(Input.GetMouseButton(1)) {
+        } else if(/*Input.GetMouseButton(1)*/Input.GetKey(KeyCode.P)) {
             timer += Time.deltaTime;
             Vector3 screenPos = Camera.main.WorldToScreenPoint(arrow.transform.position);
             float xDiff = Input.mousePosition.x - screenPos.x;

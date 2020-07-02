@@ -1,7 +1,7 @@
 [
 	{
 		"id": 0,
-		"DashEnable": false,
+		"DashEnable": true,
 		"BagEnable": false,
 		"minLight": 0.2,
 		"maxAddLight": 0.1,
